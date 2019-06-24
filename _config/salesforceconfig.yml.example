@@ -2,9 +2,14 @@
 Name: salesforceconfig
 ---
 
+
+### ###################################
+### optional extensions
+### ###################################
+
 SalesForceContact:
   extensions:
-    - SalesForceContactExtension
+    - MySalesForceContactExtension
 
 SalesForceContact:
   fields_to_send_to_sales_force:
@@ -12,6 +17,9 @@ SalesForceContact:
     - CustomField2
     - CustomField3
 
+### ###################################
+### credentials below are required
+### ###################################
 
 ---
 Only:

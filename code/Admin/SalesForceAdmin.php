@@ -17,7 +17,7 @@ class SalesForceAdmin extends ModelAdmin {
      * @var string
      */
     private static $menu_title = 'Sales Force';
-    //
+
     // /**
     //  * @var string
     //  */
