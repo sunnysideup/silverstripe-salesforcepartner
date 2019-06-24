@@ -1,0 +1,17 @@
+{
+    "name": "sunnysideup/salesforcepartner",
+    "description": "implements soap connection for sales force partner api",
+    "type": "silverstripe-module",
+    "require": {
+        "uuf6429/force.com-toolkit-for-php": "dev-Major-refactor",
+        "silverstripe/framework": "3.6.*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "sforce-wsdl-source-example-for-root-composer-file": [
+            "mysite/salesforceconfig/foo-bar.xml"
+        ],
+        "sforce-wsdl-classpath-example-for-root-composer-file": "salesforcepartner/code/SForce"
+    }
+}

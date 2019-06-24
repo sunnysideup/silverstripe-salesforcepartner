@@ -1,0 +1,44 @@
+---
+Name: salesforceconfig
+---
+
+SalesForceContact:
+  extensions:
+    - SalesForceContactExtension
+
+SalesForceContact:
+  fields_to_send_to_sales_force:
+    - CustomField1
+    - CustomField2
+    - CustomField3
+
+
+---
+Only:
+  environment: 'dev'
+---
+MySalesForcePartnerAPIConnectionOnly:
+  username: ''
+  password: ''
+  security_token: ''
+  wsdl_location: 'mysite/salesforceconfig/foo-bar.xml'
+
+---
+Only:
+  environment: 'test'
+---
+MySalesForcePartnerAPIConnectionOnly:
+  username: ''
+  password: ''
+  security_token: ''
+  wsdl_location: 'mysite/salesforceconfig/foo-bar.xml'
+
+---
+Only:
+  environment: 'live'
+---
+MySalesForcePartnerAPIConnectionOnly:
+  username: ''
+  password: ''
+  security_token: ''
+  wsdl_location: 'mysite/salesforceconfig/foo-bar.xml'
