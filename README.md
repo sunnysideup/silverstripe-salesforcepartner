@@ -1,9 +1,9 @@
-# What does this module do:
+# purpose
 
 It connects a Silverstripe Install to a Sales Force account using the Partner "approach".
 
 
-# How to use this module
+# usage
 
  1. add your wsdl file to your mysite folder and make sure it is protected, see below
  2. add to Silverstripe install as per usual
