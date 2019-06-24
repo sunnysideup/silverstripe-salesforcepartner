@@ -1,9 +1,9 @@
-# purpose
+# Purpose
 
 It connects a Silverstripe Install to a Sales Force account using the Partner "approach".
 
 
-# usage
+# Install
 
  1. add your wsdl file to your mysite folder and make sure it is protected, see below
  2. add to Silverstripe install as per usual
