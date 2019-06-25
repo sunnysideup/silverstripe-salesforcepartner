@@ -45,16 +45,8 @@ class MySalesForcePartnerAPI extends Partner
             }
             $response = $connection->create([$contact]);
         }
-        // Contact found. Update the contact details
         else {
-            foreach ($fieldsArray as $fieldName => $fieldValue) {
-                if ($existingContact->$fieldName != $fieldValue) {
-                    $existingContact->$fieldName = $fieldValue;
-                }
-            }
-
-            // TODO: update() does not work. Needs checking and fixing
-            //$response = $connection->update([$existingContact]);
+            return null;
         }
 
         return $response;
