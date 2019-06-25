@@ -45,6 +45,21 @@ class SalesForceTest extends BuildTask
         $this->showResults($response);
     }
 
+    protected function updateContact()
+    {
+        $response = MySalesForcePartnerAPI::update_contact(
+            [
+                'FirstName' => 'Joan',
+                'LastName' => 'Smith',
+                'Phone' => '(510) 555-5555',
+                'BirthDate' => '1957-01-25',
+                'Email' => 'a@b.c.d',
+            ]
+        );
+
+        $this->showResults($response);
+    }
+
     protected function showResults($response)
     {
         $this->showRequest();

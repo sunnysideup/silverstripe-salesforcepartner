@@ -2,7 +2,6 @@
 
 use SForce\Client\Partner;
 
-use SForce\Wsdl\create;
 use SForce\SObject;
 use SForce\Wsdl\SaveResult;
 
@@ -44,8 +43,52 @@ class MySalesForcePartnerAPI extends Partner
                 $contact->$fieldName = $fieldValue;
             }
             $response = $connection->create([$contact]);
+        } else {
+            return null;
         }
-        else {
+
+        return $response;
+    }
+
+    /**
+     * todo: all nullify thingy
+     * @param  array $fieldsArray
+     *
+     * @return SForce\Wsdl\SaveResult
+     */
+    public static function update_contact($fieldsArray)
+    {
+        $connection = MySalesForcePartnerAPIConnectionOnly::singleton();
+        $response = null;
+
+        // Check for existing Contact
+        $existingContact = null;
+        $email = isset($fieldsArray['Email']) ? $fieldsArray['Email'] : null;
+
+        if ($email) {
+            $existingContact = self::retrieve_contact($email);
+        }
+
+        if (! $existingContact) {
+            $phone = isset($fieldsArray['Phone']) ? $fieldsArray['Phone'] : null;
+
+            if ($phone) {
+                $existingContact = self::retrieve_contact(null, $phone);
+            }
+        }
+
+        // Contact found. Update Contact with details
+        if ($existingContact) {
+            $contact = new SObject();
+            $contact->setType('Contact');
+            $contact->setId($existingContact->getId());
+            foreach ($fieldsArray as $fieldName => $fieldValue) {
+                if ($existingContact->$fieldName != $fieldValue) {
+                    $contact->$fieldName = $fieldValue;
+                }
+            }
+            $response = $connection->update([$contact]);
+        } else {
             return null;
         }
 
@@ -127,9 +170,33 @@ class MySalesForcePartnerAPI extends Partner
                 // print_r($this->_convertToAny($sObject->getFields()));
             }
         }
-        $createObject = new create($sObjects);
+        $createObject = new SForce\Wsdl\create($sObjects);
 
         return parent::_create($createObject);
+    }
+
+    #####################################
+    # overriding parent class to fix bugs
+    # in the parent class.
+    #####################################
+    /**
+     * Updates one or more new individual objects to your organization's data.
+     *
+     * @param SObject[] $sObjects Array of one or more sObjects (up to 200) to update.
+     * @param null|string $type Unused
+     *
+     * @return SaveResult
+     */
+    public function update($sObjects, $type = null)
+    {
+        foreach ($sObjects as $sObject) {
+            if (property_exists($sObject, 'fields')) {
+                $sObject->setAny($this->_convertToAny($sObject->getFields()));
+            }
+        }
+        $updateObject = new SForce\Wsdl\update($sObjects);
+
+        return parent::_update($updateObject);
     }
 
     /**
