@@ -64,10 +64,13 @@ class MySalesForcePartnerAPI extends Partner
         $connection = MySalesForcePartnerAPIConnectionOnly::singleton();
         $query = "";
 
+        $email = trim($email);
+        $phone = trim($phone);
+
         if ($email) {
-            $query = "SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE Email = '" . trim($email) . "' LIMIT 1";
+            $query = "SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE Email = " . Convert::raw2sql($email, true) . " LIMIT 1";
         } elseif ($phone) {
-            $query = "SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE Phone = '" . trim($phone) . "' LIMIT 1";
+            $query = "SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE Phone = " . Convert::raw2sql($phone, true) . " LIMIT 1";
         }
 
         if (! $query) {
