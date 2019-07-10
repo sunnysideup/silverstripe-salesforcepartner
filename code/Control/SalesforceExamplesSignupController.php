@@ -1,7 +1,7 @@
 <?php
 
 
-class SalesForceExamplesSignupController extends ContentController
+class SalesforceExamplesSignupController extends ContentController
 {
 
     /**
@@ -14,12 +14,12 @@ class SalesForceExamplesSignupController extends ContentController
 
     public function index()
     {
-        return $this->renderWith(['SalesForceExamplesSignupController' , 'Page']);
+        return $this->renderWith(['SalesforceExamplesSignupController' , 'Page']);
     }
 
     public function Form()
     {
-        return new SalesForceSignupForm($this, 'Form');
+        return new SalesforceSignupForm($this, 'Form');
     }
 
 }

@@ -4,17 +4,17 @@
  * This class can be used by controllers in your project to set up a basic sign up
  * form.
  *
- * You can test it in isolation using the SalesForceExamplesSignupController class.
+ * You can test it in isolation using the SalesforceExamplesSignupController class.
  */
 
-class SalesForceSignupForm extends Form
+class SalesforceSignupForm extends Form
 {
 
     private static $allowed_actions = [
-        'doSalesForceSignUp' => true
+        'doSalesforceSignUp' => true
     ];
 
-    private static $based_on_instance_of = 'SalesForceContact';
+    private static $based_on_instance_of = 'SalesforceContact';
 
     /**
      * Our constructor only requires the controller and the name of the form
@@ -63,7 +63,7 @@ class SalesForceSignupForm extends Form
     public function setFormSubmitText(string $label)
     {
         $newFields = new FieldList(
-            FormAction::create('doSalesForceSignUp', $label)
+            FormAction::create('doSalesforceSignUp', $label)
         );
         $this->setActions($newFields);
 
@@ -72,7 +72,7 @@ class SalesForceSignupForm extends Form
 
     protected function getBaseFields()
     {
-        $newInstanceClassName = Config::inst()->get('SalesForceSignupForm', 'based_on_instance_of');
+        $newInstanceClassName = Config::inst()->get('SalesforceSignupForm', 'based_on_instance_of');
         $newInstance = $newInstanceClassName::create();
 
         return $newInstance->getFrontEndFields();
@@ -82,7 +82,7 @@ class SalesForceSignupForm extends Form
     protected function getBaseAction()
     {
         return new FieldList(
-            FormAction::create('doSalesForceSignUp', 'Register')
+            FormAction::create('doSalesforceSignUp', 'Register')
         );
     }
 
@@ -98,9 +98,9 @@ class SalesForceSignupForm extends Form
     }
 
 
-    public function doSalesForceSignUp($data, Form $form)
+    public function doSalesforceSignUp($data, Form $form)
     {
-        MySalesForcePartnerAPI::create_contact($data);
+        MySalesforcePartnerApi::create_contact($data);
         die('We need the option here to set a redirection link AND/OR provide an AJAX response');
     }
 

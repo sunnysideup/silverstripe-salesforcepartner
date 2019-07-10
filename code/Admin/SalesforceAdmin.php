@@ -6,7 +6,7 @@
  * @author sam@silverstripe.com
  * @author scienceninjas@silverstripe.com
  */
-class SalesForceAdmin extends ModelAdmin {
+class SalesforceAdmin extends ModelAdmin {
 
     /**
      * @var string
@@ -27,7 +27,7 @@ class SalesForceAdmin extends ModelAdmin {
      * @var array
      */
     private static $managed_models = array(
-        'SalesForceContact',
-        'SalesForceDefaultContactField',
+        'SalesforceDefaultContactField',
+        'SalesforceContactLog',
     );
 }
