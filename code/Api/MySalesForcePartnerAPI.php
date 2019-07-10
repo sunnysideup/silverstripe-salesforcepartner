@@ -10,6 +10,8 @@ class MySalesForcePartnerAPI extends Partner
 
     /**
      * todo: all nullify thingy
+     * assumes that all fields are correct (e.g. correct email format)
+     * can use email or phone as identifier
      * @param  array $fieldsArray
      *
      * @return SForce\Wsdl\SaveResult
@@ -52,6 +54,8 @@ class MySalesForcePartnerAPI extends Partner
 
     /**
      * todo: all nullify thingy
+     * assumes that all fields are correct (e.g. correct email format)
+     * can use email or phone as identifier
      * @param  array $fieldsArray
      *
      * @return SForce\Wsdl\SaveResult
