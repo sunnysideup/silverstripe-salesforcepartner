@@ -8,45 +8,37 @@ use SForce\Wsdl\SaveResult;
 class MySalesForcePartnerAPI extends Partner
 {
 
+    protected $connection = null;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->connection = MySalesForcePartnerAPIConnectionOnly::singleton();
+    }
+
     /**
      * todo: all nullify thingy
      * assumes that all fields are correct (e.g. correct email format)
      * can use email or phone as identifier
      * @param  array $fieldsArray
+     * @param  array $extraFilterArray -independent additional filters for retrieving contact
      *
-     * @return SForce\Wsdl\SaveResult
+     * @return SForce\Wsdl\SaveResult|null
      */
-    public static function create_contact($fieldsArray)
+    public static function create_contact($fieldsArray, $extraFilterArray = [])
     {
-        $connection = MySalesForcePartnerAPIConnectionOnly::singleton();
         $response = null;
-
-        // Check for existing Contact
-        $existingContact = null;
-        $email = isset($fieldsArray['Email']) ? $fieldsArray['Email'] : null;
-
-        if ($email) {
-            $existingContact = self::retrieve_contact($email);
-        }
-
-        if (! $existingContact) {
-            $phone = isset($fieldsArray['Phone']) ? $fieldsArray['Phone'] : null;
-
-            if ($phone) {
-                $existingContact = self::retrieve_contact(null, $phone);
-            }
-        }
-
+        $existingContact = self::array2sql($fieldsArray, $extraFilterArray);
         // Contact not found. Create a new Contact and set the details
-        if (!$existingContact) {
+        if ($existingContact) {
+            return null;
+        } else {
             $contact = new SObject();
             $contact->setType('Contact');
             foreach ($fieldsArray as $fieldName => $fieldValue) {
                 $contact->$fieldName = $fieldValue;
             }
-            $response = $connection->create([$contact]);
-        } else {
-            return null;
+            $response = $this->connection->create([$contact]);
         }
 
         return $response;
@@ -57,30 +49,14 @@ class MySalesForcePartnerAPI extends Partner
      * assumes that all fields are correct (e.g. correct email format)
      * can use email or phone as identifier
      * @param  array $fieldsArray
+     * @param  array $extraFilterArray -independent additional filters for retrieving contact
      *
-     * @return SForce\Wsdl\SaveResult
+     * @return SForce\Wsdl\SaveResult|null
      */
-    public static function update_contact($fieldsArray)
+    public static function update_contact($fieldsArray, $extraFilterArray = [])
     {
-        $connection = MySalesForcePartnerAPIConnectionOnly::singleton();
         $response = null;
-
-        // Check for existing Contact
-        $existingContact = null;
-        $email = isset($fieldsArray['Email']) ? $fieldsArray['Email'] : null;
-
-        if ($email) {
-            $existingContact = self::retrieve_contact($email);
-        }
-
-        if (! $existingContact) {
-            $phone = isset($fieldsArray['Phone']) ? $fieldsArray['Phone'] : null;
-
-            if ($phone) {
-                $existingContact = self::retrieve_contact(null, $phone);
-            }
-        }
-
+        $existingContact = self::array2sql($fieldsArray, $extraFilterArray);
         // Contact found. Update Contact with details
         if ($existingContact) {
             $contact = new SObject();
@@ -91,7 +67,7 @@ class MySalesForcePartnerAPI extends Partner
                     $contact->$fieldName = $fieldValue;
                 }
             }
-            $response = $connection->update([$contact]);
+            $response = $this->connection->update([$contact]);
         } else {
             return null;
         }
@@ -101,42 +77,65 @@ class MySalesForcePartnerAPI extends Partner
 
     /**
      * Retrive a contact by email address or by phone number
+     * either the email (preferred) of phone needs to be set in the $fieldsArray
      *
-     * @param string $email Email address of the contact
-     * @param string $phone Phone number of the contact
-     * @return SForce\SObject:
+     * @param array $fieldsArray
+     * @param array $extraFilterArray additional filter key-value sets
+     *
+     * @return SForce\SObject|null
      */
-    public static function retrieve_contact($email = null, $phone = null)
+    public static function retrieve_contact($fieldsArray, $extraFilterArray = [])
     {
-        $connection = MySalesForcePartnerAPIConnectionOnly::singleton();
-        $query = "";
+        // Check for existing Contact
+        $existingContact = null;
+        $filterArray = [];
+        $finalFilterArray = [];
 
-        $email = trim($email);
-        $phone = trim($phone);
-
+        $email = isset($fieldsArray['Email']) ? trim($fieldsArray['Email']) : null;
         if ($email) {
-            $query = "SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE Email = " . Convert::raw2sql($email, true) . " LIMIT 1";
-        } elseif ($phone) {
-            $query = "SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE Phone = " . Convert::raw2sql($phone, true) . " LIMIT 1";
+            $filterArray['Email'] = $email;
+        } else {
+            $phone = isset($fieldsArray['Phone']) ? trim($fieldsArray['Phone']) : null;
+            if ($phone) {
+                $filterArray['Phone'] = $phone;
+            }
+        }
+        if(count($filterArray)) {
+            $finalFilterArray[] = self::array2sql($filterArray);
+            if(count($extraFilterArray)) {
+                $finalFilterArray[] = self::array2sql($extraFilterArray);
+            }
+            $where = ' ( '.implode(' ) AND ( ', $finalFilterArray).' ) ';
+            $query = 'SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE '.$where.' LIMIT 1';
+
+            $result = $this->connection->query($query);
+            if ($result) {
+                $contacts = $result->getRecords();
+                if ($contacts) {
+                    $existingContact = $contacts[0];
+                }
+            }
         }
 
-        if (! $query) {
-            return null;
+        return $existingContact;
+    }
+
+    /**
+     * turns key value pairs into string
+     * @param  array $array [description]
+     * @return string
+     */
+    protected static function array2sql($array) : string
+    {
+        if(count($array) === 0) {
+            user_error('must have at least one entry');
+        }
+        $inner = [];
+        foreach($array as $field => $value) {
+            $inner[$field] =  $field.' = '.Convert::raw2sql($value, true);
         }
 
-        $result = $connection->query($query);
-
-        if (! $result) {
-            return null;
-        }
-
-        $contacts = $result->getRecords();
-
-        if (! $contacts) {
-            return null;
-        }
-
-        return $contacts[0];
+        return implode(' AND ', $inner);
     }
 
     public function debug()
