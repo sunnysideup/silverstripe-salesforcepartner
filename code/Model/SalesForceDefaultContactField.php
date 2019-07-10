@@ -7,6 +7,38 @@
 class SalesForceDefaultContactField extends DataObject
 {
 
+
+
+
+    /**
+     * Needs to link to a many-many relationship (SalesforceDefaultContactFields)
+     * @param  array $array fields to send
+     *
+     * @return CheckboxSetField
+     */
+    public static function select_field(
+        $fieldName = 'SalesforceDefaultContactFields',
+        $title = 'Default Fields'
+    )
+    {
+        $htmlArray = [];
+        foreach($array as $field => $value) {
+            $htmlArray[] = $field.' = '.$value.' ('.gettype($value).')';
+        }
+
+        return CheckboxSetField::create(
+            $fieldName,
+            $title,
+            SalesForceDefaultContactField::get()->map->toArray()
+        )
+            ->setDescription('
+                These default fields are always sent to Salesforce, you can
+                <a href="/admin/salesforceadmin">Edit or Add to the List</a> as required.
+                Please change with care.
+            ')
+        ;
+    }
+
     /**
      *
      * @param  array $array fields to send
@@ -25,6 +57,19 @@ class SalesForceDefaultContactField extends DataObject
             '<h2>Fields Added:</h2><p>'.implode('</p><p>', $htmlArray).'</p>'
         );
     }
+
+
+    /**
+     * Singular name for CMS
+     * @var string
+     */
+    private static $singular_name = 'Default Contact Field';
+
+    /**
+     * Plural name for CMS
+     * @var string
+     */
+    private static $plural_name = 'Default Contact Fields';
 
     /**
      *
@@ -95,5 +140,7 @@ class SalesForceDefaultContactField extends DataObject
             return intval($this->Value);
         }
     }
+
+
 
 }
