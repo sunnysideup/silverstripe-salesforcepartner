@@ -27,6 +27,7 @@ class SalesForceAdmin extends ModelAdmin {
      * @var array
      */
     private static $managed_models = array(
-        'SalesForceContact'
+        'SalesForceContact',
+        'SalesForceDefaultContactField',
     );
 }
