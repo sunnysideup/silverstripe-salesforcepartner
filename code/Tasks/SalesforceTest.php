@@ -13,17 +13,19 @@ class SalesforceTest extends BuildTask
 
     protected $description = 'Test Sales Cloud';
 
-    protected $email = '@test.best.co.com.org.net';
+    protected $emailStub = '@test.best.co.com.org.net';
+
+    protected $email = '';
 
     public function run($request)
     {
         MySalesforceContactApi::set_debug(true);
-
-        $this->email = 'test'.rand(0,99999).$this->email;
-
+        $this->setEmail();
         $this->findContact();
         $this->createContact();
         $this->updateContact();
+        $this->setEmail();
+        $this->createBadContact();
     }
 
     protected function createContact()
@@ -55,5 +57,24 @@ class SalesforceTest extends BuildTask
         $contact = MySalesforceContactApi::retrieve_contact($this->email);
     }
 
+
+    protected function createBadontact()
+    {
+        MySalesforceContactApi::create_contact(
+            [
+                'FirstName' => 'John',
+                'LastName' => 'Smith',
+                'NON_EXISTING_FIELD' => 'RUBBISH',
+                'Email' => $this->email,
+            ]
+        );
+    }
+
+
+    protected function setEmail()
+    {
+        $this->email = 'test'.rand(0,99999).$this->emailStub;
+
+    }
 
 }

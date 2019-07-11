@@ -120,17 +120,18 @@ class MySalesforceContactApi extends Object
             foreach ($fieldsArray as $fieldName => $fieldValue) {
                 $contact->$fieldName = $fieldValue;
             }
+            $log = SalesforceContactLog::create_contact_log(
+                'Created',
+                $fieldsArray,
+                $extraFilterArray
+            );
+            //doing it!
             $response = $connection->create([$contact]);
         }
         if(self::$debug) {
             $connection->debug($response);
         }
-        $success = SalesforceContactLog::create_contact_log(
-            'Created',
-            $fieldsArray,
-            $extraFilterArray,
-            $response
-        );
+        $success = $log->confirmContactLog($response);
 
         return $success;
     }
@@ -142,9 +143,9 @@ class MySalesforceContactApi extends Object
      * @param  array $fieldsArray
      * @param  array $extraFilterArray -independent additional filters for retrieving contact
      *
-     * @return SForce\Wsdl\SaveResult|null
+     * @return bool
      */
-    public static function update_contact($fieldsArray, $extraFilterArray = [])
+    public static function update_contact($fieldsArray, $extraFilterArray = []) : bool
     {
         $connection = self::get_my_singleton_connection();
         $response = null;
@@ -172,6 +173,12 @@ class MySalesforceContactApi extends Object
                     $contact->$fieldName = $fieldValue;
                 }
             }
+            SalesforceContactLog::create_contact_log(
+                'Updated',
+                $fieldsArray,
+                $extraFilterArray
+            );
+            //doing it!
             $response = $connection->update([$contact]);
         } else {
             return null;
@@ -179,12 +186,7 @@ class MySalesforceContactApi extends Object
         if(self::$debug) {
             $connection->debug($response);
         }
-        $success = SalesforceContactLog::create_contact_log(
-            'Updated',
-            $fieldsArray,
-            $extraFilterArray,
-            $response
-        );
+        $success = $log->confirmContactLog($response);
 
         return $success;
     }

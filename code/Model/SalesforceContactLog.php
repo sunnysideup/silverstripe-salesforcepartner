@@ -31,22 +31,26 @@ class SalesforceContactLog extends DataObject
 
     /**
      * returns true if the contact update was successful
-     * @param  SalesforceContactLog $obj
      * @param  mixed $response
      *
      * @return bool
      */
-    public function endContactLog(SalesforceContactLog $obj, $response) : bool
+    public function confirmContactLog($response) : bool
     {
         $id = '';
         $errors = '';
         print_r($response);
         die();
-        $obj->SalesforceIdentifier = $errors;
-        $obj->Errors = $id;
-        $obj->write();
+        $this->SalesforceIdentifier = $id;
+        $this->Errors = $errors;
+        $this->write();
 
-        return $obj->SalesforceIdentifier ? true : false;
+        return $this->hasError();
+    }
+
+    public function hasError() : bool
+    {
+        return $this->SalesforceIdentifier ? false : true;
     }
 
     /**
@@ -85,7 +89,6 @@ class SalesforceContactLog extends DataObject
      * @var array
      */
     private static $searchable_fields = [
-        'SentToSalesforce' => 'ExactMatchFilter',
         'Type' => 'ExactMatchFilter',
         'SalesforceIdentifier' => 'PartialMatchField',
         'FieldsSent' => 'PartialMatchField',
@@ -99,20 +102,13 @@ class SalesforceContactLog extends DataObject
      * @var array
      */
     private static $summary_fields = [
-        'SentToSalesforce' => 'Sent to SF',
         'SalesforceIdentifier' => 'SF ID',
         'Type' => 'Type',
         'Errors' => 'Errors'
     ];
 
     private static $indexes = [
-        'Created' => true,
-        'LastEdited' => true,
-        'SentToSalesforce' => true,
-        'SalesforceIdentifier' => true,
-        'FirstName' => true,
-        'LastName' => true,
-        'Email' => true,
+        'SalesforceIdentifier' => true
     ];
 
     /**
