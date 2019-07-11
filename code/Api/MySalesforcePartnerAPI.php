@@ -5,7 +5,7 @@ use SForce\Client\Partner;
 use SForce\SObject;
 use SForce\Wsdl\SaveResult;
 
-class MySalesForcePartnerAPI extends Partner
+class MySalesforcePartnerAPI extends Partner
 {
 
     protected $connection = null;
@@ -13,7 +13,7 @@ class MySalesForcePartnerAPI extends Partner
     public function __construct()
     {
         parent::__construct();
-        $this->connection = MySalesForcePartnerAPIConnectionOnly::singleton();
+        $this->connection = MySalesforcePartnerAPIConnectionOnly::singleton();
     }
 
     /**
@@ -29,11 +29,11 @@ class MySalesForcePartnerAPI extends Partner
     {
         //get defaults
         $extraFilterArray = array_merge(
-            SalesForceDefaultContactField::get_fields_for_filter(),
+            SalesforceDefaultContactField::get_fields_for_filter(),
             $extraFilterArray
         );
         $fieldsArray = array_merge(
-            SalesForceDefaultContactField::get_fields_to_send(),
+            SalesforceDefaultContactField::get_fields_to_send(),
             $fieldsArray
         );
         $response = null;
@@ -68,11 +68,11 @@ class MySalesForcePartnerAPI extends Partner
 
         //add defaults
         $extraFilterArray = array_merge(
-            SalesForceDefaultContactField::get_fields_for_filter(),
+            SalesforceDefaultContactField::get_fields_for_filter(),
             $extraFilterArray
         );
         $fieldsArray = array_merge(
-            SalesForceDefaultContactField::get_fields_to_send(),
+            SalesforceDefaultContactField::get_fields_to_send(),
             $fieldsArray
         );
 

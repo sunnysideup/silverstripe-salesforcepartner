@@ -2,7 +2,7 @@
 
 use SForce\Wsdl\SaveResult;
 
-class SalesForceContact extends DataObject
+class SalesforceContact extends DataObject
 {
 
     private static $fields_to_send_to_sales_force = [
@@ -27,14 +27,14 @@ class SalesForceContact extends DataObject
      * SS4 prep!
      * @var string
      */
-    private static $table_name = 'SalesForceContact';
+    private static $table_name = 'SalesforceContact';
 
     private static $db = [
-        'SalesForceIdentifier' => 'Varchar(40)',
+        'SalesforceIdentifier' => 'Varchar(40)',
         'FirstName' => 'Varchar(255)',
         'LastName' => 'Varchar(255)',
         'Email' => 'Varchar(255)',
-        'SentToSalesForce' => 'Boolean',
+        'SentToSalesforce' => 'Boolean',
         'CommsErrors' => 'Text',
     ];
 
@@ -48,8 +48,8 @@ class SalesForceContact extends DataObject
      * @var array
      */
     private static $searchable_fields = [
-        'SentToSalesForce' => 'ExactMatchFilter',
-        'SalesForceIdentifier' => 'PartialMatchField',
+        'SentToSalesforce' => 'ExactMatchFilter',
+        'SalesforceIdentifier' => 'PartialMatchField',
         'FirstName' => 'PartialMatchField',
         'LastName' => 'PartialMatchField',
         'Email' => 'PartialMatchField',
@@ -61,8 +61,8 @@ class SalesForceContact extends DataObject
      * @var array
      */
     private static $summary_fields = [
-        'SentToSalesForce' => 'Sent to SF',
-        'SalesForceIdentifier' => 'SF ID',
+        'SentToSalesforce' => 'Sent to SF',
+        'SalesforceIdentifier' => 'SF ID',
         'FirstName' => 'First Name',
         'LastName' => 'Last Name',
         'Email' => 'Email',
@@ -71,8 +71,8 @@ class SalesForceContact extends DataObject
     private static $indexes = [
         'Created' => true,
         'LastEdited' => true,
-        'SentToSalesForce' => true,
-        'SalesForceIdentifier' => true,
+        'SentToSalesforce' => true,
+        'SalesforceIdentifier' => true,
         'FirstName' => true,
         'LastName' => true,
         'Email' => true,
@@ -87,16 +87,16 @@ class SalesForceContact extends DataObject
     {
         parent::onAfterWrite();
         if($this->onAfterWriteDone === false) {
-            if(! $this->SentToSalesForce) {
-                $outcomes = MySalesForcePartnerAPI::create_contact(
-                    $this->prepareFieldsToSendToSalesForce()
+            if(! $this->SentToSalesforce) {
+                $outcomes = MySalesforcePartnerAPI::create_contact(
+                    $this->prepareFieldsToSendToSalesforce()
                 );
                 if(count($outcomes) === 1) {
                     foreach($outcomes as $outcome) {
                         $this->CommsErrors .= $outcome->getErrors()." ||| ";
-                        $this->SentToSalesForce .= $outcome->getSuccess() ? true : false;
-                        if(! $this->SalesForceIdentifier) {
-                            $this->SalesForceIdentifier = $outcome->getId();
+                        $this->SentToSalesforce .= $outcome->getSuccess() ? true : false;
+                        if(! $this->SalesforceIdentifier) {
+                            $this->SalesforceIdentifier = $outcome->getId();
                         }
                     }
                     $this->write();
@@ -108,10 +108,10 @@ class SalesForceContact extends DataObject
         }
     }
 
-    protected function prepareFieldsToSendToSalesForce()
+    protected function prepareFieldsToSendToSalesforce()
     {
         $return = [];
-        $fields = Config::inst()->get('SalesForceContact', 'fields_to_send_to_sales_force');
+        $fields = Config::inst()->get('SalesforceContact', 'fields_to_send_to_sales_force');
         foreach($fields as $field) {
             if($this->$field) {
                 $return[$field] = $this->$field;
@@ -129,16 +129,16 @@ class SalesForceContact extends DataObject
     {
         $fields = parent::getCMSFields();
         $fields->replaceField(
-            'SalesForceIdentifier',
+            'SalesforceIdentifier',
             ReadonlyField::create(
-                'SalesForceIdentifier',
+                'SalesforceIdentifier',
                 'Sales Force Identifier'
             )
         );
         $fields->replaceField(
-            'SentToSalesForce',
+            'SentToSalesforce',
             ReadonlyField::create(
-                'SentToSalesForce',
+                'SentToSalesforce',
                 'Sent to Sales Force'
             )->setRightTitle('Set to TRUE (1) if sent successfully.')
         );
@@ -155,7 +155,7 @@ class SalesForceContact extends DataObject
                 'WhatWeSend',
                 '
                     <h2>What is Send</h2>,
-                    <pre>'.print_r($this->prepareFieldsToSendToSalesForce(), 1).'</pre>
+                    <pre>'.print_r($this->prepareFieldsToSendToSalesforce(), 1).'</pre>
                 '
             )
         );

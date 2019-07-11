@@ -3,7 +3,7 @@ Name: salesforceconfig
 ---
 
 
-SalesForceDefaultContactField:
+SalesforceDefaultContactField:
   default_records:
     SalesforceField: Value
     SalesforceField: Value
@@ -23,7 +23,7 @@ SalesForceDefaultContactField:
 
 
 
-SalesForceContact:
+SalesforceContact:
   fields_to_send_to_sales_force:
     - CustomField1
     - CustomField2
@@ -37,7 +37,7 @@ SalesForceContact:
 Only:
   environment: 'dev'
 ---
-MySalesForcePartnerAPIConnectionOnly:
+MySalesforcePartnerAPIConnectionOnly:
   username: ''
   password: ''
   security_token: ''
@@ -47,7 +47,7 @@ MySalesForcePartnerAPIConnectionOnly:
 Only:
   environment: 'test'
 ---
-MySalesForcePartnerAPIConnectionOnly:
+MySalesforcePartnerAPIConnectionOnly:
   username: ''
   password: ''
   security_token: ''
@@ -57,7 +57,7 @@ MySalesForcePartnerAPIConnectionOnly:
 Only:
   environment: 'live'
 ---
-MySalesForcePartnerAPIConnectionOnly:
+MySalesforcePartnerAPIConnectionOnly:
   username: ''
   password: ''
   security_token: ''

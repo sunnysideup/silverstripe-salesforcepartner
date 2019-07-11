@@ -4,7 +4,7 @@
  * this can be linked to pages / other objects using many_many relationships
  * so that you can send default record values to Salesforce
  */
-class SalesForceDefaultContactField extends DataObject
+class SalesforceDefaultContactField extends DataObject
 {
 
     /**
@@ -36,7 +36,7 @@ class SalesForceDefaultContactField extends DataObject
         return CheckboxSetField::create(
             $fieldName,
             $title,
-            SalesForceDefaultContactField::get()->map->toArray()
+            SalesforceDefaultContactField::get()->map->toArray()
         )
             ->setDescription('
                 These default fields are always sent to Salesforce, you can
@@ -108,7 +108,7 @@ class SalesForceDefaultContactField extends DataObject
         $array = self::mixed_to_array($mixed);
 
         return array_merge(
-            Config::inst()->get('SalesForceDefaultContactField', 'site_wide_fields_to_send'),
+            Config::inst()->get('SalesforceDefaultContactField', 'site_wide_fields_to_send'),
             $array
         );
     }
@@ -124,7 +124,7 @@ class SalesForceDefaultContactField extends DataObject
         $array = self::mixed_to_array($mixed);
 
         return array_merge(
-            Config::inst()->get('SalesForceDefaultContactField', 'site_wide_filter_values'),
+            Config::inst()->get('SalesforceDefaultContactField', 'site_wide_filter_values'),
             $array
         );
     }
@@ -195,7 +195,7 @@ class SalesForceDefaultContactField extends DataObject
                 'Key' => $key
             ];
 
-            $obj = SalesForceDefaultContactField::get()->filter($filter)->first();
+            $obj = SalesforceDefaultContactField::get()->filter($filter)->first();
             if(! $obj) {
                 $obj->create($filter);
                 $obj->Value = $value;

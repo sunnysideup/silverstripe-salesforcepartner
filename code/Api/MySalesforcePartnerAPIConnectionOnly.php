@@ -4,7 +4,7 @@ use SForce\Client\Partner;
 
 use SForce\Wsdl\create;
 
-class MySalesForcePartnerAPIConnectionOnly extends Object
+class MySalesforcePartnerAPIConnectionOnly extends Object
 {
     private static $username = '';
     private static $password = '';
@@ -26,7 +26,7 @@ class MySalesForcePartnerAPIConnectionOnly extends Object
             $password = self::config()->password . self::config()->security_token;
 
             // Create connection
-            self::$my_connection = new MySalesForcePartnerAPI();
+            self::$my_connection = new MySalesforcePartnerAPI();
             self::$my_soap_client = self::$my_connection->createConnection($wsdlLocation);
             self::$my_connection->login(
                 $username,
@@ -67,7 +67,7 @@ class MySalesForcePartnerAPIConnectionOnly extends Object
         $wsdlLocation = Director::baseFolder() . '/' . self::config()->wsdl_location;
 
         // Get from cache
-        self::$my_connection = new MySalesForcePartnerAPI();
+        self::$my_connection = new MySalesforcePartnerAPI();
         self::$my_connection->createConnection($wsdlLocation);
         self::$my_connection->setEndpoint($location);
         self::$my_connection->setSessionHeader($sessionHeader);

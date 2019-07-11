@@ -7,7 +7,7 @@ use SForce\SObject;
 
 use SForce\Wsdl\create;
 
-class SalesForceTest extends BuildTask
+class SalesforceTest extends BuildTask
 {
     protected $title = 'Test Sales Force API';
 
@@ -21,8 +21,8 @@ class SalesForceTest extends BuildTask
     protected function findContact()
     {
         print '<h2>Request</h2>';
-        print "<pre>MySalesForcePartnerAPI::retrieve_contact('a@b.c.d')</pre>";
-        $contact = MySalesForcePartnerAPI::retrieve_contact('a@b.c.d');
+        print "<pre>MySalesforcePartnerAPI::retrieve_contact('a@b.c.d')</pre>";
+        $contact = MySalesforcePartnerAPI::retrieve_contact('a@b.c.d');
 
         print '<h2>Result</h2>';
         print '<pre>';
@@ -32,7 +32,7 @@ class SalesForceTest extends BuildTask
 
     protected function createContact()
     {
-        $response = MySalesForcePartnerAPI::create_contact(
+        $response = MySalesforcePartnerAPI::create_contact(
             [
                 'FirstName' => 'John',
                 'LastName' => 'Smith',
@@ -47,7 +47,7 @@ class SalesForceTest extends BuildTask
 
     protected function updateContact()
     {
-        $response = MySalesForcePartnerAPI::update_contact(
+        $response = MySalesforcePartnerAPI::update_contact(
             [
                 'FirstName' => 'Joan',
                 'LastName' => 'Smith',
@@ -68,7 +68,7 @@ class SalesForceTest extends BuildTask
 
     protected function showRequest()
     {
-        $connection = MySalesForcePartnerAPIConnectionOnly::singleton();
+        $connection = MySalesforcePartnerAPIConnectionOnly::singleton();
         $this->output('
             <h2>Request</h2>
             <pre>
