@@ -58,7 +58,7 @@ class SalesforceTest extends BuildTask
     }
 
 
-    protected function createBadontact()
+    protected function createBadContact()
     {
         MySalesforceContactApi::create_contact(
             [

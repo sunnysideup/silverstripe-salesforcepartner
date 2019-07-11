@@ -109,9 +109,15 @@ class MySalesforceContactApi extends Object
             $fieldsArray,
             $extraFilterArray
         );
-        $response = null;
+        $log = SalesforceContactLog::create_contact_log(
+            'Created',
+            $fieldsArray,
+            $extraFilterArray
+        );
+
         $existingContact = self::retrieve_contact($fieldsArray, $extraFilterArray);
         // Contact not found. Create a new Contact and set the details
+        $response = null;
         if ($existingContact) {
             return true;
         } else {
@@ -120,11 +126,6 @@ class MySalesforceContactApi extends Object
             foreach ($fieldsArray as $fieldName => $fieldValue) {
                 $contact->$fieldName = $fieldValue;
             }
-            $log = SalesforceContactLog::create_contact_log(
-                'Created',
-                $fieldsArray,
-                $extraFilterArray
-            );
             //doing it!
             $response = $connection->create([$contact]);
         }
@@ -148,7 +149,6 @@ class MySalesforceContactApi extends Object
     public static function update_contact($fieldsArray, $extraFilterArray = []) : bool
     {
         $connection = self::get_my_singleton_connection();
-        $response = null;
 
         //add defaults
         $extraFilterArray = array_merge(
@@ -160,10 +160,16 @@ class MySalesforceContactApi extends Object
             $fieldsArray,
             $extraFilterArray
         );
+        $log = SalesforceContactLog::create_contact_log(
+            'Updated',
+            $fieldsArray,
+            $extraFilterArray
+        );
 
         //find existing contact
-        $existingContact = MySalesforcePartnerApi::array2sql($fieldsArray, $extraFilterArray);
+        $existingContact = self::retrieve_contact($fieldsArray, $extraFilterArray);
         // Contact found. Update Contact with details
+        $response = null;
         if ($existingContact) {
             $contact = new SObject();
             $contact->setType('Contact');
@@ -173,15 +179,10 @@ class MySalesforceContactApi extends Object
                     $contact->$fieldName = $fieldValue;
                 }
             }
-            SalesforceContactLog::create_contact_log(
-                'Updated',
-                $fieldsArray,
-                $extraFilterArray
-            );
             //doing it!
             $response = $connection->update([$contact]);
         } else {
-            return null;
+            return true;
         }
         if(self::$debug) {
             $connection->debug($response);

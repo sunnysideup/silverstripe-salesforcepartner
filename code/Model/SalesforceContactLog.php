@@ -39,13 +39,29 @@ class SalesforceContactLog extends DataObject
     {
         $id = '';
         $errors = '';
-        print_r($response);
-        die();
+        $hasError = false;
+        if(is_array($response)) {
+            $response = $response[0];
+        }
+        if($response instanceof \SForce\Wsdl\SaveResult) {
+            $id = $response->getId();
+            $errors = serialize($response->getErrors());
+            if($response->getSuccess()) {
+                $hasError = false;
+            } else {
+                $hasError = true;
+            }
+        } else {
+            $errors = 'Unexpected response: '.serialize($response);
+            print_r($response);
+            user_error('unexptected response');
+        }
         $this->SalesforceIdentifier = $id;
         $this->Errors = $errors;
+        $this->HasError = $hasError;
         $this->write();
 
-        return $this->hasError();
+        return $this->HasError;
     }
 
     public function hasError() : bool
@@ -74,8 +90,10 @@ class SalesforceContactLog extends DataObject
     private static $db = [
         'SalesforceIdentifier' => 'Varchar(40)',
         'Type' => 'Enum("Created,Updated")',
+        'Executed' => 'Boolean',
         'FieldsSent' => 'Text',
         'Filters' => 'Text',
+        'HasError' => 'Boolean',
         'Errors' => 'Text',
     ];
 
@@ -90,6 +108,8 @@ class SalesforceContactLog extends DataObject
      */
     private static $searchable_fields = [
         'Type' => 'ExactMatchFilter',
+        'Executed' => 'ExactMatchFilter',
+        'HasError' => 'ExactMatchFilter',
         'SalesforceIdentifier' => 'PartialMatchField',
         'FieldsSent' => 'PartialMatchField',
         'Filters' => 'PartialMatchField',
@@ -104,7 +124,10 @@ class SalesforceContactLog extends DataObject
     private static $summary_fields = [
         'SalesforceIdentifier' => 'SF ID',
         'Type' => 'Type',
-        'Errors' => 'Errors'
+        'Executed.Nice' => 'Executed',
+        'Type' => 'Type',
+        'HasError.Nice' => 'Errors',
+        'Errors' => 'Errors',
     ];
 
     private static $indexes = [
@@ -138,6 +161,16 @@ class SalesforceContactLog extends DataObject
                     'Filters',
                     'Filters',
                     $this->serializedToHTML($this->Filters)
+                ),
+                ReadonlyField::create(
+                    'Executed',
+                    'Executed',
+                    $this->dbField('Executed')->Nice()
+                ),
+                ReadonlyField::create(
+                    'HasError',
+                    'HasError',
+                    $this->dbField('HasError')->Nice()
                 ),
                 ReadonlyField::create(
                     'Errors',
