@@ -3,13 +3,25 @@ Name: salesforceconfig
 ---
 
 
+SalesForceDefaultContactField:
+  default_records:
+    SalesforceField: Value
+    SalesforceField: Value
+    SalesforceField: Value
+  site_wide_fields_to_send:
+    SalesforceField: Value
+    SalesforceField: Value
+    SalesforceField: Value
+  site_wide_filter_values:
+    SalesforceField: Value
+    SalesforceField: Value
+    SalesforceField: Value
+
 ### ###################################
 ### optional extensions
 ### ###################################
 
-SalesForceContact:
-  extensions:
-    - MySalesForceContactExtension
+
 
 SalesForceContact:
   fields_to_send_to_sales_force:

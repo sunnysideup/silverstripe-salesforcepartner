@@ -7,8 +7,15 @@
 class SalesForceDefaultContactField extends DataObject
 {
 
+    /**
+     * contact fields that should be created by default...
+     * @var array
+     */
+    private static $defaults_records = [];
 
+    private static $site_wide_fields_to_send = [];
 
+    private static $site_wide_filter_values = [];
 
     /**
      * Needs to link to a many-many relationship (SalesforceDefaultContactFields)
@@ -41,21 +48,102 @@ class SalesForceDefaultContactField extends DataObject
 
     /**
      *
-     * @param  array $array fields to send
+     * @param  array|DataList|null $array fields to send
+     * @param  string $title fields to send
      *
      * @return LiteralField
      */
-    public static function field_showing_fields_to_send($array)
+    public static function fields_to_send_field(
+        $mixed = null,
+        $title  = 'Fields Added'
+    )
     {
+        $array = self::get_fields_to_send($mixed);
         $htmlArray = [];
         foreach($array as $field => $value) {
             $htmlArray[] = $field.' = '.$value.' ('.gettype($value).')';
         }
-
+        if(!count($htmlArray) == 0) {
+            $htmlArray[] = 'none';
+        }
         return LiteralField::create(
             'FieldsToSendToSalesforce',
-            '<h2>Fields Added:</h2><p>'.implode('</p><p>', $htmlArray).'</p>'
+            '<h2>'.$title.'</h2><p>- '.implode('</p><p>', $htmlArray).'</p>'
         );
+    }
+    /**
+     *
+     * @param  array|DataList|null $array fields to send
+     * @param  string $title fields to send
+     *
+     * @return LiteralField
+     */
+    public static function fields_to_filter_field(
+        $mixed = null,
+        $title  = 'Filter Fields'
+    )
+    {
+        $array = self::get_fields_to_send($mixed);
+        $htmlArray = [];
+        foreach($array as $field => $value) {
+            $htmlArray[] = $field.' = '.$value.' ('.gettype($value).')';
+        }
+        if(!count($htmlArray) == 0) {
+            $htmlArray[] = 'none';
+        }
+        return LiteralField::create(
+            'FieldsToFilterForSalesforce',
+            '<h2>'.$title.'</h2><p>- '.implode('</p><p>', $htmlArray).'</p>'
+        );
+    }
+
+    /**
+     *
+     * @param  array|DataList|null $mixed fields to send
+     *
+     * @return array
+     */
+    public static function get_fields_to_send($mixed = null)
+    {
+        $array = self::mixed_to_array($mixed);
+
+        return array_merge(
+            Config::inst()->get('SalesForceDefaultContactField', 'site_wide_fields_to_send'),
+            $array
+        );
+    }
+
+    /**
+     *
+     * @param  array|DataList|null $mixed fields to send
+     *
+     * @return array|DataList|null
+     */
+    public static function get_fields_for_filter($mixed = null)
+    {
+        $array = self::mixed_to_array($mixed);
+
+        return array_merge(
+            Config::inst()->get('SalesForceDefaultContactField', 'site_wide_filter_values'),
+            $array
+        );
+    }
+
+    protected static function mixed_to_array($mixed = null)
+    {
+        if($mixed === null) {
+            $array = [];
+        }
+        elseif($mixed instanceof DataList) {
+            $array = [];
+            foreach($mixed as $object) {
+                $array[trim($object->Field)] = $object->BetterValue();
+            }
+        } elseif(! is_array($array)) {
+            user_error('Variable '.vardump($mixed).'Should be an array');
+        }
+
+        return $array;
     }
 
 
@@ -99,11 +187,6 @@ class SalesForceDefaultContactField extends DataObject
         return $this->Key . ' - '.$this->Value;
     }
 
-    /**
-     * contact fields that should be created by default...
-     * @var array
-     */
-    private static $defaults_records = [];
 
     public function requireDefaultRecords()
     {
@@ -139,6 +222,8 @@ class SalesForceDefaultContactField extends DataObject
         if(intval($this->Value)) {
             return intval($this->Value);
         }
+
+        return trim($this->Value);
     }
 
 

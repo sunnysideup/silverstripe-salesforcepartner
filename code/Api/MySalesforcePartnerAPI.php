@@ -27,6 +27,15 @@ class MySalesForcePartnerAPI extends Partner
      */
     public static function create_contact($fieldsArray, $extraFilterArray = [])
     {
+        //get defaults
+        $extraFilterArray = array_merge(
+            SalesForceDefaultContactField::get_fields_for_filter(),
+            $extraFilterArray
+        );
+        $fieldsArray = array_merge(
+            SalesForceDefaultContactField::get_fields_to_send(),
+            $fieldsArray
+        );
         $response = null;
         $existingContact = self::array2sql($fieldsArray, $extraFilterArray);
         // Contact not found. Create a new Contact and set the details
@@ -56,6 +65,18 @@ class MySalesForcePartnerAPI extends Partner
     public static function update_contact($fieldsArray, $extraFilterArray = [])
     {
         $response = null;
+
+        //add defaults
+        $extraFilterArray = array_merge(
+            SalesForceDefaultContactField::get_fields_for_filter(),
+            $extraFilterArray
+        );
+        $fieldsArray = array_merge(
+            SalesForceDefaultContactField::get_fields_to_send(),
+            $fieldsArray
+        );
+
+        //find existing contact
         $existingContact = self::array2sql($fieldsArray, $extraFilterArray);
         // Contact found. Update Contact with details
         if ($existingContact) {
