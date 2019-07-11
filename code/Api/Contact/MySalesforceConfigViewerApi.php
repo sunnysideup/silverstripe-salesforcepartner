@@ -26,11 +26,18 @@ class MySalesforceConfigViewerApi extends Object
      *
      * @return CheckboxSetField
      */
-    public static function select_field(
+    public static function select_default_contact_fields(
         $fieldName = 'SalesforceDefaultContactFields',
         $title = 'Select Default Fields'
     )
     {
+        $count = SalesforceDefaultContactField::count();
+        if($count === 0) {
+            return HiddenField::create(
+                $fieldName,
+                $title
+            );
+        }
         return CheckboxSetField::create(
             $fieldName,
             $title,
