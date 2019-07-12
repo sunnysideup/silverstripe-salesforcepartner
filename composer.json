@@ -30,7 +30,5 @@
             "role": "lead developer"
         }
     ],
-    "extra": {
-        "installer-name": "salesforcepartner"
-    }
+    "extra": []
 }
