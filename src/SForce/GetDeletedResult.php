@@ -26,7 +26,25 @@ class GetDeletedResult
      */
     public function __construct(\DateTime $earliestDateAvailable = null, \DateTime $latestDateCovered = null)
     {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: ->format( (case sensitive)
+  * NEW: ->format( (COMPLEX)
+  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
       $this->earliestDateAvailable = $earliestDateAvailable ? $earliestDateAvailable->format(\DateTime::ATOM) : null;
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: ->format( (case sensitive)
+  * NEW: ->format( (COMPLEX)
+  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
       $this->latestDateCovered = $latestDateCovered ? $latestDateCovered->format(\DateTime::ATOM) : null;
     }
 
@@ -70,6 +88,15 @@ class GetDeletedResult
      */
     public function setEarliestDateAvailable(\DateTime $earliestDateAvailable)
     {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: ->format( (case sensitive)
+  * NEW: ->format( (COMPLEX)
+  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
       $this->earliestDateAvailable = $earliestDateAvailable->format(\DateTime::ATOM);
       return $this;
     }
@@ -96,6 +123,15 @@ class GetDeletedResult
      */
     public function setLatestDateCovered(\DateTime $latestDateCovered)
     {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: ->format( (case sensitive)
+  * NEW: ->format( (COMPLEX)
+  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
       $this->latestDateCovered = $latestDateCovered->format(\DateTime::ATOM);
       return $this;
     }

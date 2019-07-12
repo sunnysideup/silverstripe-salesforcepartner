@@ -5,9 +5,9 @@ It connects a Silverstripe Install to a Sales Force account using the Partner "a
 
 # Install
 
- 1. add your wsdl file to your mysite folder and make sure it is protected, see below
+ 1. add your wsdl file to your app folder and make sure it is protected, see below
  2. add to Silverstripe install as per usual
- 3. see: `salesforcepartner/_config/salesforceconfig.yml.example` and implement in mysite
+ 3. see: `salesforcepartner/_config/salesforceconfig.yml.example` and implement in app
    as you see fit. You will definitely need to set the login credentials
 
 # Getting Credentials

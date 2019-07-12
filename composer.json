@@ -18,7 +18,7 @@
     },
     "extra-examples": {
         "sforce-wsdl-source-example-for-root-composer-file": [
-            "mysite/salesforceconfig/foo-bar.xml"
+            "app/salesforceconfig/foo-bar.xml"
         ],
         "sforce-wsdl-classpath-example-for-root-composer-file": "salesforcepartner/code/SForce"
     },

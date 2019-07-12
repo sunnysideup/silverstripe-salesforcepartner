@@ -4,7 +4,16 @@ use SForce\Client\Partner;
 
 use SForce\Wsdl\create;
 
-class MySalesforcePartnerApiConnectionOnly extends Object
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD:  extends Object (ignore case)
+  * NEW:  extends ViewableData (COMPLEX)
+  * EXP: This used to extend Object, but object does not exist anymore. You can also manually add use Extensible, use Injectable, and use Configurable
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
+class MySalesforcePartnerApiConnectionOnly extends ViewableData
 {
     private static $username = '';
     private static $password = '';
@@ -34,9 +43,36 @@ class MySalesforcePartnerApiConnectionOnly extends Object
             );
 
             // Save connection cache
-            $cache = SS_Cache::factory(self::class);
-            $cache->save(self::$my_connection->getLocation(), 'location');
-            $cache->save(self::$my_connection->getSessionId(), 'sessionId');
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: Cache::factory( (case sensitive)
+  * NEW: SilverStripe\Core\Injector\Injector::inst()->get(Psr\SimpleCache\CacheInterface::class '.  (COMPLEX)
+  * EXP: Check cache implementation - see: https://docs.silverstripe.org/en/4/changelogs/4.0.0#cache
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
+            $cache = SS_SilverStripe\Core\Injector\Injector::inst()->get(Psr\SimpleCache\CacheInterface::class '. self::class);
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $cache->save( (case sensitive)
+  * NEW: $cache->set( (COMPLEX)
+  * EXP: Cache key and value need to be swapped!!! Put key first. See: https://docs.silverstripe.org/en/4/changelogs/4.0.0#cache
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
+            $cache->set(self::$my_connection->getLocation(), 'location');
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $cache->save( (case sensitive)
+  * NEW: $cache->set( (COMPLEX)
+  * EXP: Cache key and value need to be swapped!!! Put key first. See: https://docs.silverstripe.org/en/4/changelogs/4.0.0#cache
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
+            $cache->set(self::$my_connection->getSessionId(), 'sessionId');
         }
 
         return self::$my_connection;
@@ -77,9 +113,36 @@ class MySalesforcePartnerApiConnectionOnly extends Object
 
     protected static function retrieve_cache_data()
     {
-        $cache = SS_Cache::factory(self::class);
-        $location = $cache->load('location');
-        $sessionId = $cache->load('sessionId');
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: Cache::factory( (case sensitive)
+  * NEW: SilverStripe\Core\Injector\Injector::inst()->get(Psr\SimpleCache\CacheInterface::class '.  (COMPLEX)
+  * EXP: Check cache implementation - see: https://docs.silverstripe.org/en/4/changelogs/4.0.0#cache
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
+        $cache = SS_SilverStripe\Core\Injector\Injector::inst()->get(Psr\SimpleCache\CacheInterface::class '. self::class);
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $cache->load( (case sensitive)
+  * NEW: $cache->has( (COMPLEX)
+  * EXP: See: https://docs.silverstripe.org/en/4/changelogs/4.0.0#cache, you may also need to add $cache->get( !!!
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
+        $location = $cache->has('location');
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: $cache->load( (case sensitive)
+  * NEW: $cache->has( (COMPLEX)
+  * EXP: See: https://docs.silverstripe.org/en/4/changelogs/4.0.0#cache, you may also need to add $cache->get( !!!
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
+        $sessionId = $cache->has('sessionId');
 
         return [
             'location' => $location,

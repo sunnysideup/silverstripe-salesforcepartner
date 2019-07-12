@@ -43,6 +43,15 @@ class SalesforceDefaultContactField extends DataObject
     
     private static $table_name = 'SalesforceDefaultContactField';
 
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: private static $db = (case sensitive)
+  * NEW: private static $db = (COMPLEX)
+  * EXP: Make sure to add a private static $table_name!
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
     private static $db = [
         'Key' => 'Varchar',
         'Value' => 'Varchar',

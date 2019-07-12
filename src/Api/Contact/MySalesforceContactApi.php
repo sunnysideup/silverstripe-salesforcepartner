@@ -7,7 +7,16 @@ use SForce\Wsdl\SaveResult;
  * This class adds / updates subscribers to Salesforce
  */
 
-class MySalesforceContactApi extends Object
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD:  extends Object (ignore case)
+  * NEW:  extends ViewableData (COMPLEX)
+  * EXP: This used to extend Object, but object does not exist anymore. You can also manually add use Extensible, use Injectable, and use Configurable
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
+class MySalesforceContactApi extends ViewableData
 {
 
     /**

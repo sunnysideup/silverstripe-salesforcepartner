@@ -20,6 +20,15 @@ class GetUpdatedResult
      */
     public function __construct(\DateTime $latestDateCovered = null)
     {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: ->format( (case sensitive)
+  * NEW: ->format( (COMPLEX)
+  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
       $this->latestDateCovered = $latestDateCovered ? $latestDateCovered->format(\DateTime::ATOM) : null;
     }
 
@@ -63,6 +72,15 @@ class GetUpdatedResult
      */
     public function setLatestDateCovered(\DateTime $latestDateCovered)
     {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: ->format( (case sensitive)
+  * NEW: ->format( (COMPLEX)
+  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
       $this->latestDateCovered = $latestDateCovered->format(\DateTime::ATOM);
       return $this;
     }

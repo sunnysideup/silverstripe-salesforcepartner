@@ -96,6 +96,15 @@ class SalesforceContactLog extends DataObject
      */
     private static $table_name = 'SalesforceContactLog';
 
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: private static $db = (case sensitive)
+  * NEW: private static $db = (COMPLEX)
+  * EXP: Make sure to add a private static $table_name!
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
     private static $db = [
         'SalesforceIdentifier' => 'Varchar(40)',
         'Type' => 'Enum("Created,Updated")',
@@ -226,7 +235,7 @@ class SalesforceContactLog extends DataObject
      * @param Member $member
      * @return bool
      */
-    public function canCreate($member = null)
+    public function canCreate($member = null, $context = [])
     {
         return false;
     }
@@ -236,7 +245,7 @@ class SalesforceContactLog extends DataObject
      * @param Member $member
      * @return bool
      */
-    public function canEdit($member = null)
+    public function canEdit($member = null, $context = [])
     {
         return false;
     }
@@ -246,7 +255,7 @@ class SalesforceContactLog extends DataObject
      * @param Member $member
      * @return bool
      */
-    public function canDelete($member = null)
+    public function canDelete($member = null, $context = [])
     {
         return false;
     }

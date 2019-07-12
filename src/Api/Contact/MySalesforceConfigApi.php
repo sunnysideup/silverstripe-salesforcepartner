@@ -3,7 +3,16 @@
  * returns a bunch of form fields that inform the user about the configuration
  * of the connection and communication with Salesforce.
  */
-class MySalesforceContactConfigApi extends Object
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD:  extends Object (ignore case)
+  * NEW:  extends ViewableData (COMPLEX)
+  * EXP: This used to extend Object, but object does not exist anymore. You can also manually add use Extensible, use Injectable, and use Configurable
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
+class MySalesforceContactConfigApi extends ViewableData
 {
 
     /**

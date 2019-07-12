@@ -32,7 +32,7 @@ MySalesForcePartnerAPIConnectionOnly:
   username: ''
   password: ''
   security_token: ''
-  wsdl_location: 'mysite/salesforceconfig/foo-bar.xml'
+  wsdl_location: 'app/salesforceconfig/foo-bar.xml'
 
 ---
 Only:
@@ -42,7 +42,7 @@ MySalesForcePartnerAPIConnectionOnly:
   username: ''
   password: ''
   security_token: ''
-  wsdl_location: 'mysite/salesforceconfig/foo-bar.xml'
+  wsdl_location: 'app/salesforceconfig/foo-bar.xml'
 
 ---
 Only:
@@ -52,4 +52,4 @@ MySalesForcePartnerAPIConnectionOnly:
   username: ''
   password: ''
   security_token: ''
-  wsdl_location: 'mysite/salesforceconfig/foo-bar.xml'
+  wsdl_location: 'app/salesforceconfig/foo-bar.xml'

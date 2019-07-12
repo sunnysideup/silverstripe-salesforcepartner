@@ -28,7 +28,25 @@ class getDeleted
     public function __construct($sObjectType = null, \DateTime $startDate = null, \DateTime $endDate = null)
     {
       $this->sObjectType = $sObjectType;
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: ->format( (case sensitive)
+  * NEW: ->format( (COMPLEX)
+  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
       $this->startDate = $startDate ? $startDate->format(\DateTime::ATOM) : null;
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: ->format( (case sensitive)
+  * NEW: ->format( (COMPLEX)
+  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
       $this->endDate = $endDate ? $endDate->format(\DateTime::ATOM) : null;
     }
 
@@ -72,6 +90,15 @@ class getDeleted
      */
     public function setStartDate(\DateTime $startDate)
     {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: ->format( (case sensitive)
+  * NEW: ->format( (COMPLEX)
+  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
       $this->startDate = $startDate->format(\DateTime::ATOM);
       return $this;
     }
@@ -98,6 +125,15 @@ class getDeleted
      */
     public function setEndDate(\DateTime $endDate)
     {
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD: ->format( (case sensitive)
+  * NEW: ->format( (COMPLEX)
+  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
       $this->endDate = $endDate->format(\DateTime::ATOM);
       return $this;
     }
