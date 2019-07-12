@@ -75,13 +75,14 @@ class MySalesforceContactApi extends Object
 
 
     /**
-     * @param $email
+     * @param string $email
+     * @param array $extraFilterArray
      *
      * @return bool
      */
-    public static function is_email_registered($email) : bool
+    public static function is_email_registered($email, $extraFilterArray = []) : bool
     {
-        $subscriber = MySalesforcePartnerApi::retrieve_contact($email);
+        $subscriber = MySalesforceContactApi::retrieve_contact($email);
 
         return $subscriber ? true : false;
     }
@@ -101,11 +102,11 @@ class MySalesforceContactApi extends Object
         $connection = self::get_my_singleton_connection();
         //get defaults
         $extraFilterArray = array_merge(
-            SalesforceDefaultContactField::get_fields_for_filter(),
+            MySalesforceContactConfigApi::get_fields_for_filter(),
             $extraFilterArray
         );
         $fieldsArray = array_merge(
-            SalesforceDefaultContactField::get_fields_to_send(),
+            MySalesforceContactConfigApi::get_fields_to_send_on_creation(),
             $fieldsArray,
             $extraFilterArray
         );
@@ -156,7 +157,7 @@ class MySalesforceContactApi extends Object
             $extraFilterArray
         );
         $fieldsArray = array_merge(
-            SalesforceDefaultContactField::get_fields_to_send(),
+            MySalesforceContactConfigApi::get_fields_to_send_on_update(),
             $fieldsArray,
             $extraFilterArray
         );
@@ -283,7 +284,7 @@ class MySalesforceContactApi extends Object
      *
      * @var boolean
      */
-    protected static $debug = true;
+    protected static $debug = false;
 
     /**
      * @param bool

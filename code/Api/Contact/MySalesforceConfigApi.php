@@ -91,7 +91,6 @@ class MySalesforceContactConfigApi extends Object
     public static function get_fields_to_send_on_creation($mixed = null)
     {
         $array = self::mixed_to_array($mixed);
-
         return array_merge(
             Config::inst()->get('MySalesforceContactConfigApi', 'site_wide_fields_to_send_on_creation'),
             $array,
@@ -140,16 +139,15 @@ class MySalesforceContactConfigApi extends Object
      */
     protected static function mixed_to_array($mixed = null)
     {
-        if($mixed === null) {
+        if(is_object($mixed)) {
+            $array = [];
+            foreach($mixed as $object) {
+                $array[trim($object->Key)] = $object->BetterValueHumanReadable();
+            }
+        } elseif($mixed === null) {
             $array = [];
         } elseif(is_string($mixed)) {
             $array = [ $mixed ];
-        }
-        elseif($mixed instanceof DataList) {
-            $array = [];
-            foreach($mixed as $object) {
-                $array[trim($object->Field)] = $object->BetterValue();
-            }
         } elseif(! is_array($array)) {
             user_error('Variable '.vardump($mixed).'Should be an array');
         }
@@ -236,7 +234,7 @@ class MySalesforceContactConfigApi extends Object
      *
      * @return LiteralField
      */
-    public static function fields_to_send_on_field(
+    public static function fields_to_send_field(
         $type,
         $mixed = null,
         $fieldName = 'FieldsToSendToSalesforce',

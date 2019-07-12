@@ -32,7 +32,6 @@ class SalesforceDefaultContactField extends DataObject
     private static $db = [
         'Key' => 'Varchar',
         'Value' => 'Varchar',
-        'IsFilter' => 'Boolean',
     ];
 
     /**
@@ -43,7 +42,6 @@ class SalesforceDefaultContactField extends DataObject
     private static $summary_fields = [
         'Key' => 'Field Name',
         'Value' => 'Field Value',
-        'IsFilter.Nice' => 'Is Filter',
     ];
 
     /**
@@ -52,7 +50,7 @@ class SalesforceDefaultContactField extends DataObject
      */
     public function getTitle()
     {
-        return $this->Key . ' = '.$this->Value;
+        return $this->Key . ' = '.$this->BetterValueHumanReadable();
     }
 
 
@@ -78,20 +76,27 @@ class SalesforceDefaultContactField extends DataObject
      */
     public function BetterValue()
     {
-        if(strtolower($this->Value) === 'true') {
+        if(strtolower($this->Value) === 'true' || intval($this->Value) === 1) {
             return true;
         }
-        if(strtolower($this->Value) === 'false') {
+        elseif(strtolower($this->Value) === 'false' || empty($this->Value) || intval($this->Value) === 0) {
             return false;
         }
-        if(floatval($this->Value)) {
+        elseif(is_numeric($this->Value)) {
             return floatval($this->Value);
-        }
-        if(intval($this->Value)) {
-            return intval($this->Value);
         }
 
         return trim($this->Value);
+    }
+
+    public function BetterValueHumanReadable()
+    {
+        $value = $this->BetterValue();
+        if(gettype($value) === 'boolean') {
+            return $value ? 'true' : 'false';
+        } else {
+            return $value;
+        }
     }
 
 

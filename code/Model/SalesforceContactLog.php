@@ -53,7 +53,7 @@ class SalesforceContactLog extends DataObject
             }
         } else {
             $errors = 'Unexpected response: '.serialize($response);
-            print_r($response);
+            // print_r($response);
             user_error('unexptected response');
         }
         $this->SalesforceIdentifier = $id;
