@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class ListViewOrderBy
 {
-
     /**
-     * @var string $fieldNameOrPath
+     * @var string
      */
     protected $fieldNameOrPath = null;
 
     /**
-     * @var orderByNullsPosition $nullsPosition
+     * @var orderByNullsPosition
      */
     protected $nullsPosition = null;
 
     /**
-     * @var orderByDirection $sortDirection
+     * @var orderByDirection
      */
     protected $sortDirection = null;
 
@@ -25,7 +24,7 @@ class ListViewOrderBy
      */
     public function __construct($fieldNameOrPath = null)
     {
-      $this->fieldNameOrPath = $fieldNameOrPath;
+        $this->fieldNameOrPath = $fieldNameOrPath;
     }
 
     /**
@@ -33,7 +32,7 @@ class ListViewOrderBy
      */
     public function getFieldNameOrPath()
     {
-      return $this->fieldNameOrPath;
+        return $this->fieldNameOrPath;
     }
 
     /**
@@ -42,8 +41,8 @@ class ListViewOrderBy
      */
     public function setFieldNameOrPath($fieldNameOrPath)
     {
-      $this->fieldNameOrPath = $fieldNameOrPath;
-      return $this;
+        $this->fieldNameOrPath = $fieldNameOrPath;
+        return $this;
     }
 
     /**
@@ -51,7 +50,7 @@ class ListViewOrderBy
      */
     public function getNullsPosition()
     {
-      return $this->nullsPosition;
+        return $this->nullsPosition;
     }
 
     /**
@@ -60,8 +59,8 @@ class ListViewOrderBy
      */
     public function setNullsPosition($nullsPosition)
     {
-      $this->nullsPosition = $nullsPosition;
-      return $this;
+        $this->nullsPosition = $nullsPosition;
+        return $this;
     }
 
     /**
@@ -69,7 +68,7 @@ class ListViewOrderBy
      */
     public function getSortDirection()
     {
-      return $this->sortDirection;
+        return $this->sortDirection;
     }
 
     /**
@@ -78,8 +77,7 @@ class ListViewOrderBy
      */
     public function setSortDirection($sortDirection)
     {
-      $this->sortDirection = $sortDirection;
-      return $this;
+        $this->sortDirection = $sortDirection;
+        return $this;
     }
-
 }

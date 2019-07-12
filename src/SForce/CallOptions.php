@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class CallOptions
 {
-
     /**
-     * @var string $client
+     * @var string
      */
     protected $client = null;
 
     /**
-     * @var string $defaultNamespace
+     * @var string
      */
     protected $defaultNamespace = null;
 
@@ -21,8 +20,8 @@ class CallOptions
      */
     public function __construct($client = null, $defaultNamespace = null)
     {
-      $this->client = $client;
-      $this->defaultNamespace = $defaultNamespace;
+        $this->client = $client;
+        $this->defaultNamespace = $defaultNamespace;
     }
 
     /**
@@ -30,7 +29,7 @@ class CallOptions
      */
     public function getClient()
     {
-      return $this->client;
+        return $this->client;
     }
 
     /**
@@ -39,8 +38,8 @@ class CallOptions
      */
     public function setClient($client)
     {
-      $this->client = $client;
-      return $this;
+        $this->client = $client;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class CallOptions
      */
     public function getDefaultNamespace()
     {
-      return $this->defaultNamespace;
+        return $this->defaultNamespace;
     }
 
     /**
@@ -57,8 +56,7 @@ class CallOptions
      */
     public function setDefaultNamespace($defaultNamespace)
     {
-      $this->defaultNamespace = $defaultNamespace;
-      return $this;
+        $this->defaultNamespace = $defaultNamespace;
+        return $this;
     }
-
 }

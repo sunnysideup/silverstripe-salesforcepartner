@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class RelatedListSort
 {
-
     /**
-     * @var boolean $ascending
+     * @var boolean
      */
     protected $ascending = null;
 
     /**
-     * @var string $column
+     * @var string
      */
     protected $column = null;
 
@@ -21,8 +20,8 @@ class RelatedListSort
      */
     public function __construct($ascending = null, $column = null)
     {
-      $this->ascending = $ascending;
-      $this->column = $column;
+        $this->ascending = $ascending;
+        $this->column = $column;
     }
 
     /**
@@ -30,7 +29,7 @@ class RelatedListSort
      */
     public function getAscending()
     {
-      return $this->ascending;
+        return $this->ascending;
     }
 
     /**
@@ -39,8 +38,8 @@ class RelatedListSort
      */
     public function setAscending($ascending)
     {
-      $this->ascending = $ascending;
-      return $this;
+        $this->ascending = $ascending;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class RelatedListSort
      */
     public function getColumn()
     {
-      return $this->column;
+        return $this->column;
     }
 
     /**
@@ -57,8 +56,7 @@ class RelatedListSort
      */
     public function setColumn($column)
     {
-      $this->column = $column;
-      return $this;
+        $this->column = $column;
+        return $this;
     }
-
 }

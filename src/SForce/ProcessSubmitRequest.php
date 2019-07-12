@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class ProcessSubmitRequest extends ProcessRequest
 {
-
     /**
-     * @var ID $objectId
+     * @var ID
      */
     protected $objectId = null;
 
     /**
-     * @var ID $submitterId
+     * @var ID
      */
     protected $submitterId = null;
 
     /**
-     * @var string $processDefinitionNameOrId
+     * @var string
      */
     protected $processDefinitionNameOrId = null;
 
     /**
-     * @var boolean $skipEntryCriteria
+     * @var boolean
      */
     protected $skipEntryCriteria = null;
 
@@ -30,8 +29,8 @@ class ProcessSubmitRequest extends ProcessRequest
      */
     public function __construct($objectId = null)
     {
-      parent::__construct();
-      $this->objectId = $objectId;
+        parent::__construct();
+        $this->objectId = $objectId;
     }
 
     /**
@@ -39,7 +38,7 @@ class ProcessSubmitRequest extends ProcessRequest
      */
     public function getObjectId()
     {
-      return $this->objectId;
+        return $this->objectId;
     }
 
     /**
@@ -48,8 +47,8 @@ class ProcessSubmitRequest extends ProcessRequest
      */
     public function setObjectId($objectId)
     {
-      $this->objectId = $objectId;
-      return $this;
+        $this->objectId = $objectId;
+        return $this;
     }
 
     /**
@@ -57,7 +56,7 @@ class ProcessSubmitRequest extends ProcessRequest
      */
     public function getSubmitterId()
     {
-      return $this->submitterId;
+        return $this->submitterId;
     }
 
     /**
@@ -66,8 +65,8 @@ class ProcessSubmitRequest extends ProcessRequest
      */
     public function setSubmitterId($submitterId)
     {
-      $this->submitterId = $submitterId;
-      return $this;
+        $this->submitterId = $submitterId;
+        return $this;
     }
 
     /**
@@ -75,7 +74,7 @@ class ProcessSubmitRequest extends ProcessRequest
      */
     public function getProcessDefinitionNameOrId()
     {
-      return $this->processDefinitionNameOrId;
+        return $this->processDefinitionNameOrId;
     }
 
     /**
@@ -84,8 +83,8 @@ class ProcessSubmitRequest extends ProcessRequest
      */
     public function setProcessDefinitionNameOrId($processDefinitionNameOrId)
     {
-      $this->processDefinitionNameOrId = $processDefinitionNameOrId;
-      return $this;
+        $this->processDefinitionNameOrId = $processDefinitionNameOrId;
+        return $this;
     }
 
     /**
@@ -93,7 +92,7 @@ class ProcessSubmitRequest extends ProcessRequest
      */
     public function getSkipEntryCriteria()
     {
-      return $this->skipEntryCriteria;
+        return $this->skipEntryCriteria;
     }
 
     /**
@@ -102,8 +101,7 @@ class ProcessSubmitRequest extends ProcessRequest
      */
     public function setSkipEntryCriteria($skipEntryCriteria)
     {
-      $this->skipEntryCriteria = $skipEntryCriteria;
-      return $this;
+        $this->skipEntryCriteria = $skipEntryCriteria;
+        return $this;
     }
-
 }

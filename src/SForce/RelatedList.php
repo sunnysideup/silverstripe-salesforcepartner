@@ -4,54 +4,53 @@ namespace SForce\Wsdl;
 
 class RelatedList
 {
-
     /**
-     * @var ShareAccessLevel $accessLevelRequiredForCreate
+     * @var ShareAccessLevel
      */
     protected $accessLevelRequiredForCreate = null;
 
     /**
-     * @var DescribeLayoutButton[] $buttons
+     * @var DescribeLayoutButton[]
      */
     protected $buttons = null;
 
     /**
-     * @var RelatedListColumn[] $columns
+     * @var RelatedListColumn[]
      */
     protected $columns = null;
 
     /**
-     * @var boolean $custom
+     * @var boolean
      */
     protected $custom = null;
 
     /**
-     * @var string $field
+     * @var string
      */
     protected $field = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var int $limitRows
+     * @var int
      */
     protected $limitRows = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var string $sobject
+     * @var string
      */
     protected $sobject = null;
 
     /**
-     * @var RelatedListSort[] $sort
+     * @var RelatedListSort[]
      */
     protected $sort = null;
 
@@ -64,11 +63,11 @@ class RelatedList
      */
     public function __construct(array $columns = null, $custom = null, $label = null, $limitRows = null, $name = null)
     {
-      $this->columns = $columns;
-      $this->custom = $custom;
-      $this->label = $label;
-      $this->limitRows = $limitRows;
-      $this->name = $name;
+        $this->columns = $columns;
+        $this->custom = $custom;
+        $this->label = $label;
+        $this->limitRows = $limitRows;
+        $this->name = $name;
     }
 
     /**
@@ -76,7 +75,7 @@ class RelatedList
      */
     public function getAccessLevelRequiredForCreate()
     {
-      return $this->accessLevelRequiredForCreate;
+        return $this->accessLevelRequiredForCreate;
     }
 
     /**
@@ -85,8 +84,8 @@ class RelatedList
      */
     public function setAccessLevelRequiredForCreate($accessLevelRequiredForCreate)
     {
-      $this->accessLevelRequiredForCreate = $accessLevelRequiredForCreate;
-      return $this;
+        $this->accessLevelRequiredForCreate = $accessLevelRequiredForCreate;
+        return $this;
     }
 
     /**
@@ -94,7 +93,7 @@ class RelatedList
      */
     public function getButtons()
     {
-      return $this->buttons;
+        return $this->buttons;
     }
 
     /**
@@ -103,8 +102,8 @@ class RelatedList
      */
     public function setButtons(array $buttons = null)
     {
-      $this->buttons = $buttons;
-      return $this;
+        $this->buttons = $buttons;
+        return $this;
     }
 
     /**
@@ -112,7 +111,7 @@ class RelatedList
      */
     public function getColumns()
     {
-      return $this->columns;
+        return $this->columns;
     }
 
     /**
@@ -121,8 +120,8 @@ class RelatedList
      */
     public function setColumns(array $columns)
     {
-      $this->columns = $columns;
-      return $this;
+        $this->columns = $columns;
+        return $this;
     }
 
     /**
@@ -130,7 +129,7 @@ class RelatedList
      */
     public function getCustom()
     {
-      return $this->custom;
+        return $this->custom;
     }
 
     /**
@@ -139,8 +138,8 @@ class RelatedList
      */
     public function setCustom($custom)
     {
-      $this->custom = $custom;
-      return $this;
+        $this->custom = $custom;
+        return $this;
     }
 
     /**
@@ -148,7 +147,7 @@ class RelatedList
      */
     public function getField()
     {
-      return $this->field;
+        return $this->field;
     }
 
     /**
@@ -157,8 +156,8 @@ class RelatedList
      */
     public function setField($field)
     {
-      $this->field = $field;
-      return $this;
+        $this->field = $field;
+        return $this;
     }
 
     /**
@@ -166,7 +165,7 @@ class RelatedList
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -175,8 +174,8 @@ class RelatedList
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -184,7 +183,7 @@ class RelatedList
      */
     public function getLimitRows()
     {
-      return $this->limitRows;
+        return $this->limitRows;
     }
 
     /**
@@ -193,8 +192,8 @@ class RelatedList
      */
     public function setLimitRows($limitRows)
     {
-      $this->limitRows = $limitRows;
-      return $this;
+        $this->limitRows = $limitRows;
+        return $this;
     }
 
     /**
@@ -202,7 +201,7 @@ class RelatedList
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -211,8 +210,8 @@ class RelatedList
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -220,7 +219,7 @@ class RelatedList
      */
     public function getSobject()
     {
-      return $this->sobject;
+        return $this->sobject;
     }
 
     /**
@@ -229,8 +228,8 @@ class RelatedList
      */
     public function setSobject($sobject)
     {
-      $this->sobject = $sobject;
-      return $this;
+        $this->sobject = $sobject;
+        return $this;
     }
 
     /**
@@ -238,7 +237,7 @@ class RelatedList
      */
     public function getSort()
     {
-      return $this->sort;
+        return $this->sort;
     }
 
     /**
@@ -247,8 +246,7 @@ class RelatedList
      */
     public function setSort(array $sort = null)
     {
-      $this->sort = $sort;
-      return $this;
+        $this->sort = $sort;
+        return $this;
     }
-
 }

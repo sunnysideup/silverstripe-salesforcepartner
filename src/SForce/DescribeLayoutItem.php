@@ -4,34 +4,33 @@ namespace SForce\Wsdl;
 
 class DescribeLayoutItem
 {
-
     /**
-     * @var boolean $editableForNew
+     * @var boolean
      */
     protected $editableForNew = null;
 
     /**
-     * @var boolean $editableForUpdate
+     * @var boolean
      */
     protected $editableForUpdate = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var DescribeLayoutComponent[] $layoutComponents
+     * @var DescribeLayoutComponent[]
      */
     protected $layoutComponents = null;
 
     /**
-     * @var boolean $placeholder
+     * @var boolean
      */
     protected $placeholder = null;
 
     /**
-     * @var boolean $required
+     * @var boolean
      */
     protected $required = null;
 
@@ -43,10 +42,10 @@ class DescribeLayoutItem
      */
     public function __construct($editableForNew = null, $editableForUpdate = null, $placeholder = null, $required = null)
     {
-      $this->editableForNew = $editableForNew;
-      $this->editableForUpdate = $editableForUpdate;
-      $this->placeholder = $placeholder;
-      $this->required = $required;
+        $this->editableForNew = $editableForNew;
+        $this->editableForUpdate = $editableForUpdate;
+        $this->placeholder = $placeholder;
+        $this->required = $required;
     }
 
     /**
@@ -54,7 +53,7 @@ class DescribeLayoutItem
      */
     public function getEditableForNew()
     {
-      return $this->editableForNew;
+        return $this->editableForNew;
     }
 
     /**
@@ -63,8 +62,8 @@ class DescribeLayoutItem
      */
     public function setEditableForNew($editableForNew)
     {
-      $this->editableForNew = $editableForNew;
-      return $this;
+        $this->editableForNew = $editableForNew;
+        return $this;
     }
 
     /**
@@ -72,7 +71,7 @@ class DescribeLayoutItem
      */
     public function getEditableForUpdate()
     {
-      return $this->editableForUpdate;
+        return $this->editableForUpdate;
     }
 
     /**
@@ -81,8 +80,8 @@ class DescribeLayoutItem
      */
     public function setEditableForUpdate($editableForUpdate)
     {
-      $this->editableForUpdate = $editableForUpdate;
-      return $this;
+        $this->editableForUpdate = $editableForUpdate;
+        return $this;
     }
 
     /**
@@ -90,7 +89,7 @@ class DescribeLayoutItem
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -99,8 +98,8 @@ class DescribeLayoutItem
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -108,7 +107,7 @@ class DescribeLayoutItem
      */
     public function getLayoutComponents()
     {
-      return $this->layoutComponents;
+        return $this->layoutComponents;
     }
 
     /**
@@ -117,8 +116,8 @@ class DescribeLayoutItem
      */
     public function setLayoutComponents(array $layoutComponents = null)
     {
-      $this->layoutComponents = $layoutComponents;
-      return $this;
+        $this->layoutComponents = $layoutComponents;
+        return $this;
     }
 
     /**
@@ -126,7 +125,7 @@ class DescribeLayoutItem
      */
     public function getPlaceholder()
     {
-      return $this->placeholder;
+        return $this->placeholder;
     }
 
     /**
@@ -135,8 +134,8 @@ class DescribeLayoutItem
      */
     public function setPlaceholder($placeholder)
     {
-      $this->placeholder = $placeholder;
-      return $this;
+        $this->placeholder = $placeholder;
+        return $this;
     }
 
     /**
@@ -144,7 +143,7 @@ class DescribeLayoutItem
      */
     public function getRequired()
     {
-      return $this->required;
+        return $this->required;
     }
 
     /**
@@ -153,8 +152,7 @@ class DescribeLayoutItem
      */
     public function setRequired($required)
     {
-      $this->required = $required;
-      return $this;
+        $this->required = $required;
+        return $this;
     }
-
 }

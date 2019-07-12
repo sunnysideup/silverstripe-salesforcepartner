@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class undelete
 {
-
     /**
-     * @var ID $ids
+     * @var ID
      */
     protected $ids = null;
 
@@ -15,7 +14,7 @@ class undelete
      */
     public function __construct($ids = null)
     {
-      $this->ids = $ids;
+        $this->ids = $ids;
     }
 
     /**
@@ -23,7 +22,7 @@ class undelete
      */
     public function getIds()
     {
-      return $this->ids;
+        return $this->ids;
     }
 
     /**
@@ -32,8 +31,7 @@ class undelete
      */
     public function setIds($ids)
     {
-      $this->ids = $ids;
-      return $this;
+        $this->ids = $ids;
+        return $this;
     }
-
 }

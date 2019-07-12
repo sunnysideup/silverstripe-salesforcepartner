@@ -4,104 +4,103 @@ namespace SForce\Wsdl;
 
 class DescribeLayoutButton
 {
-
     /**
-     * @var WebLinkWindowType $behavior
+     * @var WebLinkWindowType
      */
     protected $behavior = null;
 
     /**
-     * @var DescribeColor[] $colors
+     * @var DescribeColor[]
      */
     protected $colors = null;
 
     /**
-     * @var string $content
+     * @var string
      */
     protected $content = null;
 
     /**
-     * @var WebLinkType $contentSource
+     * @var WebLinkType
      */
     protected $contentSource = null;
 
     /**
-     * @var boolean $custom
+     * @var boolean
      */
     protected $custom = null;
 
     /**
-     * @var string $encoding
+     * @var string
      */
     protected $encoding = null;
 
     /**
-     * @var int $height
+     * @var int
      */
     protected $height = null;
 
     /**
-     * @var DescribeIcon[] $icons
+     * @var DescribeIcon[]
      */
     protected $icons = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var boolean $menubar
+     * @var boolean
      */
     protected $menubar = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var boolean $overridden
+     * @var boolean
      */
     protected $overridden = null;
 
     /**
-     * @var boolean $resizeable
+     * @var boolean
      */
     protected $resizeable = null;
 
     /**
-     * @var boolean $scrollbars
+     * @var boolean
      */
     protected $scrollbars = null;
 
     /**
-     * @var boolean $showsLocation
+     * @var boolean
      */
     protected $showsLocation = null;
 
     /**
-     * @var boolean $showsStatus
+     * @var boolean
      */
     protected $showsStatus = null;
 
     /**
-     * @var boolean $toolbar
+     * @var boolean
      */
     protected $toolbar = null;
 
     /**
-     * @var string $url
+     * @var string
      */
     protected $url = null;
 
     /**
-     * @var int $width
+     * @var int
      */
     protected $width = null;
 
     /**
-     * @var WebLinkPosition $windowPosition
+     * @var WebLinkPosition
      */
     protected $windowPosition = null;
 
@@ -111,8 +110,8 @@ class DescribeLayoutButton
      */
     public function __construct($custom = null, $overridden = null)
     {
-      $this->custom = $custom;
-      $this->overridden = $overridden;
+        $this->custom = $custom;
+        $this->overridden = $overridden;
     }
 
     /**
@@ -120,7 +119,7 @@ class DescribeLayoutButton
      */
     public function getBehavior()
     {
-      return $this->behavior;
+        return $this->behavior;
     }
 
     /**
@@ -129,8 +128,8 @@ class DescribeLayoutButton
      */
     public function setBehavior($behavior)
     {
-      $this->behavior = $behavior;
-      return $this;
+        $this->behavior = $behavior;
+        return $this;
     }
 
     /**
@@ -138,7 +137,7 @@ class DescribeLayoutButton
      */
     public function getColors()
     {
-      return $this->colors;
+        return $this->colors;
     }
 
     /**
@@ -147,8 +146,8 @@ class DescribeLayoutButton
      */
     public function setColors(array $colors = null)
     {
-      $this->colors = $colors;
-      return $this;
+        $this->colors = $colors;
+        return $this;
     }
 
     /**
@@ -156,7 +155,7 @@ class DescribeLayoutButton
      */
     public function getContent()
     {
-      return $this->content;
+        return $this->content;
     }
 
     /**
@@ -165,8 +164,8 @@ class DescribeLayoutButton
      */
     public function setContent($content)
     {
-      $this->content = $content;
-      return $this;
+        $this->content = $content;
+        return $this;
     }
 
     /**
@@ -174,7 +173,7 @@ class DescribeLayoutButton
      */
     public function getContentSource()
     {
-      return $this->contentSource;
+        return $this->contentSource;
     }
 
     /**
@@ -183,8 +182,8 @@ class DescribeLayoutButton
      */
     public function setContentSource($contentSource)
     {
-      $this->contentSource = $contentSource;
-      return $this;
+        $this->contentSource = $contentSource;
+        return $this;
     }
 
     /**
@@ -192,7 +191,7 @@ class DescribeLayoutButton
      */
     public function getCustom()
     {
-      return $this->custom;
+        return $this->custom;
     }
 
     /**
@@ -201,8 +200,8 @@ class DescribeLayoutButton
      */
     public function setCustom($custom)
     {
-      $this->custom = $custom;
-      return $this;
+        $this->custom = $custom;
+        return $this;
     }
 
     /**
@@ -210,7 +209,7 @@ class DescribeLayoutButton
      */
     public function getEncoding()
     {
-      return $this->encoding;
+        return $this->encoding;
     }
 
     /**
@@ -219,8 +218,8 @@ class DescribeLayoutButton
      */
     public function setEncoding($encoding)
     {
-      $this->encoding = $encoding;
-      return $this;
+        $this->encoding = $encoding;
+        return $this;
     }
 
     /**
@@ -228,7 +227,7 @@ class DescribeLayoutButton
      */
     public function getHeight()
     {
-      return $this->height;
+        return $this->height;
     }
 
     /**
@@ -237,8 +236,8 @@ class DescribeLayoutButton
      */
     public function setHeight($height)
     {
-      $this->height = $height;
-      return $this;
+        $this->height = $height;
+        return $this;
     }
 
     /**
@@ -246,7 +245,7 @@ class DescribeLayoutButton
      */
     public function getIcons()
     {
-      return $this->icons;
+        return $this->icons;
     }
 
     /**
@@ -255,8 +254,8 @@ class DescribeLayoutButton
      */
     public function setIcons(array $icons = null)
     {
-      $this->icons = $icons;
-      return $this;
+        $this->icons = $icons;
+        return $this;
     }
 
     /**
@@ -264,7 +263,7 @@ class DescribeLayoutButton
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -273,8 +272,8 @@ class DescribeLayoutButton
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -282,7 +281,7 @@ class DescribeLayoutButton
      */
     public function getMenubar()
     {
-      return $this->menubar;
+        return $this->menubar;
     }
 
     /**
@@ -291,8 +290,8 @@ class DescribeLayoutButton
      */
     public function setMenubar($menubar)
     {
-      $this->menubar = $menubar;
-      return $this;
+        $this->menubar = $menubar;
+        return $this;
     }
 
     /**
@@ -300,7 +299,7 @@ class DescribeLayoutButton
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -309,8 +308,8 @@ class DescribeLayoutButton
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -318,7 +317,7 @@ class DescribeLayoutButton
      */
     public function getOverridden()
     {
-      return $this->overridden;
+        return $this->overridden;
     }
 
     /**
@@ -327,8 +326,8 @@ class DescribeLayoutButton
      */
     public function setOverridden($overridden)
     {
-      $this->overridden = $overridden;
-      return $this;
+        $this->overridden = $overridden;
+        return $this;
     }
 
     /**
@@ -336,7 +335,7 @@ class DescribeLayoutButton
      */
     public function getResizeable()
     {
-      return $this->resizeable;
+        return $this->resizeable;
     }
 
     /**
@@ -345,8 +344,8 @@ class DescribeLayoutButton
      */
     public function setResizeable($resizeable)
     {
-      $this->resizeable = $resizeable;
-      return $this;
+        $this->resizeable = $resizeable;
+        return $this;
     }
 
     /**
@@ -354,7 +353,7 @@ class DescribeLayoutButton
      */
     public function getScrollbars()
     {
-      return $this->scrollbars;
+        return $this->scrollbars;
     }
 
     /**
@@ -363,8 +362,8 @@ class DescribeLayoutButton
      */
     public function setScrollbars($scrollbars)
     {
-      $this->scrollbars = $scrollbars;
-      return $this;
+        $this->scrollbars = $scrollbars;
+        return $this;
     }
 
     /**
@@ -372,7 +371,7 @@ class DescribeLayoutButton
      */
     public function getShowsLocation()
     {
-      return $this->showsLocation;
+        return $this->showsLocation;
     }
 
     /**
@@ -381,8 +380,8 @@ class DescribeLayoutButton
      */
     public function setShowsLocation($showsLocation)
     {
-      $this->showsLocation = $showsLocation;
-      return $this;
+        $this->showsLocation = $showsLocation;
+        return $this;
     }
 
     /**
@@ -390,7 +389,7 @@ class DescribeLayoutButton
      */
     public function getShowsStatus()
     {
-      return $this->showsStatus;
+        return $this->showsStatus;
     }
 
     /**
@@ -399,8 +398,8 @@ class DescribeLayoutButton
      */
     public function setShowsStatus($showsStatus)
     {
-      $this->showsStatus = $showsStatus;
-      return $this;
+        $this->showsStatus = $showsStatus;
+        return $this;
     }
 
     /**
@@ -408,7 +407,7 @@ class DescribeLayoutButton
      */
     public function getToolbar()
     {
-      return $this->toolbar;
+        return $this->toolbar;
     }
 
     /**
@@ -417,8 +416,8 @@ class DescribeLayoutButton
      */
     public function setToolbar($toolbar)
     {
-      $this->toolbar = $toolbar;
-      return $this;
+        $this->toolbar = $toolbar;
+        return $this;
     }
 
     /**
@@ -426,7 +425,7 @@ class DescribeLayoutButton
      */
     public function getUrl()
     {
-      return $this->url;
+        return $this->url;
     }
 
     /**
@@ -435,8 +434,8 @@ class DescribeLayoutButton
      */
     public function setUrl($url)
     {
-      $this->url = $url;
-      return $this;
+        $this->url = $url;
+        return $this;
     }
 
     /**
@@ -444,7 +443,7 @@ class DescribeLayoutButton
      */
     public function getWidth()
     {
-      return $this->width;
+        return $this->width;
     }
 
     /**
@@ -453,8 +452,8 @@ class DescribeLayoutButton
      */
     public function setWidth($width)
     {
-      $this->width = $width;
-      return $this;
+        $this->width = $width;
+        return $this;
     }
 
     /**
@@ -462,7 +461,7 @@ class DescribeLayoutButton
      */
     public function getWindowPosition()
     {
-      return $this->windowPosition;
+        return $this->windowPosition;
     }
 
     /**
@@ -471,8 +470,7 @@ class DescribeLayoutButton
      */
     public function setWindowPosition($windowPosition)
     {
-      $this->windowPosition = $windowPosition;
-      return $this;
+        $this->windowPosition = $windowPosition;
+        return $this;
     }
-
 }

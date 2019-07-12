@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class DescribeSearchableEntityResult
 {
-
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var string $pluralLabel
+     * @var string
      */
     protected $pluralLabel = null;
 
@@ -27,9 +26,9 @@ class DescribeSearchableEntityResult
      */
     public function __construct($label = null, $name = null, $pluralLabel = null)
     {
-      $this->label = $label;
-      $this->name = $name;
-      $this->pluralLabel = $pluralLabel;
+        $this->label = $label;
+        $this->name = $name;
+        $this->pluralLabel = $pluralLabel;
     }
 
     /**
@@ -37,7 +36,7 @@ class DescribeSearchableEntityResult
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -46,8 +45,8 @@ class DescribeSearchableEntityResult
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class DescribeSearchableEntityResult
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -64,8 +63,8 @@ class DescribeSearchableEntityResult
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class DescribeSearchableEntityResult
      */
     public function getPluralLabel()
     {
-      return $this->pluralLabel;
+        return $this->pluralLabel;
     }
 
     /**
@@ -82,8 +81,7 @@ class DescribeSearchableEntityResult
      */
     public function setPluralLabel($pluralLabel)
     {
-      $this->pluralLabel = $pluralLabel;
-      return $this;
+        $this->pluralLabel = $pluralLabel;
+        return $this;
     }
-
 }

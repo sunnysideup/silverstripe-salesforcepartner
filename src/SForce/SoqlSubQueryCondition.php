@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class SoqlSubQueryCondition extends SoqlWhereCondition
 {
-
     /**
-     * @var string $field
+     * @var string
      */
     protected $field = null;
 
     /**
-     * @var soqlOperator $operator
+     * @var soqlOperator
      */
     protected $operator = null;
 
     /**
-     * @var string $subQuery
+     * @var string
      */
     protected $subQuery = null;
 
@@ -27,9 +26,9 @@ class SoqlSubQueryCondition extends SoqlWhereCondition
      */
     public function __construct($field = null, $operator = null, $subQuery = null)
     {
-      $this->field = $field;
-      $this->operator = $operator;
-      $this->subQuery = $subQuery;
+        $this->field = $field;
+        $this->operator = $operator;
+        $this->subQuery = $subQuery;
     }
 
     /**
@@ -37,7 +36,7 @@ class SoqlSubQueryCondition extends SoqlWhereCondition
      */
     public function getField()
     {
-      return $this->field;
+        return $this->field;
     }
 
     /**
@@ -46,8 +45,8 @@ class SoqlSubQueryCondition extends SoqlWhereCondition
      */
     public function setField($field)
     {
-      $this->field = $field;
-      return $this;
+        $this->field = $field;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class SoqlSubQueryCondition extends SoqlWhereCondition
      */
     public function getOperator()
     {
-      return $this->operator;
+        return $this->operator;
     }
 
     /**
@@ -64,8 +63,8 @@ class SoqlSubQueryCondition extends SoqlWhereCondition
      */
     public function setOperator($operator)
     {
-      $this->operator = $operator;
-      return $this;
+        $this->operator = $operator;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class SoqlSubQueryCondition extends SoqlWhereCondition
      */
     public function getSubQuery()
     {
-      return $this->subQuery;
+        return $this->subQuery;
     }
 
     /**
@@ -82,8 +81,7 @@ class SoqlSubQueryCondition extends SoqlWhereCondition
      */
     public function setSubQuery($subQuery)
     {
-      $this->subQuery = $subQuery;
-      return $this;
+        $this->subQuery = $subQuery;
+        return $this;
     }
-
 }

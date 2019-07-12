@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class MassEmailMessage extends Email
 {
-
     /**
-     * @var string $description
+     * @var string
      */
     protected $description = null;
 
     /**
-     * @var ID[] $targetObjectIds
+     * @var ID[]
      */
     protected $targetObjectIds = null;
 
     /**
-     * @var ID $templateId
+     * @var ID
      */
     protected $templateId = null;
 
     /**
-     * @var ID[] $whatIds
+     * @var ID[]
      */
     protected $whatIds = null;
 
@@ -30,8 +29,8 @@ class MassEmailMessage extends Email
      */
     public function __construct($templateId = null)
     {
-      parent::__construct();
-      $this->templateId = $templateId;
+        parent::__construct();
+        $this->templateId = $templateId;
     }
 
     /**
@@ -39,7 +38,7 @@ class MassEmailMessage extends Email
      */
     public function getDescription()
     {
-      return $this->description;
+        return $this->description;
     }
 
     /**
@@ -48,8 +47,8 @@ class MassEmailMessage extends Email
      */
     public function setDescription($description)
     {
-      $this->description = $description;
-      return $this;
+        $this->description = $description;
+        return $this;
     }
 
     /**
@@ -57,7 +56,7 @@ class MassEmailMessage extends Email
      */
     public function getTargetObjectIds()
     {
-      return $this->targetObjectIds;
+        return $this->targetObjectIds;
     }
 
     /**
@@ -66,8 +65,8 @@ class MassEmailMessage extends Email
      */
     public function setTargetObjectIds(array $targetObjectIds = null)
     {
-      $this->targetObjectIds = $targetObjectIds;
-      return $this;
+        $this->targetObjectIds = $targetObjectIds;
+        return $this;
     }
 
     /**
@@ -75,7 +74,7 @@ class MassEmailMessage extends Email
      */
     public function getTemplateId()
     {
-      return $this->templateId;
+        return $this->templateId;
     }
 
     /**
@@ -84,8 +83,8 @@ class MassEmailMessage extends Email
      */
     public function setTemplateId($templateId)
     {
-      $this->templateId = $templateId;
-      return $this;
+        $this->templateId = $templateId;
+        return $this;
     }
 
     /**
@@ -93,7 +92,7 @@ class MassEmailMessage extends Email
      */
     public function getWhatIds()
     {
-      return $this->whatIds;
+        return $this->whatIds;
     }
 
     /**
@@ -102,8 +101,7 @@ class MassEmailMessage extends Email
      */
     public function setWhatIds(array $whatIds = null)
     {
-      $this->whatIds = $whatIds;
-      return $this;
+        $this->whatIds = $whatIds;
+        return $this;
     }
-
 }

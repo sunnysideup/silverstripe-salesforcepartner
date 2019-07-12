@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class MruHeader
 {
-
     /**
-     * @var boolean $updateMru
+     * @var boolean
      */
     protected $updateMru = null;
 
@@ -15,7 +14,7 @@ class MruHeader
      */
     public function __construct($updateMru = null)
     {
-      $this->updateMru = $updateMru;
+        $this->updateMru = $updateMru;
     }
 
     /**
@@ -23,7 +22,7 @@ class MruHeader
      */
     public function getUpdateMru()
     {
-      return $this->updateMru;
+        return $this->updateMru;
     }
 
     /**
@@ -32,8 +31,7 @@ class MruHeader
      */
     public function setUpdateMru($updateMru)
     {
-      $this->updateMru = $updateMru;
-      return $this;
+        $this->updateMru = $updateMru;
+        return $this;
     }
-
 }

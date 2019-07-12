@@ -4,34 +4,33 @@ namespace SForce\Wsdl;
 
 class Canvas extends DescribeLayoutComponent
 {
-
     /**
-     * @var string $displayLocation
+     * @var string
      */
     protected $displayLocation = null;
 
     /**
-     * @var string $referenceId
+     * @var string
      */
     protected $referenceId = null;
 
     /**
-     * @var boolean $showLabel
+     * @var boolean
      */
     protected $showLabel = null;
 
     /**
-     * @var boolean $showScrollbars
+     * @var boolean
      */
     protected $showScrollbars = null;
 
     /**
-     * @var string $suggestedHeight
+     * @var string
      */
     protected $suggestedHeight = null;
 
     /**
-     * @var string $suggestedWidth
+     * @var string
      */
     protected $suggestedWidth = null;
 
@@ -48,13 +47,13 @@ class Canvas extends DescribeLayoutComponent
      */
     public function __construct($displayLines = null, $tabOrder = null, $type = null, $displayLocation = null, $referenceId = null, $showLabel = null, $showScrollbars = null, $suggestedHeight = null, $suggestedWidth = null)
     {
-      parent::__construct($displayLines, $tabOrder, $type);
-      $this->displayLocation = $displayLocation;
-      $this->referenceId = $referenceId;
-      $this->showLabel = $showLabel;
-      $this->showScrollbars = $showScrollbars;
-      $this->suggestedHeight = $suggestedHeight;
-      $this->suggestedWidth = $suggestedWidth;
+        parent::__construct($displayLines, $tabOrder, $type);
+        $this->displayLocation = $displayLocation;
+        $this->referenceId = $referenceId;
+        $this->showLabel = $showLabel;
+        $this->showScrollbars = $showScrollbars;
+        $this->suggestedHeight = $suggestedHeight;
+        $this->suggestedWidth = $suggestedWidth;
     }
 
     /**
@@ -62,7 +61,7 @@ class Canvas extends DescribeLayoutComponent
      */
     public function getDisplayLocation()
     {
-      return $this->displayLocation;
+        return $this->displayLocation;
     }
 
     /**
@@ -71,8 +70,8 @@ class Canvas extends DescribeLayoutComponent
      */
     public function setDisplayLocation($displayLocation)
     {
-      $this->displayLocation = $displayLocation;
-      return $this;
+        $this->displayLocation = $displayLocation;
+        return $this;
     }
 
     /**
@@ -80,7 +79,7 @@ class Canvas extends DescribeLayoutComponent
      */
     public function getReferenceId()
     {
-      return $this->referenceId;
+        return $this->referenceId;
     }
 
     /**
@@ -89,8 +88,8 @@ class Canvas extends DescribeLayoutComponent
      */
     public function setReferenceId($referenceId)
     {
-      $this->referenceId = $referenceId;
-      return $this;
+        $this->referenceId = $referenceId;
+        return $this;
     }
 
     /**
@@ -98,7 +97,7 @@ class Canvas extends DescribeLayoutComponent
      */
     public function getShowLabel()
     {
-      return $this->showLabel;
+        return $this->showLabel;
     }
 
     /**
@@ -107,8 +106,8 @@ class Canvas extends DescribeLayoutComponent
      */
     public function setShowLabel($showLabel)
     {
-      $this->showLabel = $showLabel;
-      return $this;
+        $this->showLabel = $showLabel;
+        return $this;
     }
 
     /**
@@ -116,7 +115,7 @@ class Canvas extends DescribeLayoutComponent
      */
     public function getShowScrollbars()
     {
-      return $this->showScrollbars;
+        return $this->showScrollbars;
     }
 
     /**
@@ -125,8 +124,8 @@ class Canvas extends DescribeLayoutComponent
      */
     public function setShowScrollbars($showScrollbars)
     {
-      $this->showScrollbars = $showScrollbars;
-      return $this;
+        $this->showScrollbars = $showScrollbars;
+        return $this;
     }
 
     /**
@@ -134,7 +133,7 @@ class Canvas extends DescribeLayoutComponent
      */
     public function getSuggestedHeight()
     {
-      return $this->suggestedHeight;
+        return $this->suggestedHeight;
     }
 
     /**
@@ -143,8 +142,8 @@ class Canvas extends DescribeLayoutComponent
      */
     public function setSuggestedHeight($suggestedHeight)
     {
-      $this->suggestedHeight = $suggestedHeight;
-      return $this;
+        $this->suggestedHeight = $suggestedHeight;
+        return $this;
     }
 
     /**
@@ -152,7 +151,7 @@ class Canvas extends DescribeLayoutComponent
      */
     public function getSuggestedWidth()
     {
-      return $this->suggestedWidth;
+        return $this->suggestedWidth;
     }
 
     /**
@@ -161,8 +160,7 @@ class Canvas extends DescribeLayoutComponent
      */
     public function setSuggestedWidth($suggestedWidth)
     {
-      $this->suggestedWidth = $suggestedWidth;
-      return $this;
+        $this->suggestedWidth = $suggestedWidth;
+        return $this;
     }
-
 }

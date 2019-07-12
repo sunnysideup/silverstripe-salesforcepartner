@@ -4,124 +4,123 @@ namespace SForce\Wsdl;
 
 class GetUserInfoResult
 {
-
     /**
-     * @var boolean $accessibilityMode
+     * @var boolean
      */
     protected $accessibilityMode = null;
 
     /**
-     * @var boolean $chatterExternal
+     * @var boolean
      */
     protected $chatterExternal = null;
 
     /**
-     * @var string $currencySymbol
+     * @var string
      */
     protected $currencySymbol = null;
 
     /**
-     * @var int $orgAttachmentFileSizeLimit
+     * @var int
      */
     protected $orgAttachmentFileSizeLimit = null;
 
     /**
-     * @var string $orgDefaultCurrencyIsoCode
+     * @var string
      */
     protected $orgDefaultCurrencyIsoCode = null;
 
     /**
-     * @var string $orgDefaultCurrencyLocale
+     * @var string
      */
     protected $orgDefaultCurrencyLocale = null;
 
     /**
-     * @var boolean $orgDisallowHtmlAttachments
+     * @var boolean
      */
     protected $orgDisallowHtmlAttachments = null;
 
     /**
-     * @var boolean $orgHasPersonAccounts
+     * @var boolean
      */
     protected $orgHasPersonAccounts = null;
 
     /**
-     * @var ID $organizationId
+     * @var ID
      */
     protected $organizationId = null;
 
     /**
-     * @var boolean $organizationMultiCurrency
+     * @var boolean
      */
     protected $organizationMultiCurrency = null;
 
     /**
-     * @var string $organizationName
+     * @var string
      */
     protected $organizationName = null;
 
     /**
-     * @var ID $profileId
+     * @var ID
      */
     protected $profileId = null;
 
     /**
-     * @var ID $roleId
+     * @var ID
      */
     protected $roleId = null;
 
     /**
-     * @var int $sessionSecondsValid
+     * @var int
      */
     protected $sessionSecondsValid = null;
 
     /**
-     * @var string $userDefaultCurrencyIsoCode
+     * @var string
      */
     protected $userDefaultCurrencyIsoCode = null;
 
     /**
-     * @var string $userEmail
+     * @var string
      */
     protected $userEmail = null;
 
     /**
-     * @var string $userFullName
+     * @var string
      */
     protected $userFullName = null;
 
     /**
-     * @var ID $userId
+     * @var ID
      */
     protected $userId = null;
 
     /**
-     * @var string $userLanguage
+     * @var string
      */
     protected $userLanguage = null;
 
     /**
-     * @var string $userLocale
+     * @var string
      */
     protected $userLocale = null;
 
     /**
-     * @var string $userName
+     * @var string
      */
     protected $userName = null;
 
     /**
-     * @var string $userTimeZone
+     * @var string
      */
     protected $userTimeZone = null;
 
     /**
-     * @var string $userType
+     * @var string
      */
     protected $userType = null;
 
     /**
-     * @var string $userUiSkin
+     * @var string
      */
     protected $userUiSkin = null;
 
@@ -148,25 +147,25 @@ class GetUserInfoResult
      */
     public function __construct($accessibilityMode = null, $chatterExternal = null, $orgAttachmentFileSizeLimit = null, $orgDisallowHtmlAttachments = null, $orgHasPersonAccounts = null, $organizationId = null, $organizationMultiCurrency = null, $organizationName = null, $profileId = null, $sessionSecondsValid = null, $userEmail = null, $userFullName = null, $userId = null, $userLanguage = null, $userLocale = null, $userName = null, $userTimeZone = null, $userType = null, $userUiSkin = null)
     {
-      $this->accessibilityMode = $accessibilityMode;
-      $this->chatterExternal = $chatterExternal;
-      $this->orgAttachmentFileSizeLimit = $orgAttachmentFileSizeLimit;
-      $this->orgDisallowHtmlAttachments = $orgDisallowHtmlAttachments;
-      $this->orgHasPersonAccounts = $orgHasPersonAccounts;
-      $this->organizationId = $organizationId;
-      $this->organizationMultiCurrency = $organizationMultiCurrency;
-      $this->organizationName = $organizationName;
-      $this->profileId = $profileId;
-      $this->sessionSecondsValid = $sessionSecondsValid;
-      $this->userEmail = $userEmail;
-      $this->userFullName = $userFullName;
-      $this->userId = $userId;
-      $this->userLanguage = $userLanguage;
-      $this->userLocale = $userLocale;
-      $this->userName = $userName;
-      $this->userTimeZone = $userTimeZone;
-      $this->userType = $userType;
-      $this->userUiSkin = $userUiSkin;
+        $this->accessibilityMode = $accessibilityMode;
+        $this->chatterExternal = $chatterExternal;
+        $this->orgAttachmentFileSizeLimit = $orgAttachmentFileSizeLimit;
+        $this->orgDisallowHtmlAttachments = $orgDisallowHtmlAttachments;
+        $this->orgHasPersonAccounts = $orgHasPersonAccounts;
+        $this->organizationId = $organizationId;
+        $this->organizationMultiCurrency = $organizationMultiCurrency;
+        $this->organizationName = $organizationName;
+        $this->profileId = $profileId;
+        $this->sessionSecondsValid = $sessionSecondsValid;
+        $this->userEmail = $userEmail;
+        $this->userFullName = $userFullName;
+        $this->userId = $userId;
+        $this->userLanguage = $userLanguage;
+        $this->userLocale = $userLocale;
+        $this->userName = $userName;
+        $this->userTimeZone = $userTimeZone;
+        $this->userType = $userType;
+        $this->userUiSkin = $userUiSkin;
     }
 
     /**
@@ -174,7 +173,7 @@ class GetUserInfoResult
      */
     public function getAccessibilityMode()
     {
-      return $this->accessibilityMode;
+        return $this->accessibilityMode;
     }
 
     /**
@@ -183,8 +182,8 @@ class GetUserInfoResult
      */
     public function setAccessibilityMode($accessibilityMode)
     {
-      $this->accessibilityMode = $accessibilityMode;
-      return $this;
+        $this->accessibilityMode = $accessibilityMode;
+        return $this;
     }
 
     /**
@@ -192,7 +191,7 @@ class GetUserInfoResult
      */
     public function getChatterExternal()
     {
-      return $this->chatterExternal;
+        return $this->chatterExternal;
     }
 
     /**
@@ -201,8 +200,8 @@ class GetUserInfoResult
      */
     public function setChatterExternal($chatterExternal)
     {
-      $this->chatterExternal = $chatterExternal;
-      return $this;
+        $this->chatterExternal = $chatterExternal;
+        return $this;
     }
 
     /**
@@ -210,7 +209,7 @@ class GetUserInfoResult
      */
     public function getCurrencySymbol()
     {
-      return $this->currencySymbol;
+        return $this->currencySymbol;
     }
 
     /**
@@ -219,8 +218,8 @@ class GetUserInfoResult
      */
     public function setCurrencySymbol($currencySymbol)
     {
-      $this->currencySymbol = $currencySymbol;
-      return $this;
+        $this->currencySymbol = $currencySymbol;
+        return $this;
     }
 
     /**
@@ -228,7 +227,7 @@ class GetUserInfoResult
      */
     public function getOrgAttachmentFileSizeLimit()
     {
-      return $this->orgAttachmentFileSizeLimit;
+        return $this->orgAttachmentFileSizeLimit;
     }
 
     /**
@@ -237,8 +236,8 @@ class GetUserInfoResult
      */
     public function setOrgAttachmentFileSizeLimit($orgAttachmentFileSizeLimit)
     {
-      $this->orgAttachmentFileSizeLimit = $orgAttachmentFileSizeLimit;
-      return $this;
+        $this->orgAttachmentFileSizeLimit = $orgAttachmentFileSizeLimit;
+        return $this;
     }
 
     /**
@@ -246,7 +245,7 @@ class GetUserInfoResult
      */
     public function getOrgDefaultCurrencyIsoCode()
     {
-      return $this->orgDefaultCurrencyIsoCode;
+        return $this->orgDefaultCurrencyIsoCode;
     }
 
     /**
@@ -255,8 +254,8 @@ class GetUserInfoResult
      */
     public function setOrgDefaultCurrencyIsoCode($orgDefaultCurrencyIsoCode)
     {
-      $this->orgDefaultCurrencyIsoCode = $orgDefaultCurrencyIsoCode;
-      return $this;
+        $this->orgDefaultCurrencyIsoCode = $orgDefaultCurrencyIsoCode;
+        return $this;
     }
 
     /**
@@ -264,7 +263,7 @@ class GetUserInfoResult
      */
     public function getOrgDefaultCurrencyLocale()
     {
-      return $this->orgDefaultCurrencyLocale;
+        return $this->orgDefaultCurrencyLocale;
     }
 
     /**
@@ -273,8 +272,8 @@ class GetUserInfoResult
      */
     public function setOrgDefaultCurrencyLocale($orgDefaultCurrencyLocale)
     {
-      $this->orgDefaultCurrencyLocale = $orgDefaultCurrencyLocale;
-      return $this;
+        $this->orgDefaultCurrencyLocale = $orgDefaultCurrencyLocale;
+        return $this;
     }
 
     /**
@@ -282,7 +281,7 @@ class GetUserInfoResult
      */
     public function getOrgDisallowHtmlAttachments()
     {
-      return $this->orgDisallowHtmlAttachments;
+        return $this->orgDisallowHtmlAttachments;
     }
 
     /**
@@ -291,8 +290,8 @@ class GetUserInfoResult
      */
     public function setOrgDisallowHtmlAttachments($orgDisallowHtmlAttachments)
     {
-      $this->orgDisallowHtmlAttachments = $orgDisallowHtmlAttachments;
-      return $this;
+        $this->orgDisallowHtmlAttachments = $orgDisallowHtmlAttachments;
+        return $this;
     }
 
     /**
@@ -300,7 +299,7 @@ class GetUserInfoResult
      */
     public function getOrgHasPersonAccounts()
     {
-      return $this->orgHasPersonAccounts;
+        return $this->orgHasPersonAccounts;
     }
 
     /**
@@ -309,8 +308,8 @@ class GetUserInfoResult
      */
     public function setOrgHasPersonAccounts($orgHasPersonAccounts)
     {
-      $this->orgHasPersonAccounts = $orgHasPersonAccounts;
-      return $this;
+        $this->orgHasPersonAccounts = $orgHasPersonAccounts;
+        return $this;
     }
 
     /**
@@ -318,7 +317,7 @@ class GetUserInfoResult
      */
     public function getOrganizationId()
     {
-      return $this->organizationId;
+        return $this->organizationId;
     }
 
     /**
@@ -327,8 +326,8 @@ class GetUserInfoResult
      */
     public function setOrganizationId($organizationId)
     {
-      $this->organizationId = $organizationId;
-      return $this;
+        $this->organizationId = $organizationId;
+        return $this;
     }
 
     /**
@@ -336,7 +335,7 @@ class GetUserInfoResult
      */
     public function getOrganizationMultiCurrency()
     {
-      return $this->organizationMultiCurrency;
+        return $this->organizationMultiCurrency;
     }
 
     /**
@@ -345,8 +344,8 @@ class GetUserInfoResult
      */
     public function setOrganizationMultiCurrency($organizationMultiCurrency)
     {
-      $this->organizationMultiCurrency = $organizationMultiCurrency;
-      return $this;
+        $this->organizationMultiCurrency = $organizationMultiCurrency;
+        return $this;
     }
 
     /**
@@ -354,7 +353,7 @@ class GetUserInfoResult
      */
     public function getOrganizationName()
     {
-      return $this->organizationName;
+        return $this->organizationName;
     }
 
     /**
@@ -363,8 +362,8 @@ class GetUserInfoResult
      */
     public function setOrganizationName($organizationName)
     {
-      $this->organizationName = $organizationName;
-      return $this;
+        $this->organizationName = $organizationName;
+        return $this;
     }
 
     /**
@@ -372,7 +371,7 @@ class GetUserInfoResult
      */
     public function getProfileId()
     {
-      return $this->profileId;
+        return $this->profileId;
     }
 
     /**
@@ -381,8 +380,8 @@ class GetUserInfoResult
      */
     public function setProfileId($profileId)
     {
-      $this->profileId = $profileId;
-      return $this;
+        $this->profileId = $profileId;
+        return $this;
     }
 
     /**
@@ -390,7 +389,7 @@ class GetUserInfoResult
      */
     public function getRoleId()
     {
-      return $this->roleId;
+        return $this->roleId;
     }
 
     /**
@@ -399,8 +398,8 @@ class GetUserInfoResult
      */
     public function setRoleId($roleId)
     {
-      $this->roleId = $roleId;
-      return $this;
+        $this->roleId = $roleId;
+        return $this;
     }
 
     /**
@@ -408,7 +407,7 @@ class GetUserInfoResult
      */
     public function getSessionSecondsValid()
     {
-      return $this->sessionSecondsValid;
+        return $this->sessionSecondsValid;
     }
 
     /**
@@ -417,8 +416,8 @@ class GetUserInfoResult
      */
     public function setSessionSecondsValid($sessionSecondsValid)
     {
-      $this->sessionSecondsValid = $sessionSecondsValid;
-      return $this;
+        $this->sessionSecondsValid = $sessionSecondsValid;
+        return $this;
     }
 
     /**
@@ -426,7 +425,7 @@ class GetUserInfoResult
      */
     public function getUserDefaultCurrencyIsoCode()
     {
-      return $this->userDefaultCurrencyIsoCode;
+        return $this->userDefaultCurrencyIsoCode;
     }
 
     /**
@@ -435,8 +434,8 @@ class GetUserInfoResult
      */
     public function setUserDefaultCurrencyIsoCode($userDefaultCurrencyIsoCode)
     {
-      $this->userDefaultCurrencyIsoCode = $userDefaultCurrencyIsoCode;
-      return $this;
+        $this->userDefaultCurrencyIsoCode = $userDefaultCurrencyIsoCode;
+        return $this;
     }
 
     /**
@@ -444,7 +443,7 @@ class GetUserInfoResult
      */
     public function getUserEmail()
     {
-      return $this->userEmail;
+        return $this->userEmail;
     }
 
     /**
@@ -453,8 +452,8 @@ class GetUserInfoResult
      */
     public function setUserEmail($userEmail)
     {
-      $this->userEmail = $userEmail;
-      return $this;
+        $this->userEmail = $userEmail;
+        return $this;
     }
 
     /**
@@ -462,7 +461,7 @@ class GetUserInfoResult
      */
     public function getUserFullName()
     {
-      return $this->userFullName;
+        return $this->userFullName;
     }
 
     /**
@@ -471,8 +470,8 @@ class GetUserInfoResult
      */
     public function setUserFullName($userFullName)
     {
-      $this->userFullName = $userFullName;
-      return $this;
+        $this->userFullName = $userFullName;
+        return $this;
     }
 
     /**
@@ -480,7 +479,7 @@ class GetUserInfoResult
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
@@ -489,8 +488,8 @@ class GetUserInfoResult
      */
     public function setUserId($userId)
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
 
     /**
@@ -498,7 +497,7 @@ class GetUserInfoResult
      */
     public function getUserLanguage()
     {
-      return $this->userLanguage;
+        return $this->userLanguage;
     }
 
     /**
@@ -507,8 +506,8 @@ class GetUserInfoResult
      */
     public function setUserLanguage($userLanguage)
     {
-      $this->userLanguage = $userLanguage;
-      return $this;
+        $this->userLanguage = $userLanguage;
+        return $this;
     }
 
     /**
@@ -516,7 +515,7 @@ class GetUserInfoResult
      */
     public function getUserLocale()
     {
-      return $this->userLocale;
+        return $this->userLocale;
     }
 
     /**
@@ -525,8 +524,8 @@ class GetUserInfoResult
      */
     public function setUserLocale($userLocale)
     {
-      $this->userLocale = $userLocale;
-      return $this;
+        $this->userLocale = $userLocale;
+        return $this;
     }
 
     /**
@@ -534,7 +533,7 @@ class GetUserInfoResult
      */
     public function getUserName()
     {
-      return $this->userName;
+        return $this->userName;
     }
 
     /**
@@ -543,8 +542,8 @@ class GetUserInfoResult
      */
     public function setUserName($userName)
     {
-      $this->userName = $userName;
-      return $this;
+        $this->userName = $userName;
+        return $this;
     }
 
     /**
@@ -552,7 +551,7 @@ class GetUserInfoResult
      */
     public function getUserTimeZone()
     {
-      return $this->userTimeZone;
+        return $this->userTimeZone;
     }
 
     /**
@@ -561,8 +560,8 @@ class GetUserInfoResult
      */
     public function setUserTimeZone($userTimeZone)
     {
-      $this->userTimeZone = $userTimeZone;
-      return $this;
+        $this->userTimeZone = $userTimeZone;
+        return $this;
     }
 
     /**
@@ -570,7 +569,7 @@ class GetUserInfoResult
      */
     public function getUserType()
     {
-      return $this->userType;
+        return $this->userType;
     }
 
     /**
@@ -579,8 +578,8 @@ class GetUserInfoResult
      */
     public function setUserType($userType)
     {
-      $this->userType = $userType;
-      return $this;
+        $this->userType = $userType;
+        return $this;
     }
 
     /**
@@ -588,7 +587,7 @@ class GetUserInfoResult
      */
     public function getUserUiSkin()
     {
-      return $this->userUiSkin;
+        return $this->userUiSkin;
     }
 
     /**
@@ -597,8 +596,7 @@ class GetUserInfoResult
      */
     public function setUserUiSkin($userUiSkin)
     {
-      $this->userUiSkin = $userUiSkin;
-      return $this;
+        $this->userUiSkin = $userUiSkin;
+        return $this;
     }
-
 }

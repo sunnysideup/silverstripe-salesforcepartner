@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class convertLead
 {
-
     /**
-     * @var LeadConvert $leadConverts
+     * @var LeadConvert
      */
     protected $leadConverts = null;
 
@@ -15,7 +14,7 @@ class convertLead
      */
     public function __construct($leadConverts = null)
     {
-      $this->leadConverts = $leadConverts;
+        $this->leadConverts = $leadConverts;
     }
 
     /**
@@ -23,7 +22,7 @@ class convertLead
      */
     public function getLeadConverts()
     {
-      return $this->leadConverts;
+        return $this->leadConverts;
     }
 
     /**
@@ -32,8 +31,7 @@ class convertLead
      */
     public function setLeadConverts($leadConverts)
     {
-      $this->leadConverts = $leadConverts;
-      return $this;
+        $this->leadConverts = $leadConverts;
+        return $this;
     }
-
 }

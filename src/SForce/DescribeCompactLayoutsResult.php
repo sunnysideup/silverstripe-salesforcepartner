@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class DescribeCompactLayoutsResult
 {
-
     /**
-     * @var DescribeCompactLayout[] $compactLayouts
+     * @var DescribeCompactLayout[]
      */
     protected $compactLayouts = null;
 
     /**
-     * @var ID $defaultCompactLayoutId
+     * @var ID
      */
     protected $defaultCompactLayoutId = null;
 
     /**
-     * @var RecordTypeCompactLayoutMapping[] $recordTypeCompactLayoutMappings
+     * @var RecordTypeCompactLayoutMapping[]
      */
     protected $recordTypeCompactLayoutMappings = null;
 
@@ -26,8 +25,8 @@ class DescribeCompactLayoutsResult
      */
     public function __construct(array $compactLayouts = null, $defaultCompactLayoutId = null)
     {
-      $this->compactLayouts = $compactLayouts;
-      $this->defaultCompactLayoutId = $defaultCompactLayoutId;
+        $this->compactLayouts = $compactLayouts;
+        $this->defaultCompactLayoutId = $defaultCompactLayoutId;
     }
 
     /**
@@ -35,7 +34,7 @@ class DescribeCompactLayoutsResult
      */
     public function getCompactLayouts()
     {
-      return $this->compactLayouts;
+        return $this->compactLayouts;
     }
 
     /**
@@ -44,8 +43,8 @@ class DescribeCompactLayoutsResult
      */
     public function setCompactLayouts(array $compactLayouts)
     {
-      $this->compactLayouts = $compactLayouts;
-      return $this;
+        $this->compactLayouts = $compactLayouts;
+        return $this;
     }
 
     /**
@@ -53,7 +52,7 @@ class DescribeCompactLayoutsResult
      */
     public function getDefaultCompactLayoutId()
     {
-      return $this->defaultCompactLayoutId;
+        return $this->defaultCompactLayoutId;
     }
 
     /**
@@ -62,8 +61,8 @@ class DescribeCompactLayoutsResult
      */
     public function setDefaultCompactLayoutId($defaultCompactLayoutId)
     {
-      $this->defaultCompactLayoutId = $defaultCompactLayoutId;
-      return $this;
+        $this->defaultCompactLayoutId = $defaultCompactLayoutId;
+        return $this;
     }
 
     /**
@@ -71,7 +70,7 @@ class DescribeCompactLayoutsResult
      */
     public function getRecordTypeCompactLayoutMappings()
     {
-      return $this->recordTypeCompactLayoutMappings;
+        return $this->recordTypeCompactLayoutMappings;
     }
 
     /**
@@ -80,8 +79,7 @@ class DescribeCompactLayoutsResult
      */
     public function setRecordTypeCompactLayoutMappings(array $recordTypeCompactLayoutMappings = null)
     {
-      $this->recordTypeCompactLayoutMappings = $recordTypeCompactLayoutMappings;
-      return $this;
+        $this->recordTypeCompactLayoutMappings = $recordTypeCompactLayoutMappings;
+        return $this;
     }
-
 }

@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class SearchRecordMetadata
 {
-
     /**
-     * @var boolean $searchPromoted
+     * @var boolean
      */
     protected $searchPromoted = null;
 
     /**
-     * @var boolean $spellCorrected
+     * @var boolean
      */
     protected $spellCorrected = null;
 
@@ -21,8 +20,8 @@ class SearchRecordMetadata
      */
     public function __construct($searchPromoted = null, $spellCorrected = null)
     {
-      $this->searchPromoted = $searchPromoted;
-      $this->spellCorrected = $spellCorrected;
+        $this->searchPromoted = $searchPromoted;
+        $this->spellCorrected = $spellCorrected;
     }
 
     /**
@@ -30,7 +29,7 @@ class SearchRecordMetadata
      */
     public function getSearchPromoted()
     {
-      return $this->searchPromoted;
+        return $this->searchPromoted;
     }
 
     /**
@@ -39,8 +38,8 @@ class SearchRecordMetadata
      */
     public function setSearchPromoted($searchPromoted)
     {
-      $this->searchPromoted = $searchPromoted;
-      return $this;
+        $this->searchPromoted = $searchPromoted;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class SearchRecordMetadata
      */
     public function getSpellCorrected()
     {
-      return $this->spellCorrected;
+        return $this->spellCorrected;
     }
 
     /**
@@ -57,8 +56,7 @@ class SearchRecordMetadata
      */
     public function setSpellCorrected($spellCorrected)
     {
-      $this->spellCorrected = $spellCorrected;
-      return $this;
+        $this->spellCorrected = $spellCorrected;
+        return $this;
     }
-
 }

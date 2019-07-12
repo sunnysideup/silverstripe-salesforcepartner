@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class PerformQuickActionResult
 {
-
     /**
-     * @var ID $contextId
+     * @var ID
      */
     protected $contextId = null;
 
     /**
-     * @var boolean $created
+     * @var boolean
      */
     protected $created = null;
 
     /**
-     * @var Error[] $errors
+     * @var Error[]
      */
     protected $errors = null;
 
     /**
-     * @var ID[] $feedItemIds
+     * @var ID[]
      */
     protected $feedItemIds = null;
 
     /**
-     * @var ID[] $ids
+     * @var ID[]
      */
     protected $ids = null;
 
     /**
-     * @var boolean $success
+     * @var boolean
      */
     protected $success = null;
 
     /**
-     * @var string $successMessage
+     * @var string
      */
     protected $successMessage = null;
 
@@ -46,8 +45,8 @@ class PerformQuickActionResult
      */
     public function __construct($created = null, $success = null)
     {
-      $this->created = $created;
-      $this->success = $success;
+        $this->created = $created;
+        $this->success = $success;
     }
 
     /**
@@ -55,7 +54,7 @@ class PerformQuickActionResult
      */
     public function getContextId()
     {
-      return $this->contextId;
+        return $this->contextId;
     }
 
     /**
@@ -64,8 +63,8 @@ class PerformQuickActionResult
      */
     public function setContextId($contextId)
     {
-      $this->contextId = $contextId;
-      return $this;
+        $this->contextId = $contextId;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class PerformQuickActionResult
      */
     public function getCreated()
     {
-      return $this->created;
+        return $this->created;
     }
 
     /**
@@ -82,8 +81,8 @@ class PerformQuickActionResult
      */
     public function setCreated($created)
     {
-      $this->created = $created;
-      return $this;
+        $this->created = $created;
+        return $this;
     }
 
     /**
@@ -91,7 +90,7 @@ class PerformQuickActionResult
      */
     public function getErrors()
     {
-      return $this->errors;
+        return $this->errors;
     }
 
     /**
@@ -100,8 +99,8 @@ class PerformQuickActionResult
      */
     public function setErrors(array $errors = null)
     {
-      $this->errors = $errors;
-      return $this;
+        $this->errors = $errors;
+        return $this;
     }
 
     /**
@@ -109,7 +108,7 @@ class PerformQuickActionResult
      */
     public function getFeedItemIds()
     {
-      return $this->feedItemIds;
+        return $this->feedItemIds;
     }
 
     /**
@@ -118,8 +117,8 @@ class PerformQuickActionResult
      */
     public function setFeedItemIds(array $feedItemIds = null)
     {
-      $this->feedItemIds = $feedItemIds;
-      return $this;
+        $this->feedItemIds = $feedItemIds;
+        return $this;
     }
 
     /**
@@ -127,7 +126,7 @@ class PerformQuickActionResult
      */
     public function getIds()
     {
-      return $this->ids;
+        return $this->ids;
     }
 
     /**
@@ -136,8 +135,8 @@ class PerformQuickActionResult
      */
     public function setIds(array $ids = null)
     {
-      $this->ids = $ids;
-      return $this;
+        $this->ids = $ids;
+        return $this;
     }
 
     /**
@@ -145,7 +144,7 @@ class PerformQuickActionResult
      */
     public function getSuccess()
     {
-      return $this->success;
+        return $this->success;
     }
 
     /**
@@ -154,8 +153,8 @@ class PerformQuickActionResult
      */
     public function setSuccess($success)
     {
-      $this->success = $success;
-      return $this;
+        $this->success = $success;
+        return $this;
     }
 
     /**
@@ -163,7 +162,7 @@ class PerformQuickActionResult
      */
     public function getSuccessMessage()
     {
-      return $this->successMessage;
+        return $this->successMessage;
     }
 
     /**
@@ -172,8 +171,7 @@ class PerformQuickActionResult
      */
     public function setSuccessMessage($successMessage)
     {
-      $this->successMessage = $successMessage;
-      return $this;
+        $this->successMessage = $successMessage;
+        return $this;
     }
-
 }

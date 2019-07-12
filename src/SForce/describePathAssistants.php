@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class describePathAssistants
 {
-
     /**
-     * @var string $sObjectType
+     * @var string
      */
     protected $sObjectType = null;
 
     /**
-     * @var string $picklistValue
+     * @var string
      */
     protected $picklistValue = null;
 
     /**
-     * @var ID $recordTypeIds
+     * @var ID
      */
     protected $recordTypeIds = null;
 
@@ -27,9 +26,9 @@ class describePathAssistants
      */
     public function __construct($sObjectType = null, $picklistValue = null, $recordTypeIds = null)
     {
-      $this->sObjectType = $sObjectType;
-      $this->picklistValue = $picklistValue;
-      $this->recordTypeIds = $recordTypeIds;
+        $this->sObjectType = $sObjectType;
+        $this->picklistValue = $picklistValue;
+        $this->recordTypeIds = $recordTypeIds;
     }
 
     /**
@@ -37,7 +36,7 @@ class describePathAssistants
      */
     public function getSObjectType()
     {
-      return $this->sObjectType;
+        return $this->sObjectType;
     }
 
     /**
@@ -46,8 +45,8 @@ class describePathAssistants
      */
     public function setSObjectType($sObjectType)
     {
-      $this->sObjectType = $sObjectType;
-      return $this;
+        $this->sObjectType = $sObjectType;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class describePathAssistants
      */
     public function getPicklistValue()
     {
-      return $this->picklistValue;
+        return $this->picklistValue;
     }
 
     /**
@@ -64,8 +63,8 @@ class describePathAssistants
      */
     public function setPicklistValue($picklistValue)
     {
-      $this->picklistValue = $picklistValue;
-      return $this;
+        $this->picklistValue = $picklistValue;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class describePathAssistants
      */
     public function getRecordTypeIds()
     {
-      return $this->recordTypeIds;
+        return $this->recordTypeIds;
     }
 
     /**
@@ -82,8 +81,7 @@ class describePathAssistants
      */
     public function setRecordTypeIds($recordTypeIds)
     {
-      $this->recordTypeIds = $recordTypeIds;
-      return $this;
+        $this->recordTypeIds = $recordTypeIds;
+        return $this;
     }
-
 }

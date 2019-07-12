@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class describeAvailableQuickActions
 {
-
     /**
-     * @var string $contextType
+     * @var string
      */
     protected $contextType = null;
 
@@ -15,7 +14,7 @@ class describeAvailableQuickActions
      */
     public function __construct($contextType = null)
     {
-      $this->contextType = $contextType;
+        $this->contextType = $contextType;
     }
 
     /**
@@ -23,7 +22,7 @@ class describeAvailableQuickActions
      */
     public function getContextType()
     {
-      return $this->contextType;
+        return $this->contextType;
     }
 
     /**
@@ -32,8 +31,7 @@ class describeAvailableQuickActions
      */
     public function setContextType($contextType)
     {
-      $this->contextType = $contextType;
-      return $this;
+        $this->contextType = $contextType;
+        return $this;
     }
-
 }

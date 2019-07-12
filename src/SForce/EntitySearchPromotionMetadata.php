@@ -4,16 +4,13 @@ namespace SForce\Wsdl;
 
 class EntitySearchPromotionMetadata
 {
-
     /**
-     * @var int $promotedResultCount
+     * @var int
      */
     protected $promotedResultCount = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -21,7 +18,7 @@ class EntitySearchPromotionMetadata
      */
     public function getPromotedResultCount()
     {
-      return $this->promotedResultCount;
+        return $this->promotedResultCount;
     }
 
     /**
@@ -30,8 +27,7 @@ class EntitySearchPromotionMetadata
      */
     public function setPromotedResultCount($promotedResultCount)
     {
-      $this->promotedResultCount = $promotedResultCount;
-      return $this;
+        $this->promotedResultCount = $promotedResultCount;
+        return $this;
     }
-
 }

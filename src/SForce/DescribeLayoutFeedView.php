@@ -4,16 +4,13 @@ namespace SForce\Wsdl;
 
 class DescribeLayoutFeedView
 {
-
     /**
-     * @var DescribeLayoutFeedFilter[] $feedFilters
+     * @var DescribeLayoutFeedFilter[]
      */
     protected $feedFilters = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -21,7 +18,7 @@ class DescribeLayoutFeedView
      */
     public function getFeedFilters()
     {
-      return $this->feedFilters;
+        return $this->feedFilters;
     }
 
     /**
@@ -30,8 +27,7 @@ class DescribeLayoutFeedView
      */
     public function setFeedFilters(array $feedFilters = null)
     {
-      $this->feedFilters = $feedFilters;
-      return $this;
+        $this->feedFilters = $feedFilters;
+        return $this;
     }
-
 }

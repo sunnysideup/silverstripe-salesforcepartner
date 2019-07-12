@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class FindDuplicatesResult
 {
-
     /**
-     * @var DuplicateResult[] $duplicateResults
+     * @var DuplicateResult[]
      */
     protected $duplicateResults = null;
 
     /**
-     * @var Error[] $errors
+     * @var Error[]
      */
     protected $errors = null;
 
     /**
-     * @var boolean $success
+     * @var boolean
      */
     protected $success = null;
 
@@ -25,7 +24,7 @@ class FindDuplicatesResult
      */
     public function __construct($success = null)
     {
-      $this->success = $success;
+        $this->success = $success;
     }
 
     /**
@@ -33,7 +32,7 @@ class FindDuplicatesResult
      */
     public function getDuplicateResults()
     {
-      return $this->duplicateResults;
+        return $this->duplicateResults;
     }
 
     /**
@@ -42,8 +41,8 @@ class FindDuplicatesResult
      */
     public function setDuplicateResults(array $duplicateResults = null)
     {
-      $this->duplicateResults = $duplicateResults;
-      return $this;
+        $this->duplicateResults = $duplicateResults;
+        return $this;
     }
 
     /**
@@ -51,7 +50,7 @@ class FindDuplicatesResult
      */
     public function getErrors()
     {
-      return $this->errors;
+        return $this->errors;
     }
 
     /**
@@ -60,8 +59,8 @@ class FindDuplicatesResult
      */
     public function setErrors(array $errors = null)
     {
-      $this->errors = $errors;
-      return $this;
+        $this->errors = $errors;
+        return $this;
     }
 
     /**
@@ -69,7 +68,7 @@ class FindDuplicatesResult
      */
     public function getSuccess()
     {
-      return $this->success;
+        return $this->success;
     }
 
     /**
@@ -78,8 +77,7 @@ class FindDuplicatesResult
      */
     public function setSuccess($success)
     {
-      $this->success = $success;
-      return $this;
+        $this->success = $success;
+        return $this;
     }
-
 }

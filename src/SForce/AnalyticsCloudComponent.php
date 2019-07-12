@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class AnalyticsCloudComponent extends DescribeLayoutComponent
 {
-
     /**
-     * @var string $error
+     * @var string
      */
     protected $error = null;
 
     /**
-     * @var string $filter
+     * @var string
      */
     protected $filter = null;
 
     /**
-     * @var string $height
+     * @var string
      */
     protected $height = null;
 
     /**
-     * @var boolean $hideOnError
+     * @var boolean
      */
     protected $hideOnError = null;
 
     /**
-     * @var boolean $showSharing
+     * @var boolean
      */
     protected $showSharing = null;
 
     /**
-     * @var boolean $showTitle
+     * @var boolean
      */
     protected $showTitle = null;
 
     /**
-     * @var string $width
+     * @var string
      */
     protected $width = null;
 
@@ -54,14 +53,14 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function __construct($displayLines = null, $tabOrder = null, $type = null, $error = null, $filter = null, $height = null, $hideOnError = null, $showSharing = null, $showTitle = null, $width = null)
     {
-      parent::__construct($displayLines, $tabOrder, $type);
-      $this->error = $error;
-      $this->filter = $filter;
-      $this->height = $height;
-      $this->hideOnError = $hideOnError;
-      $this->showSharing = $showSharing;
-      $this->showTitle = $showTitle;
-      $this->width = $width;
+        parent::__construct($displayLines, $tabOrder, $type);
+        $this->error = $error;
+        $this->filter = $filter;
+        $this->height = $height;
+        $this->hideOnError = $hideOnError;
+        $this->showSharing = $showSharing;
+        $this->showTitle = $showTitle;
+        $this->width = $width;
     }
 
     /**
@@ -69,7 +68,7 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function getError()
     {
-      return $this->error;
+        return $this->error;
     }
 
     /**
@@ -78,8 +77,8 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function setError($error)
     {
-      $this->error = $error;
-      return $this;
+        $this->error = $error;
+        return $this;
     }
 
     /**
@@ -87,7 +86,7 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function getFilter()
     {
-      return $this->filter;
+        return $this->filter;
     }
 
     /**
@@ -96,8 +95,8 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function setFilter($filter)
     {
-      $this->filter = $filter;
-      return $this;
+        $this->filter = $filter;
+        return $this;
     }
 
     /**
@@ -105,7 +104,7 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function getHeight()
     {
-      return $this->height;
+        return $this->height;
     }
 
     /**
@@ -114,8 +113,8 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function setHeight($height)
     {
-      $this->height = $height;
-      return $this;
+        $this->height = $height;
+        return $this;
     }
 
     /**
@@ -123,7 +122,7 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function getHideOnError()
     {
-      return $this->hideOnError;
+        return $this->hideOnError;
     }
 
     /**
@@ -132,8 +131,8 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function setHideOnError($hideOnError)
     {
-      $this->hideOnError = $hideOnError;
-      return $this;
+        $this->hideOnError = $hideOnError;
+        return $this;
     }
 
     /**
@@ -141,7 +140,7 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function getShowSharing()
     {
-      return $this->showSharing;
+        return $this->showSharing;
     }
 
     /**
@@ -150,8 +149,8 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function setShowSharing($showSharing)
     {
-      $this->showSharing = $showSharing;
-      return $this;
+        $this->showSharing = $showSharing;
+        return $this;
     }
 
     /**
@@ -159,7 +158,7 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function getShowTitle()
     {
-      return $this->showTitle;
+        return $this->showTitle;
     }
 
     /**
@@ -168,8 +167,8 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function setShowTitle($showTitle)
     {
-      $this->showTitle = $showTitle;
-      return $this;
+        $this->showTitle = $showTitle;
+        return $this;
     }
 
     /**
@@ -177,7 +176,7 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function getWidth()
     {
-      return $this->width;
+        return $this->width;
     }
 
     /**
@@ -186,8 +185,7 @@ class AnalyticsCloudComponent extends DescribeLayoutComponent
      */
     public function setWidth($width)
     {
-      $this->width = $width;
-      return $this;
+        $this->width = $width;
+        return $this;
     }
-
 }

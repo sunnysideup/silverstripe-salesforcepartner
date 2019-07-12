@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class DescribeThemeItem
 {
-
     /**
-     * @var DescribeColor[] $colors
+     * @var DescribeColor[]
      */
     protected $colors = null;
 
     /**
-     * @var DescribeIcon[] $icons
+     * @var DescribeIcon[]
      */
     protected $icons = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
@@ -25,7 +24,7 @@ class DescribeThemeItem
      */
     public function __construct($name = null)
     {
-      $this->name = $name;
+        $this->name = $name;
     }
 
     /**
@@ -33,7 +32,7 @@ class DescribeThemeItem
      */
     public function getColors()
     {
-      return $this->colors;
+        return $this->colors;
     }
 
     /**
@@ -42,8 +41,8 @@ class DescribeThemeItem
      */
     public function setColors(array $colors = null)
     {
-      $this->colors = $colors;
-      return $this;
+        $this->colors = $colors;
+        return $this;
     }
 
     /**
@@ -51,7 +50,7 @@ class DescribeThemeItem
      */
     public function getIcons()
     {
-      return $this->icons;
+        return $this->icons;
     }
 
     /**
@@ -60,8 +59,8 @@ class DescribeThemeItem
      */
     public function setIcons(array $icons = null)
     {
-      $this->icons = $icons;
-      return $this;
+        $this->icons = $icons;
+        return $this;
     }
 
     /**
@@ -69,7 +68,7 @@ class DescribeThemeItem
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -78,8 +77,7 @@ class DescribeThemeItem
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
-
 }

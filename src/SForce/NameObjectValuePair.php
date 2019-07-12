@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class NameObjectValuePair
 {
-
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var anyType[] $value
+     * @var anyType[]
      */
     protected $value = null;
 
@@ -21,8 +20,8 @@ class NameObjectValuePair
      */
     public function __construct($name = null, array $value = null)
     {
-      $this->name = $name;
-      $this->value = $value;
+        $this->name = $name;
+        $this->value = $value;
     }
 
     /**
@@ -30,7 +29,7 @@ class NameObjectValuePair
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -39,8 +38,8 @@ class NameObjectValuePair
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class NameObjectValuePair
      */
     public function getValue()
     {
-      return $this->value;
+        return $this->value;
     }
 
     /**
@@ -57,8 +56,7 @@ class NameObjectValuePair
      */
     public function setValue(array $value)
     {
-      $this->value = $value;
-      return $this;
+        $this->value = $value;
+        return $this;
     }
-
 }

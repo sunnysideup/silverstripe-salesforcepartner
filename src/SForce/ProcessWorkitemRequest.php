@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class ProcessWorkitemRequest extends ProcessRequest
 {
-
     /**
-     * @var string $action
+     * @var string
      */
     protected $action = null;
 
     /**
-     * @var ID $workitemId
+     * @var ID
      */
     protected $workitemId = null;
 
@@ -21,9 +20,9 @@ class ProcessWorkitemRequest extends ProcessRequest
      */
     public function __construct($action = null, $workitemId = null)
     {
-      parent::__construct();
-      $this->action = $action;
-      $this->workitemId = $workitemId;
+        parent::__construct();
+        $this->action = $action;
+        $this->workitemId = $workitemId;
     }
 
     /**
@@ -31,7 +30,7 @@ class ProcessWorkitemRequest extends ProcessRequest
      */
     public function getAction()
     {
-      return $this->action;
+        return $this->action;
     }
 
     /**
@@ -40,8 +39,8 @@ class ProcessWorkitemRequest extends ProcessRequest
      */
     public function setAction($action)
     {
-      $this->action = $action;
-      return $this;
+        $this->action = $action;
+        return $this;
     }
 
     /**
@@ -49,7 +48,7 @@ class ProcessWorkitemRequest extends ProcessRequest
      */
     public function getWorkitemId()
     {
-      return $this->workitemId;
+        return $this->workitemId;
     }
 
     /**
@@ -58,8 +57,7 @@ class ProcessWorkitemRequest extends ProcessRequest
      */
     public function setWorkitemId($workitemId)
     {
-      $this->workitemId = $workitemId;
-      return $this;
+        $this->workitemId = $workitemId;
+        return $this;
     }
-
 }

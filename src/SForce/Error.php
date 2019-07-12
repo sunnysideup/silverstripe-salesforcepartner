@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class Error
 {
-
     /**
-     * @var ExtendedErrorDetails[] $extendedErrorDetails
+     * @var ExtendedErrorDetails[]
      */
     protected $extendedErrorDetails = null;
 
     /**
-     * @var string[] $fields
+     * @var string[]
      */
     protected $fields = null;
 
     /**
-     * @var string $message
+     * @var string
      */
     protected $message = null;
 
     /**
-     * @var StatusCode $statusCode
+     * @var StatusCode
      */
     protected $statusCode = null;
 
@@ -31,8 +30,8 @@ class Error
      */
     public function __construct($message = null, $statusCode = null)
     {
-      $this->message = $message;
-      $this->statusCode = $statusCode;
+        $this->message = $message;
+        $this->statusCode = $statusCode;
     }
 
     /**
@@ -40,7 +39,7 @@ class Error
      */
     public function getExtendedErrorDetails()
     {
-      return $this->extendedErrorDetails;
+        return $this->extendedErrorDetails;
     }
 
     /**
@@ -49,8 +48,8 @@ class Error
      */
     public function setExtendedErrorDetails(array $extendedErrorDetails = null)
     {
-      $this->extendedErrorDetails = $extendedErrorDetails;
-      return $this;
+        $this->extendedErrorDetails = $extendedErrorDetails;
+        return $this;
     }
 
     /**
@@ -58,7 +57,7 @@ class Error
      */
     public function getFields()
     {
-      return $this->fields;
+        return $this->fields;
     }
 
     /**
@@ -67,8 +66,8 @@ class Error
      */
     public function setFields(array $fields = null)
     {
-      $this->fields = $fields;
-      return $this;
+        $this->fields = $fields;
+        return $this;
     }
 
     /**
@@ -76,7 +75,7 @@ class Error
      */
     public function getMessage()
     {
-      return $this->message;
+        return $this->message;
     }
 
     /**
@@ -85,8 +84,8 @@ class Error
      */
     public function setMessage($message)
     {
-      $this->message = $message;
-      return $this;
+        $this->message = $message;
+        return $this;
     }
 
     /**
@@ -94,7 +93,7 @@ class Error
      */
     public function getStatusCode()
     {
-      return $this->statusCode;
+        return $this->statusCode;
     }
 
     /**
@@ -103,8 +102,7 @@ class Error
      */
     public function setStatusCode($statusCode)
     {
-      $this->statusCode = $statusCode;
-      return $this;
+        $this->statusCode = $statusCode;
+        return $this;
     }
-
 }

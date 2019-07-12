@@ -3,9 +3,8 @@
 namespace Sunnysideup\SalesforcePartner\Model;
 
 use DataObject;
-use TextField;
 use ReadonlyField;
-
+use TextField;
 
 /**
  * this can be linked to pages / other objects using many_many relationships
@@ -13,7 +12,6 @@ use ReadonlyField;
  */
 class SalesforceDefaultContactField extends DataObject
 {
-
     /**
      * contact fields that should be created by default...
      * @var array
@@ -33,32 +31,27 @@ class SalesforceDefaultContactField extends DataObject
     private static $plural_name = 'Default Contact Fields';
 
     /**
-     *
      * @var array
      */
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * OLD: private static $db (case sensitive)
-  * NEW: 
-    private static $table_name = '[SEARCH_REPLACE_CLASS_NAME_GOES_HERE]';
-
+    /**
+     * ### @@@@ START REPLACEMENT @@@@ ###
+     * OLD: private static $db (case sensitive)
+     * NEW:
     private static $db (COMPLEX)
-  * EXP: Check that is class indeed extends DataObject and that it is not a data-extension!
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
-    
+     * EXP: Check that is class indeed extends DataObject and that it is not a data-extension!
+     * ### @@@@ STOP REPLACEMENT @@@@ ###
+     */
     private static $table_name = 'SalesforceDefaultContactField';
 
-
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: private static $db = (case sensitive)
-  * NEW: private static $db = (COMPLEX)
-  * EXP: Make sure to add a private static $table_name!
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+     * ### @@@@ START REPLACEMENT @@@@ ###
+     * WHY: upgrade to SS4
+     * OLD: private static $db = (case sensitive)
+     * NEW: private static $db = (COMPLEX)
+     * EXP: Make sure to add a private static $table_name!
+     * ### @@@@ STOP REPLACEMENT @@@@ ###
+     */
     private static $db = [
         'Key' => 'Varchar',
         'Value' => 'Varchar',
@@ -75,29 +68,26 @@ class SalesforceDefaultContactField extends DataObject
     ];
 
     /**
-     *
      * @return string
      */
     public function getTitle()
     {
-        return $this->Key . ' = '.$this->BetterValueHumanReadable();
+        return $this->Key . ' = ' . $this->BetterValueHumanReadable();
     }
-
 
     public function requireDefaultRecords()
     {
-        foreach($this->Config()->get('default_records') as $key => $value) {
+        foreach ($this->Config()->get('default_records') as $key => $value) {
             $filter = [
-                'Key' => $key
+                'Key' => $key,
             ];
 
-            $obj = SalesforceDefaultContactField::get()->filter($filter)->first();
-            if(! $obj) {
-                $obj = SalesforceDefaultContactField::create($filter);
+            $obj = self::get()->filter($filter)->first();
+            if (! $obj) {
+                $obj = self::create($filter);
                 $obj->Value = $value;
                 $obj->write();
             }
-
         }
     }
 
@@ -106,13 +96,11 @@ class SalesforceDefaultContactField extends DataObject
      */
     public function BetterValue()
     {
-        if(strtolower($this->Value) === 'true') {
+        if (strtolower($this->Value) === 'true') {
             return 'true';
-        }
-        elseif(strtolower($this->Value) === 'false') {
+        } elseif (strtolower($this->Value) === 'false') {
             return 'false';
-        }
-        elseif(is_numeric($this->Value)) {
+        } elseif (is_numeric($this->Value)) {
             return floatval($this->Value);
         }
 
@@ -150,13 +138,10 @@ class SalesforceDefaultContactField extends DataObject
                     'FieldType',
                     'Field Type',
                     gettype($this->BetterValue())
-                )
+                ),
             ]
         );
 
         return $fields;
     }
-
-
-
 }

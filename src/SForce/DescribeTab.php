@@ -4,49 +4,48 @@ namespace SForce\Wsdl;
 
 class DescribeTab
 {
-
     /**
-     * @var DescribeColor[] $colors
+     * @var DescribeColor[]
      */
     protected $colors = null;
 
     /**
-     * @var boolean $custom
+     * @var boolean
      */
     protected $custom = null;
 
     /**
-     * @var string $iconUrl
+     * @var string
      */
     protected $iconUrl = null;
 
     /**
-     * @var DescribeIcon[] $icons
+     * @var DescribeIcon[]
      */
     protected $icons = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $miniIconUrl
+     * @var string
      */
     protected $miniIconUrl = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var string $sobjectName
+     * @var string
      */
     protected $sobjectName = null;
 
     /**
-     * @var string $url
+     * @var string
      */
     protected $url = null;
 
@@ -60,12 +59,12 @@ class DescribeTab
      */
     public function __construct($custom = null, $iconUrl = null, $label = null, $miniIconUrl = null, $name = null, $url = null)
     {
-      $this->custom = $custom;
-      $this->iconUrl = $iconUrl;
-      $this->label = $label;
-      $this->miniIconUrl = $miniIconUrl;
-      $this->name = $name;
-      $this->url = $url;
+        $this->custom = $custom;
+        $this->iconUrl = $iconUrl;
+        $this->label = $label;
+        $this->miniIconUrl = $miniIconUrl;
+        $this->name = $name;
+        $this->url = $url;
     }
 
     /**
@@ -73,7 +72,7 @@ class DescribeTab
      */
     public function getColors()
     {
-      return $this->colors;
+        return $this->colors;
     }
 
     /**
@@ -82,8 +81,8 @@ class DescribeTab
      */
     public function setColors(array $colors = null)
     {
-      $this->colors = $colors;
-      return $this;
+        $this->colors = $colors;
+        return $this;
     }
 
     /**
@@ -91,7 +90,7 @@ class DescribeTab
      */
     public function getCustom()
     {
-      return $this->custom;
+        return $this->custom;
     }
 
     /**
@@ -100,8 +99,8 @@ class DescribeTab
      */
     public function setCustom($custom)
     {
-      $this->custom = $custom;
-      return $this;
+        $this->custom = $custom;
+        return $this;
     }
 
     /**
@@ -109,7 +108,7 @@ class DescribeTab
      */
     public function getIconUrl()
     {
-      return $this->iconUrl;
+        return $this->iconUrl;
     }
 
     /**
@@ -118,8 +117,8 @@ class DescribeTab
      */
     public function setIconUrl($iconUrl)
     {
-      $this->iconUrl = $iconUrl;
-      return $this;
+        $this->iconUrl = $iconUrl;
+        return $this;
     }
 
     /**
@@ -127,7 +126,7 @@ class DescribeTab
      */
     public function getIcons()
     {
-      return $this->icons;
+        return $this->icons;
     }
 
     /**
@@ -136,8 +135,8 @@ class DescribeTab
      */
     public function setIcons(array $icons = null)
     {
-      $this->icons = $icons;
-      return $this;
+        $this->icons = $icons;
+        return $this;
     }
 
     /**
@@ -145,7 +144,7 @@ class DescribeTab
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -154,8 +153,8 @@ class DescribeTab
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -163,7 +162,7 @@ class DescribeTab
      */
     public function getMiniIconUrl()
     {
-      return $this->miniIconUrl;
+        return $this->miniIconUrl;
     }
 
     /**
@@ -172,8 +171,8 @@ class DescribeTab
      */
     public function setMiniIconUrl($miniIconUrl)
     {
-      $this->miniIconUrl = $miniIconUrl;
-      return $this;
+        $this->miniIconUrl = $miniIconUrl;
+        return $this;
     }
 
     /**
@@ -181,7 +180,7 @@ class DescribeTab
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -190,8 +189,8 @@ class DescribeTab
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -199,7 +198,7 @@ class DescribeTab
      */
     public function getSobjectName()
     {
-      return $this->sobjectName;
+        return $this->sobjectName;
     }
 
     /**
@@ -208,8 +207,8 @@ class DescribeTab
      */
     public function setSobjectName($sobjectName)
     {
-      $this->sobjectName = $sobjectName;
-      return $this;
+        $this->sobjectName = $sobjectName;
+        return $this;
     }
 
     /**
@@ -217,7 +216,7 @@ class DescribeTab
      */
     public function getUrl()
     {
-      return $this->url;
+        return $this->url;
     }
 
     /**
@@ -226,8 +225,7 @@ class DescribeTab
      */
     public function setUrl($url)
     {
-      $this->url = $url;
-      return $this;
+        $this->url = $url;
+        return $this;
     }
-
 }

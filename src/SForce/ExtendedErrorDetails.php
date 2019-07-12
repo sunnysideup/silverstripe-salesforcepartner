@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class ExtendedErrorDetails
 {
-
     /**
-     * @var ExtendedErrorCode $extendedErrorCode
+     * @var ExtendedErrorCode
      */
     protected $extendedErrorCode = null;
 
     /**
-     * @var string $any
+     * @var string
      */
     protected $any = null;
 
@@ -21,8 +20,8 @@ class ExtendedErrorDetails
      */
     public function __construct($extendedErrorCode = null, $any = null)
     {
-      $this->extendedErrorCode = $extendedErrorCode;
-      $this->any = $any;
+        $this->extendedErrorCode = $extendedErrorCode;
+        $this->any = $any;
     }
 
     /**
@@ -30,7 +29,7 @@ class ExtendedErrorDetails
      */
     public function getExtendedErrorCode()
     {
-      return $this->extendedErrorCode;
+        return $this->extendedErrorCode;
     }
 
     /**
@@ -39,8 +38,8 @@ class ExtendedErrorDetails
      */
     public function setExtendedErrorCode($extendedErrorCode)
     {
-      $this->extendedErrorCode = $extendedErrorCode;
-      return $this;
+        $this->extendedErrorCode = $extendedErrorCode;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class ExtendedErrorDetails
      */
     public function getAny()
     {
-      return $this->any;
+        return $this->any;
     }
 
     /**
@@ -57,8 +56,7 @@ class ExtendedErrorDetails
      */
     public function setAny($any)
     {
-      $this->any = $any;
-      return $this;
+        $this->any = $any;
+        return $this;
     }
-
 }

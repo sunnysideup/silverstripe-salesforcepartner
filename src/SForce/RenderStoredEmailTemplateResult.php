@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class RenderStoredEmailTemplateResult
 {
-
     /**
-     * @var Error[] $errors
+     * @var Error[]
      */
     protected $errors = null;
 
     /**
-     * @var SingleEmailMessage $renderedEmail
+     * @var SingleEmailMessage
      */
     protected $renderedEmail = null;
 
     /**
-     * @var boolean $success
+     * @var boolean
      */
     protected $success = null;
 
@@ -25,7 +24,7 @@ class RenderStoredEmailTemplateResult
      */
     public function __construct($success = null)
     {
-      $this->success = $success;
+        $this->success = $success;
     }
 
     /**
@@ -33,7 +32,7 @@ class RenderStoredEmailTemplateResult
      */
     public function getErrors()
     {
-      return $this->errors;
+        return $this->errors;
     }
 
     /**
@@ -42,8 +41,8 @@ class RenderStoredEmailTemplateResult
      */
     public function setErrors(array $errors = null)
     {
-      $this->errors = $errors;
-      return $this;
+        $this->errors = $errors;
+        return $this;
     }
 
     /**
@@ -51,7 +50,7 @@ class RenderStoredEmailTemplateResult
      */
     public function getRenderedEmail()
     {
-      return $this->renderedEmail;
+        return $this->renderedEmail;
     }
 
     /**
@@ -60,8 +59,8 @@ class RenderStoredEmailTemplateResult
      */
     public function setRenderedEmail($renderedEmail)
     {
-      $this->renderedEmail = $renderedEmail;
-      return $this;
+        $this->renderedEmail = $renderedEmail;
+        return $this;
     }
 
     /**
@@ -69,7 +68,7 @@ class RenderStoredEmailTemplateResult
      */
     public function getSuccess()
     {
-      return $this->success;
+        return $this->success;
     }
 
     /**
@@ -78,8 +77,7 @@ class RenderStoredEmailTemplateResult
      */
     public function setSuccess($success)
     {
-      $this->success = $success;
-      return $this;
+        $this->success = $success;
+        return $this;
     }
-
 }

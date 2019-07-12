@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class DescribeSoftphoneLayoutSection
 {
-
     /**
-     * @var string $entityApiName
+     * @var string
      */
     protected $entityApiName = null;
 
     /**
-     * @var DescribeSoftphoneLayoutItem[] $items
+     * @var DescribeSoftphoneLayoutItem[]
      */
     protected $items = null;
 
@@ -21,8 +20,8 @@ class DescribeSoftphoneLayoutSection
      */
     public function __construct($entityApiName = null, array $items = null)
     {
-      $this->entityApiName = $entityApiName;
-      $this->items = $items;
+        $this->entityApiName = $entityApiName;
+        $this->items = $items;
     }
 
     /**
@@ -30,7 +29,7 @@ class DescribeSoftphoneLayoutSection
      */
     public function getEntityApiName()
     {
-      return $this->entityApiName;
+        return $this->entityApiName;
     }
 
     /**
@@ -39,8 +38,8 @@ class DescribeSoftphoneLayoutSection
      */
     public function setEntityApiName($entityApiName)
     {
-      $this->entityApiName = $entityApiName;
-      return $this;
+        $this->entityApiName = $entityApiName;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class DescribeSoftphoneLayoutSection
      */
     public function getItems()
     {
-      return $this->items;
+        return $this->items;
     }
 
     /**
@@ -57,8 +56,7 @@ class DescribeSoftphoneLayoutSection
      */
     public function setItems(array $items)
     {
-      $this->items = $items;
-      return $this;
+        $this->items = $items;
+        return $this;
     }
-
 }

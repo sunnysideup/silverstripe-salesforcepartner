@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class DescribeColor
 {
-
     /**
-     * @var string $color
+     * @var string
      */
     protected $color = null;
 
     /**
-     * @var string $context
+     * @var string
      */
     protected $context = null;
 
     /**
-     * @var string $theme
+     * @var string
      */
     protected $theme = null;
 
@@ -27,9 +26,9 @@ class DescribeColor
      */
     public function __construct($color = null, $context = null, $theme = null)
     {
-      $this->color = $color;
-      $this->context = $context;
-      $this->theme = $theme;
+        $this->color = $color;
+        $this->context = $context;
+        $this->theme = $theme;
     }
 
     /**
@@ -37,7 +36,7 @@ class DescribeColor
      */
     public function getColor()
     {
-      return $this->color;
+        return $this->color;
     }
 
     /**
@@ -46,8 +45,8 @@ class DescribeColor
      */
     public function setColor($color)
     {
-      $this->color = $color;
-      return $this;
+        $this->color = $color;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class DescribeColor
      */
     public function getContext()
     {
-      return $this->context;
+        return $this->context;
     }
 
     /**
@@ -64,8 +63,8 @@ class DescribeColor
      */
     public function setContext($context)
     {
-      $this->context = $context;
-      return $this;
+        $this->context = $context;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class DescribeColor
      */
     public function getTheme()
     {
-      return $this->theme;
+        return $this->theme;
     }
 
     /**
@@ -82,8 +81,7 @@ class DescribeColor
      */
     public function setTheme($theme)
     {
-      $this->theme = $theme;
-      return $this;
+        $this->theme = $theme;
+        return $this;
     }
-
 }

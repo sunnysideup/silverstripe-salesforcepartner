@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class DescribeLayoutComponent
 {
-
     /**
-     * @var int $displayLines
+     * @var int
      */
     protected $displayLines = null;
 
     /**
-     * @var int $tabOrder
+     * @var int
      */
     protected $tabOrder = null;
 
     /**
-     * @var layoutComponentType $type
+     * @var layoutComponentType
      */
     protected $type = null;
 
     /**
-     * @var string $value
+     * @var string
      */
     protected $value = null;
 
@@ -32,9 +31,9 @@ class DescribeLayoutComponent
      */
     public function __construct($displayLines = null, $tabOrder = null, $type = null)
     {
-      $this->displayLines = $displayLines;
-      $this->tabOrder = $tabOrder;
-      $this->type = $type;
+        $this->displayLines = $displayLines;
+        $this->tabOrder = $tabOrder;
+        $this->type = $type;
     }
 
     /**
@@ -42,7 +41,7 @@ class DescribeLayoutComponent
      */
     public function getDisplayLines()
     {
-      return $this->displayLines;
+        return $this->displayLines;
     }
 
     /**
@@ -51,8 +50,8 @@ class DescribeLayoutComponent
      */
     public function setDisplayLines($displayLines)
     {
-      $this->displayLines = $displayLines;
-      return $this;
+        $this->displayLines = $displayLines;
+        return $this;
     }
 
     /**
@@ -60,7 +59,7 @@ class DescribeLayoutComponent
      */
     public function getTabOrder()
     {
-      return $this->tabOrder;
+        return $this->tabOrder;
     }
 
     /**
@@ -69,8 +68,8 @@ class DescribeLayoutComponent
      */
     public function setTabOrder($tabOrder)
     {
-      $this->tabOrder = $tabOrder;
-      return $this;
+        $this->tabOrder = $tabOrder;
+        return $this;
     }
 
     /**
@@ -78,7 +77,7 @@ class DescribeLayoutComponent
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -87,8 +86,8 @@ class DescribeLayoutComponent
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
 
     /**
@@ -96,7 +95,7 @@ class DescribeLayoutComponent
      */
     public function getValue()
     {
-      return $this->value;
+        return $this->value;
     }
 
     /**
@@ -105,8 +104,7 @@ class DescribeLayoutComponent
      */
     public function setValue($value)
     {
-      $this->value = $value;
-      return $this;
+        $this->value = $value;
+        return $this;
     }
-
 }

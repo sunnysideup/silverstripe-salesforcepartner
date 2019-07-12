@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class AllOrNoneHeader
 {
-
     /**
-     * @var boolean $allOrNone
+     * @var boolean
      */
     protected $allOrNone = null;
 
@@ -15,7 +14,7 @@ class AllOrNoneHeader
      */
     public function __construct($allOrNone = null)
     {
-      $this->allOrNone = $allOrNone;
+        $this->allOrNone = $allOrNone;
     }
 
     /**
@@ -23,7 +22,7 @@ class AllOrNoneHeader
      */
     public function getAllOrNone()
     {
-      return $this->allOrNone;
+        return $this->allOrNone;
     }
 
     /**
@@ -32,8 +31,7 @@ class AllOrNoneHeader
      */
     public function setAllOrNone($allOrNone)
     {
-      $this->allOrNone = $allOrNone;
-      return $this;
+        $this->allOrNone = $allOrNone;
+        return $this;
     }
-
 }

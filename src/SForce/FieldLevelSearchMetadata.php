@@ -4,26 +4,23 @@ namespace SForce\Wsdl;
 
 class FieldLevelSearchMetadata
 {
-
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var string $type
+     * @var string
      */
     protected $type = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -31,7 +28,7 @@ class FieldLevelSearchMetadata
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -40,8 +37,8 @@ class FieldLevelSearchMetadata
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -49,7 +46,7 @@ class FieldLevelSearchMetadata
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -58,8 +55,8 @@ class FieldLevelSearchMetadata
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -67,7 +64,7 @@ class FieldLevelSearchMetadata
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -76,8 +73,7 @@ class FieldLevelSearchMetadata
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
-
 }

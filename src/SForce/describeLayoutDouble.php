@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class describeLayoutDouble
 {
-
     /**
-     * @var string $sObjectType
+     * @var string
      */
     protected $sObjectType = null;
 
     /**
-     * @var string $layoutName
+     * @var string
      */
     protected $layoutName = null;
 
     /**
-     * @var ID $recordTypeIds
+     * @var ID
      */
     protected $recordTypeIds = null;
 
@@ -27,9 +26,9 @@ class describeLayoutDouble
      */
     public function __construct($sObjectType = null, $layoutName = null, $recordTypeIds = null)
     {
-      $this->sObjectType = $sObjectType;
-      $this->layoutName = $layoutName;
-      $this->recordTypeIds = $recordTypeIds;
+        $this->sObjectType = $sObjectType;
+        $this->layoutName = $layoutName;
+        $this->recordTypeIds = $recordTypeIds;
     }
 
     /**
@@ -37,7 +36,7 @@ class describeLayoutDouble
      */
     public function getSObjectType()
     {
-      return $this->sObjectType;
+        return $this->sObjectType;
     }
 
     /**
@@ -46,8 +45,8 @@ class describeLayoutDouble
      */
     public function setSObjectType($sObjectType)
     {
-      $this->sObjectType = $sObjectType;
-      return $this;
+        $this->sObjectType = $sObjectType;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class describeLayoutDouble
      */
     public function getLayoutName()
     {
-      return $this->layoutName;
+        return $this->layoutName;
     }
 
     /**
@@ -64,8 +63,8 @@ class describeLayoutDouble
      */
     public function setLayoutName($layoutName)
     {
-      $this->layoutName = $layoutName;
-      return $this;
+        $this->layoutName = $layoutName;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class describeLayoutDouble
      */
     public function getRecordTypeIds()
     {
-      return $this->recordTypeIds;
+        return $this->recordTypeIds;
     }
 
     /**
@@ -82,8 +81,7 @@ class describeLayoutDouble
      */
     public function setRecordTypeIds($recordTypeIds)
     {
-      $this->recordTypeIds = $recordTypeIds;
-      return $this;
+        $this->recordTypeIds = $recordTypeIds;
+        return $this;
     }
-
 }

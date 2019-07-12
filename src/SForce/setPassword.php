@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class setPassword
 {
-
     /**
-     * @var ID $userId
+     * @var ID
      */
     protected $userId = null;
 
     /**
-     * @var string $password
+     * @var string
      */
     protected $password = null;
 
@@ -21,8 +20,8 @@ class setPassword
      */
     public function __construct($userId = null, $password = null)
     {
-      $this->userId = $userId;
-      $this->password = $password;
+        $this->userId = $userId;
+        $this->password = $password;
     }
 
     /**
@@ -30,7 +29,7 @@ class setPassword
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
@@ -39,8 +38,8 @@ class setPassword
      */
     public function setUserId($userId)
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class setPassword
      */
     public function getPassword()
     {
-      return $this->password;
+        return $this->password;
     }
 
     /**
@@ -57,8 +56,7 @@ class setPassword
      */
     public function setPassword($password)
     {
-      $this->password = $password;
-      return $this;
+        $this->password = $password;
+        return $this;
     }
-
 }

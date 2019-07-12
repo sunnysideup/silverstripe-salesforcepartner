@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class retrieve
 {
-
     /**
-     * @var string $fieldList
+     * @var string
      */
     protected $fieldList = null;
 
     /**
-     * @var string $sObjectType
+     * @var string
      */
     protected $sObjectType = null;
 
     /**
-     * @var ID $ids
+     * @var ID
      */
     protected $ids = null;
 
@@ -27,9 +26,9 @@ class retrieve
      */
     public function __construct($fieldList = null, $sObjectType = null, $ids = null)
     {
-      $this->fieldList = $fieldList;
-      $this->sObjectType = $sObjectType;
-      $this->ids = $ids;
+        $this->fieldList = $fieldList;
+        $this->sObjectType = $sObjectType;
+        $this->ids = $ids;
     }
 
     /**
@@ -37,7 +36,7 @@ class retrieve
      */
     public function getFieldList()
     {
-      return $this->fieldList;
+        return $this->fieldList;
     }
 
     /**
@@ -46,8 +45,8 @@ class retrieve
      */
     public function setFieldList($fieldList)
     {
-      $this->fieldList = $fieldList;
-      return $this;
+        $this->fieldList = $fieldList;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class retrieve
      */
     public function getSObjectType()
     {
-      return $this->sObjectType;
+        return $this->sObjectType;
     }
 
     /**
@@ -64,8 +63,8 @@ class retrieve
      */
     public function setSObjectType($sObjectType)
     {
-      $this->sObjectType = $sObjectType;
-      return $this;
+        $this->sObjectType = $sObjectType;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class retrieve
      */
     public function getIds()
     {
-      return $this->ids;
+        return $this->ids;
     }
 
     /**
@@ -82,8 +81,7 @@ class retrieve
      */
     public function setIds($ids)
     {
-      $this->ids = $ids;
-      return $this;
+        $this->ids = $ids;
+        return $this;
     }
-
 }

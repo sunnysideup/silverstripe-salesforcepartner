@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class MergeResult
 {
-
     /**
-     * @var Error[] $errors
+     * @var Error[]
      */
     protected $errors = null;
 
     /**
-     * @var ID $id
+     * @var ID
      */
     protected $id = null;
 
     /**
-     * @var ID[] $mergedRecordIds
+     * @var ID[]
      */
     protected $mergedRecordIds = null;
 
     /**
-     * @var boolean $success
+     * @var boolean
      */
     protected $success = null;
 
     /**
-     * @var ID[] $updatedRelatedIds
+     * @var ID[]
      */
     protected $updatedRelatedIds = null;
 
@@ -35,7 +34,7 @@ class MergeResult
      */
     public function __construct($success = null)
     {
-      $this->success = $success;
+        $this->success = $success;
     }
 
     /**
@@ -43,7 +42,7 @@ class MergeResult
      */
     public function getErrors()
     {
-      return $this->errors;
+        return $this->errors;
     }
 
     /**
@@ -52,8 +51,8 @@ class MergeResult
      */
     public function setErrors(array $errors = null)
     {
-      $this->errors = $errors;
-      return $this;
+        $this->errors = $errors;
+        return $this;
     }
 
     /**
@@ -61,7 +60,7 @@ class MergeResult
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
@@ -70,8 +69,8 @@ class MergeResult
      */
     public function setId($id)
     {
-      $this->id = $id;
-      return $this;
+        $this->id = $id;
+        return $this;
     }
 
     /**
@@ -79,7 +78,7 @@ class MergeResult
      */
     public function getMergedRecordIds()
     {
-      return $this->mergedRecordIds;
+        return $this->mergedRecordIds;
     }
 
     /**
@@ -88,8 +87,8 @@ class MergeResult
      */
     public function setMergedRecordIds(array $mergedRecordIds = null)
     {
-      $this->mergedRecordIds = $mergedRecordIds;
-      return $this;
+        $this->mergedRecordIds = $mergedRecordIds;
+        return $this;
     }
 
     /**
@@ -97,7 +96,7 @@ class MergeResult
      */
     public function getSuccess()
     {
-      return $this->success;
+        return $this->success;
     }
 
     /**
@@ -106,8 +105,8 @@ class MergeResult
      */
     public function setSuccess($success)
     {
-      $this->success = $success;
-      return $this;
+        $this->success = $success;
+        return $this;
     }
 
     /**
@@ -115,7 +114,7 @@ class MergeResult
      */
     public function getUpdatedRelatedIds()
     {
-      return $this->updatedRelatedIds;
+        return $this->updatedRelatedIds;
     }
 
     /**
@@ -124,8 +123,7 @@ class MergeResult
      */
     public function setUpdatedRelatedIds(array $updatedRelatedIds = null)
     {
-      $this->updatedRelatedIds = $updatedRelatedIds;
-      return $this;
+        $this->updatedRelatedIds = $updatedRelatedIds;
+        return $this;
     }
-
 }

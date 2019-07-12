@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class ReportChartComponent extends DescribeLayoutComponent
 {
-
     /**
-     * @var boolean $cacheData
+     * @var boolean
      */
     protected $cacheData = null;
 
     /**
-     * @var string $contextFilterableField
+     * @var string
      */
     protected $contextFilterableField = null;
 
     /**
-     * @var string $error
+     * @var string
      */
     protected $error = null;
 
     /**
-     * @var boolean $hideOnError
+     * @var boolean
      */
     protected $hideOnError = null;
 
     /**
-     * @var boolean $includeContext
+     * @var boolean
      */
     protected $includeContext = null;
 
     /**
-     * @var boolean $showTitle
+     * @var boolean
      */
     protected $showTitle = null;
 
     /**
-     * @var ReportChartSize $size
+     * @var ReportChartSize
      */
     protected $size = null;
 
@@ -54,14 +53,14 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function __construct($displayLines = null, $tabOrder = null, $type = null, $cacheData = null, $contextFilterableField = null, $error = null, $hideOnError = null, $includeContext = null, $showTitle = null, $size = null)
     {
-      parent::__construct($displayLines, $tabOrder, $type);
-      $this->cacheData = $cacheData;
-      $this->contextFilterableField = $contextFilterableField;
-      $this->error = $error;
-      $this->hideOnError = $hideOnError;
-      $this->includeContext = $includeContext;
-      $this->showTitle = $showTitle;
-      $this->size = $size;
+        parent::__construct($displayLines, $tabOrder, $type);
+        $this->cacheData = $cacheData;
+        $this->contextFilterableField = $contextFilterableField;
+        $this->error = $error;
+        $this->hideOnError = $hideOnError;
+        $this->includeContext = $includeContext;
+        $this->showTitle = $showTitle;
+        $this->size = $size;
     }
 
     /**
@@ -69,7 +68,7 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function getCacheData()
     {
-      return $this->cacheData;
+        return $this->cacheData;
     }
 
     /**
@@ -78,8 +77,8 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function setCacheData($cacheData)
     {
-      $this->cacheData = $cacheData;
-      return $this;
+        $this->cacheData = $cacheData;
+        return $this;
     }
 
     /**
@@ -87,7 +86,7 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function getContextFilterableField()
     {
-      return $this->contextFilterableField;
+        return $this->contextFilterableField;
     }
 
     /**
@@ -96,8 +95,8 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function setContextFilterableField($contextFilterableField)
     {
-      $this->contextFilterableField = $contextFilterableField;
-      return $this;
+        $this->contextFilterableField = $contextFilterableField;
+        return $this;
     }
 
     /**
@@ -105,7 +104,7 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function getError()
     {
-      return $this->error;
+        return $this->error;
     }
 
     /**
@@ -114,8 +113,8 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function setError($error)
     {
-      $this->error = $error;
-      return $this;
+        $this->error = $error;
+        return $this;
     }
 
     /**
@@ -123,7 +122,7 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function getHideOnError()
     {
-      return $this->hideOnError;
+        return $this->hideOnError;
     }
 
     /**
@@ -132,8 +131,8 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function setHideOnError($hideOnError)
     {
-      $this->hideOnError = $hideOnError;
-      return $this;
+        $this->hideOnError = $hideOnError;
+        return $this;
     }
 
     /**
@@ -141,7 +140,7 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function getIncludeContext()
     {
-      return $this->includeContext;
+        return $this->includeContext;
     }
 
     /**
@@ -150,8 +149,8 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function setIncludeContext($includeContext)
     {
-      $this->includeContext = $includeContext;
-      return $this;
+        $this->includeContext = $includeContext;
+        return $this;
     }
 
     /**
@@ -159,7 +158,7 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function getShowTitle()
     {
-      return $this->showTitle;
+        return $this->showTitle;
     }
 
     /**
@@ -168,8 +167,8 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function setShowTitle($showTitle)
     {
-      $this->showTitle = $showTitle;
-      return $this;
+        $this->showTitle = $showTitle;
+        return $this;
     }
 
     /**
@@ -177,7 +176,7 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function getSize()
     {
-      return $this->size;
+        return $this->size;
     }
 
     /**
@@ -186,8 +185,7 @@ class ReportChartComponent extends DescribeLayoutComponent
      */
     public function setSize($size)
     {
-      $this->size = $size;
-      return $this;
+        $this->size = $size;
+        return $this;
     }
-
 }

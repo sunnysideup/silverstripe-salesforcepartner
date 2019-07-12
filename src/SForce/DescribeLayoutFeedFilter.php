@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class DescribeLayoutFeedFilter
 {
-
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var FeedLayoutFilterType $type
+     * @var FeedLayoutFilterType
      */
     protected $type = null;
 
@@ -27,9 +26,9 @@ class DescribeLayoutFeedFilter
      */
     public function __construct($label = null, $name = null, $type = null)
     {
-      $this->label = $label;
-      $this->name = $name;
-      $this->type = $type;
+        $this->label = $label;
+        $this->name = $name;
+        $this->type = $type;
     }
 
     /**
@@ -37,7 +36,7 @@ class DescribeLayoutFeedFilter
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -46,8 +45,8 @@ class DescribeLayoutFeedFilter
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class DescribeLayoutFeedFilter
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -64,8 +63,8 @@ class DescribeLayoutFeedFilter
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class DescribeLayoutFeedFilter
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -82,8 +81,7 @@ class DescribeLayoutFeedFilter
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
-
 }

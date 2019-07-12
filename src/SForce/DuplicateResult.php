@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class DuplicateResult
 {
-
     /**
-     * @var boolean $allowSave
+     * @var boolean
      */
     protected $allowSave = null;
 
     /**
-     * @var string $duplicateRule
+     * @var string
      */
     protected $duplicateRule = null;
 
     /**
-     * @var string $duplicateRuleEntityType
+     * @var string
      */
     protected $duplicateRuleEntityType = null;
 
     /**
-     * @var string $errorMessage
+     * @var string
      */
     protected $errorMessage = null;
 
     /**
-     * @var MatchResult[] $matchResults
+     * @var MatchResult[]
      */
     protected $matchResults = null;
 
@@ -37,9 +36,9 @@ class DuplicateResult
      */
     public function __construct($allowSave = null, $duplicateRule = null, $duplicateRuleEntityType = null)
     {
-      $this->allowSave = $allowSave;
-      $this->duplicateRule = $duplicateRule;
-      $this->duplicateRuleEntityType = $duplicateRuleEntityType;
+        $this->allowSave = $allowSave;
+        $this->duplicateRule = $duplicateRule;
+        $this->duplicateRuleEntityType = $duplicateRuleEntityType;
     }
 
     /**
@@ -47,7 +46,7 @@ class DuplicateResult
      */
     public function getAllowSave()
     {
-      return $this->allowSave;
+        return $this->allowSave;
     }
 
     /**
@@ -56,8 +55,8 @@ class DuplicateResult
      */
     public function setAllowSave($allowSave)
     {
-      $this->allowSave = $allowSave;
-      return $this;
+        $this->allowSave = $allowSave;
+        return $this;
     }
 
     /**
@@ -65,7 +64,7 @@ class DuplicateResult
      */
     public function getDuplicateRule()
     {
-      return $this->duplicateRule;
+        return $this->duplicateRule;
     }
 
     /**
@@ -74,8 +73,8 @@ class DuplicateResult
      */
     public function setDuplicateRule($duplicateRule)
     {
-      $this->duplicateRule = $duplicateRule;
-      return $this;
+        $this->duplicateRule = $duplicateRule;
+        return $this;
     }
 
     /**
@@ -83,7 +82,7 @@ class DuplicateResult
      */
     public function getDuplicateRuleEntityType()
     {
-      return $this->duplicateRuleEntityType;
+        return $this->duplicateRuleEntityType;
     }
 
     /**
@@ -92,8 +91,8 @@ class DuplicateResult
      */
     public function setDuplicateRuleEntityType($duplicateRuleEntityType)
     {
-      $this->duplicateRuleEntityType = $duplicateRuleEntityType;
-      return $this;
+        $this->duplicateRuleEntityType = $duplicateRuleEntityType;
+        return $this;
     }
 
     /**
@@ -101,7 +100,7 @@ class DuplicateResult
      */
     public function getErrorMessage()
     {
-      return $this->errorMessage;
+        return $this->errorMessage;
     }
 
     /**
@@ -110,8 +109,8 @@ class DuplicateResult
      */
     public function setErrorMessage($errorMessage)
     {
-      $this->errorMessage = $errorMessage;
-      return $this;
+        $this->errorMessage = $errorMessage;
+        return $this;
     }
 
     /**
@@ -119,7 +118,7 @@ class DuplicateResult
      */
     public function getMatchResults()
     {
-      return $this->matchResults;
+        return $this->matchResults;
     }
 
     /**
@@ -128,8 +127,7 @@ class DuplicateResult
      */
     public function setMatchResults(array $matchResults = null)
     {
-      $this->matchResults = $matchResults;
-      return $this;
+        $this->matchResults = $matchResults;
+        return $this;
     }
-
 }

@@ -2,90 +2,13 @@
 
 namespace Sunnysideup\SalesforcePartner\Model;
 
-
-use SForce\Wsdl\SaveResult;
 use DataObject;
-use ReadonlyField;
 use DBField;
 use LiteralField;
-
+use ReadonlyField;
 
 class SalesforceContactLog extends DataObject
 {
-
-    /**
-     * create contact log
-     * @param  string $type
-     * @param  array $fieldsSent
-     * @param  array $filters
-     *
-     * @return SalesforceContactLog|null
-     */
-    public static function create_contact_log($type, array $fieldsSent, array $filters)
-    {
-        //basic fields
-        $email = isset($fieldsSent['Email']) ? $fieldsSent['Email'] : '';
-        $phone = isset($fieldsSent['Phone']) ? $fieldsSent['Phone'] : '';
-        $firstName = isset($fieldsSent['FirstName']) ? $fieldsSent['FirstName'] : '';
-        $lastName = isset($fieldsSent['LastName']) ? $fieldsSent['LastName'] : '';
-
-        //serialize
-        $fieldsSent = serialize($fieldsSent);
-        $filters = serialize($filters);
-        $obj = SalesforceContactLog::create(
-            [
-                'Type' => $type,
-                'FieldsSent' => $fieldsSent,
-                'Filters' => $filters,
-                'Email' => $email,
-                'Phone' => $phone,
-                'FirstName' => $firstName,
-                'LastName' => $lastName,
-            ]
-        );
-        $id = $obj->write();
-
-        return SalesforceContactLog::get()->byID($id);
-    }
-
-    /**
-     * returns true if the contact update was successful
-     * @param  mixed $response
-     *
-     * @return bool
-     */
-    public function confirmContactLog($response, $error = '')
-    {
-        $id = '';
-        $errors = '';
-        $hasError = false;
-        if(is_array($response)) {
-            $response = $response[0];
-        }
-        if($error) {
-            $hasError = true;
-            $errors = $error;
-        }
-        if($response instanceof \SForce\Wsdl\SaveResult) {
-            $id = $response->getId();
-            if($response->getSuccess()) {
-                $hasError = false;
-            } else {
-                $errors = serialize($response->getErrors());
-                $hasError = true;
-            }
-        } else {
-            $errors .= '||| Unexpected response: '.serialize($response);
-        }
-        $this->SalesforceIdentifier = $id;
-        $this->Errors = $errors;
-        $this->HasError = $hasError;
-        $this->Executed = true;
-        $this->write();
-
-        return $this->HasError ? false : true;
-    }
-
     /**
      * Singular name for CMS
      * @var string
@@ -104,15 +27,14 @@ class SalesforceContactLog extends DataObject
      */
     private static $table_name = 'SalesforceContactLog';
 
-
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: private static $db = (case sensitive)
-  * NEW: private static $db = (COMPLEX)
-  * EXP: Make sure to add a private static $table_name!
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+    /**
+     * ### @@@@ START REPLACEMENT @@@@ ###
+     * WHY: upgrade to SS4
+     * OLD: private static $db = (case sensitive)
+     * NEW: private static $db = (COMPLEX)
+     * EXP: Make sure to add a private static $table_name!
+     * ### @@@@ STOP REPLACEMENT @@@@ ###
+     */
     private static $db = [
         'SalesforceIdentifier' => 'Varchar(40)',
         'Type' => 'Enum("Created,Updated")',
@@ -127,9 +49,8 @@ class SalesforceContactLog extends DataObject
         'Errors' => 'Text',
     ];
 
-
     private static $default_sort = [
-        'ID' => 'DESC'
+        'ID' => 'DESC',
     ];
 
     /**
@@ -174,6 +95,79 @@ class SalesforceContactLog extends DataObject
     ];
 
     /**
+     * create contact log
+     * @param  string $type
+     * @param  array $fieldsSent
+     * @param  array $filters
+     *
+     * @return SalesforceContactLog|null
+     */
+    public static function create_contact_log($type, array $fieldsSent, array $filters)
+    {
+        //basic fields
+        $email = isset($fieldsSent['Email']) ? $fieldsSent['Email'] : '';
+        $phone = isset($fieldsSent['Phone']) ? $fieldsSent['Phone'] : '';
+        $firstName = isset($fieldsSent['FirstName']) ? $fieldsSent['FirstName'] : '';
+        $lastName = isset($fieldsSent['LastName']) ? $fieldsSent['LastName'] : '';
+
+        //serialize
+        $fieldsSent = serialize($fieldsSent);
+        $filters = serialize($filters);
+        $obj = self::create(
+            [
+                'Type' => $type,
+                'FieldsSent' => $fieldsSent,
+                'Filters' => $filters,
+                'Email' => $email,
+                'Phone' => $phone,
+                'FirstName' => $firstName,
+                'LastName' => $lastName,
+            ]
+        );
+        $id = $obj->write();
+
+        return self::get()->byID($id);
+    }
+
+    /**
+     * returns true if the contact update was successful
+     * @param  mixed $response
+     *
+     * @return bool
+     */
+    public function confirmContactLog($response, $error = '')
+    {
+        $id = '';
+        $errors = '';
+        $hasError = false;
+        if (is_array($response)) {
+            $response = $response[0];
+        }
+        if ($error) {
+            $hasError = true;
+            $errors = $error;
+        }
+        if ($response instanceof \SForce\Wsdl\SaveResult) {
+            $id = $response->getId();
+            if ($response->getSuccess()) {
+                $hasError = false;
+            } else {
+                $errors = serialize($response->getErrors());
+                $hasError = true;
+            }
+        } else {
+            $errors .= '||| Unexpected response: ' . serialize($response);
+        }
+        $this->SalesforceIdentifier = $id;
+        $this->Errors = $errors;
+        $this->HasError = $hasError;
+        $this->Executed = true;
+        $this->write();
+
+        return $this->HasError ? false : true;
+    }
+
+    /**
      * CMS Fields
      * @return FieldList
      */
@@ -212,11 +206,11 @@ class SalesforceContactLog extends DataObject
             [
                 LiteralField::create(
                     'FieldsSentNice',
-                    '<h2>Fields Sent</h2>'.$this->serializedToHTML($this->FieldsSent)
+                    '<h2>Fields Sent</h2>' . $this->serializedToHTML($this->FieldsSent)
                 ),
                 LiteralField::create(
                     'FiltersNice',
-                    '<h2>Filters</h2>'.$this->serializedToHTML($this->Filters)
+                    '<h2>Filters</h2>' . $this->serializedToHTML($this->Filters)
                 ),
                 ReadonlyField::create(
                     'ExecutedNice',
@@ -231,7 +225,7 @@ class SalesforceContactLog extends DataObject
                 ReadonlyField::create(
                     'Errors',
                     'Communication Errors'
-                )->setRightTitle('Separated by three ||| symbols.')
+                )->setRightTitle('Separated by three ||| symbols.'),
             ]
         );
 
@@ -269,7 +263,6 @@ class SalesforceContactLog extends DataObject
     }
 
     /**
-     *
      * @param  string $serializedString (serialised data)
      * @return string (html)
      */
@@ -277,7 +270,6 @@ class SalesforceContactLog extends DataObject
     {
         $s = unserialize($serializedString);
 
-        return '<pre>'.print_r($s, 1).'</pre>';
+        return '<pre>' . print_r($s, 1) . '</pre>';
     }
-
 }

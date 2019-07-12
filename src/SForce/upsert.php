@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class upsert
 {
-
     /**
-     * @var string $externalIDFieldName
+     * @var string
      */
     protected $externalIDFieldName = null;
 
     /**
-     * @var sObject $sObjects
+     * @var sObject
      */
     protected $sObjects = null;
 
@@ -21,8 +20,8 @@ class upsert
      */
     public function __construct($externalIDFieldName = null, $sObjects = null)
     {
-      $this->externalIDFieldName = $externalIDFieldName;
-      $this->sObjects = $sObjects;
+        $this->externalIDFieldName = $externalIDFieldName;
+        $this->sObjects = $sObjects;
     }
 
     /**
@@ -30,7 +29,7 @@ class upsert
      */
     public function getExternalIDFieldName()
     {
-      return $this->externalIDFieldName;
+        return $this->externalIDFieldName;
     }
 
     /**
@@ -39,8 +38,8 @@ class upsert
      */
     public function setExternalIDFieldName($externalIDFieldName)
     {
-      $this->externalIDFieldName = $externalIDFieldName;
-      return $this;
+        $this->externalIDFieldName = $externalIDFieldName;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class upsert
      */
     public function getSObjects()
     {
-      return $this->sObjects;
+        return $this->sObjects;
     }
 
     /**
@@ -57,8 +56,7 @@ class upsert
      */
     public function setSObjects($sObjects)
     {
-      $this->sObjects = $sObjects;
-      return $this;
+        $this->sObjects = $sObjects;
+        return $this;
     }
-
 }

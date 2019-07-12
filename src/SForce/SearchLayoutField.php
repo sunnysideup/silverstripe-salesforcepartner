@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class SearchLayoutField
 {
-
     /**
-     * @var string $apiName
+     * @var string
      */
     protected $apiName = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var boolean $sortable
+     * @var boolean
      */
     protected $sortable = null;
 
@@ -27,9 +26,9 @@ class SearchLayoutField
      */
     public function __construct($apiName = null, $label = null, $sortable = null)
     {
-      $this->apiName = $apiName;
-      $this->label = $label;
-      $this->sortable = $sortable;
+        $this->apiName = $apiName;
+        $this->label = $label;
+        $this->sortable = $sortable;
     }
 
     /**
@@ -37,7 +36,7 @@ class SearchLayoutField
      */
     public function getApiName()
     {
-      return $this->apiName;
+        return $this->apiName;
     }
 
     /**
@@ -46,8 +45,8 @@ class SearchLayoutField
      */
     public function setApiName($apiName)
     {
-      $this->apiName = $apiName;
-      return $this;
+        $this->apiName = $apiName;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class SearchLayoutField
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -64,8 +63,8 @@ class SearchLayoutField
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class SearchLayoutField
      */
     public function getSortable()
     {
-      return $this->sortable;
+        return $this->sortable;
     }
 
     /**
@@ -82,8 +81,7 @@ class SearchLayoutField
      */
     public function setSortable($sortable)
     {
-      $this->sortable = $sortable;
-      return $this;
+        $this->sortable = $sortable;
+        return $this;
     }
-
 }

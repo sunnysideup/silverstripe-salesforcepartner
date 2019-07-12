@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class SendEmailError
 {
-
     /**
-     * @var string[] $fields
+     * @var string[]
      */
     protected $fields = null;
 
     /**
-     * @var string $message
+     * @var string
      */
     protected $message = null;
 
     /**
-     * @var StatusCode $statusCode
+     * @var StatusCode
      */
     protected $statusCode = null;
 
     /**
-     * @var ID $targetObjectId
+     * @var ID
      */
     protected $targetObjectId = null;
 
@@ -31,8 +30,8 @@ class SendEmailError
      */
     public function __construct($message = null, $statusCode = null)
     {
-      $this->message = $message;
-      $this->statusCode = $statusCode;
+        $this->message = $message;
+        $this->statusCode = $statusCode;
     }
 
     /**
@@ -40,7 +39,7 @@ class SendEmailError
      */
     public function getFields()
     {
-      return $this->fields;
+        return $this->fields;
     }
 
     /**
@@ -49,8 +48,8 @@ class SendEmailError
      */
     public function setFields(array $fields = null)
     {
-      $this->fields = $fields;
-      return $this;
+        $this->fields = $fields;
+        return $this;
     }
 
     /**
@@ -58,7 +57,7 @@ class SendEmailError
      */
     public function getMessage()
     {
-      return $this->message;
+        return $this->message;
     }
 
     /**
@@ -67,8 +66,8 @@ class SendEmailError
      */
     public function setMessage($message)
     {
-      $this->message = $message;
-      return $this;
+        $this->message = $message;
+        return $this;
     }
 
     /**
@@ -76,7 +75,7 @@ class SendEmailError
      */
     public function getStatusCode()
     {
-      return $this->statusCode;
+        return $this->statusCode;
     }
 
     /**
@@ -85,8 +84,8 @@ class SendEmailError
      */
     public function setStatusCode($statusCode)
     {
-      $this->statusCode = $statusCode;
-      return $this;
+        $this->statusCode = $statusCode;
+        return $this;
     }
 
     /**
@@ -94,7 +93,7 @@ class SendEmailError
      */
     public function getTargetObjectId()
     {
-      return $this->targetObjectId;
+        return $this->targetObjectId;
     }
 
     /**
@@ -103,8 +102,7 @@ class SendEmailError
      */
     public function setTargetObjectId($targetObjectId)
     {
-      $this->targetObjectId = $targetObjectId;
-      return $this;
+        $this->targetObjectId = $targetObjectId;
+        return $this;
     }
-
 }

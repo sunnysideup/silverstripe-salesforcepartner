@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class RenderEmailTemplateError
 {
-
     /**
-     * @var string $fieldName
+     * @var string
      */
     protected $fieldName = null;
 
     /**
-     * @var string $message
+     * @var string
      */
     protected $message = null;
 
     /**
-     * @var int $offset
+     * @var int
      */
     protected $offset = null;
 
     /**
-     * @var StatusCode $statusCode
+     * @var StatusCode
      */
     protected $statusCode = null;
 
@@ -33,10 +32,10 @@ class RenderEmailTemplateError
      */
     public function __construct($fieldName = null, $message = null, $offset = null, $statusCode = null)
     {
-      $this->fieldName = $fieldName;
-      $this->message = $message;
-      $this->offset = $offset;
-      $this->statusCode = $statusCode;
+        $this->fieldName = $fieldName;
+        $this->message = $message;
+        $this->offset = $offset;
+        $this->statusCode = $statusCode;
     }
 
     /**
@@ -44,7 +43,7 @@ class RenderEmailTemplateError
      */
     public function getFieldName()
     {
-      return $this->fieldName;
+        return $this->fieldName;
     }
 
     /**
@@ -53,8 +52,8 @@ class RenderEmailTemplateError
      */
     public function setFieldName($fieldName)
     {
-      $this->fieldName = $fieldName;
-      return $this;
+        $this->fieldName = $fieldName;
+        return $this;
     }
 
     /**
@@ -62,7 +61,7 @@ class RenderEmailTemplateError
      */
     public function getMessage()
     {
-      return $this->message;
+        return $this->message;
     }
 
     /**
@@ -71,8 +70,8 @@ class RenderEmailTemplateError
      */
     public function setMessage($message)
     {
-      $this->message = $message;
-      return $this;
+        $this->message = $message;
+        return $this;
     }
 
     /**
@@ -80,7 +79,7 @@ class RenderEmailTemplateError
      */
     public function getOffset()
     {
-      return $this->offset;
+        return $this->offset;
     }
 
     /**
@@ -89,8 +88,8 @@ class RenderEmailTemplateError
      */
     public function setOffset($offset)
     {
-      $this->offset = $offset;
-      return $this;
+        $this->offset = $offset;
+        return $this;
     }
 
     /**
@@ -98,7 +97,7 @@ class RenderEmailTemplateError
      */
     public function getStatusCode()
     {
-      return $this->statusCode;
+        return $this->statusCode;
     }
 
     /**
@@ -107,8 +106,7 @@ class RenderEmailTemplateError
      */
     public function setStatusCode($statusCode)
     {
-      $this->statusCode = $statusCode;
-      return $this;
+        $this->statusCode = $statusCode;
+        return $this;
     }
-
 }

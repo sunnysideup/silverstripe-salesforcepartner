@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class queryAll
 {
-
     /**
-     * @var string $queryString
+     * @var string
      */
     protected $queryString = null;
 
@@ -15,7 +14,7 @@ class queryAll
      */
     public function __construct($queryString = null)
     {
-      $this->queryString = $queryString;
+        $this->queryString = $queryString;
     }
 
     /**
@@ -23,7 +22,7 @@ class queryAll
      */
     public function getQueryString()
     {
-      return $this->queryString;
+        return $this->queryString;
     }
 
     /**
@@ -32,8 +31,7 @@ class queryAll
      */
     public function setQueryString($queryString)
     {
-      $this->queryString = $queryString;
-      return $this;
+        $this->queryString = $queryString;
+        return $this;
     }
-
 }

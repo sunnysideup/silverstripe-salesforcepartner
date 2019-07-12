@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class describeCompactLayouts
 {
-
     /**
-     * @var string $sObjectType
+     * @var string
      */
     protected $sObjectType = null;
 
     /**
-     * @var ID $recordTypeIds
+     * @var ID
      */
     protected $recordTypeIds = null;
 
@@ -21,8 +20,8 @@ class describeCompactLayouts
      */
     public function __construct($sObjectType = null, $recordTypeIds = null)
     {
-      $this->sObjectType = $sObjectType;
-      $this->recordTypeIds = $recordTypeIds;
+        $this->sObjectType = $sObjectType;
+        $this->recordTypeIds = $recordTypeIds;
     }
 
     /**
@@ -30,7 +29,7 @@ class describeCompactLayouts
      */
     public function getSObjectType()
     {
-      return $this->sObjectType;
+        return $this->sObjectType;
     }
 
     /**
@@ -39,8 +38,8 @@ class describeCompactLayouts
      */
     public function setSObjectType($sObjectType)
     {
-      $this->sObjectType = $sObjectType;
-      return $this;
+        $this->sObjectType = $sObjectType;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class describeCompactLayouts
      */
     public function getRecordTypeIds()
     {
-      return $this->recordTypeIds;
+        return $this->recordTypeIds;
     }
 
     /**
@@ -57,8 +56,7 @@ class describeCompactLayouts
      */
     public function setRecordTypeIds($recordTypeIds)
     {
-      $this->recordTypeIds = $recordTypeIds;
-      return $this;
+        $this->recordTypeIds = $recordTypeIds;
+        return $this;
     }
-
 }

@@ -4,21 +4,18 @@ namespace SForce\Wsdl;
 
 class DescribeQuickActionDefaultValue
 {
-
     /**
-     * @var string $defaultValue
+     * @var string
      */
     protected $defaultValue = null;
 
     /**
-     * @var string $field
+     * @var string
      */
     protected $field = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -26,7 +23,7 @@ class DescribeQuickActionDefaultValue
      */
     public function getDefaultValue()
     {
-      return $this->defaultValue;
+        return $this->defaultValue;
     }
 
     /**
@@ -35,8 +32,8 @@ class DescribeQuickActionDefaultValue
      */
     public function setDefaultValue($defaultValue)
     {
-      $this->defaultValue = $defaultValue;
-      return $this;
+        $this->defaultValue = $defaultValue;
+        return $this;
     }
 
     /**
@@ -44,7 +41,7 @@ class DescribeQuickActionDefaultValue
      */
     public function getField()
     {
-      return $this->field;
+        return $this->field;
     }
 
     /**
@@ -53,8 +50,7 @@ class DescribeQuickActionDefaultValue
      */
     public function setField($field)
     {
-      $this->field = $field;
-      return $this;
+        $this->field = $field;
+        return $this;
     }
-
 }

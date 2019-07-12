@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class RecordTypeCompactLayoutMapping
 {
-
     /**
-     * @var boolean $available
+     * @var boolean
      */
     protected $available = null;
 
     /**
-     * @var ID $compactLayoutId
+     * @var ID
      */
     protected $compactLayoutId = null;
 
     /**
-     * @var string $compactLayoutName
+     * @var string
      */
     protected $compactLayoutName = null;
 
     /**
-     * @var ID $recordTypeId
+     * @var ID
      */
     protected $recordTypeId = null;
 
     /**
-     * @var string $recordTypeName
+     * @var string
      */
     protected $recordTypeName = null;
 
@@ -38,10 +37,10 @@ class RecordTypeCompactLayoutMapping
      */
     public function __construct($available = null, $compactLayoutName = null, $recordTypeId = null, $recordTypeName = null)
     {
-      $this->available = $available;
-      $this->compactLayoutName = $compactLayoutName;
-      $this->recordTypeId = $recordTypeId;
-      $this->recordTypeName = $recordTypeName;
+        $this->available = $available;
+        $this->compactLayoutName = $compactLayoutName;
+        $this->recordTypeId = $recordTypeId;
+        $this->recordTypeName = $recordTypeName;
     }
 
     /**
@@ -49,7 +48,7 @@ class RecordTypeCompactLayoutMapping
      */
     public function getAvailable()
     {
-      return $this->available;
+        return $this->available;
     }
 
     /**
@@ -58,8 +57,8 @@ class RecordTypeCompactLayoutMapping
      */
     public function setAvailable($available)
     {
-      $this->available = $available;
-      return $this;
+        $this->available = $available;
+        return $this;
     }
 
     /**
@@ -67,7 +66,7 @@ class RecordTypeCompactLayoutMapping
      */
     public function getCompactLayoutId()
     {
-      return $this->compactLayoutId;
+        return $this->compactLayoutId;
     }
 
     /**
@@ -76,8 +75,8 @@ class RecordTypeCompactLayoutMapping
      */
     public function setCompactLayoutId($compactLayoutId)
     {
-      $this->compactLayoutId = $compactLayoutId;
-      return $this;
+        $this->compactLayoutId = $compactLayoutId;
+        return $this;
     }
 
     /**
@@ -85,7 +84,7 @@ class RecordTypeCompactLayoutMapping
      */
     public function getCompactLayoutName()
     {
-      return $this->compactLayoutName;
+        return $this->compactLayoutName;
     }
 
     /**
@@ -94,8 +93,8 @@ class RecordTypeCompactLayoutMapping
      */
     public function setCompactLayoutName($compactLayoutName)
     {
-      $this->compactLayoutName = $compactLayoutName;
-      return $this;
+        $this->compactLayoutName = $compactLayoutName;
+        return $this;
     }
 
     /**
@@ -103,7 +102,7 @@ class RecordTypeCompactLayoutMapping
      */
     public function getRecordTypeId()
     {
-      return $this->recordTypeId;
+        return $this->recordTypeId;
     }
 
     /**
@@ -112,8 +111,8 @@ class RecordTypeCompactLayoutMapping
      */
     public function setRecordTypeId($recordTypeId)
     {
-      $this->recordTypeId = $recordTypeId;
-      return $this;
+        $this->recordTypeId = $recordTypeId;
+        return $this;
     }
 
     /**
@@ -121,7 +120,7 @@ class RecordTypeCompactLayoutMapping
      */
     public function getRecordTypeName()
     {
-      return $this->recordTypeName;
+        return $this->recordTypeName;
     }
 
     /**
@@ -130,8 +129,7 @@ class RecordTypeCompactLayoutMapping
      */
     public function setRecordTypeName($recordTypeName)
     {
-      $this->recordTypeName = $recordTypeName;
-      return $this;
+        $this->recordTypeName = $recordTypeName;
+        return $this;
     }
-
 }

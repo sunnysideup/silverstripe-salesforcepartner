@@ -4,16 +4,13 @@ namespace SForce\Wsdl;
 
 class DescribeAppMenuResult
 {
-
     /**
-     * @var DescribeAppMenuItem[] $appMenuItems
+     * @var DescribeAppMenuItem[]
      */
     protected $appMenuItems = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -21,7 +18,7 @@ class DescribeAppMenuResult
      */
     public function getAppMenuItems()
     {
-      return $this->appMenuItems;
+        return $this->appMenuItems;
     }
 
     /**
@@ -30,8 +27,7 @@ class DescribeAppMenuResult
      */
     public function setAppMenuItems(array $appMenuItems = null)
     {
-      $this->appMenuItems = $appMenuItems;
-      return $this;
+        $this->appMenuItems = $appMenuItems;
+        return $this;
     }
-
 }

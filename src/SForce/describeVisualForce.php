@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class describeVisualForce
 {
-
     /**
-     * @var boolean $includeAllDetails
+     * @var boolean
      */
     protected $includeAllDetails = null;
 
     /**
-     * @var string $namespacePrefix
+     * @var string
      */
     protected $namespacePrefix = null;
 
@@ -21,8 +20,8 @@ class describeVisualForce
      */
     public function __construct($includeAllDetails = null, $namespacePrefix = null)
     {
-      $this->includeAllDetails = $includeAllDetails;
-      $this->namespacePrefix = $namespacePrefix;
+        $this->includeAllDetails = $includeAllDetails;
+        $this->namespacePrefix = $namespacePrefix;
     }
 
     /**
@@ -30,7 +29,7 @@ class describeVisualForce
      */
     public function getIncludeAllDetails()
     {
-      return $this->includeAllDetails;
+        return $this->includeAllDetails;
     }
 
     /**
@@ -39,8 +38,8 @@ class describeVisualForce
      */
     public function setIncludeAllDetails($includeAllDetails)
     {
-      $this->includeAllDetails = $includeAllDetails;
-      return $this;
+        $this->includeAllDetails = $includeAllDetails;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class describeVisualForce
      */
     public function getNamespacePrefix()
     {
-      return $this->namespacePrefix;
+        return $this->namespacePrefix;
     }
 
     /**
@@ -57,8 +56,7 @@ class describeVisualForce
      */
     public function setNamespacePrefix($namespacePrefix)
     {
-      $this->namespacePrefix = $namespacePrefix;
-      return $this;
+        $this->namespacePrefix = $namespacePrefix;
+        return $this;
     }
-
 }

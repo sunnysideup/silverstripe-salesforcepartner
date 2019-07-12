@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class DebuggingInfo
 {
-
     /**
-     * @var string $debugLog
+     * @var string
      */
     protected $debugLog = null;
 
@@ -15,7 +14,7 @@ class DebuggingInfo
      */
     public function __construct($debugLog = null)
     {
-      $this->debugLog = $debugLog;
+        $this->debugLog = $debugLog;
     }
 
     /**
@@ -23,7 +22,7 @@ class DebuggingInfo
      */
     public function getDebugLog()
     {
-      return $this->debugLog;
+        return $this->debugLog;
     }
 
     /**
@@ -32,8 +31,7 @@ class DebuggingInfo
      */
     public function setDebugLog($debugLog)
     {
-      $this->debugLog = $debugLog;
-      return $this;
+        $this->debugLog = $debugLog;
+        return $this;
     }
-
 }

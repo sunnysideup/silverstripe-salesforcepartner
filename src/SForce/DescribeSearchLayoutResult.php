@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class DescribeSearchLayoutResult
 {
-
     /**
-     * @var string $errorMsg
+     * @var string
      */
     protected $errorMsg = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var int $limitRows
+     * @var int
      */
     protected $limitRows = null;
 
     /**
-     * @var string $objectType
+     * @var string
      */
     protected $objectType = null;
 
     /**
-     * @var DescribeColumn[] $searchColumns
+     * @var DescribeColumn[]
      */
     protected $searchColumns = null;
 
@@ -35,7 +34,7 @@ class DescribeSearchLayoutResult
      */
     public function __construct($objectType = null)
     {
-      $this->objectType = $objectType;
+        $this->objectType = $objectType;
     }
 
     /**
@@ -43,7 +42,7 @@ class DescribeSearchLayoutResult
      */
     public function getErrorMsg()
     {
-      return $this->errorMsg;
+        return $this->errorMsg;
     }
 
     /**
@@ -52,8 +51,8 @@ class DescribeSearchLayoutResult
      */
     public function setErrorMsg($errorMsg)
     {
-      $this->errorMsg = $errorMsg;
-      return $this;
+        $this->errorMsg = $errorMsg;
+        return $this;
     }
 
     /**
@@ -61,7 +60,7 @@ class DescribeSearchLayoutResult
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -70,8 +69,8 @@ class DescribeSearchLayoutResult
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -79,7 +78,7 @@ class DescribeSearchLayoutResult
      */
     public function getLimitRows()
     {
-      return $this->limitRows;
+        return $this->limitRows;
     }
 
     /**
@@ -88,8 +87,8 @@ class DescribeSearchLayoutResult
      */
     public function setLimitRows($limitRows)
     {
-      $this->limitRows = $limitRows;
-      return $this;
+        $this->limitRows = $limitRows;
+        return $this;
     }
 
     /**
@@ -97,7 +96,7 @@ class DescribeSearchLayoutResult
      */
     public function getObjectType()
     {
-      return $this->objectType;
+        return $this->objectType;
     }
 
     /**
@@ -106,8 +105,8 @@ class DescribeSearchLayoutResult
      */
     public function setObjectType($objectType)
     {
-      $this->objectType = $objectType;
-      return $this;
+        $this->objectType = $objectType;
+        return $this;
     }
 
     /**
@@ -115,7 +114,7 @@ class DescribeSearchLayoutResult
      */
     public function getSearchColumns()
     {
-      return $this->searchColumns;
+        return $this->searchColumns;
     }
 
     /**
@@ -124,8 +123,7 @@ class DescribeSearchLayoutResult
      */
     public function setSearchColumns(array $searchColumns = null)
     {
-      $this->searchColumns = $searchColumns;
-      return $this;
+        $this->searchColumns = $searchColumns;
+        return $this;
     }
-
 }

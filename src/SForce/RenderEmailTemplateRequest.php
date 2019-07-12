@@ -4,31 +4,28 @@ namespace SForce\Wsdl;
 
 class RenderEmailTemplateRequest
 {
-
     /**
-     * @var boolean $escapeHtmlInMergeFields
+     * @var boolean
      */
     protected $escapeHtmlInMergeFields = null;
 
     /**
-     * @var string[] $templateBodies
+     * @var string[]
      */
     protected $templateBodies = null;
 
     /**
-     * @var ID $whatId
+     * @var ID
      */
     protected $whatId = null;
 
     /**
-     * @var ID $whoId
+     * @var ID
      */
     protected $whoId = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -36,7 +33,7 @@ class RenderEmailTemplateRequest
      */
     public function getEscapeHtmlInMergeFields()
     {
-      return $this->escapeHtmlInMergeFields;
+        return $this->escapeHtmlInMergeFields;
     }
 
     /**
@@ -45,8 +42,8 @@ class RenderEmailTemplateRequest
      */
     public function setEscapeHtmlInMergeFields($escapeHtmlInMergeFields)
     {
-      $this->escapeHtmlInMergeFields = $escapeHtmlInMergeFields;
-      return $this;
+        $this->escapeHtmlInMergeFields = $escapeHtmlInMergeFields;
+        return $this;
     }
 
     /**
@@ -54,7 +51,7 @@ class RenderEmailTemplateRequest
      */
     public function getTemplateBodies()
     {
-      return $this->templateBodies;
+        return $this->templateBodies;
     }
 
     /**
@@ -63,8 +60,8 @@ class RenderEmailTemplateRequest
      */
     public function setTemplateBodies(array $templateBodies = null)
     {
-      $this->templateBodies = $templateBodies;
-      return $this;
+        $this->templateBodies = $templateBodies;
+        return $this;
     }
 
     /**
@@ -72,7 +69,7 @@ class RenderEmailTemplateRequest
      */
     public function getWhatId()
     {
-      return $this->whatId;
+        return $this->whatId;
     }
 
     /**
@@ -81,8 +78,8 @@ class RenderEmailTemplateRequest
      */
     public function setWhatId($whatId)
     {
-      $this->whatId = $whatId;
-      return $this;
+        $this->whatId = $whatId;
+        return $this;
     }
 
     /**
@@ -90,7 +87,7 @@ class RenderEmailTemplateRequest
      */
     public function getWhoId()
     {
-      return $this->whoId;
+        return $this->whoId;
     }
 
     /**
@@ -99,8 +96,7 @@ class RenderEmailTemplateRequest
      */
     public function setWhoId($whoId)
     {
-      $this->whoId = $whoId;
-      return $this;
+        $this->whoId = $whoId;
+        return $this;
     }
-
 }

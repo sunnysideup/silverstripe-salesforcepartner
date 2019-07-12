@@ -4,34 +4,33 @@ namespace SForce\Wsdl;
 
 class LeadConvertResult
 {
-
     /**
-     * @var ID $accountId
+     * @var ID
      */
     protected $accountId = null;
 
     /**
-     * @var ID $contactId
+     * @var ID
      */
     protected $contactId = null;
 
     /**
-     * @var Error[] $errors
+     * @var Error[]
      */
     protected $errors = null;
 
     /**
-     * @var ID $leadId
+     * @var ID
      */
     protected $leadId = null;
 
     /**
-     * @var ID $opportunityId
+     * @var ID
      */
     protected $opportunityId = null;
 
     /**
-     * @var boolean $success
+     * @var boolean
      */
     protected $success = null;
 
@@ -40,7 +39,7 @@ class LeadConvertResult
      */
     public function __construct($success = null)
     {
-      $this->success = $success;
+        $this->success = $success;
     }
 
     /**
@@ -48,7 +47,7 @@ class LeadConvertResult
      */
     public function getAccountId()
     {
-      return $this->accountId;
+        return $this->accountId;
     }
 
     /**
@@ -57,8 +56,8 @@ class LeadConvertResult
      */
     public function setAccountId($accountId)
     {
-      $this->accountId = $accountId;
-      return $this;
+        $this->accountId = $accountId;
+        return $this;
     }
 
     /**
@@ -66,7 +65,7 @@ class LeadConvertResult
      */
     public function getContactId()
     {
-      return $this->contactId;
+        return $this->contactId;
     }
 
     /**
@@ -75,8 +74,8 @@ class LeadConvertResult
      */
     public function setContactId($contactId)
     {
-      $this->contactId = $contactId;
-      return $this;
+        $this->contactId = $contactId;
+        return $this;
     }
 
     /**
@@ -84,7 +83,7 @@ class LeadConvertResult
      */
     public function getErrors()
     {
-      return $this->errors;
+        return $this->errors;
     }
 
     /**
@@ -93,8 +92,8 @@ class LeadConvertResult
      */
     public function setErrors(array $errors = null)
     {
-      $this->errors = $errors;
-      return $this;
+        $this->errors = $errors;
+        return $this;
     }
 
     /**
@@ -102,7 +101,7 @@ class LeadConvertResult
      */
     public function getLeadId()
     {
-      return $this->leadId;
+        return $this->leadId;
     }
 
     /**
@@ -111,8 +110,8 @@ class LeadConvertResult
      */
     public function setLeadId($leadId)
     {
-      $this->leadId = $leadId;
-      return $this;
+        $this->leadId = $leadId;
+        return $this;
     }
 
     /**
@@ -120,7 +119,7 @@ class LeadConvertResult
      */
     public function getOpportunityId()
     {
-      return $this->opportunityId;
+        return $this->opportunityId;
     }
 
     /**
@@ -129,8 +128,8 @@ class LeadConvertResult
      */
     public function setOpportunityId($opportunityId)
     {
-      $this->opportunityId = $opportunityId;
-      return $this;
+        $this->opportunityId = $opportunityId;
+        return $this;
     }
 
     /**
@@ -138,7 +137,7 @@ class LeadConvertResult
      */
     public function getSuccess()
     {
-      return $this->success;
+        return $this->success;
     }
 
     /**
@@ -147,8 +146,7 @@ class LeadConvertResult
      */
     public function setSuccess($success)
     {
-      $this->success = $success;
-      return $this;
+        $this->success = $success;
+        return $this;
     }
-
 }

@@ -4,51 +4,49 @@ namespace SForce\Wsdl;
 
 class address extends location
 {
-
     /**
-     * @var string $city
+     * @var string
      */
     protected $city = null;
 
     /**
-     * @var string $country
+     * @var string
      */
     protected $country = null;
 
     /**
-     * @var string $countryCode
+     * @var string
      */
     protected $countryCode = null;
 
     /**
-     * @var string $geocodeAccuracy
+     * @var string
      */
     protected $geocodeAccuracy = null;
 
     /**
-     * @var string $postalCode
+     * @var string
      */
     protected $postalCode = null;
 
     /**
-     * @var string $state
+     * @var string
      */
     protected $state = null;
 
     /**
-     * @var string $stateCode
+     * @var string
      */
     protected $stateCode = null;
 
     /**
-     * @var string $street
+     * @var string
      */
     protected $street = null;
 
-    
     public function __construct()
     {
-      parent::__construct();
+        parent::__construct();
     }
 
     /**
@@ -56,7 +54,7 @@ class address extends location
      */
     public function getCity()
     {
-      return $this->city;
+        return $this->city;
     }
 
     /**
@@ -65,8 +63,8 @@ class address extends location
      */
     public function setCity($city)
     {
-      $this->city = $city;
-      return $this;
+        $this->city = $city;
+        return $this;
     }
 
     /**
@@ -74,7 +72,7 @@ class address extends location
      */
     public function getCountry()
     {
-      return $this->country;
+        return $this->country;
     }
 
     /**
@@ -83,8 +81,8 @@ class address extends location
      */
     public function setCountry($country)
     {
-      $this->country = $country;
-      return $this;
+        $this->country = $country;
+        return $this;
     }
 
     /**
@@ -92,7 +90,7 @@ class address extends location
      */
     public function getCountryCode()
     {
-      return $this->countryCode;
+        return $this->countryCode;
     }
 
     /**
@@ -101,8 +99,8 @@ class address extends location
      */
     public function setCountryCode($countryCode)
     {
-      $this->countryCode = $countryCode;
-      return $this;
+        $this->countryCode = $countryCode;
+        return $this;
     }
 
     /**
@@ -110,7 +108,7 @@ class address extends location
      */
     public function getGeocodeAccuracy()
     {
-      return $this->geocodeAccuracy;
+        return $this->geocodeAccuracy;
     }
 
     /**
@@ -119,8 +117,8 @@ class address extends location
      */
     public function setGeocodeAccuracy($geocodeAccuracy)
     {
-      $this->geocodeAccuracy = $geocodeAccuracy;
-      return $this;
+        $this->geocodeAccuracy = $geocodeAccuracy;
+        return $this;
     }
 
     /**
@@ -128,7 +126,7 @@ class address extends location
      */
     public function getPostalCode()
     {
-      return $this->postalCode;
+        return $this->postalCode;
     }
 
     /**
@@ -137,8 +135,8 @@ class address extends location
      */
     public function setPostalCode($postalCode)
     {
-      $this->postalCode = $postalCode;
-      return $this;
+        $this->postalCode = $postalCode;
+        return $this;
     }
 
     /**
@@ -146,7 +144,7 @@ class address extends location
      */
     public function getState()
     {
-      return $this->state;
+        return $this->state;
     }
 
     /**
@@ -155,8 +153,8 @@ class address extends location
      */
     public function setState($state)
     {
-      $this->state = $state;
-      return $this;
+        $this->state = $state;
+        return $this;
     }
 
     /**
@@ -164,7 +162,7 @@ class address extends location
      */
     public function getStateCode()
     {
-      return $this->stateCode;
+        return $this->stateCode;
     }
 
     /**
@@ -173,8 +171,8 @@ class address extends location
      */
     public function setStateCode($stateCode)
     {
-      $this->stateCode = $stateCode;
-      return $this;
+        $this->stateCode = $stateCode;
+        return $this;
     }
 
     /**
@@ -182,7 +180,7 @@ class address extends location
      */
     public function getStreet()
     {
-      return $this->street;
+        return $this->street;
     }
 
     /**
@@ -191,8 +189,7 @@ class address extends location
      */
     public function setStreet($street)
     {
-      $this->street = $street;
-      return $this;
+        $this->street = $street;
+        return $this;
     }
-
 }

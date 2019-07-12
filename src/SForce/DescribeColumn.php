@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class DescribeColumn
 {
-
     /**
-     * @var string $field
+     * @var string
      */
     protected $field = null;
 
     /**
-     * @var string $format
+     * @var string
      */
     protected $format = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
@@ -32,9 +31,9 @@ class DescribeColumn
      */
     public function __construct($field = null, $label = null, $name = null)
     {
-      $this->field = $field;
-      $this->label = $label;
-      $this->name = $name;
+        $this->field = $field;
+        $this->label = $label;
+        $this->name = $name;
     }
 
     /**
@@ -42,7 +41,7 @@ class DescribeColumn
      */
     public function getField()
     {
-      return $this->field;
+        return $this->field;
     }
 
     /**
@@ -51,8 +50,8 @@ class DescribeColumn
      */
     public function setField($field)
     {
-      $this->field = $field;
-      return $this;
+        $this->field = $field;
+        return $this;
     }
 
     /**
@@ -60,7 +59,7 @@ class DescribeColumn
      */
     public function getFormat()
     {
-      return $this->format;
+        return $this->format;
     }
 
     /**
@@ -69,8 +68,8 @@ class DescribeColumn
      */
     public function setFormat($format)
     {
-      $this->format = $format;
-      return $this;
+        $this->format = $format;
+        return $this;
     }
 
     /**
@@ -78,7 +77,7 @@ class DescribeColumn
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -87,8 +86,8 @@ class DescribeColumn
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -96,7 +95,7 @@ class DescribeColumn
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -105,8 +104,7 @@ class DescribeColumn
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
-
 }

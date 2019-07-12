@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class GetServerTimestampResult
 {
-
     /**
-     * @var \DateTime $timestamp
+     * @var \DateTime
      */
     protected $timestamp = null;
 
@@ -16,15 +15,15 @@ class GetServerTimestampResult
     public function __construct(\DateTime $timestamp = null)
     {
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: ->format( (case sensitive)
-  * NEW: ->format( (COMPLEX)
-  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
-      $this->timestamp = $timestamp ? $timestamp->format(\DateTime::ATOM) : null;
+      /**
+       * ### @@@@ START REPLACEMENT @@@@ ###
+       * WHY: upgrade to SS4
+       * OLD: ->format( (case sensitive)
+       * NEW: ->format( (COMPLEX)
+       * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+       * ### @@@@ STOP REPLACEMENT @@@@ ###
+       */
+        $this->timestamp = $timestamp ? $timestamp->format(\DateTime::ATOM) : null;
     }
 
     /**
@@ -32,15 +31,14 @@ class GetServerTimestampResult
      */
     public function getTimestamp()
     {
-      if ($this->timestamp == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->timestamp);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->timestamp === null) {
+            return null;
         }
-      }
+        try {
+            return new \DateTime($this->timestamp);
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     /**
@@ -50,16 +48,15 @@ class GetServerTimestampResult
     public function setTimestamp(\DateTime $timestamp)
     {
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: ->format( (case sensitive)
-  * NEW: ->format( (COMPLEX)
-  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
-      $this->timestamp = $timestamp->format(\DateTime::ATOM);
-      return $this;
+      /**
+       * ### @@@@ START REPLACEMENT @@@@ ###
+       * WHY: upgrade to SS4
+       * OLD: ->format( (case sensitive)
+       * NEW: ->format( (COMPLEX)
+       * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+       * ### @@@@ STOP REPLACEMENT @@@@ ###
+       */
+        $this->timestamp = $timestamp->format(\DateTime::ATOM);
+        return $this;
     }
-
 }

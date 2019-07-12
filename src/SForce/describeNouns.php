@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class describeNouns
 {
-
     /**
-     * @var string $nouns
+     * @var string
      */
     protected $nouns = null;
 
     /**
-     * @var boolean $onlyRenamed
+     * @var boolean
      */
     protected $onlyRenamed = null;
 
     /**
-     * @var boolean $includeFields
+     * @var boolean
      */
     protected $includeFields = null;
 
@@ -27,9 +26,9 @@ class describeNouns
      */
     public function __construct($nouns = null, $onlyRenamed = null, $includeFields = null)
     {
-      $this->nouns = $nouns;
-      $this->onlyRenamed = $onlyRenamed;
-      $this->includeFields = $includeFields;
+        $this->nouns = $nouns;
+        $this->onlyRenamed = $onlyRenamed;
+        $this->includeFields = $includeFields;
     }
 
     /**
@@ -37,7 +36,7 @@ class describeNouns
      */
     public function getNouns()
     {
-      return $this->nouns;
+        return $this->nouns;
     }
 
     /**
@@ -46,8 +45,8 @@ class describeNouns
      */
     public function setNouns($nouns)
     {
-      $this->nouns = $nouns;
-      return $this;
+        $this->nouns = $nouns;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class describeNouns
      */
     public function getOnlyRenamed()
     {
-      return $this->onlyRenamed;
+        return $this->onlyRenamed;
     }
 
     /**
@@ -64,8 +63,8 @@ class describeNouns
      */
     public function setOnlyRenamed($onlyRenamed)
     {
-      $this->onlyRenamed = $onlyRenamed;
-      return $this;
+        $this->onlyRenamed = $onlyRenamed;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class describeNouns
      */
     public function getIncludeFields()
     {
-      return $this->includeFields;
+        return $this->includeFields;
     }
 
     /**
@@ -82,8 +81,7 @@ class describeNouns
      */
     public function setIncludeFields($includeFields)
     {
-      $this->includeFields = $includeFields;
-      return $this;
+        $this->includeFields = $includeFields;
+        return $this;
     }
-
 }

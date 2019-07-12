@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class SendEmailResult
 {
-
     /**
-     * @var SendEmailError[] $errors
+     * @var SendEmailError[]
      */
     protected $errors = null;
 
     /**
-     * @var boolean $success
+     * @var boolean
      */
     protected $success = null;
 
@@ -20,7 +19,7 @@ class SendEmailResult
      */
     public function __construct($success = null)
     {
-      $this->success = $success;
+        $this->success = $success;
     }
 
     /**
@@ -28,7 +27,7 @@ class SendEmailResult
      */
     public function getErrors()
     {
-      return $this->errors;
+        return $this->errors;
     }
 
     /**
@@ -37,8 +36,8 @@ class SendEmailResult
      */
     public function setErrors(array $errors = null)
     {
-      $this->errors = $errors;
-      return $this;
+        $this->errors = $errors;
+        return $this;
     }
 
     /**
@@ -46,7 +45,7 @@ class SendEmailResult
      */
     public function getSuccess()
     {
-      return $this->success;
+        return $this->success;
     }
 
     /**
@@ -55,8 +54,7 @@ class SendEmailResult
      */
     public function setSuccess($success)
     {
-      $this->success = $success;
-      return $this;
+        $this->success = $success;
+        return $this;
     }
-
 }

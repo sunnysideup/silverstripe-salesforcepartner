@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class DescribePathAssistantField
 {
-
     /**
-     * @var string $apiName
+     * @var string
      */
     protected $apiName = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var boolean $readOnly
+     * @var boolean
      */
     protected $readOnly = null;
 
     /**
-     * @var boolean $required
+     * @var boolean
      */
     protected $required = null;
 
@@ -33,10 +32,10 @@ class DescribePathAssistantField
      */
     public function __construct($apiName = null, $label = null, $readOnly = null, $required = null)
     {
-      $this->apiName = $apiName;
-      $this->label = $label;
-      $this->readOnly = $readOnly;
-      $this->required = $required;
+        $this->apiName = $apiName;
+        $this->label = $label;
+        $this->readOnly = $readOnly;
+        $this->required = $required;
     }
 
     /**
@@ -44,7 +43,7 @@ class DescribePathAssistantField
      */
     public function getApiName()
     {
-      return $this->apiName;
+        return $this->apiName;
     }
 
     /**
@@ -53,8 +52,8 @@ class DescribePathAssistantField
      */
     public function setApiName($apiName)
     {
-      $this->apiName = $apiName;
-      return $this;
+        $this->apiName = $apiName;
+        return $this;
     }
 
     /**
@@ -62,7 +61,7 @@ class DescribePathAssistantField
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -71,8 +70,8 @@ class DescribePathAssistantField
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -80,7 +79,7 @@ class DescribePathAssistantField
      */
     public function getReadOnly()
     {
-      return $this->readOnly;
+        return $this->readOnly;
     }
 
     /**
@@ -89,8 +88,8 @@ class DescribePathAssistantField
      */
     public function setReadOnly($readOnly)
     {
-      $this->readOnly = $readOnly;
-      return $this;
+        $this->readOnly = $readOnly;
+        return $this;
     }
 
     /**
@@ -98,7 +97,7 @@ class DescribePathAssistantField
      */
     public function getRequired()
     {
-      return $this->required;
+        return $this->required;
     }
 
     /**
@@ -107,8 +106,7 @@ class DescribePathAssistantField
      */
     public function setRequired($required)
     {
-      $this->required = $required;
-      return $this;
+        $this->required = $required;
+        return $this;
     }
-
 }

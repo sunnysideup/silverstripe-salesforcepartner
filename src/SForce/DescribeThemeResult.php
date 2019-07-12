@@ -4,16 +4,13 @@ namespace SForce\Wsdl;
 
 class DescribeThemeResult
 {
-
     /**
-     * @var DescribeThemeItem[] $themeItems
+     * @var DescribeThemeItem[]
      */
     protected $themeItems = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -21,7 +18,7 @@ class DescribeThemeResult
      */
     public function getThemeItems()
     {
-      return $this->themeItems;
+        return $this->themeItems;
     }
 
     /**
@@ -30,8 +27,7 @@ class DescribeThemeResult
      */
     public function setThemeItems(array $themeItems = null)
     {
-      $this->themeItems = $themeItems;
-      return $this;
+        $this->themeItems = $themeItems;
+        return $this;
     }
-
 }

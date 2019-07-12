@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class RenderEmailTemplateBodyResult
 {
-
     /**
-     * @var RenderEmailTemplateError[] $errors
+     * @var RenderEmailTemplateError[]
      */
     protected $errors = null;
 
     /**
-     * @var string $mergedBody
+     * @var string
      */
     protected $mergedBody = null;
 
     /**
-     * @var boolean $success
+     * @var boolean
      */
     protected $success = null;
 
@@ -25,7 +24,7 @@ class RenderEmailTemplateBodyResult
      */
     public function __construct($success = null)
     {
-      $this->success = $success;
+        $this->success = $success;
     }
 
     /**
@@ -33,7 +32,7 @@ class RenderEmailTemplateBodyResult
      */
     public function getErrors()
     {
-      return $this->errors;
+        return $this->errors;
     }
 
     /**
@@ -42,8 +41,8 @@ class RenderEmailTemplateBodyResult
      */
     public function setErrors(array $errors = null)
     {
-      $this->errors = $errors;
-      return $this;
+        $this->errors = $errors;
+        return $this;
     }
 
     /**
@@ -51,7 +50,7 @@ class RenderEmailTemplateBodyResult
      */
     public function getMergedBody()
     {
-      return $this->mergedBody;
+        return $this->mergedBody;
     }
 
     /**
@@ -60,8 +59,8 @@ class RenderEmailTemplateBodyResult
      */
     public function setMergedBody($mergedBody)
     {
-      $this->mergedBody = $mergedBody;
-      return $this;
+        $this->mergedBody = $mergedBody;
+        return $this;
     }
 
     /**
@@ -69,7 +68,7 @@ class RenderEmailTemplateBodyResult
      */
     public function getSuccess()
     {
-      return $this->success;
+        return $this->success;
     }
 
     /**
@@ -78,8 +77,7 @@ class RenderEmailTemplateBodyResult
      */
     public function setSuccess($success)
     {
-      $this->success = $success;
-      return $this;
+        $this->success = $success;
+        return $this;
     }
-
 }

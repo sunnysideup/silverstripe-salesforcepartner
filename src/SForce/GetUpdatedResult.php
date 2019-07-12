@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class GetUpdatedResult
 {
-
     /**
-     * @var ID[] $ids
+     * @var ID[]
      */
     protected $ids = null;
 
     /**
-     * @var \DateTime $latestDateCovered
+     * @var \DateTime
      */
     protected $latestDateCovered = null;
 
@@ -21,15 +20,15 @@ class GetUpdatedResult
     public function __construct(\DateTime $latestDateCovered = null)
     {
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: ->format( (case sensitive)
-  * NEW: ->format( (COMPLEX)
-  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
-      $this->latestDateCovered = $latestDateCovered ? $latestDateCovered->format(\DateTime::ATOM) : null;
+      /**
+       * ### @@@@ START REPLACEMENT @@@@ ###
+       * WHY: upgrade to SS4
+       * OLD: ->format( (case sensitive)
+       * NEW: ->format( (COMPLEX)
+       * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+       * ### @@@@ STOP REPLACEMENT @@@@ ###
+       */
+        $this->latestDateCovered = $latestDateCovered ? $latestDateCovered->format(\DateTime::ATOM) : null;
     }
 
     /**
@@ -37,7 +36,7 @@ class GetUpdatedResult
      */
     public function getIds()
     {
-      return $this->ids;
+        return $this->ids;
     }
 
     /**
@@ -46,8 +45,8 @@ class GetUpdatedResult
      */
     public function setIds(array $ids = null)
     {
-      $this->ids = $ids;
-      return $this;
+        $this->ids = $ids;
+        return $this;
     }
 
     /**
@@ -55,15 +54,14 @@ class GetUpdatedResult
      */
     public function getLatestDateCovered()
     {
-      if ($this->latestDateCovered == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->latestDateCovered);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->latestDateCovered === null) {
+            return null;
         }
-      }
+        try {
+            return new \DateTime($this->latestDateCovered);
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     /**
@@ -73,16 +71,15 @@ class GetUpdatedResult
     public function setLatestDateCovered(\DateTime $latestDateCovered)
     {
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: ->format( (case sensitive)
-  * NEW: ->format( (COMPLEX)
-  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
-      $this->latestDateCovered = $latestDateCovered->format(\DateTime::ATOM);
-      return $this;
+      /**
+       * ### @@@@ START REPLACEMENT @@@@ ###
+       * WHY: upgrade to SS4
+       * OLD: ->format( (case sensitive)
+       * NEW: ->format( (COMPLEX)
+       * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+       * ### @@@@ STOP REPLACEMENT @@@@ ###
+       */
+        $this->latestDateCovered = $latestDateCovered->format(\DateTime::ATOM);
+        return $this;
     }
-
 }

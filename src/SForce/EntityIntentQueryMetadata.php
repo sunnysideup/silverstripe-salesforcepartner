@@ -4,21 +4,18 @@ namespace SForce\Wsdl;
 
 class EntityIntentQueryMetadata
 {
-
     /**
-     * @var boolean $intentQuery
+     * @var boolean
      */
     protected $intentQuery = null;
 
     /**
-     * @var string $message
+     * @var string
      */
     protected $message = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -26,7 +23,7 @@ class EntityIntentQueryMetadata
      */
     public function getIntentQuery()
     {
-      return $this->intentQuery;
+        return $this->intentQuery;
     }
 
     /**
@@ -35,8 +32,8 @@ class EntityIntentQueryMetadata
      */
     public function setIntentQuery($intentQuery)
     {
-      $this->intentQuery = $intentQuery;
-      return $this;
+        $this->intentQuery = $intentQuery;
+        return $this;
     }
 
     /**
@@ -44,7 +41,7 @@ class EntityIntentQueryMetadata
      */
     public function getMessage()
     {
-      return $this->message;
+        return $this->message;
     }
 
     /**
@@ -53,8 +50,7 @@ class EntityIntentQueryMetadata
      */
     public function setMessage($message)
     {
-      $this->message = $message;
-      return $this;
+        $this->message = $message;
+        return $this;
     }
-
 }

@@ -4,49 +4,48 @@ namespace SForce\Wsdl;
 
 class DescribeQuickActionListItemResult
 {
-
     /**
-     * @var ShareAccessLevel $accessLevelRequired
+     * @var ShareAccessLevel
      */
     protected $accessLevelRequired = null;
 
     /**
-     * @var DescribeColor[] $colors
+     * @var DescribeColor[]
      */
     protected $colors = null;
 
     /**
-     * @var string $iconUrl
+     * @var string
      */
     protected $iconUrl = null;
 
     /**
-     * @var DescribeIcon[] $icons
+     * @var DescribeIcon[]
      */
     protected $icons = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $miniIconUrl
+     * @var string
      */
     protected $miniIconUrl = null;
 
     /**
-     * @var string $quickActionName
+     * @var string
      */
     protected $quickActionName = null;
 
     /**
-     * @var string $targetSobjectType
+     * @var string
      */
     protected $targetSobjectType = null;
 
     /**
-     * @var string $type
+     * @var string
      */
     protected $type = null;
 
@@ -58,10 +57,10 @@ class DescribeQuickActionListItemResult
      */
     public function __construct($label = null, $miniIconUrl = null, $quickActionName = null, $type = null)
     {
-      $this->label = $label;
-      $this->miniIconUrl = $miniIconUrl;
-      $this->quickActionName = $quickActionName;
-      $this->type = $type;
+        $this->label = $label;
+        $this->miniIconUrl = $miniIconUrl;
+        $this->quickActionName = $quickActionName;
+        $this->type = $type;
     }
 
     /**
@@ -69,7 +68,7 @@ class DescribeQuickActionListItemResult
      */
     public function getAccessLevelRequired()
     {
-      return $this->accessLevelRequired;
+        return $this->accessLevelRequired;
     }
 
     /**
@@ -78,8 +77,8 @@ class DescribeQuickActionListItemResult
      */
     public function setAccessLevelRequired($accessLevelRequired)
     {
-      $this->accessLevelRequired = $accessLevelRequired;
-      return $this;
+        $this->accessLevelRequired = $accessLevelRequired;
+        return $this;
     }
 
     /**
@@ -87,7 +86,7 @@ class DescribeQuickActionListItemResult
      */
     public function getColors()
     {
-      return $this->colors;
+        return $this->colors;
     }
 
     /**
@@ -96,8 +95,8 @@ class DescribeQuickActionListItemResult
      */
     public function setColors(array $colors = null)
     {
-      $this->colors = $colors;
-      return $this;
+        $this->colors = $colors;
+        return $this;
     }
 
     /**
@@ -105,7 +104,7 @@ class DescribeQuickActionListItemResult
      */
     public function getIconUrl()
     {
-      return $this->iconUrl;
+        return $this->iconUrl;
     }
 
     /**
@@ -114,8 +113,8 @@ class DescribeQuickActionListItemResult
      */
     public function setIconUrl($iconUrl)
     {
-      $this->iconUrl = $iconUrl;
-      return $this;
+        $this->iconUrl = $iconUrl;
+        return $this;
     }
 
     /**
@@ -123,7 +122,7 @@ class DescribeQuickActionListItemResult
      */
     public function getIcons()
     {
-      return $this->icons;
+        return $this->icons;
     }
 
     /**
@@ -132,8 +131,8 @@ class DescribeQuickActionListItemResult
      */
     public function setIcons(array $icons = null)
     {
-      $this->icons = $icons;
-      return $this;
+        $this->icons = $icons;
+        return $this;
     }
 
     /**
@@ -141,7 +140,7 @@ class DescribeQuickActionListItemResult
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -150,8 +149,8 @@ class DescribeQuickActionListItemResult
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -159,7 +158,7 @@ class DescribeQuickActionListItemResult
      */
     public function getMiniIconUrl()
     {
-      return $this->miniIconUrl;
+        return $this->miniIconUrl;
     }
 
     /**
@@ -168,8 +167,8 @@ class DescribeQuickActionListItemResult
      */
     public function setMiniIconUrl($miniIconUrl)
     {
-      $this->miniIconUrl = $miniIconUrl;
-      return $this;
+        $this->miniIconUrl = $miniIconUrl;
+        return $this;
     }
 
     /**
@@ -177,7 +176,7 @@ class DescribeQuickActionListItemResult
      */
     public function getQuickActionName()
     {
-      return $this->quickActionName;
+        return $this->quickActionName;
     }
 
     /**
@@ -186,8 +185,8 @@ class DescribeQuickActionListItemResult
      */
     public function setQuickActionName($quickActionName)
     {
-      $this->quickActionName = $quickActionName;
-      return $this;
+        $this->quickActionName = $quickActionName;
+        return $this;
     }
 
     /**
@@ -195,7 +194,7 @@ class DescribeQuickActionListItemResult
      */
     public function getTargetSobjectType()
     {
-      return $this->targetSobjectType;
+        return $this->targetSobjectType;
     }
 
     /**
@@ -204,8 +203,8 @@ class DescribeQuickActionListItemResult
      */
     public function setTargetSobjectType($targetSobjectType)
     {
-      $this->targetSobjectType = $targetSobjectType;
-      return $this;
+        $this->targetSobjectType = $targetSobjectType;
+        return $this;
     }
 
     /**
@@ -213,7 +212,7 @@ class DescribeQuickActionListItemResult
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -222,8 +221,7 @@ class DescribeQuickActionListItemResult
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
-
 }

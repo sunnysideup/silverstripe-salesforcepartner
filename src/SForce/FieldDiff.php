@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class FieldDiff
 {
-
     /**
-     * @var differenceType $difference
+     * @var differenceType
      */
     protected $difference = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
@@ -20,7 +19,7 @@ class FieldDiff
      */
     public function __construct($name = null)
     {
-      $this->name = $name;
+        $this->name = $name;
     }
 
     /**
@@ -28,7 +27,7 @@ class FieldDiff
      */
     public function getDifference()
     {
-      return $this->difference;
+        return $this->difference;
     }
 
     /**
@@ -37,8 +36,8 @@ class FieldDiff
      */
     public function setDifference($difference)
     {
-      $this->difference = $difference;
-      return $this;
+        $this->difference = $difference;
+        return $this;
     }
 
     /**
@@ -46,7 +45,7 @@ class FieldDiff
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -55,8 +54,7 @@ class FieldDiff
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
-
 }

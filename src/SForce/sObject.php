@@ -4,25 +4,23 @@ namespace SForce\Wsdl;
 
 class sObject
 {
-
-
     /**
-     * @var string $type
+     * @var string
      */
     protected $type = null;
 
     /**
-     * @var string[] $fieldsToNull
+     * @var string[]
      */
     protected $fieldsToNull = null;
 
     /**
-     * @var ID $Id
+     * @var ID
      */
     protected $Id = null;
 
     /**
-     * @var string $any
+     * @var string
      */
     protected $any = null;
 
@@ -32,8 +30,8 @@ class sObject
      */
     public function __construct($type = null, $any = null)
     {
-      $this->type = $type;
-      $this->any = $any;
+        $this->type = $type;
+        $this->any = $any;
     }
 
     /**
@@ -41,7 +39,7 @@ class sObject
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -50,8 +48,8 @@ class sObject
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
 
     /**
@@ -59,7 +57,7 @@ class sObject
      */
     public function getFieldsToNull()
     {
-      return $this->fieldsToNull;
+        return $this->fieldsToNull;
     }
 
     /**
@@ -68,8 +66,8 @@ class sObject
      */
     public function setFieldsToNull(array $fieldsToNull = null)
     {
-      $this->fieldsToNull = $fieldsToNull;
-      return $this;
+        $this->fieldsToNull = $fieldsToNull;
+        return $this;
     }
 
     /**
@@ -77,7 +75,7 @@ class sObject
      */
     public function getId()
     {
-      return $this->Id;
+        return $this->Id;
     }
 
     /**
@@ -86,8 +84,8 @@ class sObject
      */
     public function setId($Id)
     {
-      $this->Id = $Id;
-      return $this;
+        $this->Id = $Id;
+        return $this;
     }
 
     /**
@@ -95,7 +93,7 @@ class sObject
      */
     public function getAny()
     {
-      return $this->any;
+        return $this->any;
     }
 
     /**
@@ -104,8 +102,7 @@ class sObject
      */
     public function setAny($any)
     {
-      $this->any = $any;
-      return $this;
+        $this->any = $any;
+        return $this;
     }
-
 }

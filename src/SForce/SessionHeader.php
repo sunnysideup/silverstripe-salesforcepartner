@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class SessionHeader
 {
-
     /**
-     * @var string $sessionId
+     * @var string
      */
     protected $sessionId = null;
 
@@ -15,7 +14,7 @@ class SessionHeader
      */
     public function __construct($sessionId = null)
     {
-      $this->sessionId = $sessionId;
+        $this->sessionId = $sessionId;
     }
 
     /**
@@ -23,7 +22,7 @@ class SessionHeader
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
@@ -32,8 +31,7 @@ class SessionHeader
      */
     public function setSessionId($sessionId)
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
-
 }

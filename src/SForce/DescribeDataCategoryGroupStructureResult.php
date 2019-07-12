@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class DescribeDataCategoryGroupStructureResult
 {
-
     /**
-     * @var string $description
+     * @var string
      */
     protected $description = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var string $sobject
+     * @var string
      */
     protected $sobject = null;
 
     /**
-     * @var DataCategory[] $topCategories
+     * @var DataCategory[]
      */
     protected $topCategories = null;
 
@@ -38,10 +37,10 @@ class DescribeDataCategoryGroupStructureResult
      */
     public function __construct($description = null, $label = null, $name = null, $sobject = null)
     {
-      $this->description = $description;
-      $this->label = $label;
-      $this->name = $name;
-      $this->sobject = $sobject;
+        $this->description = $description;
+        $this->label = $label;
+        $this->name = $name;
+        $this->sobject = $sobject;
     }
 
     /**
@@ -49,7 +48,7 @@ class DescribeDataCategoryGroupStructureResult
      */
     public function getDescription()
     {
-      return $this->description;
+        return $this->description;
     }
 
     /**
@@ -58,8 +57,8 @@ class DescribeDataCategoryGroupStructureResult
      */
     public function setDescription($description)
     {
-      $this->description = $description;
-      return $this;
+        $this->description = $description;
+        return $this;
     }
 
     /**
@@ -67,7 +66,7 @@ class DescribeDataCategoryGroupStructureResult
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -76,8 +75,8 @@ class DescribeDataCategoryGroupStructureResult
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -85,7 +84,7 @@ class DescribeDataCategoryGroupStructureResult
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -94,8 +93,8 @@ class DescribeDataCategoryGroupStructureResult
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -103,7 +102,7 @@ class DescribeDataCategoryGroupStructureResult
      */
     public function getSobject()
     {
-      return $this->sobject;
+        return $this->sobject;
     }
 
     /**
@@ -112,8 +111,8 @@ class DescribeDataCategoryGroupStructureResult
      */
     public function setSobject($sobject)
     {
-      $this->sobject = $sobject;
-      return $this;
+        $this->sobject = $sobject;
+        return $this;
     }
 
     /**
@@ -121,7 +120,7 @@ class DescribeDataCategoryGroupStructureResult
      */
     public function getTopCategories()
     {
-      return $this->topCategories;
+        return $this->topCategories;
     }
 
     /**
@@ -130,8 +129,7 @@ class DescribeDataCategoryGroupStructureResult
      */
     public function setTopCategories(array $topCategories = null)
     {
-      $this->topCategories = $topCategories;
-      return $this;
+        $this->topCategories = $topCategories;
+        return $this;
     }
-
 }

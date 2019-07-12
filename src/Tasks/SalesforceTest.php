@@ -2,16 +2,8 @@
 
 namespace Sunnysideup\SalesforcePartner\Tasks;
 
-
-
-use SForce\Client\Partner;
-
-use SForce\SObject;
-
-use SForce\Wsdl\create;
 use BuildTask;
 use MySalesforceContactApi;
-
 
 class SalesforceTest extends BuildTask
 {
@@ -71,7 +63,6 @@ class SalesforceTest extends BuildTask
         $contact = MySalesforceContactApi::is_email_registered($this->email);
     }
 
-
     protected function createSubscriber()
     {
         MySalesforceContactApi::add_email_subscriber(
@@ -94,7 +85,6 @@ class SalesforceTest extends BuildTask
         );
     }
 
-
     protected function createBadContact()
     {
         MySalesforceContactApi::create_contact(
@@ -107,11 +97,8 @@ class SalesforceTest extends BuildTask
         );
     }
 
-
     protected function setEmail()
     {
-        $this->email = 'test'.rand(0,99999).$this->emailStub;
-
+        $this->email = 'test' . rand(0, 99999) . $this->emailStub;
     }
-
 }

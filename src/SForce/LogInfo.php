@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class LogInfo
 {
-
     /**
-     * @var LogCategory $category
+     * @var LogCategory
      */
     protected $category = null;
 
     /**
-     * @var LogCategoryLevel $level
+     * @var LogCategoryLevel
      */
     protected $level = null;
 
@@ -21,8 +20,8 @@ class LogInfo
      */
     public function __construct($category = null, $level = null)
     {
-      $this->category = $category;
-      $this->level = $level;
+        $this->category = $category;
+        $this->level = $level;
     }
 
     /**
@@ -30,7 +29,7 @@ class LogInfo
      */
     public function getCategory()
     {
-      return $this->category;
+        return $this->category;
     }
 
     /**
@@ -39,8 +38,8 @@ class LogInfo
      */
     public function setCategory($category)
     {
-      $this->category = $category;
-      return $this;
+        $this->category = $category;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class LogInfo
      */
     public function getLevel()
     {
-      return $this->level;
+        return $this->level;
     }
 
     /**
@@ -57,8 +56,7 @@ class LogInfo
      */
     public function setLevel($level)
     {
-      $this->level = $level;
-      return $this;
+        $this->level = $level;
+        return $this;
     }
-
 }

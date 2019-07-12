@@ -2,16 +2,13 @@
 
 namespace Sunnysideup\SalesforcePartner\Api\Contact;
 
-
-use SForce\SObject;
-use SForce\Wsdl\SaveResult;
-use ViewableData;
-use SalesforceContactLog;
 use Exception;
-use MySalesforcePartnerApi;
 use InvalidArgumentException;
+use MySalesforcePartnerApi;
 use MySalesforcePartnerApiConnectionOnly;
-
+use SalesforceContactLog;
+use SForce\SObject;
+use ViewableData;
 
 /**
  * This class adds / updates subscribers to Salesforce
@@ -19,15 +16,21 @@ use MySalesforcePartnerApiConnectionOnly;
 
 
 /**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD:  extends Object (ignore case)
-  * NEW:  extends ViewableData (COMPLEX)
-  * EXP: This used to extend Object, but object does not exist anymore. You can also manually add use Extensible, use Injectable, and use Configurable
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
+ * ### @@@@ START REPLACEMENT @@@@ ###
+ * WHY: upgrade to SS4
+ * OLD:  extends Object (ignore case)
+ * NEW:  extends ViewableData (COMPLEX)
+ * EXP: This used to extend Object, but object does not exist anymore. You can also manually add use Extensible, use Injectable, and use Configurable
+ * ### @@@@ STOP REPLACEMENT @@@@ ###
+ */
 class MySalesforceContactApi extends ViewableData
 {
+    /**
+     * @var boolean
+     */
+    protected static $debug = false;
+
+    protected static $my_singleton_connection = null;
 
     /**
      * @param string $email
@@ -46,8 +49,7 @@ class MySalesforceContactApi extends ViewableData
         $lastName = null,
         $extraFields = [],
         $extraFilterArray = []
-    )
-    {
+    ) {
         self::assert_email($email);
 
         $fields = $extraFields;
@@ -67,7 +69,6 @@ class MySalesforceContactApi extends ViewableData
 
         //doing it!
         return self::create_contact($fields, $extraFilterArray);
-
     }
 
     /**
@@ -81,17 +82,14 @@ class MySalesforceContactApi extends ViewableData
         $email,
         $extraFields = [],
         $extraFilterArray = []
-    )
-    {
+    ) {
         self::assert_email($email);
         $fields = $extraFields;
         $fields['Email'] = $email;
 
         //doing it
         return self::update_contact($fields, $extraFilterArray);
-
     }
-
 
     /**
      * @param string $email
@@ -102,11 +100,10 @@ class MySalesforceContactApi extends ViewableData
     public static function is_email_registered($email, $extraFilterArray = [])
     {
         $fieldsArray = ['Email' => $email];
-        $subscriber = MySalesforceContactApi::retrieve_contact($fieldsArray, $extraFilterArray);
+        $subscriber = self::retrieve_contact($fieldsArray, $extraFilterArray);
 
         return $subscriber ? true : false;
     }
-
 
     /**
      * todo: all nullify thingy
@@ -139,33 +136,30 @@ class MySalesforceContactApi extends ViewableData
         $existingContact = self::retrieve_contact($fieldsArray, $extraFilterArray);
         // Contact not found. Create a new Contact and set the details
         if ($existingContact) {
-
             //we are out of here!
             return true;
-        } else {
-            $contact = new SObject();
-            $contact->setType('Contact');
-            foreach ($fieldsArray as $fieldName => $fieldValue) {
-                $contact->$fieldName = $fieldValue;
-            }
-
-            //doing it!
-            $error = '';
-            $response = null;
-            try {
-                $response = $connection->create([$contact]);
-            }
-            //catch exception
-            catch(\Exception $e) {
-                $error = $e->getMessage();
-            }
         }
-        if(self::$debug) {
+        $contact = new SObject();
+        $contact->setType('Contact');
+        foreach ($fieldsArray as $fieldName => $fieldValue) {
+            $contact->{$fieldName} = $fieldValue;
+        }
+
+        //doing it!
+        $error = '';
+        $response = null;
+        try {
+            $response = $connection->create([$contact]);
+        }
+        //catch exception
+        catch (\Exception $e) {
+            $error = $e->getMessage();
+        }
+
+        if (self::$debug) {
             $connection->debug($response);
         }
-        $success = $log->confirmContactLog($response, $error);
-
-        return $success;
+        return $log->confirmContactLog($response, $error);
     }
 
     /**
@@ -205,8 +199,8 @@ class MySalesforceContactApi extends ViewableData
             $contact->setType('Contact');
             $contact->setId($existingContact->getId());
             foreach ($fieldsArray as $fieldName => $fieldValue) {
-                if ($existingContact->$fieldName != $fieldValue) {
-                    $contact->$fieldName = $fieldValue;
+                if ($fieldValue !== $existingContact->{$fieldName}) {
+                    $contact->{$fieldName} = $fieldValue;
                 }
             }
             //doing it!
@@ -216,21 +210,18 @@ class MySalesforceContactApi extends ViewableData
                 $response = $connection->update([$contact]);
             }
             //catch exception
-            catch(\Exception $e) {
+            catch (\Exception $e) {
                 $error = $e->getMessage();
             }
         } else {
-
             //we are out of here!
             return true;
         }
-        if(self::$debug) {
+        if (self::$debug) {
             echo $error;
             $connection->debug($response);
         }
-        $success = $log->confirmContactLog($response, $error);
-
-        return $success;
+        return $log->confirmContactLog($response, $error);
     }
 
     /**
@@ -265,13 +256,13 @@ class MySalesforceContactApi extends ViewableData
                 $filterArray['Phone'] = $phone;
             }
         }
-        if(count($filterArray)) {
+        if (count($filterArray)) {
             $finalFilterArray[] = MySalesforcePartnerApi::array2sql($filterArray);
-            if(count($extraFilterArray)) {
+            if (count($extraFilterArray)) {
                 $finalFilterArray[] = MySalesforcePartnerApi::array2sql($extraFilterArray);
             }
-            $where = ' ( '.implode(' ) AND ( ', $finalFilterArray).' ) ';
-            $query = 'SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE '.$where.' LIMIT 1';
+            $where = ' ( ' . implode(' ) AND ( ', $finalFilterArray) . ' ) ';
+            $query = 'SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE ' . $where . ' LIMIT 1';
 
             $result = $connection->query($query);
             if ($result) {
@@ -281,7 +272,7 @@ class MySalesforceContactApi extends ViewableData
                 }
             }
         }
-        if(self::$debug) {
+        if (self::$debug) {
             $connection->debug($result);
         }
 
@@ -289,7 +280,6 @@ class MySalesforceContactApi extends ViewableData
     }
 
     /**
-     *
      * @return array
      */
     public static function retrieve_contact_record_types()
@@ -303,57 +293,46 @@ class MySalesforceContactApi extends ViewableData
             WHERE IsActive = true AND sObjectType = \'Contact\'';
 
         $result = $connection->query($query);
-        if($result) {
+        if ($result) {
             $records = $result->getRecords();
             if ($records) {
-                foreach($records as $record) {
+                foreach ($records as $record) {
                     $object = $record->getFields();
                     $object->Id = $record->getId();
                     $returnArray[] = $object;
                 }
             }
         }
-        if(self::$debug) {
+        if (self::$debug) {
             $connection->debug($result);
         }
         return $returnArray;
     }
-
 
     /**
      * @param string $email
      */
     public static function assert_email($email)
     {
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new InvalidArgumentException('Wrong email address format');
         }
     }
 
     /**
-     *
-     * @var boolean
-     */
-    protected static $debug = false;
-
-    /**
-     * @param bool
+     * @param $b
      */
     public static function set_debug($b = true)
     {
         self::$debug = $b;
     }
 
-    protected static $my_singleton_connection = null;
-
     protected static function get_my_singleton_connection()
     {
-        if(self::$my_singleton_connection === null){
+        if (self::$my_singleton_connection === null) {
             self::$my_singleton_connection = MySalesforcePartnerApiConnectionOnly::singleton();
         }
 
         return self::$my_singleton_connection;
     }
-
-
 }

@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class describeApprovalLayoutDouble
 {
-
     /**
-     * @var string $sObjectType
+     * @var string
      */
     protected $sObjectType = null;
 
     /**
-     * @var string $approvalProcessNames
+     * @var string
      */
     protected $approvalProcessNames = null;
 
@@ -21,8 +20,8 @@ class describeApprovalLayoutDouble
      */
     public function __construct($sObjectType = null, $approvalProcessNames = null)
     {
-      $this->sObjectType = $sObjectType;
-      $this->approvalProcessNames = $approvalProcessNames;
+        $this->sObjectType = $sObjectType;
+        $this->approvalProcessNames = $approvalProcessNames;
     }
 
     /**
@@ -30,7 +29,7 @@ class describeApprovalLayoutDouble
      */
     public function getSObjectType()
     {
-      return $this->sObjectType;
+        return $this->sObjectType;
     }
 
     /**
@@ -39,8 +38,8 @@ class describeApprovalLayoutDouble
      */
     public function setSObjectType($sObjectType)
     {
-      $this->sObjectType = $sObjectType;
-      return $this;
+        $this->sObjectType = $sObjectType;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class describeApprovalLayoutDouble
      */
     public function getApprovalProcessNames()
     {
-      return $this->approvalProcessNames;
+        return $this->approvalProcessNames;
     }
 
     /**
@@ -57,8 +56,7 @@ class describeApprovalLayoutDouble
      */
     public function setApprovalProcessNames($approvalProcessNames)
     {
-      $this->approvalProcessNames = $approvalProcessNames;
-      return $this;
+        $this->approvalProcessNames = $approvalProcessNames;
+        return $this;
     }
-
 }

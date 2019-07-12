@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class ApiQueryFault extends ApiFault
 {
-
     /**
-     * @var int $row
+     * @var int
      */
     protected $row = null;
 
     /**
-     * @var int $column
+     * @var int
      */
     protected $column = null;
 
@@ -23,9 +22,9 @@ class ApiQueryFault extends ApiFault
      */
     public function __construct($exceptionCode = null, $exceptionMessage = null, $row = null, $column = null)
     {
-      parent::__construct($exceptionCode, $exceptionMessage);
-      $this->row = $row;
-      $this->column = $column;
+        parent::__construct($exceptionCode, $exceptionMessage);
+        $this->row = $row;
+        $this->column = $column;
     }
 
     /**
@@ -33,7 +32,7 @@ class ApiQueryFault extends ApiFault
      */
     public function getRow()
     {
-      return $this->row;
+        return $this->row;
     }
 
     /**
@@ -42,8 +41,8 @@ class ApiQueryFault extends ApiFault
      */
     public function setRow($row)
     {
-      $this->row = $row;
-      return $this;
+        $this->row = $row;
+        return $this;
     }
 
     /**
@@ -51,7 +50,7 @@ class ApiQueryFault extends ApiFault
      */
     public function getColumn()
     {
-      return $this->column;
+        return $this->column;
     }
 
     /**
@@ -60,8 +59,7 @@ class ApiQueryFault extends ApiFault
      */
     public function setColumn($column)
     {
-      $this->column = $column;
-      return $this;
+        $this->column = $column;
+        return $this;
     }
-
 }

@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class DataCategory
 {
-
     /**
-     * @var DataCategory[] $childCategories
+     * @var DataCategory[]
      */
     protected $childCategories = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
@@ -26,8 +25,8 @@ class DataCategory
      */
     public function __construct($label = null, $name = null)
     {
-      $this->label = $label;
-      $this->name = $name;
+        $this->label = $label;
+        $this->name = $name;
     }
 
     /**
@@ -35,7 +34,7 @@ class DataCategory
      */
     public function getChildCategories()
     {
-      return $this->childCategories;
+        return $this->childCategories;
     }
 
     /**
@@ -44,8 +43,8 @@ class DataCategory
      */
     public function setChildCategories(array $childCategories = null)
     {
-      $this->childCategories = $childCategories;
-      return $this;
+        $this->childCategories = $childCategories;
+        return $this;
     }
 
     /**
@@ -53,7 +52,7 @@ class DataCategory
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -62,8 +61,8 @@ class DataCategory
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -71,7 +70,7 @@ class DataCategory
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -80,8 +79,7 @@ class DataCategory
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
-
 }

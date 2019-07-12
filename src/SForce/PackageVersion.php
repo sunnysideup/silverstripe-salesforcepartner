@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class PackageVersion
 {
-
     /**
-     * @var int $majorNumber
+     * @var int
      */
     protected $majorNumber = null;
 
     /**
-     * @var int $minorNumber
+     * @var int
      */
     protected $minorNumber = null;
 
     /**
-     * @var string $namespace
+     * @var string
      */
     protected $namespace = null;
 
@@ -27,9 +26,9 @@ class PackageVersion
      */
     public function __construct($majorNumber = null, $minorNumber = null, $namespace = null)
     {
-      $this->majorNumber = $majorNumber;
-      $this->minorNumber = $minorNumber;
-      $this->namespace = $namespace;
+        $this->majorNumber = $majorNumber;
+        $this->minorNumber = $minorNumber;
+        $this->namespace = $namespace;
     }
 
     /**
@@ -37,7 +36,7 @@ class PackageVersion
      */
     public function getMajorNumber()
     {
-      return $this->majorNumber;
+        return $this->majorNumber;
     }
 
     /**
@@ -46,8 +45,8 @@ class PackageVersion
      */
     public function setMajorNumber($majorNumber)
     {
-      $this->majorNumber = $majorNumber;
-      return $this;
+        $this->majorNumber = $majorNumber;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class PackageVersion
      */
     public function getMinorNumber()
     {
-      return $this->minorNumber;
+        return $this->minorNumber;
     }
 
     /**
@@ -64,8 +63,8 @@ class PackageVersion
      */
     public function setMinorNumber($minorNumber)
     {
-      $this->minorNumber = $minorNumber;
-      return $this;
+        $this->minorNumber = $minorNumber;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class PackageVersion
      */
     public function getNamespace()
     {
-      return $this->namespace;
+        return $this->namespace;
     }
 
     /**
@@ -82,8 +81,7 @@ class PackageVersion
      */
     public function setNamespace($namespace)
     {
-      $this->namespace = $namespace;
-      return $this;
+        $this->namespace = $namespace;
+        return $this;
     }
-
 }

@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class MatchRecord
 {
-
     /**
-     * @var AdditionalInformationMap[] $additionalInformation
+     * @var AdditionalInformationMap[]
      */
     protected $additionalInformation = null;
 
     /**
-     * @var FieldDiff[] $fieldDiffs
+     * @var FieldDiff[]
      */
     protected $fieldDiffs = null;
 
     /**
-     * @var float $matchConfidence
+     * @var float
      */
     protected $matchConfidence = null;
 
     /**
-     * @var sObject $record
+     * @var sObject
      */
     protected $record = null;
 
@@ -31,8 +30,8 @@ class MatchRecord
      */
     public function __construct($matchConfidence = null, $record = null)
     {
-      $this->matchConfidence = $matchConfidence;
-      $this->record = $record;
+        $this->matchConfidence = $matchConfidence;
+        $this->record = $record;
     }
 
     /**
@@ -40,7 +39,7 @@ class MatchRecord
      */
     public function getAdditionalInformation()
     {
-      return $this->additionalInformation;
+        return $this->additionalInformation;
     }
 
     /**
@@ -49,8 +48,8 @@ class MatchRecord
      */
     public function setAdditionalInformation(array $additionalInformation = null)
     {
-      $this->additionalInformation = $additionalInformation;
-      return $this;
+        $this->additionalInformation = $additionalInformation;
+        return $this;
     }
 
     /**
@@ -58,7 +57,7 @@ class MatchRecord
      */
     public function getFieldDiffs()
     {
-      return $this->fieldDiffs;
+        return $this->fieldDiffs;
     }
 
     /**
@@ -67,8 +66,8 @@ class MatchRecord
      */
     public function setFieldDiffs(array $fieldDiffs = null)
     {
-      $this->fieldDiffs = $fieldDiffs;
-      return $this;
+        $this->fieldDiffs = $fieldDiffs;
+        return $this;
     }
 
     /**
@@ -76,7 +75,7 @@ class MatchRecord
      */
     public function getMatchConfidence()
     {
-      return $this->matchConfidence;
+        return $this->matchConfidence;
     }
 
     /**
@@ -85,8 +84,8 @@ class MatchRecord
      */
     public function setMatchConfidence($matchConfidence)
     {
-      $this->matchConfidence = $matchConfidence;
-      return $this;
+        $this->matchConfidence = $matchConfidence;
+        return $this;
     }
 
     /**
@@ -94,7 +93,7 @@ class MatchRecord
      */
     public function getRecord()
     {
-      return $this->record;
+        return $this->record;
     }
 
     /**
@@ -103,8 +102,7 @@ class MatchRecord
      */
     public function setRecord($record)
     {
-      $this->record = $record;
-      return $this;
+        $this->record = $record;
+        return $this;
     }
-
 }

@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class DescribePathAssistant
 {
-
     /**
-     * @var boolean $active
+     * @var boolean
      */
     protected $active = null;
 
     /**
-     * @var string $apiName
+     * @var string
      */
     protected $apiName = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $pathPicklistField
+     * @var string
      */
     protected $pathPicklistField = null;
 
     /**
-     * @var PicklistForRecordType[] $picklistsForRecordType
+     * @var PicklistForRecordType[]
      */
     protected $picklistsForRecordType = null;
 
     /**
-     * @var ID $recordTypeId
+     * @var ID
      */
     protected $recordTypeId = null;
 
     /**
-     * @var DescribePathAssistantStep[] $steps
+     * @var DescribePathAssistantStep[]
      */
     protected $steps = null;
 
@@ -48,10 +47,10 @@ class DescribePathAssistant
      */
     public function __construct($active = null, $apiName = null, $label = null, $pathPicklistField = null)
     {
-      $this->active = $active;
-      $this->apiName = $apiName;
-      $this->label = $label;
-      $this->pathPicklistField = $pathPicklistField;
+        $this->active = $active;
+        $this->apiName = $apiName;
+        $this->label = $label;
+        $this->pathPicklistField = $pathPicklistField;
     }
 
     /**
@@ -59,7 +58,7 @@ class DescribePathAssistant
      */
     public function getActive()
     {
-      return $this->active;
+        return $this->active;
     }
 
     /**
@@ -68,8 +67,8 @@ class DescribePathAssistant
      */
     public function setActive($active)
     {
-      $this->active = $active;
-      return $this;
+        $this->active = $active;
+        return $this;
     }
 
     /**
@@ -77,7 +76,7 @@ class DescribePathAssistant
      */
     public function getApiName()
     {
-      return $this->apiName;
+        return $this->apiName;
     }
 
     /**
@@ -86,8 +85,8 @@ class DescribePathAssistant
      */
     public function setApiName($apiName)
     {
-      $this->apiName = $apiName;
-      return $this;
+        $this->apiName = $apiName;
+        return $this;
     }
 
     /**
@@ -95,7 +94,7 @@ class DescribePathAssistant
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -104,8 +103,8 @@ class DescribePathAssistant
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -113,7 +112,7 @@ class DescribePathAssistant
      */
     public function getPathPicklistField()
     {
-      return $this->pathPicklistField;
+        return $this->pathPicklistField;
     }
 
     /**
@@ -122,8 +121,8 @@ class DescribePathAssistant
      */
     public function setPathPicklistField($pathPicklistField)
     {
-      $this->pathPicklistField = $pathPicklistField;
-      return $this;
+        $this->pathPicklistField = $pathPicklistField;
+        return $this;
     }
 
     /**
@@ -131,7 +130,7 @@ class DescribePathAssistant
      */
     public function getPicklistsForRecordType()
     {
-      return $this->picklistsForRecordType;
+        return $this->picklistsForRecordType;
     }
 
     /**
@@ -140,8 +139,8 @@ class DescribePathAssistant
      */
     public function setPicklistsForRecordType(array $picklistsForRecordType = null)
     {
-      $this->picklistsForRecordType = $picklistsForRecordType;
-      return $this;
+        $this->picklistsForRecordType = $picklistsForRecordType;
+        return $this;
     }
 
     /**
@@ -149,7 +148,7 @@ class DescribePathAssistant
      */
     public function getRecordTypeId()
     {
-      return $this->recordTypeId;
+        return $this->recordTypeId;
     }
 
     /**
@@ -158,8 +157,8 @@ class DescribePathAssistant
      */
     public function setRecordTypeId($recordTypeId)
     {
-      $this->recordTypeId = $recordTypeId;
-      return $this;
+        $this->recordTypeId = $recordTypeId;
+        return $this;
     }
 
     /**
@@ -167,7 +166,7 @@ class DescribePathAssistant
      */
     public function getSteps()
     {
-      return $this->steps;
+        return $this->steps;
     }
 
     /**
@@ -176,8 +175,7 @@ class DescribePathAssistant
      */
     public function setSteps(array $steps = null)
     {
-      $this->steps = $steps;
-      return $this;
+        $this->steps = $steps;
+        return $this;
     }
-
 }

@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class FieldLayoutComponent extends DescribeLayoutComponent
 {
-
     /**
-     * @var DescribeLayoutComponent[] $components
+     * @var DescribeLayoutComponent[]
      */
     protected $components = null;
 
     /**
-     * @var fieldType $fieldType
+     * @var fieldType
      */
     protected $fieldType = null;
 
@@ -23,8 +22,8 @@ class FieldLayoutComponent extends DescribeLayoutComponent
      */
     public function __construct($displayLines = null, $tabOrder = null, $type = null, $fieldType = null)
     {
-      parent::__construct($displayLines, $tabOrder, $type);
-      $this->fieldType = $fieldType;
+        parent::__construct($displayLines, $tabOrder, $type);
+        $this->fieldType = $fieldType;
     }
 
     /**
@@ -32,7 +31,7 @@ class FieldLayoutComponent extends DescribeLayoutComponent
      */
     public function getComponents()
     {
-      return $this->components;
+        return $this->components;
     }
 
     /**
@@ -41,8 +40,8 @@ class FieldLayoutComponent extends DescribeLayoutComponent
      */
     public function setComponents(array $components = null)
     {
-      $this->components = $components;
-      return $this;
+        $this->components = $components;
+        return $this;
     }
 
     /**
@@ -50,7 +49,7 @@ class FieldLayoutComponent extends DescribeLayoutComponent
      */
     public function getFieldType()
     {
-      return $this->fieldType;
+        return $this->fieldType;
     }
 
     /**
@@ -59,8 +58,7 @@ class FieldLayoutComponent extends DescribeLayoutComponent
      */
     public function setFieldType($fieldType)
     {
-      $this->fieldType = $fieldType;
-      return $this;
+        $this->fieldType = $fieldType;
+        return $this;
     }
-
 }

@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class DeletedRecord
 {
-
     /**
-     * @var \DateTime $deletedDate
+     * @var \DateTime
      */
     protected $deletedDate = null;
 
     /**
-     * @var ID $id
+     * @var ID
      */
     protected $id = null;
 
@@ -22,16 +21,16 @@ class DeletedRecord
     public function __construct(\DateTime $deletedDate = null, $id = null)
     {
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: ->format( (case sensitive)
-  * NEW: ->format( (COMPLEX)
-  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
-      $this->deletedDate = $deletedDate ? $deletedDate->format(\DateTime::ATOM) : null;
-      $this->id = $id;
+      /**
+       * ### @@@@ START REPLACEMENT @@@@ ###
+       * WHY: upgrade to SS4
+       * OLD: ->format( (case sensitive)
+       * NEW: ->format( (COMPLEX)
+       * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+       * ### @@@@ STOP REPLACEMENT @@@@ ###
+       */
+        $this->deletedDate = $deletedDate ? $deletedDate->format(\DateTime::ATOM) : null;
+        $this->id = $id;
     }
 
     /**
@@ -39,15 +38,14 @@ class DeletedRecord
      */
     public function getDeletedDate()
     {
-      if ($this->deletedDate == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->deletedDate);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->deletedDate === null) {
+            return null;
         }
-      }
+        try {
+            return new \DateTime($this->deletedDate);
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     /**
@@ -57,16 +55,16 @@ class DeletedRecord
     public function setDeletedDate(\DateTime $deletedDate)
     {
 
-/**
-  * ### @@@@ START REPLACEMENT @@@@ ###
-  * WHY: upgrade to SS4
-  * OLD: ->format( (case sensitive)
-  * NEW: ->format( (COMPLEX)
-  * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
-  * ### @@@@ STOP REPLACEMENT @@@@ ###
-  */
-      $this->deletedDate = $deletedDate->format(\DateTime::ATOM);
-      return $this;
+      /**
+       * ### @@@@ START REPLACEMENT @@@@ ###
+       * WHY: upgrade to SS4
+       * OLD: ->format( (case sensitive)
+       * NEW: ->format( (COMPLEX)
+       * EXP: If this is a PHP Date format call then this needs to be changed to new Date formatting system. (see http://userguide.icu-project.org/formatparse/datetime)
+       * ### @@@@ STOP REPLACEMENT @@@@ ###
+       */
+        $this->deletedDate = $deletedDate->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -74,7 +72,7 @@ class DeletedRecord
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
@@ -83,8 +81,7 @@ class DeletedRecord
      */
     public function setId($id)
     {
-      $this->id = $id;
-      return $this;
+        $this->id = $id;
+        return $this;
     }
-
 }

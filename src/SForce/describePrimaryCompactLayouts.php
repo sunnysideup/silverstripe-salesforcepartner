@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class describePrimaryCompactLayouts
 {
-
     /**
-     * @var string $sObjectTypes
+     * @var string
      */
     protected $sObjectTypes = null;
 
@@ -15,7 +14,7 @@ class describePrimaryCompactLayouts
      */
     public function __construct($sObjectTypes = null)
     {
-      $this->sObjectTypes = $sObjectTypes;
+        $this->sObjectTypes = $sObjectTypes;
     }
 
     /**
@@ -23,7 +22,7 @@ class describePrimaryCompactLayouts
      */
     public function getSObjectTypes()
     {
-      return $this->sObjectTypes;
+        return $this->sObjectTypes;
     }
 
     /**
@@ -32,8 +31,7 @@ class describePrimaryCompactLayouts
      */
     public function setSObjectTypes($sObjectTypes)
     {
-      $this->sObjectTypes = $sObjectTypes;
-      return $this;
+        $this->sObjectTypes = $sObjectTypes;
+        return $this;
     }
-
 }

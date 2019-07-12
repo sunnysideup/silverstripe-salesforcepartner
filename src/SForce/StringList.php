@@ -4,16 +4,13 @@ namespace SForce\Wsdl;
 
 class StringList
 {
-
     /**
-     * @var string[] $values
+     * @var string[]
      */
     protected $values = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -21,7 +18,7 @@ class StringList
      */
     public function getValues()
     {
-      return $this->values;
+        return $this->values;
     }
 
     /**
@@ -30,8 +27,7 @@ class StringList
      */
     public function setValues(array $values = null)
     {
-      $this->values = $values;
-      return $this;
+        $this->values = $values;
+        return $this;
     }
-
 }

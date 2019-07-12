@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class DescribeLayoutResult
 {
-
     /**
-     * @var DescribeLayout[] $layouts
+     * @var DescribeLayout[]
      */
     protected $layouts = null;
 
     /**
-     * @var RecordTypeMapping[] $recordTypeMappings
+     * @var RecordTypeMapping[]
      */
     protected $recordTypeMappings = null;
 
     /**
-     * @var boolean $recordTypeSelectorRequired
+     * @var boolean
      */
     protected $recordTypeSelectorRequired = null;
 
@@ -26,8 +25,8 @@ class DescribeLayoutResult
      */
     public function __construct(array $layouts = null, $recordTypeSelectorRequired = null)
     {
-      $this->layouts = $layouts;
-      $this->recordTypeSelectorRequired = $recordTypeSelectorRequired;
+        $this->layouts = $layouts;
+        $this->recordTypeSelectorRequired = $recordTypeSelectorRequired;
     }
 
     /**
@@ -35,7 +34,7 @@ class DescribeLayoutResult
      */
     public function getLayouts()
     {
-      return $this->layouts;
+        return $this->layouts;
     }
 
     /**
@@ -44,8 +43,8 @@ class DescribeLayoutResult
      */
     public function setLayouts(array $layouts)
     {
-      $this->layouts = $layouts;
-      return $this;
+        $this->layouts = $layouts;
+        return $this;
     }
 
     /**
@@ -53,7 +52,7 @@ class DescribeLayoutResult
      */
     public function getRecordTypeMappings()
     {
-      return $this->recordTypeMappings;
+        return $this->recordTypeMappings;
     }
 
     /**
@@ -62,8 +61,8 @@ class DescribeLayoutResult
      */
     public function setRecordTypeMappings(array $recordTypeMappings = null)
     {
-      $this->recordTypeMappings = $recordTypeMappings;
-      return $this;
+        $this->recordTypeMappings = $recordTypeMappings;
+        return $this;
     }
 
     /**
@@ -71,7 +70,7 @@ class DescribeLayoutResult
      */
     public function getRecordTypeSelectorRequired()
     {
-      return $this->recordTypeSelectorRequired;
+        return $this->recordTypeSelectorRequired;
     }
 
     /**
@@ -80,8 +79,7 @@ class DescribeLayoutResult
      */
     public function setRecordTypeSelectorRequired($recordTypeSelectorRequired)
     {
-      $this->recordTypeSelectorRequired = $recordTypeSelectorRequired;
-      return $this;
+        $this->recordTypeSelectorRequired = $recordTypeSelectorRequired;
+        return $this;
     }
-
 }

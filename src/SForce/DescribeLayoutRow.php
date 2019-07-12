@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class DescribeLayoutRow
 {
-
     /**
-     * @var DescribeLayoutItem[] $layoutItems
+     * @var DescribeLayoutItem[]
      */
     protected $layoutItems = null;
 
     /**
-     * @var int $numItems
+     * @var int
      */
     protected $numItems = null;
 
@@ -21,8 +20,8 @@ class DescribeLayoutRow
      */
     public function __construct(array $layoutItems = null, $numItems = null)
     {
-      $this->layoutItems = $layoutItems;
-      $this->numItems = $numItems;
+        $this->layoutItems = $layoutItems;
+        $this->numItems = $numItems;
     }
 
     /**
@@ -30,7 +29,7 @@ class DescribeLayoutRow
      */
     public function getLayoutItems()
     {
-      return $this->layoutItems;
+        return $this->layoutItems;
     }
 
     /**
@@ -39,8 +38,8 @@ class DescribeLayoutRow
      */
     public function setLayoutItems(array $layoutItems)
     {
-      $this->layoutItems = $layoutItems;
-      return $this;
+        $this->layoutItems = $layoutItems;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class DescribeLayoutRow
      */
     public function getNumItems()
     {
-      return $this->numItems;
+        return $this->numItems;
     }
 
     /**
@@ -57,8 +56,7 @@ class DescribeLayoutRow
      */
     public function setNumItems($numItems)
     {
-      $this->numItems = $numItems;
-      return $this;
+        $this->numItems = $numItems;
+        return $this;
     }
-
 }

@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class search
 {
-
     /**
-     * @var string $searchString
+     * @var string
      */
     protected $searchString = null;
 
@@ -15,7 +14,7 @@ class search
      */
     public function __construct($searchString = null)
     {
-      $this->searchString = $searchString;
+        $this->searchString = $searchString;
     }
 
     /**
@@ -23,7 +22,7 @@ class search
      */
     public function getSearchString()
     {
-      return $this->searchString;
+        return $this->searchString;
     }
 
     /**
@@ -32,8 +31,7 @@ class search
      */
     public function setSearchString($searchString)
     {
-      $this->searchString = $searchString;
-      return $this;
+        $this->searchString = $searchString;
+        return $this;
     }
-
 }

@@ -4,16 +4,13 @@ namespace SForce\Wsdl;
 
 class RecordTypesSupported
 {
-
     /**
-     * @var RecordTypeInfo[] $recordTypeInfos
+     * @var RecordTypeInfo[]
      */
     protected $recordTypeInfos = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -21,7 +18,7 @@ class RecordTypesSupported
      */
     public function getRecordTypeInfos()
     {
-      return $this->recordTypeInfos;
+        return $this->recordTypeInfos;
     }
 
     /**
@@ -30,8 +27,7 @@ class RecordTypesSupported
      */
     public function setRecordTypeInfos(array $recordTypeInfos = null)
     {
-      $this->recordTypeInfos = $recordTypeInfos;
-      return $this;
+        $this->recordTypeInfos = $recordTypeInfos;
+        return $this;
     }
-
 }

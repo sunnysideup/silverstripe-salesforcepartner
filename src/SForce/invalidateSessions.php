@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class invalidateSessions
 {
-
     /**
-     * @var string $sessionIds
+     * @var string
      */
     protected $sessionIds = null;
 
@@ -15,7 +14,7 @@ class invalidateSessions
      */
     public function __construct($sessionIds = null)
     {
-      $this->sessionIds = $sessionIds;
+        $this->sessionIds = $sessionIds;
     }
 
     /**
@@ -23,7 +22,7 @@ class invalidateSessions
      */
     public function getSessionIds()
     {
-      return $this->sessionIds;
+        return $this->sessionIds;
     }
 
     /**
@@ -32,8 +31,7 @@ class invalidateSessions
      */
     public function setSessionIds($sessionIds)
     {
-      $this->sessionIds = $sessionIds;
-      return $this;
+        $this->sessionIds = $sessionIds;
+        return $this;
     }
-
 }

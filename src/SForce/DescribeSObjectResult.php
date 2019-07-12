@@ -4,189 +4,188 @@ namespace SForce\Wsdl;
 
 class DescribeSObjectResult
 {
-
     /**
-     * @var ActionOverride[] $actionOverrides
+     * @var ActionOverride[]
      */
     protected $actionOverrides = null;
 
     /**
-     * @var boolean $activateable
+     * @var boolean
      */
     protected $activateable = null;
 
     /**
-     * @var ChildRelationship[] $childRelationships
+     * @var ChildRelationship[]
      */
     protected $childRelationships = null;
 
     /**
-     * @var boolean $compactLayoutable
+     * @var boolean
      */
     protected $compactLayoutable = null;
 
     /**
-     * @var boolean $createable
+     * @var boolean
      */
     protected $createable = null;
 
     /**
-     * @var boolean $custom
+     * @var boolean
      */
     protected $custom = null;
 
     /**
-     * @var boolean $customSetting
+     * @var boolean
      */
     protected $customSetting = null;
 
     /**
-     * @var boolean $dataTranslationEnabled
+     * @var boolean
      */
     protected $dataTranslationEnabled = null;
 
     /**
-     * @var boolean $deletable
+     * @var boolean
      */
     protected $deletable = null;
 
     /**
-     * @var boolean $deprecatedAndHidden
+     * @var boolean
      */
     protected $deprecatedAndHidden = null;
 
     /**
-     * @var boolean $feedEnabled
+     * @var boolean
      */
     protected $feedEnabled = null;
 
     /**
-     * @var Field[] $fields
+     * @var Field[]
      */
     protected $fields = null;
 
     /**
-     * @var boolean $hasSubtypes
+     * @var boolean
      */
     protected $hasSubtypes = null;
 
     /**
-     * @var boolean $idEnabled
+     * @var boolean
      */
     protected $idEnabled = null;
 
     /**
-     * @var boolean $isSubtype
+     * @var boolean
      */
     protected $isSubtype = null;
 
     /**
-     * @var string $keyPrefix
+     * @var string
      */
     protected $keyPrefix = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $labelPlural
+     * @var string
      */
     protected $labelPlural = null;
 
     /**
-     * @var boolean $layoutable
+     * @var boolean
      */
     protected $layoutable = null;
 
     /**
-     * @var boolean $mergeable
+     * @var boolean
      */
     protected $mergeable = null;
 
     /**
-     * @var boolean $mruEnabled
+     * @var boolean
      */
     protected $mruEnabled = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var NamedLayoutInfo[] $namedLayoutInfos
+     * @var NamedLayoutInfo[]
      */
     protected $namedLayoutInfos = null;
 
     /**
-     * @var string $networkScopeFieldName
+     * @var string
      */
     protected $networkScopeFieldName = null;
 
     /**
-     * @var boolean $queryable
+     * @var boolean
      */
     protected $queryable = null;
 
     /**
-     * @var RecordTypeInfo[] $recordTypeInfos
+     * @var RecordTypeInfo[]
      */
     protected $recordTypeInfos = null;
 
     /**
-     * @var boolean $replicateable
+     * @var boolean
      */
     protected $replicateable = null;
 
     /**
-     * @var boolean $retrieveable
+     * @var boolean
      */
     protected $retrieveable = null;
 
     /**
-     * @var boolean $searchLayoutable
+     * @var boolean
      */
     protected $searchLayoutable = null;
 
     /**
-     * @var boolean $searchable
+     * @var boolean
      */
     protected $searchable = null;
 
     /**
-     * @var ScopeInfo[] $supportedScopes
+     * @var ScopeInfo[]
      */
     protected $supportedScopes = null;
 
     /**
-     * @var boolean $triggerable
+     * @var boolean
      */
     protected $triggerable = null;
 
     /**
-     * @var boolean $undeletable
+     * @var boolean
      */
     protected $undeletable = null;
 
     /**
-     * @var boolean $updateable
+     * @var boolean
      */
     protected $updateable = null;
 
     /**
-     * @var string $urlDetail
+     * @var string
      */
     protected $urlDetail = null;
 
     /**
-     * @var string $urlEdit
+     * @var string
      */
     protected $urlEdit = null;
 
     /**
-     * @var string $urlNew
+     * @var string
      */
     protected $urlNew = null;
 
@@ -217,29 +216,29 @@ class DescribeSObjectResult
      */
     public function __construct($activateable = null, $compactLayoutable = null, $createable = null, $custom = null, $customSetting = null, $deletable = null, $deprecatedAndHidden = null, $feedEnabled = null, $hasSubtypes = null, $idEnabled = null, $isSubtype = null, $label = null, $labelPlural = null, $layoutable = null, $mergeable = null, $mruEnabled = null, $name = null, $queryable = null, $replicateable = null, $retrieveable = null, $searchable = null, $undeletable = null, $updateable = null)
     {
-      $this->activateable = $activateable;
-      $this->compactLayoutable = $compactLayoutable;
-      $this->createable = $createable;
-      $this->custom = $custom;
-      $this->customSetting = $customSetting;
-      $this->deletable = $deletable;
-      $this->deprecatedAndHidden = $deprecatedAndHidden;
-      $this->feedEnabled = $feedEnabled;
-      $this->hasSubtypes = $hasSubtypes;
-      $this->idEnabled = $idEnabled;
-      $this->isSubtype = $isSubtype;
-      $this->label = $label;
-      $this->labelPlural = $labelPlural;
-      $this->layoutable = $layoutable;
-      $this->mergeable = $mergeable;
-      $this->mruEnabled = $mruEnabled;
-      $this->name = $name;
-      $this->queryable = $queryable;
-      $this->replicateable = $replicateable;
-      $this->retrieveable = $retrieveable;
-      $this->searchable = $searchable;
-      $this->undeletable = $undeletable;
-      $this->updateable = $updateable;
+        $this->activateable = $activateable;
+        $this->compactLayoutable = $compactLayoutable;
+        $this->createable = $createable;
+        $this->custom = $custom;
+        $this->customSetting = $customSetting;
+        $this->deletable = $deletable;
+        $this->deprecatedAndHidden = $deprecatedAndHidden;
+        $this->feedEnabled = $feedEnabled;
+        $this->hasSubtypes = $hasSubtypes;
+        $this->idEnabled = $idEnabled;
+        $this->isSubtype = $isSubtype;
+        $this->label = $label;
+        $this->labelPlural = $labelPlural;
+        $this->layoutable = $layoutable;
+        $this->mergeable = $mergeable;
+        $this->mruEnabled = $mruEnabled;
+        $this->name = $name;
+        $this->queryable = $queryable;
+        $this->replicateable = $replicateable;
+        $this->retrieveable = $retrieveable;
+        $this->searchable = $searchable;
+        $this->undeletable = $undeletable;
+        $this->updateable = $updateable;
     }
 
     /**
@@ -247,7 +246,7 @@ class DescribeSObjectResult
      */
     public function getActionOverrides()
     {
-      return $this->actionOverrides;
+        return $this->actionOverrides;
     }
 
     /**
@@ -256,8 +255,8 @@ class DescribeSObjectResult
      */
     public function setActionOverrides(array $actionOverrides = null)
     {
-      $this->actionOverrides = $actionOverrides;
-      return $this;
+        $this->actionOverrides = $actionOverrides;
+        return $this;
     }
 
     /**
@@ -265,7 +264,7 @@ class DescribeSObjectResult
      */
     public function getActivateable()
     {
-      return $this->activateable;
+        return $this->activateable;
     }
 
     /**
@@ -274,8 +273,8 @@ class DescribeSObjectResult
      */
     public function setActivateable($activateable)
     {
-      $this->activateable = $activateable;
-      return $this;
+        $this->activateable = $activateable;
+        return $this;
     }
 
     /**
@@ -283,7 +282,7 @@ class DescribeSObjectResult
      */
     public function getChildRelationships()
     {
-      return $this->childRelationships;
+        return $this->childRelationships;
     }
 
     /**
@@ -292,8 +291,8 @@ class DescribeSObjectResult
      */
     public function setChildRelationships(array $childRelationships = null)
     {
-      $this->childRelationships = $childRelationships;
-      return $this;
+        $this->childRelationships = $childRelationships;
+        return $this;
     }
 
     /**
@@ -301,7 +300,7 @@ class DescribeSObjectResult
      */
     public function getCompactLayoutable()
     {
-      return $this->compactLayoutable;
+        return $this->compactLayoutable;
     }
 
     /**
@@ -310,8 +309,8 @@ class DescribeSObjectResult
      */
     public function setCompactLayoutable($compactLayoutable)
     {
-      $this->compactLayoutable = $compactLayoutable;
-      return $this;
+        $this->compactLayoutable = $compactLayoutable;
+        return $this;
     }
 
     /**
@@ -319,7 +318,7 @@ class DescribeSObjectResult
      */
     public function getCreateable()
     {
-      return $this->createable;
+        return $this->createable;
     }
 
     /**
@@ -328,8 +327,8 @@ class DescribeSObjectResult
      */
     public function setCreateable($createable)
     {
-      $this->createable = $createable;
-      return $this;
+        $this->createable = $createable;
+        return $this;
     }
 
     /**
@@ -337,7 +336,7 @@ class DescribeSObjectResult
      */
     public function getCustom()
     {
-      return $this->custom;
+        return $this->custom;
     }
 
     /**
@@ -346,8 +345,8 @@ class DescribeSObjectResult
      */
     public function setCustom($custom)
     {
-      $this->custom = $custom;
-      return $this;
+        $this->custom = $custom;
+        return $this;
     }
 
     /**
@@ -355,7 +354,7 @@ class DescribeSObjectResult
      */
     public function getCustomSetting()
     {
-      return $this->customSetting;
+        return $this->customSetting;
     }
 
     /**
@@ -364,8 +363,8 @@ class DescribeSObjectResult
      */
     public function setCustomSetting($customSetting)
     {
-      $this->customSetting = $customSetting;
-      return $this;
+        $this->customSetting = $customSetting;
+        return $this;
     }
 
     /**
@@ -373,7 +372,7 @@ class DescribeSObjectResult
      */
     public function getDataTranslationEnabled()
     {
-      return $this->dataTranslationEnabled;
+        return $this->dataTranslationEnabled;
     }
 
     /**
@@ -382,8 +381,8 @@ class DescribeSObjectResult
      */
     public function setDataTranslationEnabled($dataTranslationEnabled)
     {
-      $this->dataTranslationEnabled = $dataTranslationEnabled;
-      return $this;
+        $this->dataTranslationEnabled = $dataTranslationEnabled;
+        return $this;
     }
 
     /**
@@ -391,7 +390,7 @@ class DescribeSObjectResult
      */
     public function getDeletable()
     {
-      return $this->deletable;
+        return $this->deletable;
     }
 
     /**
@@ -400,8 +399,8 @@ class DescribeSObjectResult
      */
     public function setDeletable($deletable)
     {
-      $this->deletable = $deletable;
-      return $this;
+        $this->deletable = $deletable;
+        return $this;
     }
 
     /**
@@ -409,7 +408,7 @@ class DescribeSObjectResult
      */
     public function getDeprecatedAndHidden()
     {
-      return $this->deprecatedAndHidden;
+        return $this->deprecatedAndHidden;
     }
 
     /**
@@ -418,8 +417,8 @@ class DescribeSObjectResult
      */
     public function setDeprecatedAndHidden($deprecatedAndHidden)
     {
-      $this->deprecatedAndHidden = $deprecatedAndHidden;
-      return $this;
+        $this->deprecatedAndHidden = $deprecatedAndHidden;
+        return $this;
     }
 
     /**
@@ -427,7 +426,7 @@ class DescribeSObjectResult
      */
     public function getFeedEnabled()
     {
-      return $this->feedEnabled;
+        return $this->feedEnabled;
     }
 
     /**
@@ -436,8 +435,8 @@ class DescribeSObjectResult
      */
     public function setFeedEnabled($feedEnabled)
     {
-      $this->feedEnabled = $feedEnabled;
-      return $this;
+        $this->feedEnabled = $feedEnabled;
+        return $this;
     }
 
     /**
@@ -445,7 +444,7 @@ class DescribeSObjectResult
      */
     public function getFields()
     {
-      return $this->fields;
+        return $this->fields;
     }
 
     /**
@@ -454,8 +453,8 @@ class DescribeSObjectResult
      */
     public function setFields(array $fields = null)
     {
-      $this->fields = $fields;
-      return $this;
+        $this->fields = $fields;
+        return $this;
     }
 
     /**
@@ -463,7 +462,7 @@ class DescribeSObjectResult
      */
     public function getHasSubtypes()
     {
-      return $this->hasSubtypes;
+        return $this->hasSubtypes;
     }
 
     /**
@@ -472,8 +471,8 @@ class DescribeSObjectResult
      */
     public function setHasSubtypes($hasSubtypes)
     {
-      $this->hasSubtypes = $hasSubtypes;
-      return $this;
+        $this->hasSubtypes = $hasSubtypes;
+        return $this;
     }
 
     /**
@@ -481,7 +480,7 @@ class DescribeSObjectResult
      */
     public function getIdEnabled()
     {
-      return $this->idEnabled;
+        return $this->idEnabled;
     }
 
     /**
@@ -490,8 +489,8 @@ class DescribeSObjectResult
      */
     public function setIdEnabled($idEnabled)
     {
-      $this->idEnabled = $idEnabled;
-      return $this;
+        $this->idEnabled = $idEnabled;
+        return $this;
     }
 
     /**
@@ -499,7 +498,7 @@ class DescribeSObjectResult
      */
     public function getIsSubtype()
     {
-      return $this->isSubtype;
+        return $this->isSubtype;
     }
 
     /**
@@ -508,8 +507,8 @@ class DescribeSObjectResult
      */
     public function setIsSubtype($isSubtype)
     {
-      $this->isSubtype = $isSubtype;
-      return $this;
+        $this->isSubtype = $isSubtype;
+        return $this;
     }
 
     /**
@@ -517,7 +516,7 @@ class DescribeSObjectResult
      */
     public function getKeyPrefix()
     {
-      return $this->keyPrefix;
+        return $this->keyPrefix;
     }
 
     /**
@@ -526,8 +525,8 @@ class DescribeSObjectResult
      */
     public function setKeyPrefix($keyPrefix)
     {
-      $this->keyPrefix = $keyPrefix;
-      return $this;
+        $this->keyPrefix = $keyPrefix;
+        return $this;
     }
 
     /**
@@ -535,7 +534,7 @@ class DescribeSObjectResult
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -544,8 +543,8 @@ class DescribeSObjectResult
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -553,7 +552,7 @@ class DescribeSObjectResult
      */
     public function getLabelPlural()
     {
-      return $this->labelPlural;
+        return $this->labelPlural;
     }
 
     /**
@@ -562,8 +561,8 @@ class DescribeSObjectResult
      */
     public function setLabelPlural($labelPlural)
     {
-      $this->labelPlural = $labelPlural;
-      return $this;
+        $this->labelPlural = $labelPlural;
+        return $this;
     }
 
     /**
@@ -571,7 +570,7 @@ class DescribeSObjectResult
      */
     public function getLayoutable()
     {
-      return $this->layoutable;
+        return $this->layoutable;
     }
 
     /**
@@ -580,8 +579,8 @@ class DescribeSObjectResult
      */
     public function setLayoutable($layoutable)
     {
-      $this->layoutable = $layoutable;
-      return $this;
+        $this->layoutable = $layoutable;
+        return $this;
     }
 
     /**
@@ -589,7 +588,7 @@ class DescribeSObjectResult
      */
     public function getMergeable()
     {
-      return $this->mergeable;
+        return $this->mergeable;
     }
 
     /**
@@ -598,8 +597,8 @@ class DescribeSObjectResult
      */
     public function setMergeable($mergeable)
     {
-      $this->mergeable = $mergeable;
-      return $this;
+        $this->mergeable = $mergeable;
+        return $this;
     }
 
     /**
@@ -607,7 +606,7 @@ class DescribeSObjectResult
      */
     public function getMruEnabled()
     {
-      return $this->mruEnabled;
+        return $this->mruEnabled;
     }
 
     /**
@@ -616,8 +615,8 @@ class DescribeSObjectResult
      */
     public function setMruEnabled($mruEnabled)
     {
-      $this->mruEnabled = $mruEnabled;
-      return $this;
+        $this->mruEnabled = $mruEnabled;
+        return $this;
     }
 
     /**
@@ -625,7 +624,7 @@ class DescribeSObjectResult
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -634,8 +633,8 @@ class DescribeSObjectResult
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -643,7 +642,7 @@ class DescribeSObjectResult
      */
     public function getNamedLayoutInfos()
     {
-      return $this->namedLayoutInfos;
+        return $this->namedLayoutInfos;
     }
 
     /**
@@ -652,8 +651,8 @@ class DescribeSObjectResult
      */
     public function setNamedLayoutInfos(array $namedLayoutInfos = null)
     {
-      $this->namedLayoutInfos = $namedLayoutInfos;
-      return $this;
+        $this->namedLayoutInfos = $namedLayoutInfos;
+        return $this;
     }
 
     /**
@@ -661,7 +660,7 @@ class DescribeSObjectResult
      */
     public function getNetworkScopeFieldName()
     {
-      return $this->networkScopeFieldName;
+        return $this->networkScopeFieldName;
     }
 
     /**
@@ -670,8 +669,8 @@ class DescribeSObjectResult
      */
     public function setNetworkScopeFieldName($networkScopeFieldName)
     {
-      $this->networkScopeFieldName = $networkScopeFieldName;
-      return $this;
+        $this->networkScopeFieldName = $networkScopeFieldName;
+        return $this;
     }
 
     /**
@@ -679,7 +678,7 @@ class DescribeSObjectResult
      */
     public function getQueryable()
     {
-      return $this->queryable;
+        return $this->queryable;
     }
 
     /**
@@ -688,8 +687,8 @@ class DescribeSObjectResult
      */
     public function setQueryable($queryable)
     {
-      $this->queryable = $queryable;
-      return $this;
+        $this->queryable = $queryable;
+        return $this;
     }
 
     /**
@@ -697,7 +696,7 @@ class DescribeSObjectResult
      */
     public function getRecordTypeInfos()
     {
-      return $this->recordTypeInfos;
+        return $this->recordTypeInfos;
     }
 
     /**
@@ -706,8 +705,8 @@ class DescribeSObjectResult
      */
     public function setRecordTypeInfos(array $recordTypeInfos = null)
     {
-      $this->recordTypeInfos = $recordTypeInfos;
-      return $this;
+        $this->recordTypeInfos = $recordTypeInfos;
+        return $this;
     }
 
     /**
@@ -715,7 +714,7 @@ class DescribeSObjectResult
      */
     public function getReplicateable()
     {
-      return $this->replicateable;
+        return $this->replicateable;
     }
 
     /**
@@ -724,8 +723,8 @@ class DescribeSObjectResult
      */
     public function setReplicateable($replicateable)
     {
-      $this->replicateable = $replicateable;
-      return $this;
+        $this->replicateable = $replicateable;
+        return $this;
     }
 
     /**
@@ -733,7 +732,7 @@ class DescribeSObjectResult
      */
     public function getRetrieveable()
     {
-      return $this->retrieveable;
+        return $this->retrieveable;
     }
 
     /**
@@ -742,8 +741,8 @@ class DescribeSObjectResult
      */
     public function setRetrieveable($retrieveable)
     {
-      $this->retrieveable = $retrieveable;
-      return $this;
+        $this->retrieveable = $retrieveable;
+        return $this;
     }
 
     /**
@@ -751,7 +750,7 @@ class DescribeSObjectResult
      */
     public function getSearchLayoutable()
     {
-      return $this->searchLayoutable;
+        return $this->searchLayoutable;
     }
 
     /**
@@ -760,8 +759,8 @@ class DescribeSObjectResult
      */
     public function setSearchLayoutable($searchLayoutable)
     {
-      $this->searchLayoutable = $searchLayoutable;
-      return $this;
+        $this->searchLayoutable = $searchLayoutable;
+        return $this;
     }
 
     /**
@@ -769,7 +768,7 @@ class DescribeSObjectResult
      */
     public function getSearchable()
     {
-      return $this->searchable;
+        return $this->searchable;
     }
 
     /**
@@ -778,8 +777,8 @@ class DescribeSObjectResult
      */
     public function setSearchable($searchable)
     {
-      $this->searchable = $searchable;
-      return $this;
+        $this->searchable = $searchable;
+        return $this;
     }
 
     /**
@@ -787,7 +786,7 @@ class DescribeSObjectResult
      */
     public function getSupportedScopes()
     {
-      return $this->supportedScopes;
+        return $this->supportedScopes;
     }
 
     /**
@@ -796,8 +795,8 @@ class DescribeSObjectResult
      */
     public function setSupportedScopes(array $supportedScopes = null)
     {
-      $this->supportedScopes = $supportedScopes;
-      return $this;
+        $this->supportedScopes = $supportedScopes;
+        return $this;
     }
 
     /**
@@ -805,7 +804,7 @@ class DescribeSObjectResult
      */
     public function getTriggerable()
     {
-      return $this->triggerable;
+        return $this->triggerable;
     }
 
     /**
@@ -814,8 +813,8 @@ class DescribeSObjectResult
      */
     public function setTriggerable($triggerable)
     {
-      $this->triggerable = $triggerable;
-      return $this;
+        $this->triggerable = $triggerable;
+        return $this;
     }
 
     /**
@@ -823,7 +822,7 @@ class DescribeSObjectResult
      */
     public function getUndeletable()
     {
-      return $this->undeletable;
+        return $this->undeletable;
     }
 
     /**
@@ -832,8 +831,8 @@ class DescribeSObjectResult
      */
     public function setUndeletable($undeletable)
     {
-      $this->undeletable = $undeletable;
-      return $this;
+        $this->undeletable = $undeletable;
+        return $this;
     }
 
     /**
@@ -841,7 +840,7 @@ class DescribeSObjectResult
      */
     public function getUpdateable()
     {
-      return $this->updateable;
+        return $this->updateable;
     }
 
     /**
@@ -850,8 +849,8 @@ class DescribeSObjectResult
      */
     public function setUpdateable($updateable)
     {
-      $this->updateable = $updateable;
-      return $this;
+        $this->updateable = $updateable;
+        return $this;
     }
 
     /**
@@ -859,7 +858,7 @@ class DescribeSObjectResult
      */
     public function getUrlDetail()
     {
-      return $this->urlDetail;
+        return $this->urlDetail;
     }
 
     /**
@@ -868,8 +867,8 @@ class DescribeSObjectResult
      */
     public function setUrlDetail($urlDetail)
     {
-      $this->urlDetail = $urlDetail;
-      return $this;
+        $this->urlDetail = $urlDetail;
+        return $this;
     }
 
     /**
@@ -877,7 +876,7 @@ class DescribeSObjectResult
      */
     public function getUrlEdit()
     {
-      return $this->urlEdit;
+        return $this->urlEdit;
     }
 
     /**
@@ -886,8 +885,8 @@ class DescribeSObjectResult
      */
     public function setUrlEdit($urlEdit)
     {
-      $this->urlEdit = $urlEdit;
-      return $this;
+        $this->urlEdit = $urlEdit;
+        return $this;
     }
 
     /**
@@ -895,7 +894,7 @@ class DescribeSObjectResult
      */
     public function getUrlNew()
     {
-      return $this->urlNew;
+        return $this->urlNew;
     }
 
     /**
@@ -904,8 +903,7 @@ class DescribeSObjectResult
      */
     public function setUrlNew($urlNew)
     {
-      $this->urlNew = $urlNew;
-      return $this;
+        $this->urlNew = $urlNew;
+        return $this;
     }
-
 }

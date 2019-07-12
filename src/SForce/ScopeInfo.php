@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class ScopeInfo
 {
-
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
@@ -21,8 +20,8 @@ class ScopeInfo
      */
     public function __construct($label = null, $name = null)
     {
-      $this->label = $label;
-      $this->name = $name;
+        $this->label = $label;
+        $this->name = $name;
     }
 
     /**
@@ -30,7 +29,7 @@ class ScopeInfo
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -39,8 +38,8 @@ class ScopeInfo
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class ScopeInfo
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -57,8 +56,7 @@ class ScopeInfo
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
-
 }

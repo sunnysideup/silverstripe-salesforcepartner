@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class CustomLinkComponent extends DescribeLayoutComponent
 {
-
     /**
-     * @var DescribeLayoutButton $customLink
+     * @var DescribeLayoutButton
      */
     protected $customLink = null;
 
@@ -18,8 +17,8 @@ class CustomLinkComponent extends DescribeLayoutComponent
      */
     public function __construct($displayLines = null, $tabOrder = null, $type = null, $customLink = null)
     {
-      parent::__construct($displayLines, $tabOrder, $type);
-      $this->customLink = $customLink;
+        parent::__construct($displayLines, $tabOrder, $type);
+        $this->customLink = $customLink;
     }
 
     /**
@@ -27,7 +26,7 @@ class CustomLinkComponent extends DescribeLayoutComponent
      */
     public function getCustomLink()
     {
-      return $this->customLink;
+        return $this->customLink;
     }
 
     /**
@@ -36,8 +35,7 @@ class CustomLinkComponent extends DescribeLayoutComponent
      */
     public function setCustomLink($customLink)
     {
-      $this->customLink = $customLink;
-      return $this;
+        $this->customLink = $customLink;
+        return $this;
     }
-
 }

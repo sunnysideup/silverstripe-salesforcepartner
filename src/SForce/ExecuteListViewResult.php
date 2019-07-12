@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class ExecuteListViewResult
 {
-
     /**
-     * @var ListViewColumn[] $columns
+     * @var ListViewColumn[]
      */
     protected $columns = null;
 
     /**
-     * @var string $developerName
+     * @var string
      */
     protected $developerName = null;
 
     /**
-     * @var boolean $done
+     * @var boolean
      */
     protected $done = null;
 
     /**
-     * @var ID $id
+     * @var ID
      */
     protected $id = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var ListViewRecord[] $records
+     * @var ListViewRecord[]
      */
     protected $records = null;
 
     /**
-     * @var int $size
+     * @var int
      */
     protected $size = null;
 
@@ -51,13 +50,13 @@ class ExecuteListViewResult
      */
     public function __construct(array $columns = null, $developerName = null, $done = null, $id = null, $label = null, array $records = null, $size = null)
     {
-      $this->columns = $columns;
-      $this->developerName = $developerName;
-      $this->done = $done;
-      $this->id = $id;
-      $this->label = $label;
-      $this->records = $records;
-      $this->size = $size;
+        $this->columns = $columns;
+        $this->developerName = $developerName;
+        $this->done = $done;
+        $this->id = $id;
+        $this->label = $label;
+        $this->records = $records;
+        $this->size = $size;
     }
 
     /**
@@ -65,7 +64,7 @@ class ExecuteListViewResult
      */
     public function getColumns()
     {
-      return $this->columns;
+        return $this->columns;
     }
 
     /**
@@ -74,8 +73,8 @@ class ExecuteListViewResult
      */
     public function setColumns(array $columns)
     {
-      $this->columns = $columns;
-      return $this;
+        $this->columns = $columns;
+        return $this;
     }
 
     /**
@@ -83,7 +82,7 @@ class ExecuteListViewResult
      */
     public function getDeveloperName()
     {
-      return $this->developerName;
+        return $this->developerName;
     }
 
     /**
@@ -92,8 +91,8 @@ class ExecuteListViewResult
      */
     public function setDeveloperName($developerName)
     {
-      $this->developerName = $developerName;
-      return $this;
+        $this->developerName = $developerName;
+        return $this;
     }
 
     /**
@@ -101,7 +100,7 @@ class ExecuteListViewResult
      */
     public function getDone()
     {
-      return $this->done;
+        return $this->done;
     }
 
     /**
@@ -110,8 +109,8 @@ class ExecuteListViewResult
      */
     public function setDone($done)
     {
-      $this->done = $done;
-      return $this;
+        $this->done = $done;
+        return $this;
     }
 
     /**
@@ -119,7 +118,7 @@ class ExecuteListViewResult
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
@@ -128,8 +127,8 @@ class ExecuteListViewResult
      */
     public function setId($id)
     {
-      $this->id = $id;
-      return $this;
+        $this->id = $id;
+        return $this;
     }
 
     /**
@@ -137,7 +136,7 @@ class ExecuteListViewResult
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -146,8 +145,8 @@ class ExecuteListViewResult
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -155,7 +154,7 @@ class ExecuteListViewResult
      */
     public function getRecords()
     {
-      return $this->records;
+        return $this->records;
     }
 
     /**
@@ -164,8 +163,8 @@ class ExecuteListViewResult
      */
     public function setRecords(array $records)
     {
-      $this->records = $records;
-      return $this;
+        $this->records = $records;
+        return $this;
     }
 
     /**
@@ -173,7 +172,7 @@ class ExecuteListViewResult
      */
     public function getSize()
     {
-      return $this->size;
+        return $this->size;
     }
 
     /**
@@ -182,8 +181,7 @@ class ExecuteListViewResult
      */
     public function setSize($size)
     {
-      $this->size = $size;
-      return $this;
+        $this->size = $size;
+        return $this;
     }
-
 }

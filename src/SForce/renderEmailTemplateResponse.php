@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class renderEmailTemplateResponse
 {
-
     /**
-     * @var RenderEmailTemplateResult $result
+     * @var RenderEmailTemplateResult
      */
     protected $result = null;
 
@@ -15,7 +14,7 @@ class renderEmailTemplateResponse
      */
     public function __construct($result = null)
     {
-      $this->result = $result;
+        $this->result = $result;
     }
 
     /**
@@ -23,7 +22,7 @@ class renderEmailTemplateResponse
      */
     public function getResult()
     {
-      return $this->result;
+        return $this->result;
     }
 
     /**
@@ -32,8 +31,7 @@ class renderEmailTemplateResponse
      */
     public function setResult($result)
     {
-      $this->result = $result;
-      return $this;
+        $this->result = $result;
+        return $this;
     }
-
 }

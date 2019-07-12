@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class retrieveQuickActionTemplates
 {
-
     /**
-     * @var string $quickActionNames
+     * @var string
      */
     protected $quickActionNames = null;
 
     /**
-     * @var ID $contextId
+     * @var ID
      */
     protected $contextId = null;
 
@@ -21,8 +20,8 @@ class retrieveQuickActionTemplates
      */
     public function __construct($quickActionNames = null, $contextId = null)
     {
-      $this->quickActionNames = $quickActionNames;
-      $this->contextId = $contextId;
+        $this->quickActionNames = $quickActionNames;
+        $this->contextId = $contextId;
     }
 
     /**
@@ -30,7 +29,7 @@ class retrieveQuickActionTemplates
      */
     public function getQuickActionNames()
     {
-      return $this->quickActionNames;
+        return $this->quickActionNames;
     }
 
     /**
@@ -39,8 +38,8 @@ class retrieveQuickActionTemplates
      */
     public function setQuickActionNames($quickActionNames)
     {
-      $this->quickActionNames = $quickActionNames;
-      return $this;
+        $this->quickActionNames = $quickActionNames;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class retrieveQuickActionTemplates
      */
     public function getContextId()
     {
-      return $this->contextId;
+        return $this->contextId;
     }
 
     /**
@@ -57,8 +56,7 @@ class retrieveQuickActionTemplates
      */
     public function setContextId($contextId)
     {
-      $this->contextId = $contextId;
-      return $this;
+        $this->contextId = $contextId;
+        return $this;
     }
-
 }

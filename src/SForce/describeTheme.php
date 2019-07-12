@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class describeTheme
 {
-
     /**
-     * @var string $sobjectType
+     * @var string
      */
     protected $sobjectType = null;
 
@@ -15,7 +14,7 @@ class describeTheme
      */
     public function __construct($sobjectType = null)
     {
-      $this->sobjectType = $sobjectType;
+        $this->sobjectType = $sobjectType;
     }
 
     /**
@@ -23,7 +22,7 @@ class describeTheme
      */
     public function getSobjectType()
     {
-      return $this->sobjectType;
+        return $this->sobjectType;
     }
 
     /**
@@ -32,8 +31,7 @@ class describeTheme
      */
     public function setSobjectType($sobjectType)
     {
-      $this->sobjectType = $sobjectType;
-      return $this;
+        $this->sobjectType = $sobjectType;
+        return $this;
     }
-
 }

@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class PicklistEntry
 {
-
     /**
-     * @var boolean $active
+     * @var boolean
      */
     protected $active = null;
 
     /**
-     * @var boolean $defaultValue
+     * @var boolean
      */
     protected $defaultValue = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var base64Binary $validFor
+     * @var base64Binary
      */
     protected $validFor = null;
 
     /**
-     * @var string $value
+     * @var string
      */
     protected $value = null;
 
@@ -37,9 +36,9 @@ class PicklistEntry
      */
     public function __construct($active = null, $defaultValue = null, $value = null)
     {
-      $this->active = $active;
-      $this->defaultValue = $defaultValue;
-      $this->value = $value;
+        $this->active = $active;
+        $this->defaultValue = $defaultValue;
+        $this->value = $value;
     }
 
     /**
@@ -47,7 +46,7 @@ class PicklistEntry
      */
     public function getActive()
     {
-      return $this->active;
+        return $this->active;
     }
 
     /**
@@ -56,8 +55,8 @@ class PicklistEntry
      */
     public function setActive($active)
     {
-      $this->active = $active;
-      return $this;
+        $this->active = $active;
+        return $this;
     }
 
     /**
@@ -65,7 +64,7 @@ class PicklistEntry
      */
     public function getDefaultValue()
     {
-      return $this->defaultValue;
+        return $this->defaultValue;
     }
 
     /**
@@ -74,8 +73,8 @@ class PicklistEntry
      */
     public function setDefaultValue($defaultValue)
     {
-      $this->defaultValue = $defaultValue;
-      return $this;
+        $this->defaultValue = $defaultValue;
+        return $this;
     }
 
     /**
@@ -83,7 +82,7 @@ class PicklistEntry
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -92,8 +91,8 @@ class PicklistEntry
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -101,7 +100,7 @@ class PicklistEntry
      */
     public function getValidFor()
     {
-      return $this->validFor;
+        return $this->validFor;
     }
 
     /**
@@ -110,8 +109,8 @@ class PicklistEntry
      */
     public function setValidFor($validFor)
     {
-      $this->validFor = $validFor;
-      return $this;
+        $this->validFor = $validFor;
+        return $this;
     }
 
     /**
@@ -119,7 +118,7 @@ class PicklistEntry
      */
     public function getValue()
     {
-      return $this->value;
+        return $this->value;
     }
 
     /**
@@ -128,8 +127,7 @@ class PicklistEntry
      */
     public function setValue($value)
     {
-      $this->value = $value;
-      return $this;
+        $this->value = $value;
+        return $this;
     }
-
 }

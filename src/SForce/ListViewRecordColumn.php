@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class ListViewRecordColumn
 {
-
     /**
-     * @var string $fieldNameOrPath
+     * @var string
      */
     protected $fieldNameOrPath = null;
 
     /**
-     * @var string $value
+     * @var string
      */
     protected $value = null;
 
@@ -20,7 +19,7 @@ class ListViewRecordColumn
      */
     public function __construct($fieldNameOrPath = null)
     {
-      $this->fieldNameOrPath = $fieldNameOrPath;
+        $this->fieldNameOrPath = $fieldNameOrPath;
     }
 
     /**
@@ -28,7 +27,7 @@ class ListViewRecordColumn
      */
     public function getFieldNameOrPath()
     {
-      return $this->fieldNameOrPath;
+        return $this->fieldNameOrPath;
     }
 
     /**
@@ -37,8 +36,8 @@ class ListViewRecordColumn
      */
     public function setFieldNameOrPath($fieldNameOrPath)
     {
-      $this->fieldNameOrPath = $fieldNameOrPath;
-      return $this;
+        $this->fieldNameOrPath = $fieldNameOrPath;
+        return $this;
     }
 
     /**
@@ -46,7 +45,7 @@ class ListViewRecordColumn
      */
     public function getValue()
     {
-      return $this->value;
+        return $this->value;
     }
 
     /**
@@ -55,8 +54,7 @@ class ListViewRecordColumn
      */
     public function setValue($value)
     {
-      $this->value = $value;
-      return $this;
+        $this->value = $value;
+        return $this;
     }
-
 }

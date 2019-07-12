@@ -7,7 +7,6 @@ use SForce\Wsdl\SaveResult;
 
 class MySalesforcePartnerApi extends Partner
 {
-
     /**
      * turns key value pairs into string
      * @param  array $array
@@ -16,17 +15,16 @@ class MySalesforcePartnerApi extends Partner
      */
     public static function array2sql($array, $glue = ' AND ')
     {
-        if(count($array) === 0) {
+        if (count($array) === 0) {
             user_error('must have at least one entry');
         }
         $inner = [];
-        foreach($array as $field => $value) {
-            $inner[$field] =  $field.' = '.Convert::raw2sql($value, true);
+        foreach ($array as $field => $value) {
+            $inner[$field] = $field . ' = ' . Convert::raw2sql($value, true);
         }
 
         return implode($glue, $inner);
     }
-
 
     public function debug($response = null)
     {
@@ -34,78 +32,16 @@ class MySalesforcePartnerApi extends Partner
         $this->debugShowResponse($response);
     }
 
-    protected function debugShowRequest()
-    {
-        $this->debugOutput('
-            <h2>Request</h2>
-            <pre>
-        ');
-        $this->debugOutput($this->debugLastRequest(), true);
-        $this->debugOutput('
-            </pre>
-        ');
-    }
-
-
-    protected function debugShowResponse($response)
-    {
-        $this->debugOutput('
-            <h2>Response</h2>
-            <pre>
-        ');
-        $this->debugOutput($response);
-        $this->debugOutput('
-            </pre>
-        ');
-    }
-
-    protected function debugLastRequest()
-    {
-        $xml = $this->getLastRequest();
-
-        if (! $xml) {
-            return null;
-        }
-        $domxml = new \DOMDocument('1.0');
-        $domxml->preserveWhiteSpace = false;
-        $domxml->formatOutput = true;
-        /* @var $xml SimpleXMLElement */
-        $domxml->loadXML($xml);
-
-        return $domxml->saveXML();
-    }
-
-
-
-    protected function debugOutput($html, $escape = false)
-    {
-        if (! is_string($html)) {
-            $html = print_r($html, 1);
-        }
-        if ($this->isCli()) {
-            echo "\n";
-        } elseif ($escape) {
-            $html = htmlentities($html);
-        }
-
-        echo $html;
-    }
-
-    protected function isCli()
-    {
-        return PHP_SAPI === 'cli';
-    }
-
-
     #####################################
     # overriding parent class to fix bugs
     # in the parent class.
     #####################################
+
     /**
      * Adds one or more new individual objects to your organization's data.
      *
      * @param SObject[] $sObjects Array of one or more sObjects (up to 200) to create.
-     * @param null|string $type Unused
+     * @param string|null $type Unused
      *
      * @return SaveResult
      */
@@ -130,11 +66,12 @@ class MySalesforcePartnerApi extends Partner
     # overriding parent class to fix bugs
     # in the parent class.
     #####################################
+
     /**
      * Updates one or more new individual objects to your organization's data.
      *
      * @param SObject[] $sObjects Array of one or more sObjects (up to 200) to update.
-     * @param null|string $type Unused
+     * @param string|null $type Unused
      *
      * @return SaveResult
      */
@@ -179,5 +116,64 @@ class MySalesforcePartnerApi extends Partner
         return $this->sforce
             ->describeLayoutDouble(new Wsdl\describeLayoutDouble($type, $recordTypeIds))
             ->getResult();
+    }
+
+    protected function debugShowRequest()
+    {
+        $this->debugOutput('
+            <h2>Request</h2>
+            <pre>
+        ');
+        $this->debugOutput($this->debugLastRequest(), true);
+        $this->debugOutput('
+            </pre>
+        ');
+    }
+
+    protected function debugShowResponse($response)
+    {
+        $this->debugOutput('
+            <h2>Response</h2>
+            <pre>
+        ');
+        $this->debugOutput($response);
+        $this->debugOutput('
+            </pre>
+        ');
+    }
+
+    protected function debugLastRequest()
+    {
+        $xml = $this->getLastRequest();
+
+        if (! $xml) {
+            return null;
+        }
+        $domxml = new \DOMDocument('1.0');
+        $domxml->preserveWhiteSpace = false;
+        $domxml->formatOutput = true;
+        /** @var SimpleXMLElement $xml */
+        $domxml->loadXML($xml);
+
+        return $domxml->saveXML();
+    }
+
+    protected function debugOutput($html, $escape = false)
+    {
+        if (! is_string($html)) {
+            $html = print_r($html, 1);
+        }
+        if ($this->isCli()) {
+            echo "\n";
+        } elseif ($escape) {
+            $html = htmlentities($html);
+        }
+
+        echo $html;
+    }
+
+    protected function isCli()
+    {
+        return PHP_SAPI === 'cli';
     }
 }

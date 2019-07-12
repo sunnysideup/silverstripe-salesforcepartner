@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class QueryResult
 {
-
     /**
-     * @var boolean $done
+     * @var boolean
      */
     protected $done = null;
 
     /**
-     * @var QueryLocator $queryLocator
+     * @var QueryLocator
      */
     protected $queryLocator = null;
 
     /**
-     * @var sObject[] $records
+     * @var sObject[]
      */
     protected $records = null;
 
     /**
-     * @var int $size
+     * @var int
      */
     protected $size = null;
 
@@ -31,8 +30,8 @@ class QueryResult
      */
     public function __construct($done = null, $size = null)
     {
-      $this->done = $done;
-      $this->size = $size;
+        $this->done = $done;
+        $this->size = $size;
     }
 
     /**
@@ -40,7 +39,7 @@ class QueryResult
      */
     public function getDone()
     {
-      return $this->done;
+        return $this->done;
     }
 
     /**
@@ -49,8 +48,8 @@ class QueryResult
      */
     public function setDone($done)
     {
-      $this->done = $done;
-      return $this;
+        $this->done = $done;
+        return $this;
     }
 
     /**
@@ -58,7 +57,7 @@ class QueryResult
      */
     public function getQueryLocator()
     {
-      return $this->queryLocator;
+        return $this->queryLocator;
     }
 
     /**
@@ -67,8 +66,8 @@ class QueryResult
      */
     public function setQueryLocator($queryLocator)
     {
-      $this->queryLocator = $queryLocator;
-      return $this;
+        $this->queryLocator = $queryLocator;
+        return $this;
     }
 
     /**
@@ -76,7 +75,7 @@ class QueryResult
      */
     public function getRecords()
     {
-      return $this->records;
+        return $this->records;
     }
 
     /**
@@ -85,8 +84,8 @@ class QueryResult
      */
     public function setRecords(array $records = null)
     {
-      $this->records = $records;
-      return $this;
+        $this->records = $records;
+        return $this;
     }
 
     /**
@@ -94,7 +93,7 @@ class QueryResult
      */
     public function getSize()
     {
-      return $this->size;
+        return $this->size;
     }
 
     /**
@@ -103,8 +102,7 @@ class QueryResult
      */
     public function setSize($size)
     {
-      $this->size = $size;
-      return $this;
+        $this->size = $size;
+        return $this;
     }
-
 }

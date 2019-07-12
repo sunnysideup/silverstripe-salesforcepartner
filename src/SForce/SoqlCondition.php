@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class SoqlCondition extends SoqlWhereCondition
 {
-
     /**
-     * @var string $field
+     * @var string
      */
     protected $field = null;
 
     /**
-     * @var soqlOperator $operator
+     * @var soqlOperator
      */
     protected $operator = null;
 
     /**
-     * @var string[] $values
+     * @var string[]
      */
     protected $values = null;
 
@@ -27,9 +26,9 @@ class SoqlCondition extends SoqlWhereCondition
      */
     public function __construct($field = null, $operator = null, array $values = null)
     {
-      $this->field = $field;
-      $this->operator = $operator;
-      $this->values = $values;
+        $this->field = $field;
+        $this->operator = $operator;
+        $this->values = $values;
     }
 
     /**
@@ -37,7 +36,7 @@ class SoqlCondition extends SoqlWhereCondition
      */
     public function getField()
     {
-      return $this->field;
+        return $this->field;
     }
 
     /**
@@ -46,8 +45,8 @@ class SoqlCondition extends SoqlWhereCondition
      */
     public function setField($field)
     {
-      $this->field = $field;
-      return $this;
+        $this->field = $field;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class SoqlCondition extends SoqlWhereCondition
      */
     public function getOperator()
     {
-      return $this->operator;
+        return $this->operator;
     }
 
     /**
@@ -64,8 +63,8 @@ class SoqlCondition extends SoqlWhereCondition
      */
     public function setOperator($operator)
     {
-      $this->operator = $operator;
-      return $this;
+        $this->operator = $operator;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class SoqlCondition extends SoqlWhereCondition
      */
     public function getValues()
     {
-      return $this->values;
+        return $this->values;
     }
 
     /**
@@ -82,8 +81,7 @@ class SoqlCondition extends SoqlWhereCondition
      */
     public function setValues(array $values)
     {
-      $this->values = $values;
-      return $this;
+        $this->values = $values;
+        return $this;
     }
-
 }

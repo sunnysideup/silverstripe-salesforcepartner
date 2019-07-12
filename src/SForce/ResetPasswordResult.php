@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class ResetPasswordResult
 {
-
     /**
-     * @var string $password
+     * @var string
      */
     protected $password = null;
 
@@ -15,7 +14,7 @@ class ResetPasswordResult
      */
     public function __construct($password = null)
     {
-      $this->password = $password;
+        $this->password = $password;
     }
 
     /**
@@ -23,7 +22,7 @@ class ResetPasswordResult
      */
     public function getPassword()
     {
-      return $this->password;
+        return $this->password;
     }
 
     /**
@@ -32,8 +31,7 @@ class ResetPasswordResult
      */
     public function setPassword($password)
     {
-      $this->password = $password;
-      return $this;
+        $this->password = $password;
+        return $this;
     }
-
 }

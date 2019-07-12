@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class DuplicateRuleHeader
 {
-
     /**
-     * @var boolean $allowSave
+     * @var boolean
      */
     protected $allowSave = null;
 
     /**
-     * @var boolean $includeRecordDetails
+     * @var boolean
      */
     protected $includeRecordDetails = null;
 
     /**
-     * @var boolean $runAsCurrentUser
+     * @var boolean
      */
     protected $runAsCurrentUser = null;
 
@@ -27,9 +26,9 @@ class DuplicateRuleHeader
      */
     public function __construct($allowSave = null, $includeRecordDetails = null, $runAsCurrentUser = null)
     {
-      $this->allowSave = $allowSave;
-      $this->includeRecordDetails = $includeRecordDetails;
-      $this->runAsCurrentUser = $runAsCurrentUser;
+        $this->allowSave = $allowSave;
+        $this->includeRecordDetails = $includeRecordDetails;
+        $this->runAsCurrentUser = $runAsCurrentUser;
     }
 
     /**
@@ -37,7 +36,7 @@ class DuplicateRuleHeader
      */
     public function getAllowSave()
     {
-      return $this->allowSave;
+        return $this->allowSave;
     }
 
     /**
@@ -46,8 +45,8 @@ class DuplicateRuleHeader
      */
     public function setAllowSave($allowSave)
     {
-      $this->allowSave = $allowSave;
-      return $this;
+        $this->allowSave = $allowSave;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class DuplicateRuleHeader
      */
     public function getIncludeRecordDetails()
     {
-      return $this->includeRecordDetails;
+        return $this->includeRecordDetails;
     }
 
     /**
@@ -64,8 +63,8 @@ class DuplicateRuleHeader
      */
     public function setIncludeRecordDetails($includeRecordDetails)
     {
-      $this->includeRecordDetails = $includeRecordDetails;
-      return $this;
+        $this->includeRecordDetails = $includeRecordDetails;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class DuplicateRuleHeader
      */
     public function getRunAsCurrentUser()
     {
-      return $this->runAsCurrentUser;
+        return $this->runAsCurrentUser;
     }
 
     /**
@@ -82,8 +81,7 @@ class DuplicateRuleHeader
      */
     public function setRunAsCurrentUser($runAsCurrentUser)
     {
-      $this->runAsCurrentUser = $runAsCurrentUser;
-      return $this;
+        $this->runAsCurrentUser = $runAsCurrentUser;
+        return $this;
     }
-
 }

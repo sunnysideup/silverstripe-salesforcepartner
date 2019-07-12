@@ -4,21 +4,18 @@ namespace SForce\Wsdl;
 
 class SearchResultsMetadata
 {
-
     /**
-     * @var LabelsSearchMetadata[] $entityLabelMetadata
+     * @var LabelsSearchMetadata[]
      */
     protected $entityLabelMetadata = null;
 
     /**
-     * @var EntitySearchMetadata[] $entityMetadata
+     * @var EntitySearchMetadata[]
      */
     protected $entityMetadata = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -26,7 +23,7 @@ class SearchResultsMetadata
      */
     public function getEntityLabelMetadata()
     {
-      return $this->entityLabelMetadata;
+        return $this->entityLabelMetadata;
     }
 
     /**
@@ -35,8 +32,8 @@ class SearchResultsMetadata
      */
     public function setEntityLabelMetadata(array $entityLabelMetadata = null)
     {
-      $this->entityLabelMetadata = $entityLabelMetadata;
-      return $this;
+        $this->entityLabelMetadata = $entityLabelMetadata;
+        return $this;
     }
 
     /**
@@ -44,7 +41,7 @@ class SearchResultsMetadata
      */
     public function getEntityMetadata()
     {
-      return $this->entityMetadata;
+        return $this->entityMetadata;
     }
 
     /**
@@ -53,8 +50,7 @@ class SearchResultsMetadata
      */
     public function setEntityMetadata(array $entityMetadata = null)
     {
-      $this->entityMetadata = $entityMetadata;
-      return $this;
+        $this->entityMetadata = $entityMetadata;
+        return $this;
     }
-
 }

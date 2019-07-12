@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class login
 {
-
     /**
-     * @var string $username
+     * @var string
      */
     protected $username = null;
 
     /**
-     * @var string $password
+     * @var string
      */
     protected $password = null;
 
@@ -21,8 +20,8 @@ class login
      */
     public function __construct($username = null, $password = null)
     {
-      $this->username = $username;
-      $this->password = $password;
+        $this->username = $username;
+        $this->password = $password;
     }
 
     /**
@@ -30,7 +29,7 @@ class login
      */
     public function getUsername()
     {
-      return $this->username;
+        return $this->username;
     }
 
     /**
@@ -39,8 +38,8 @@ class login
      */
     public function setUsername($username)
     {
-      $this->username = $username;
-      return $this;
+        $this->username = $username;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class login
      */
     public function getPassword()
     {
-      return $this->password;
+        return $this->password;
     }
 
     /**
@@ -57,8 +56,7 @@ class login
      */
     public function setPassword($password)
     {
-      $this->password = $password;
-      return $this;
+        $this->password = $password;
+        return $this;
     }
-
 }

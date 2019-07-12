@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class DescribeCompactLayout
 {
-
     /**
-     * @var DescribeLayoutButton[] $actions
+     * @var DescribeLayoutButton[]
      */
     protected $actions = null;
 
     /**
-     * @var DescribeLayoutItem[] $fieldItems
+     * @var DescribeLayoutItem[]
      */
     protected $fieldItems = null;
 
     /**
-     * @var ID $id
+     * @var ID
      */
     protected $id = null;
 
     /**
-     * @var DescribeLayoutItem[] $imageItems
+     * @var DescribeLayoutItem[]
      */
     protected $imageItems = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var string $objectType
+     * @var string
      */
     protected $objectType = null;
 
@@ -48,10 +47,10 @@ class DescribeCompactLayout
      */
     public function __construct($id = null, $label = null, $name = null, $objectType = null)
     {
-      $this->id = $id;
-      $this->label = $label;
-      $this->name = $name;
-      $this->objectType = $objectType;
+        $this->id = $id;
+        $this->label = $label;
+        $this->name = $name;
+        $this->objectType = $objectType;
     }
 
     /**
@@ -59,7 +58,7 @@ class DescribeCompactLayout
      */
     public function getActions()
     {
-      return $this->actions;
+        return $this->actions;
     }
 
     /**
@@ -68,8 +67,8 @@ class DescribeCompactLayout
      */
     public function setActions(array $actions = null)
     {
-      $this->actions = $actions;
-      return $this;
+        $this->actions = $actions;
+        return $this;
     }
 
     /**
@@ -77,7 +76,7 @@ class DescribeCompactLayout
      */
     public function getFieldItems()
     {
-      return $this->fieldItems;
+        return $this->fieldItems;
     }
 
     /**
@@ -86,8 +85,8 @@ class DescribeCompactLayout
      */
     public function setFieldItems(array $fieldItems = null)
     {
-      $this->fieldItems = $fieldItems;
-      return $this;
+        $this->fieldItems = $fieldItems;
+        return $this;
     }
 
     /**
@@ -95,7 +94,7 @@ class DescribeCompactLayout
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
@@ -104,8 +103,8 @@ class DescribeCompactLayout
      */
     public function setId($id)
     {
-      $this->id = $id;
-      return $this;
+        $this->id = $id;
+        return $this;
     }
 
     /**
@@ -113,7 +112,7 @@ class DescribeCompactLayout
      */
     public function getImageItems()
     {
-      return $this->imageItems;
+        return $this->imageItems;
     }
 
     /**
@@ -122,8 +121,8 @@ class DescribeCompactLayout
      */
     public function setImageItems(array $imageItems = null)
     {
-      $this->imageItems = $imageItems;
-      return $this;
+        $this->imageItems = $imageItems;
+        return $this;
     }
 
     /**
@@ -131,7 +130,7 @@ class DescribeCompactLayout
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -140,8 +139,8 @@ class DescribeCompactLayout
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -149,7 +148,7 @@ class DescribeCompactLayout
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -158,8 +157,8 @@ class DescribeCompactLayout
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -167,7 +166,7 @@ class DescribeCompactLayout
      */
     public function getObjectType()
     {
-      return $this->objectType;
+        return $this->objectType;
     }
 
     /**
@@ -176,8 +175,7 @@ class DescribeCompactLayout
      */
     public function setObjectType($objectType)
     {
-      $this->objectType = $objectType;
-      return $this;
+        $this->objectType = $objectType;
+        return $this;
     }
-
 }

@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class EmailHeader
 {
-
     /**
-     * @var boolean $triggerAutoResponseEmail
+     * @var boolean
      */
     protected $triggerAutoResponseEmail = null;
 
     /**
-     * @var boolean $triggerOtherEmail
+     * @var boolean
      */
     protected $triggerOtherEmail = null;
 
     /**
-     * @var boolean $triggerUserEmail
+     * @var boolean
      */
     protected $triggerUserEmail = null;
 
@@ -27,9 +26,9 @@ class EmailHeader
      */
     public function __construct($triggerAutoResponseEmail = null, $triggerOtherEmail = null, $triggerUserEmail = null)
     {
-      $this->triggerAutoResponseEmail = $triggerAutoResponseEmail;
-      $this->triggerOtherEmail = $triggerOtherEmail;
-      $this->triggerUserEmail = $triggerUserEmail;
+        $this->triggerAutoResponseEmail = $triggerAutoResponseEmail;
+        $this->triggerOtherEmail = $triggerOtherEmail;
+        $this->triggerUserEmail = $triggerUserEmail;
     }
 
     /**
@@ -37,7 +36,7 @@ class EmailHeader
      */
     public function getTriggerAutoResponseEmail()
     {
-      return $this->triggerAutoResponseEmail;
+        return $this->triggerAutoResponseEmail;
     }
 
     /**
@@ -46,8 +45,8 @@ class EmailHeader
      */
     public function setTriggerAutoResponseEmail($triggerAutoResponseEmail)
     {
-      $this->triggerAutoResponseEmail = $triggerAutoResponseEmail;
-      return $this;
+        $this->triggerAutoResponseEmail = $triggerAutoResponseEmail;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class EmailHeader
      */
     public function getTriggerOtherEmail()
     {
-      return $this->triggerOtherEmail;
+        return $this->triggerOtherEmail;
     }
 
     /**
@@ -64,8 +63,8 @@ class EmailHeader
      */
     public function setTriggerOtherEmail($triggerOtherEmail)
     {
-      $this->triggerOtherEmail = $triggerOtherEmail;
-      return $this;
+        $this->triggerOtherEmail = $triggerOtherEmail;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class EmailHeader
      */
     public function getTriggerUserEmail()
     {
-      return $this->triggerUserEmail;
+        return $this->triggerUserEmail;
     }
 
     /**
@@ -82,8 +81,7 @@ class EmailHeader
      */
     public function setTriggerUserEmail($triggerUserEmail)
     {
-      $this->triggerUserEmail = $triggerUserEmail;
-      return $this;
+        $this->triggerUserEmail = $triggerUserEmail;
+        return $this;
     }
-
 }

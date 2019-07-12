@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class describeSearchLayoutsResponse
 {
-
     /**
-     * @var DescribeSearchLayoutResult $result
+     * @var DescribeSearchLayoutResult
      */
     protected $result = null;
 
@@ -15,7 +14,7 @@ class describeSearchLayoutsResponse
      */
     public function __construct($result = null)
     {
-      $this->result = $result;
+        $this->result = $result;
     }
 
     /**
@@ -23,7 +22,7 @@ class describeSearchLayoutsResponse
      */
     public function getResult()
     {
-      return $this->result;
+        return $this->result;
     }
 
     /**
@@ -32,8 +31,7 @@ class describeSearchLayoutsResponse
      */
     public function setResult($result)
     {
-      $this->result = $result;
-      return $this;
+        $this->result = $result;
+        return $this;
     }
-
 }

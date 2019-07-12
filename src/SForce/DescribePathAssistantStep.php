@@ -4,44 +4,43 @@ namespace SForce\Wsdl;
 
 class DescribePathAssistantStep
 {
-
     /**
-     * @var boolean $closed
+     * @var boolean
      */
     protected $closed = null;
 
     /**
-     * @var boolean $converted
+     * @var boolean
      */
     protected $converted = null;
 
     /**
-     * @var DescribePathAssistantField[] $fields
+     * @var DescribePathAssistantField[]
      */
     protected $fields = null;
 
     /**
-     * @var string $info
+     * @var string
      */
     protected $info = null;
 
     /**
-     * @var DescribeLayoutSection $layoutSection
+     * @var DescribeLayoutSection
      */
     protected $layoutSection = null;
 
     /**
-     * @var string $picklistLabel
+     * @var string
      */
     protected $picklistLabel = null;
 
     /**
-     * @var string $picklistValue
+     * @var string
      */
     protected $picklistValue = null;
 
     /**
-     * @var boolean $won
+     * @var boolean
      */
     protected $won = null;
 
@@ -54,11 +53,11 @@ class DescribePathAssistantStep
      */
     public function __construct($closed = null, $converted = null, $picklistLabel = null, $picklistValue = null, $won = null)
     {
-      $this->closed = $closed;
-      $this->converted = $converted;
-      $this->picklistLabel = $picklistLabel;
-      $this->picklistValue = $picklistValue;
-      $this->won = $won;
+        $this->closed = $closed;
+        $this->converted = $converted;
+        $this->picklistLabel = $picklistLabel;
+        $this->picklistValue = $picklistValue;
+        $this->won = $won;
     }
 
     /**
@@ -66,7 +65,7 @@ class DescribePathAssistantStep
      */
     public function getClosed()
     {
-      return $this->closed;
+        return $this->closed;
     }
 
     /**
@@ -75,8 +74,8 @@ class DescribePathAssistantStep
      */
     public function setClosed($closed)
     {
-      $this->closed = $closed;
-      return $this;
+        $this->closed = $closed;
+        return $this;
     }
 
     /**
@@ -84,7 +83,7 @@ class DescribePathAssistantStep
      */
     public function getConverted()
     {
-      return $this->converted;
+        return $this->converted;
     }
 
     /**
@@ -93,8 +92,8 @@ class DescribePathAssistantStep
      */
     public function setConverted($converted)
     {
-      $this->converted = $converted;
-      return $this;
+        $this->converted = $converted;
+        return $this;
     }
 
     /**
@@ -102,7 +101,7 @@ class DescribePathAssistantStep
      */
     public function getFields()
     {
-      return $this->fields;
+        return $this->fields;
     }
 
     /**
@@ -111,8 +110,8 @@ class DescribePathAssistantStep
      */
     public function setFields(array $fields = null)
     {
-      $this->fields = $fields;
-      return $this;
+        $this->fields = $fields;
+        return $this;
     }
 
     /**
@@ -120,7 +119,7 @@ class DescribePathAssistantStep
      */
     public function getInfo()
     {
-      return $this->info;
+        return $this->info;
     }
 
     /**
@@ -129,8 +128,8 @@ class DescribePathAssistantStep
      */
     public function setInfo($info)
     {
-      $this->info = $info;
-      return $this;
+        $this->info = $info;
+        return $this;
     }
 
     /**
@@ -138,7 +137,7 @@ class DescribePathAssistantStep
      */
     public function getLayoutSection()
     {
-      return $this->layoutSection;
+        return $this->layoutSection;
     }
 
     /**
@@ -147,8 +146,8 @@ class DescribePathAssistantStep
      */
     public function setLayoutSection($layoutSection)
     {
-      $this->layoutSection = $layoutSection;
-      return $this;
+        $this->layoutSection = $layoutSection;
+        return $this;
     }
 
     /**
@@ -156,7 +155,7 @@ class DescribePathAssistantStep
      */
     public function getPicklistLabel()
     {
-      return $this->picklistLabel;
+        return $this->picklistLabel;
     }
 
     /**
@@ -165,8 +164,8 @@ class DescribePathAssistantStep
      */
     public function setPicklistLabel($picklistLabel)
     {
-      $this->picklistLabel = $picklistLabel;
-      return $this;
+        $this->picklistLabel = $picklistLabel;
+        return $this;
     }
 
     /**
@@ -174,7 +173,7 @@ class DescribePathAssistantStep
      */
     public function getPicklistValue()
     {
-      return $this->picklistValue;
+        return $this->picklistValue;
     }
 
     /**
@@ -183,8 +182,8 @@ class DescribePathAssistantStep
      */
     public function setPicklistValue($picklistValue)
     {
-      $this->picklistValue = $picklistValue;
-      return $this;
+        $this->picklistValue = $picklistValue;
+        return $this;
     }
 
     /**
@@ -192,7 +191,7 @@ class DescribePathAssistantStep
      */
     public function getWon()
     {
-      return $this->won;
+        return $this->won;
     }
 
     /**
@@ -201,8 +200,7 @@ class DescribePathAssistantStep
      */
     public function setWon($won)
     {
-      $this->won = $won;
-      return $this;
+        $this->won = $won;
+        return $this;
     }
-
 }

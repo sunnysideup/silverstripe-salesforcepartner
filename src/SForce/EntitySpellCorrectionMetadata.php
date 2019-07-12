@@ -4,21 +4,18 @@ namespace SForce\Wsdl;
 
 class EntitySpellCorrectionMetadata
 {
-
     /**
-     * @var string $correctedQuery
+     * @var string
      */
     protected $correctedQuery = null;
 
     /**
-     * @var boolean $hasNonCorrectedResults
+     * @var boolean
      */
     protected $hasNonCorrectedResults = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -26,7 +23,7 @@ class EntitySpellCorrectionMetadata
      */
     public function getCorrectedQuery()
     {
-      return $this->correctedQuery;
+        return $this->correctedQuery;
     }
 
     /**
@@ -35,8 +32,8 @@ class EntitySpellCorrectionMetadata
      */
     public function setCorrectedQuery($correctedQuery)
     {
-      $this->correctedQuery = $correctedQuery;
-      return $this;
+        $this->correctedQuery = $correctedQuery;
+        return $this;
     }
 
     /**
@@ -44,7 +41,7 @@ class EntitySpellCorrectionMetadata
      */
     public function getHasNonCorrectedResults()
     {
-      return $this->hasNonCorrectedResults;
+        return $this->hasNonCorrectedResults;
     }
 
     /**
@@ -53,8 +50,7 @@ class EntitySpellCorrectionMetadata
      */
     public function setHasNonCorrectedResults($hasNonCorrectedResults)
     {
-      $this->hasNonCorrectedResults = $hasNonCorrectedResults;
-      return $this;
+        $this->hasNonCorrectedResults = $hasNonCorrectedResults;
+        return $this;
     }
-
 }

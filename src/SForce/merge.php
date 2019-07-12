@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class merge
 {
-
     /**
-     * @var MergeRequest $request
+     * @var MergeRequest
      */
     protected $request = null;
 
@@ -15,7 +14,7 @@ class merge
      */
     public function __construct($request = null)
     {
-      $this->request = $request;
+        $this->request = $request;
     }
 
     /**
@@ -23,7 +22,7 @@ class merge
      */
     public function getRequest()
     {
-      return $this->request;
+        return $this->request;
     }
 
     /**
@@ -32,8 +31,7 @@ class merge
      */
     public function setRequest($request)
     {
-      $this->request = $request;
-      return $this;
+        $this->request = $request;
+        return $this;
     }
-
 }
