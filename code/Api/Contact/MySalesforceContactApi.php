@@ -27,7 +27,7 @@ class MySalesforceContactApi extends Object
         $lastName = null,
         $extraFields = [],
         $extraFilterArray = []
-    ): bool
+    )
     {
         self::assert_email($email);
 
@@ -62,7 +62,7 @@ class MySalesforceContactApi extends Object
         $email,
         $extraFields = [],
         $extraFilterArray = []
-    ): bool
+    )
     {
         self::assert_email($email);
         $fields = $extraFields;
@@ -80,7 +80,7 @@ class MySalesforceContactApi extends Object
      *
      * @return bool
      */
-    public static function is_email_registered($email, $extraFilterArray = []) : bool
+    public static function is_email_registered($email, $extraFilterArray = [])
     {
         $fieldsArray = ['Email' => $email];
         $subscriber = MySalesforceContactApi::retrieve_contact($fieldsArray, $extraFilterArray);
@@ -147,7 +147,7 @@ class MySalesforceContactApi extends Object
      *
      * @return bool
      */
-    public static function update_contact($fieldsArray, $extraFilterArray = []) : bool
+    public static function update_contact($fieldsArray, $extraFilterArray = [])
     {
         $connection = self::get_my_singleton_connection();
 
@@ -247,10 +247,15 @@ class MySalesforceContactApi extends Object
         return $existingContact;
     }
 
-    public static function retrieve_contact_record_types() : array
+    /**
+     *
+     * @return array
+     */
+    public static function retrieve_contact_record_types()
     {
         $connection = self::get_my_singleton_connection();
         $returnArray = [];
+
         $query = '
             SELECT Id, Name, Description, DeveloperName, IsActive, sObjectType
             FROM RecordType

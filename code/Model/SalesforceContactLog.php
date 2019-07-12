@@ -35,7 +35,7 @@ class SalesforceContactLog extends DataObject
      *
      * @return bool
      */
-    public function confirmContactLog($response) : bool
+    public function confirmContactLog($response)
     {
         $id = '';
         $errors = '';

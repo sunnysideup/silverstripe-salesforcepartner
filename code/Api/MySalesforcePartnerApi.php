@@ -10,10 +10,11 @@ class MySalesforcePartnerApi extends Partner
 
     /**
      * turns key value pairs into string
-     * @param  array $array [description]
+     * @param  array $array
+     * @param  string $glue implode glue
      * @return string
      */
-    public static function array2sql($array, $glue = ' AND ') : string
+    public static function array2sql($array, $glue = ' AND ')
     {
         if(count($array) === 0) {
             user_error('must have at least one entry');
