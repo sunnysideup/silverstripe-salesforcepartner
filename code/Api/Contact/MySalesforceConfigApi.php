@@ -24,7 +24,6 @@ class MySalesforceContactConfigApi extends Object
      */
     private static $site_wide_filter_values = [];
 
-
     /**
      *
      * @var array
@@ -33,7 +32,7 @@ class MySalesforceContactConfigApi extends Object
 
     /**
      *
-     * @param  array|DataList|string $mixed fields to send
+     * @param  array|DataList|string $mixed fields to send for creations
      *
      */
     public static function add_fields_to_send_on_creation($mixed)
@@ -51,7 +50,7 @@ class MySalesforceContactConfigApi extends Object
 
     /**
      *
-     * @param  array|DataList|string $mixed fields to send
+     * @param  array|DataList|string $mixed fields to send for updates
      *
      * @return array
      */
@@ -70,7 +69,7 @@ class MySalesforceContactConfigApi extends Object
 
     /**
      *
-     * @param  array|DataList|string $mixed fields to send
+     * @param  array|DataList|string $mixed fields to send as filters
      *
      * @return array
      */
@@ -91,6 +90,7 @@ class MySalesforceContactConfigApi extends Object
     public static function get_fields_to_send_on_creation($mixed = null)
     {
         $array = self::mixed_to_array($mixed);
+
         return array_merge(
             Config::inst()->get('MySalesforceContactConfigApi', 'site_wide_fields_to_send_on_creation'),
             $array,
@@ -134,22 +134,25 @@ class MySalesforceContactConfigApi extends Object
 
     /**
      *
-     * @param  DataList|array|null $mixed
+     * @param  DataList|array|null|string $mixed
      * @return array
      */
     protected static function mixed_to_array($mixed = null)
     {
-        if(is_object($mixed)) {
+        if($mixed === null) {
+            $array = [];
+        } elseif($mixed instanceof SS_List) {
             $array = [];
             foreach($mixed as $object) {
                 $array[trim($object->Key)] = $object->BetterValueHumanReadable();
             }
-        } elseif($mixed === null) {
-            $array = [];
         } elseif(is_string($mixed)) {
             $array = [ $mixed ];
-        } elseif(! is_array($array)) {
-            user_error('Variable '.vardump($mixed).'Should be an array');
+        } elseif(is_array($mixed)) {
+            $array = $mixed;
+        } else {
+            $array = [];
+            user_error('Variable '.var_dump($mixed).'Should be an array');
         }
 
         return $array;
@@ -191,7 +194,7 @@ class MySalesforceContactConfigApi extends Object
         $data = MySalesforceContactApi::retrieve_contact_record_types();
 
         return LiteralField::create(
-            'ListOfContactRecordTypes',
+            $fieldName,
             '<h2>'.$title.'</h2>'.
             '<pre>'.print_r($data, 1).'</pre>'
         );
@@ -201,7 +204,7 @@ class MySalesforceContactConfigApi extends Object
      * Needs to link to a many-many relationship (SalesforceDefaultContactFields)
      * @param  array $array fields to send
      *
-     * @return CheckboxSetField
+     * @return FormField
      */
     public static function select_default_contact_fields_field($fieldName, $title, $desc = '')
     {
@@ -244,6 +247,7 @@ class MySalesforceContactConfigApi extends Object
         $fieldName .= ucfirst($type);
         $title .= ' '.ucfirst($type);
 
+        $array = [];
         switch( $type ) {
             case 'create':
                 $array = self::get_fields_to_send_on_creation($mixed);
