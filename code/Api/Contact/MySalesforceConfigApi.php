@@ -56,7 +56,7 @@ class MySalesforceContactConfigApi extends Object
      */
     public static function add_fields_to_send_on_update($mixed)
     {
-        $array = self::mixed_to_array($mixed);
+        $array = self::mixed_to_array($mixed, false);
 
         self::$run_time_fields_to_send_on_update += $array;
     }
@@ -75,7 +75,7 @@ class MySalesforceContactConfigApi extends Object
      */
     public static function add_fields_to_use_for_filter($mixed)
     {
-        $array = self::mixed_to_array($mixed);
+        $array = self::mixed_to_array($mixed, false);
 
         self::$run_time_fields_for_filter += $array;
     }
@@ -135,6 +135,7 @@ class MySalesforceContactConfigApi extends Object
     /**
      *
      * @param  DataList|array|null|string $mixed
+     *
      * @return array
      */
     protected static function mixed_to_array($mixed = null)
@@ -144,7 +145,7 @@ class MySalesforceContactConfigApi extends Object
         } elseif($mixed instanceof SS_List) {
             $array = [];
             foreach($mixed as $object) {
-                $array[trim($object->Key)] = $object->BetterValueHumanReadable();
+                $array[trim($object->Key)] = $object->BetterValue();
             }
         } elseif(is_string($mixed)) {
             $array = [ $mixed ];
@@ -250,13 +251,13 @@ class MySalesforceContactConfigApi extends Object
         $array = [];
         switch( $type ) {
             case 'create':
-                $array = self::get_fields_to_send_on_creation($mixed);
+                $array = self::get_fields_to_send_on_creation($mixed, true );
                 break;
             case 'update':
-                $array = self::get_fields_to_send_on_update($mixed);
+                $array = self::get_fields_to_send_on_update($mixed, true );
                 break;
             case 'filter':
-                $array = self::get_fields_for_filter($mixed);
+                $array = self::get_fields_for_filter($mixed, true );
                 break;
             default:
                 user_error('type needs to be create, update or filter - currently set to: '.$type);
@@ -278,7 +279,7 @@ class MySalesforceContactConfigApi extends Object
     {
         $htmlArray = [];
         foreach($array as $field => $value) {
-            $htmlArray[] = $field.' = '.$value.' ('.gettype($value).')';
+            $htmlArray[] = $field.' = '.$value;
         }
         if(count($htmlArray) == 0) {
             $htmlArray[] = 'none';

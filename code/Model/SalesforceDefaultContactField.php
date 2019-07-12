@@ -76,11 +76,11 @@ class SalesforceDefaultContactField extends DataObject
      */
     public function BetterValue()
     {
-        if(strtolower($this->Value) === 'true' || intval($this->Value) === 1) {
-            return true;
+        if(strtolower($this->Value) === 'true') {
+            return 'true';
         }
-        elseif(strtolower($this->Value) === 'false' || empty($this->Value) || intval($this->Value) === 0) {
-            return false;
+        elseif(strtolower($this->Value) === 'false') {
+            return 'false';
         }
         elseif(is_numeric($this->Value)) {
             return floatval($this->Value);
@@ -89,16 +89,43 @@ class SalesforceDefaultContactField extends DataObject
         return trim($this->Value);
     }
 
+    /**
+     * @return mixed
+     */
     public function BetterValueHumanReadable()
     {
-        $value = $this->BetterValue();
-        if(gettype($value) === 'boolean') {
-            return $value ? 'true' : 'false';
-        } else {
-            return $value;
-        }
+        return $this->BetterValue();
     }
 
+    /**
+     * CMS Fields
+     * @return FieldList
+     */
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
+        $fields->addFieldsToTab(
+            'Root.Main',
+            [
+                TextField::create(
+                    'Value',
+                    'Value'
+                )->setDescription('For a boolean value, simply enter TRUE or FALSE'),
+                ReadonlyField::create(
+                    'BetterValueHumanReadableNice',
+                    'Calculated Value',
+                    $this->BetterValueHumanReadable()
+                ),
+                ReadonlyField::create(
+                    'FieldType',
+                    'Field Type',
+                    gettype($this->BetterValue())
+                )
+            ]
+        );
+
+        return $fields;
+    }
 
 
 
