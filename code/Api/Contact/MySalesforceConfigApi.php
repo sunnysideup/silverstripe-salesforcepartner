@@ -56,7 +56,7 @@ class MySalesforceContactConfigApi extends Object
      */
     public static function add_fields_to_send_on_update($mixed)
     {
-        $array = self::mixed_to_array($mixed, false);
+        $array = self::mixed_to_array($mixed);
 
         self::$run_time_fields_to_send_on_update += $array;
     }
@@ -75,7 +75,7 @@ class MySalesforceContactConfigApi extends Object
      */
     public static function add_fields_to_use_for_filter($mixed)
     {
-        $array = self::mixed_to_array($mixed, false);
+        $array = self::mixed_to_array($mixed);
 
         self::$run_time_fields_for_filter += $array;
     }
