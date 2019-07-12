@@ -167,9 +167,9 @@ class MySalesforceContactConfigApiFormFields extends Object
     }
 
     /**
-     *
      * @param  array $array
-     * @return string
+     *
+     * @return string (html)
      */
     protected static function array_to_html($array)
     {
