@@ -8,6 +8,8 @@ SalesForceDefaultContactField:
     SalesforceField: Value
     SalesforceField: Value
     SalesforceField: Value
+
+MySalesforceContactConfigApi:
   site_wide_fields_to_send:
     SalesforceField: Value
     SalesforceField: Value
@@ -17,17 +19,6 @@ SalesForceDefaultContactField:
     SalesforceField: Value
     SalesforceField: Value
 
-### ###################################
-### optional extensions
-### ###################################
-
-
-
-SalesForceContact:
-  fields_to_send_to_sales_force:
-    - CustomField1
-    - CustomField2
-    - CustomField3
 
 ### ###################################
 ### credentials below are required
