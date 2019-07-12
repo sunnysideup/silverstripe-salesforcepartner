@@ -1,7 +1,7 @@
 {
     "name": "sunnysideup/salesforcepartner",
     "description": "implements soap connection for sales force partner api",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "keywords": [
         "Silverstripe-CMS",
         "CMS",
