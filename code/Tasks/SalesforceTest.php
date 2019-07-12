@@ -20,14 +20,18 @@ class SalesforceTest extends BuildTask
     public function run($request)
     {
         MySalesforceContactApi::set_debug(true);
+
         $this->setEmail();
         $this->findContact();
         $this->createContact();
         $this->findContact();
         $this->updateContact();
+
+        $this->setEmail();
         $this->createSubscriber();
         $this->findContact();
         $this->updateSubscriber();
+
         $this->setEmail();
         $this->createBadContact();
     }
@@ -64,7 +68,7 @@ class SalesforceTest extends BuildTask
 
     protected function createSubscriber()
     {
-        MySalesforceContactApi::create_contact(
+        MySalesforceContactApi::add_email_subscriber(
             $this->email,
             '(510) 555-5555',
             'John',

@@ -15,6 +15,13 @@ class SalesforceContactLog extends DataObject
      */
     public static function create_contact_log($type, array $fieldsSent, array $filters)
     {
+        //basic fields
+        $email = isset($fieldsSent['Email']) ? $fieldsSent['Email'] : '';
+        $phone = isset($fieldsSent['Phone']) ? $fieldsSent['Phone'] : '';
+        $firstName = isset($fieldsSent['FirstName']) ? $fieldsSent['FirstName'] : '';
+        $lastName = isset($fieldsSent['LastName']) ? $fieldsSent['LastName'] : '';
+
+        //serialize
         $fieldsSent = serialize($fieldsSent);
         $filters = serialize($filters);
         $obj = SalesforceContactLog::create(
@@ -22,6 +29,10 @@ class SalesforceContactLog extends DataObject
                 'Type' => $type,
                 'FieldsSent' => $fieldsSent,
                 'Filters' => $filters,
+                'Email' => $email,
+                'Phone' => $phone,
+                'FirstName' => $firstName,
+                'LastName' => $lastName,
             ]
         );
         $id = $obj->write();
@@ -35,13 +46,17 @@ class SalesforceContactLog extends DataObject
      *
      * @return bool
      */
-    public function confirmContactLog($response)
+    public function confirmContactLog($response, $error = '')
     {
         $id = '';
         $errors = '';
         $hasError = false;
         if(is_array($response)) {
             $response = $response[0];
+        }
+        if($error) {
+            $hasError = true;
+            $errors = $error;
         }
         if($response instanceof \SForce\Wsdl\SaveResult) {
             $id = $response->getId();
@@ -52,13 +67,12 @@ class SalesforceContactLog extends DataObject
                 $hasError = true;
             }
         } else {
-            $errors = 'Unexpected response: '.serialize($response);
-            // print_r($response);
-            user_error('unexptected response');
+            $errors .= '||| Unexpected response: '.serialize($response);
         }
         $this->SalesforceIdentifier = $id;
         $this->Errors = $errors;
         $this->HasError = $hasError;
+        $this->Executed = true;
         $this->write();
 
         return $this->HasError;
@@ -85,6 +99,10 @@ class SalesforceContactLog extends DataObject
     private static $db = [
         'SalesforceIdentifier' => 'Varchar(40)',
         'Type' => 'Enum("Created,Updated")',
+        'Email' => 'Varchar',
+        'Phone' => 'Varchar',
+        'FirstName' => 'Varchar',
+        'LastName' => 'Varchar',
         'Executed' => 'Boolean',
         'FieldsSent' => 'Text',
         'Filters' => 'Text',
@@ -106,6 +124,10 @@ class SalesforceContactLog extends DataObject
         'Executed' => 'ExactMatchFilter',
         'HasError' => 'ExactMatchFilter',
         'SalesforceIdentifier' => 'PartialMatchField',
+        'Email' => 'PartialMatchField',
+        'Phone' => 'PartialMatchField',
+        'FirstName' => 'PartialMatchField',
+        'LastName' => 'PartialMatchField',
         'FieldsSent' => 'PartialMatchField',
         'Filters' => 'PartialMatchField',
         'Errors' => 'PartialMatchField',
@@ -117,17 +139,21 @@ class SalesforceContactLog extends DataObject
      * @var array
      */
     private static $summary_fields = [
-        'Created.Nice' => 'Created',
-        'SalesforceIdentifier' => 'SF ID',
+        'Created.Nice' => 'When',
+        'SalesforceIdentifier' => 'Code',
         'Type' => 'Type',
+        'Email' => 'Email',
+        'Phone' => 'Phone',
+        'FirstName' => 'First',
+        'LastName' => 'Last',
         'Executed.Nice' => 'Executed',
-        'Type' => 'Type',
         'HasError.Nice' => 'Errors',
-        'Errors' => 'Errors',
     ];
 
     private static $indexes = [
-        'SalesforceIdentifier' => true
+        'SalesforceIdentifier' => true,
+        'Email' => 'Email',
+        'Phone' => 'Phone',
     ];
 
     /**
@@ -155,16 +181,21 @@ class SalesforceContactLog extends DataObject
                     DBField::create_field('SS_DateTime', $this->Created)->Nice()
                 ),
                 ReadonlyField::create(
+                    'Type',
+                    'Type'
+                ),
+                ReadonlyField::create(
                     'SalesforceIdentifier',
                     'Sales Force Identifier'
                 ),
+            ]
+        );
+        $fields->addFieldsToTab(
+            'Root.Debug',
+            [
                 LiteralField::create(
                     'FieldsSentNice',
                     '<h2>Fields Sent</h2>'.$this->serializedToHTML($this->FieldsSent)
-                ),
-                ReadonlyField::create(
-                    'Type',
-                    'Type'
                 ),
                 LiteralField::create(
                     'FiltersNice',

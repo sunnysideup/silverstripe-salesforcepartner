@@ -120,6 +120,8 @@ class MySalesforceContactApi extends Object
         $existingContact = self::retrieve_contact($fieldsArray, $extraFilterArray);
         // Contact not found. Create a new Contact and set the details
         if ($existingContact) {
+
+            //we are out of here!
             return true;
         } else {
             $contact = new SObject();
@@ -127,13 +129,22 @@ class MySalesforceContactApi extends Object
             foreach ($fieldsArray as $fieldName => $fieldValue) {
                 $contact->$fieldName = $fieldValue;
             }
+
             //doing it!
-            $response = $connection->create([$contact]);
+            $error = '';
+            $response = null;
+            try {
+                $response = $connection->create([$contact]);
+            }
+            //catch exception
+            catch(\Exception $e) {
+                $error = $e->getMessage();
+            }
         }
         if(self::$debug) {
             $connection->debug($response);
         }
-        $success = $log->confirmContactLog($response);
+        $success = $log->confirmContactLog($response, $error);
 
         return $success;
     }
@@ -180,14 +191,25 @@ class MySalesforceContactApi extends Object
                 }
             }
             //doing it!
-            $response = $connection->update([$contact]);
+            $error = '';
+            $response = null;
+            try {
+                $response = $connection->update([$contact]);
+            }
+            //catch exception
+            catch(\Exception $e) {
+                $error = $e->getMessage();
+            }
         } else {
+
+            //we are out of here!
             return true;
         }
         if(self::$debug) {
+            echo $error;
             $connection->debug($response);
         }
-        $success = $log->confirmContactLog($response);
+        $success = $log->confirmContactLog($response, $error);
 
         return $success;
     }
