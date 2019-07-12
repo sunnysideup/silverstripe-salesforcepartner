@@ -75,7 +75,7 @@ class SalesforceContactLog extends DataObject
         $this->Executed = true;
         $this->write();
 
-        return $this->HasError;
+        return $this->HasError ? false : true;
     }
 
     /**
