@@ -64,11 +64,6 @@ class SalesforceContactLog extends DataObject
         return $this->HasError;
     }
 
-    public function hasError() : bool
-    {
-        return $this->SalesforceIdentifier ? false : true;
-    }
-
     /**
      * Singular name for CMS
      * @var string
@@ -122,6 +117,7 @@ class SalesforceContactLog extends DataObject
      * @var array
      */
     private static $summary_fields = [
+        'Created.Nice' => 'Created',
         'SalesforceIdentifier' => 'SF ID',
         'Type' => 'Type',
         'Executed.Nice' => 'Executed',
@@ -141,36 +137,48 @@ class SalesforceContactLog extends DataObject
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+        $fields->removeFieldsFromTab(
+            'Root.Main',
+            [
+                'FieldsSent',
+                'Filters',
+                'HasError',
+                'Executed',
+            ]
+        );
         $fields->addFieldsToTab(
             'Root.Main',
             [
                 ReadonlyField::create(
+                    'Created',
+                    'Created',
+                    DBField::create_field('SS_DateTime', $this->Created)->Nice()
+                ),
+                ReadonlyField::create(
                     'SalesforceIdentifier',
                     'Sales Force Identifier'
                 ),
-                ReadonlyField::create(
-                    'FieldsSent',
-                    'Fields Sent',
-                    $this->serializedToHTML($this->FieldsSent)
+                LiteralField::create(
+                    'FieldsSentNice',
+                    '<h2>Fields Sent</h2>'.$this->serializedToHTML($this->FieldsSent)
                 ),
                 ReadonlyField::create(
                     'Type',
                     'Type'
                 ),
-                ReadonlyField::create(
-                    'Filters',
-                    'Filters',
-                    $this->serializedToHTML($this->Filters)
+                LiteralField::create(
+                    'FiltersNice',
+                    '<h2>Filters</h2>'.$this->serializedToHTML($this->Filters)
                 ),
                 ReadonlyField::create(
+                    'ExecutedNice',
                     'Executed',
-                    'Executed',
-                    $this->dbField('Executed')->Nice()
+                    DBField::create_field('Boolean', $this->Executed)->Nice()
                 ),
                 ReadonlyField::create(
+                    'HasErrorNice',
                     'HasError',
-                    'HasError',
-                    $this->dbField('HasError')->Nice()
+                    DBField::create_field('Boolean', $this->HasError)->Nice()
                 ),
                 ReadonlyField::create(
                     'Errors',
