@@ -21,7 +21,7 @@ class MySalesforceContactConfigApiFormFields extends Object
         return [
             self::fields_to_send_field(
                 'create',
-                $this->$createFieldsMethod()
+                $dataObject->$createFieldsMethod()
             ),
 
             self::select_default_contact_fields_field(
@@ -31,7 +31,7 @@ class MySalesforceContactConfigApiFormFields extends Object
 
             self::fields_to_send_field(
                 'update',
-                $this->$updateFieldsMethod()
+                $dataObject->$updateFieldsMethod()
             ),
 
             self::select_default_contact_fields_field(
@@ -41,7 +41,7 @@ class MySalesforceContactConfigApiFormFields extends Object
 
             self::fields_to_send_field(
                 'filter',
-                $this->$filterFieldsMethod()
+                $dataObject->$filterFieldsMethod()
             ),
 
             self::select_default_contact_fields_field(
