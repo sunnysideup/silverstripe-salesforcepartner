@@ -70,7 +70,8 @@ class MySalesforcePartnerApi extends Partner
         $domxml->formatOutput = true;
         /* @var $xml SimpleXMLElement */
         $domxml->loadXML($xml);
-        echo $domxml->saveXML();
+
+        return $domxml->saveXML();
     }
 
 

@@ -152,7 +152,7 @@ class MySalesforceContactConfigApi extends Object
             $array = $mixed;
         } else {
             $array = [];
-            user_error('Variable '.var_dump($mixed).'Should be an array');
+            user_error('Variable '.print_r($mixed, 1).' should be an array. Currently, it is a '.gettype($mixed));
         }
 
         return $array;

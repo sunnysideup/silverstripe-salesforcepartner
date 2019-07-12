@@ -82,7 +82,8 @@ class MySalesforceContactApi extends Object
      */
     public static function is_email_registered($email, $extraFilterArray = []) : bool
     {
-        $subscriber = MySalesforceContactApi::retrieve_contact($email);
+        $fieldsArray = ['Email' => $email];
+        $subscriber = MySalesforceContactApi::retrieve_contact($fieldsArray, $extraFilterArray);
 
         return $subscriber ? true : false;
     }
@@ -118,7 +119,6 @@ class MySalesforceContactApi extends Object
 
         $existingContact = self::retrieve_contact($fieldsArray, $extraFilterArray);
         // Contact not found. Create a new Contact and set the details
-        $response = null;
         if ($existingContact) {
             return true;
         } else {
@@ -170,7 +170,6 @@ class MySalesforceContactApi extends Object
         //find existing contact
         $existingContact = self::retrieve_contact($fieldsArray, $extraFilterArray);
         // Contact found. Update Contact with details
-        $response = null;
         if ($existingContact) {
             $contact = new SObject();
             $contact->setType('Contact');
@@ -210,6 +209,11 @@ class MySalesforceContactApi extends Object
         $filterArray = [];
         $finalFilterArray = [];
         $result = null;
+
+        $extraFilterArray = array_merge(
+            MySalesforceContactConfigApi::get_fields_for_filter(),
+            $extraFilterArray
+        );
 
         $email = isset($fieldsArray['Email']) ? trim($fieldsArray['Email']) : null;
         if ($email) {

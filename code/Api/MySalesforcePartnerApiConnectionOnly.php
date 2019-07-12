@@ -46,7 +46,7 @@ class MySalesforcePartnerApiConnectionOnly extends Object
     {
         $sessionData = self::retrieve_cache_data();
 
-        if (! $sessionData) {
+        if (empty($sessionData)) {
             return null;
         }
 
@@ -59,7 +59,7 @@ class MySalesforcePartnerApiConnectionOnly extends Object
 
         $sessionHeader = new SForce\Wsdl\SessionHeader($sessionId);
 
-        if (! $sessionHeader) {
+        if (empty($sessionHeader)) {
             return null;
         }
 

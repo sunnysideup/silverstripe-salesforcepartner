@@ -11,12 +11,12 @@ class SalesforceContactLog extends DataObject
      * @param  array $fieldsSent
      * @param  array $filters
      *
-     * @return SalesforceContactLog
+     * @return SalesforceContactLog|null
      */
-    public static function create_contact_log($type, array $fieldsSent, array $filters) : SalesforceContactLog
+    public static function create_contact_log($type, array $fieldsSent, array $filters)
     {
         $fieldsSent = serialize($fieldsSent);
-        $filters = serialize($fieldsSent);
+        $filters = serialize($filters);
         $obj = SalesforceContactLog::create(
             [
                 'Type' => $type,
@@ -45,10 +45,10 @@ class SalesforceContactLog extends DataObject
         }
         if($response instanceof \SForce\Wsdl\SaveResult) {
             $id = $response->getId();
-            $errors = serialize($response->getErrors());
             if($response->getSuccess()) {
                 $hasError = false;
             } else {
+                $errors = serialize($response->getErrors());
                 $hasError = true;
             }
         } else {
