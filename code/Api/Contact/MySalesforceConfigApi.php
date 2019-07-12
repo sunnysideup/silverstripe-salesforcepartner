@@ -93,7 +93,7 @@ class MySalesforceContactConfigApi extends Object
         $array = self::mixed_to_array($mixed);
 
         return array_merge(
-            Config::inst()->get('SalesforceDefaultContactField', 'site_wide_fields_to_send_on_creation'),
+            Config::inst()->get('MySalesforceContactConfigApi', 'site_wide_fields_to_send_on_creation'),
             $array,
             self::$run_time_fields_to_send_on_creation
         );
@@ -110,7 +110,7 @@ class MySalesforceContactConfigApi extends Object
         $array = self::mixed_to_array($mixed);
 
         return array_merge(
-            Config::inst()->get('SalesforceDefaultContactField', 'site_wide_fields_to_send_on_update'),
+            Config::inst()->get('MySalesforceContactConfigApi', 'site_wide_fields_to_send_on_update'),
             $array,
             self::$run_time_fields_to_send_on_update
         );
@@ -127,7 +127,7 @@ class MySalesforceContactConfigApi extends Object
         $array = self::mixed_to_array($mixed);
 
         return array_merge(
-            Config::inst()->get('SalesforceDefaultContactField', 'site_wide_filter_values'),
+            Config::inst()->get('MySalesforceContactConfigApi', 'site_wide_filter_values'),
             $array,
             self::$run_time_fields_for_filter
         );
@@ -190,12 +190,12 @@ class MySalesforceContactConfigApi extends Object
         $title = 'Contact Record Types Available'
     )
     {
-        $data = MySalesforcePartnerApi::retrieve_contact_record_types();
+        $data = MySalesforceContactApi::retrieve_contact_record_types();
 
         return LiteralField::create(
             'ListOfContactRecordTypes',
             '<h2>'.$title.'</h2>'.
-            '<pre>'.print_r($data).'</pre>'
+            '<pre>'.print_r($data, 1).'</pre>'
         );
     }
 
