@@ -112,10 +112,14 @@ class MySalesforcePartnerApi extends Partner
     {
         foreach ($sObjects as $sObject) {
             if (property_exists($sObject, 'fields')) {
+                // $sObject->getFields() of type object is incompatible with the type array
+                // expected by parameter $fields of SForce\Client\Base::_convertToAny().
                 $sObject->setAny($this->_convertToAny($sObject->getFields()));
                 // print_r($this->_convertToAny($sObject->getFields()));
             }
         }
+        // $sObjects of type SForce\SObject[] is incompatible with the type SForce\Wsdl\sObject
+        // expected by parameter $sObjects of SForce\Wsdl\create::__construct(). (  Ignorable by Annotation )
         $createObject = new SForce\Wsdl\create($sObjects);
 
         return parent::_create($createObject);
@@ -137,9 +141,13 @@ class MySalesforcePartnerApi extends Partner
     {
         foreach ($sObjects as $sObject) {
             if (property_exists($sObject, 'fields')) {
+                // $sObject->getFields() of type object is incompatible with the type array
+                // expected by parameter $fields of SForce\Client\Base::_convertToAny().
                 $sObject->setAny($this->_convertToAny($sObject->getFields()));
             }
         }
+        // $sObjects of type SForce\SObject[] is incompatible with the type
+        // SForce\Wsdl\sObject expected by parameter $sObjects of SForce\Wsdl\update::__construct().
         $updateObject = new SForce\Wsdl\update($sObjects);
 
         return parent::_update($updateObject);
@@ -164,7 +172,9 @@ class MySalesforcePartnerApi extends Partner
     public function describeLayoutDouble($type, array $recordTypeIds = [])
     {
         $this->setHeaders(static::CALL_DESCRIBE_LAYOUT);
-
+        // The expression return $this->sforce->de...dTypeIds))->getResult()
+        // returns the type SForce\Wsdl\DescribeLayoutResult which is incompatible
+        // with the documented return type Wsdl\DescribeLayoutResult.
         return $this->sforce
             ->describeLayoutDouble(new Wsdl\describeLayoutDouble($type, $recordTypeIds))
             ->getResult();

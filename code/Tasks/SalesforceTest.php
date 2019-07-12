@@ -54,7 +54,7 @@ class SalesforceTest extends BuildTask
 
     protected function findContact()
     {
-        $contact = MySalesforceContactApi::retrieve_contact($this->email);
+        $contact = MySalesforceContactApi::is_email_registered($this->email);
     }
 
 
