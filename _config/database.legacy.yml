@@ -1,0 +1,8 @@
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    MySalesforceContactApi: Sunnysideup\SalesforcePartner\Api\Contact\MySalesforceContactApi
+    MySalesforceContactConfigApi: Sunnysideup\SalesforcePartner\Api\Contact\MySalesforceContactConfigApi
+    SalesforceAdmin: Sunnysideup\SalesforcePartner\Admin\SalesforceAdmin
+    SalesforceTest: Sunnysideup\SalesforcePartner\Tasks\SalesforceTest
+    SalesforceContactLog: Sunnysideup\SalesforcePartner\Model\SalesforceContactLog
+    SalesforceDefaultContactField: Sunnysideup\SalesforcePartner\Model\SalesforceDefaultContactField
