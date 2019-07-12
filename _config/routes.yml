@@ -1,3 +1,0 @@
-Director:
-  rules:
-    'salesforceexamplesignup//$Action/$ID/$OtherID': 'SalesForceExamplesSignupController'
