@@ -1,4 +1,9 @@
 <?php
+
+namespace Sunnysideup\SalesforcePartner\Admin;
+
+use ModelAdmin;
+
 /**
  * Provides CMS Administration of {@link: RedirectedURL} objects
  *

@@ -1,5 +1,10 @@
 <?php
 
+namespace Sunnysideup\SalesforcePartner\SForce;
+
+
+
+
 
  function autoload_f791f973d9ad7d9a16952ea57c78299d($class)
 {

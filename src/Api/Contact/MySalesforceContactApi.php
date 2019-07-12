@@ -1,7 +1,17 @@
 <?php
 
+namespace Sunnysideup\SalesforcePartner\Api\Contact;
+
+
 use SForce\SObject;
 use SForce\Wsdl\SaveResult;
+use ViewableData;
+use SalesforceContactLog;
+use Exception;
+use MySalesforcePartnerApi;
+use InvalidArgumentException;
+use MySalesforcePartnerApiConnectionOnly;
+
 
 /**
  * This class adds / updates subscribers to Salesforce

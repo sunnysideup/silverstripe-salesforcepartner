@@ -1,5 +1,12 @@
 <?php
 
+namespace Sunnysideup\SalesforcePartner\Model;
+
+use DataObject;
+use TextField;
+use ReadonlyField;
+
+
 /**
  * this can be linked to pages / other objects using many_many relationships
  * so that you can send default record values to Salesforce

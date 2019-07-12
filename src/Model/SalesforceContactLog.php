@@ -1,6 +1,14 @@
 <?php
 
+namespace Sunnysideup\SalesforcePartner\Model;
+
+
 use SForce\Wsdl\SaveResult;
+use DataObject;
+use ReadonlyField;
+use DBField;
+use LiteralField;
+
 
 class SalesforceContactLog extends DataObject
 {

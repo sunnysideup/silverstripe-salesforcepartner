@@ -1,4 +1,15 @@
 <?php
+
+namespace Sunnysideup\SalesforcePartner\Api\Contact;
+
+use ViewableData;
+use Config;
+use SS_List;
+use LiteralField;
+use SalesforceDefaultContactField;
+use HiddenField;
+use CheckboxSetField;
+
 /**
  * returns a bunch of form fields that inform the user about the configuration
  * of the connection and communication with Salesforce.

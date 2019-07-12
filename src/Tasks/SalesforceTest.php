@@ -1,11 +1,17 @@
 <?php
 
+namespace Sunnysideup\SalesforcePartner\Tasks;
+
+
 
 use SForce\Client\Partner;
 
 use SForce\SObject;
 
 use SForce\Wsdl\create;
+use BuildTask;
+use MySalesforceContactApi;
+
 
 class SalesforceTest extends BuildTask
 {
