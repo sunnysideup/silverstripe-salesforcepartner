@@ -271,8 +271,8 @@ class MySalesforceContactConfigApi extends Object
 
     /**
      *
-     * @param  [type] $array [description]
-     * @return [type]        [description]
+     * @param  array $array
+     * @return string
      */
     protected static function array_to_html($array) : string
     {
