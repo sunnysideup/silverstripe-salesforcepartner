@@ -251,13 +251,13 @@ class MySalesforceContactConfigApi extends Object
         $array = [];
         switch( $type ) {
             case 'create':
-                $array = self::get_fields_to_send_on_creation($mixed, true );
+                $array = self::get_fields_to_send_on_creation($mixed);
                 break;
             case 'update':
-                $array = self::get_fields_to_send_on_update($mixed, true );
+                $array = self::get_fields_to_send_on_update($mixed);
                 break;
             case 'filter':
-                $array = self::get_fields_for_filter($mixed, true );
+                $array = self::get_fields_for_filter($mixed);
                 break;
             default:
                 user_error('type needs to be create, update or filter - currently set to: '.$type);
