@@ -3,15 +3,15 @@
  * returns a bunch of form fields that inform the user about the configuration
  * of the connection and communication with Salesforce.
  */
-class MySalesforceContactConfigApi extends Object
+class MySalesforceContactConfigApiFormFields extends Object
 {
 
     /**
      * [all_fields description]
      * @param  DataObject $dataObject
-     * @param  [type] $createFields
-     * @param  [type] $updateFields
-     * @param  [type] $filterFields
+     * @param  string $createFields
+     * @param  string $updateFields
+     * @param  string $filterFields
      * @return array
      */
     public static function all_fields($dataObject, $createFields, $updateFields, $filterFields)

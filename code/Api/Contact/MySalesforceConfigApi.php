@@ -1,7 +1,6 @@
 <?php
 /**
- * returns a bunch of form fields that inform the user about the configuration
- * of the connection and communication with Salesforce.
+ * configuration for adding / updating contact records
  */
 class MySalesforceContactConfigApi extends Object
 {
