@@ -153,7 +153,7 @@ class MySalesforceContactApi extends Object
 
         //add defaults
         $extraFilterArray = array_merge(
-            SalesforceDefaultContactField::get_fields_for_filter(),
+            MySalesforceContactConfigApi::get_fields_for_filter(),
             $extraFilterArray
         );
         $fieldsArray = array_merge(
