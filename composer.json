@@ -13,7 +13,8 @@
         "SForce"
     ],
     "require": {
-        "uuf6429/force.com-toolkit-for-php": "dev-Major-refactor#5509a1705dc5413eaf41705da77d82275162a888"
+        "uuf6429/force.com-toolkit-for-php": "dev-Major-refactor#5509a1705dc5413eaf41705da77d82275162a888",
+        "silverstripe/recipe-cms": "^4.4"
     },
     "extra-examples": {
         "sforce-wsdl-source-example-for-root-composer-file": [
