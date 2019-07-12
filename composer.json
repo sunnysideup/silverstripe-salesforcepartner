@@ -1,36 +1,35 @@
 {
-  "name": "sunnysideup/salesforcepartner",
-  "description": "implements soap connection for sales force partner api",
-  "type": "silverstripe-module",
-  "keywords": [
-    "Silverstripe-CMS",
-    "CMS",
-    "Silverstripe",
-    "Sales Force",
-    "Marketing Cloud",
-    "Sales Cloud",
-    "SalesForce",
-    "SForce"
-  ],
-  "require": {
-    "uuf6429/force.com-toolkit-for-php": "dev-Major-refactor#5509a1705dc5413eaf41705da77d82275162a888",
-    "silverstripe/framework": "3.6.*"
-  },
-  "extra-examples": {
-    "sforce-wsdl-source-example-for-root-composer-file": [
-      "mysite/salesforceconfig/foo-bar.xml"
+    "name": "sunnysideup/salesforcepartner",
+    "description": "implements soap connection for sales force partner api",
+    "type": "silverstripe-module",
+    "keywords": [
+        "Silverstripe-CMS",
+        "CMS",
+        "Silverstripe",
+        "Sales Force",
+        "Marketing Cloud",
+        "Sales Cloud",
+        "SalesForce",
+        "SForce"
     ],
-    "sforce-wsdl-classpath-example-for-root-composer-file": "salesforcepartner/code/SForce"
-  },
-  "license": "BSD-3-Clause",
-  "authors": [
-    {
-      "name": "Nicolaas Francken",
-      "email": "modules@sunnysideup.co.nz",
-      "role": "lead developer"
+    "require": {
+        "uuf6429/force.com-toolkit-for-php": "dev-Major-refactor#5509a1705dc5413eaf41705da77d82275162a888"
+    },
+    "extra-examples": {
+        "sforce-wsdl-source-example-for-root-composer-file": [
+            "mysite/salesforceconfig/foo-bar.xml"
+        ],
+        "sforce-wsdl-classpath-example-for-root-composer-file": "salesforcepartner/code/SForce"
+    },
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Nicolaas Francken",
+            "email": "modules@sunnysideup.co.nz",
+            "role": "lead developer"
+        }
+    ],
+    "extra": {
+        "installer-name": "salesforcepartner"
     }
-  ],
-  "extra": {
-    "installer-name": "salesforcepartner"
-  }
 }
