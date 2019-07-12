@@ -23,7 +23,11 @@ class SalesforceTest extends BuildTask
         $this->setEmail();
         $this->findContact();
         $this->createContact();
+        $this->findContact();
         $this->updateContact();
+        $this->createSubscriber();
+        $this->findContact();
+        $this->updateSubscriber();
         $this->setEmail();
         $this->createBadContact();
     }
@@ -55,6 +59,29 @@ class SalesforceTest extends BuildTask
     protected function findContact()
     {
         $contact = MySalesforceContactApi::is_email_registered($this->email);
+    }
+
+
+    protected function createSubscriber()
+    {
+        MySalesforceContactApi::create_contact(
+            $this->email,
+            '(510) 555-5555',
+            'John',
+            'Smith',
+            [
+            ]
+        );
+    }
+
+    protected function updateSubscriber()
+    {
+        MySalesforceContactApi::update_email_subscriber(
+            $this->email,
+            [
+                'Phone' => '(511) 555-1111',
+            ]
+        );
     }
 
 

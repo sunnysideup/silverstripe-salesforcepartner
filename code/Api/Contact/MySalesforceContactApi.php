@@ -58,7 +58,7 @@ class MySalesforceContactApi extends Object
      *
      * @return bool
      */
-    public function update_email_subscriber(
+    public static function update_email_subscriber(
         $email,
         $extraFields = [],
         $extraFilterArray = []
