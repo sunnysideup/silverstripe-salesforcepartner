@@ -3,7 +3,7 @@ Name: salesforceconfig
 ---
 
 
-SalesForceDefaultContactField:
+SalesforceDefaultContactField:
   default_records:
     SalesforceField: Value
     SalesforceField: Value
@@ -19,6 +19,13 @@ MySalesforceContactConfigApi:
     SalesforceField: Value
     SalesforceField: Value
 
+MySalesforceContactConfigApi:
+  site_wide_fields_to_send_on_creation:
+    FieldA: ValueA
+  site_wide_fields_to_send_on_update:
+    FieldA: ValueA
+  site_wide_filter_values:
+    FieldA: ValueA
 
 ### ###################################
 ### credentials below are required
@@ -28,7 +35,7 @@ MySalesforceContactConfigApi:
 Only:
   environment: 'dev'
 ---
-MySalesForcePartnerAPIConnectionOnly:
+MySalesforcePartnerAPIConnectionOnly:
   username: ''
   password: ''
   security_token: ''
@@ -38,7 +45,7 @@ MySalesForcePartnerAPIConnectionOnly:
 Only:
   environment: 'test'
 ---
-MySalesForcePartnerAPIConnectionOnly:
+MySalesforcePartnerAPIConnectionOnly:
   username: ''
   password: ''
   security_token: ''
@@ -48,7 +55,7 @@ MySalesForcePartnerAPIConnectionOnly:
 Only:
   environment: 'live'
 ---
-MySalesForcePartnerAPIConnectionOnly:
+MySalesforcePartnerAPIConnectionOnly:
   username: ''
   password: ''
   security_token: ''
