@@ -5,9 +5,9 @@ Name: salesforceconfig
 
 SalesforceDefaultContactField:
   default_records:
-    SalesforceField: Value
-    SalesforceField: Value
-    SalesforceField: Value
+    SalesforceField:
+      Value: Foo
+      ValueType: String
 
 MySalesforceContactConfigApi:
   site_wide_fields_to_send:

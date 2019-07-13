@@ -1,8 +1,12 @@
 <?php
 
+use SilverStripe\Forms\DropdownField;
 /**
  * this can be linked to pages / other objects using many_many relationships
- * so that you can send default record values to Salesforce
+ * so that you can send default record values to Salesforce.
+ * It is NOT for user specific ones, but for generic fields.
+ *
+ * This class knows what format salesforce expects.
  */
 class SalesforceDefaultContactField extends DataObject
 {
@@ -32,6 +36,7 @@ class SalesforceDefaultContactField extends DataObject
     private static $db = [
         'Key' => 'Varchar',
         'Value' => 'Varchar',
+        'ValueType' => 'Enum("String,Number,YesOrTrue,NoOrFalse,CurrentDate,CurrentDateAndTime", "String")',
     ];
 
     /**
@@ -42,6 +47,21 @@ class SalesforceDefaultContactField extends DataObject
     private static $summary_fields = [
         'Key' => 'Field Name',
         'Value' => 'Field Value',
+        'ValueType' => 'Value Type',
+    ];
+    /**
+     * Defines summary fields commonly used in table columns
+     * as a quick overview of the data for this dataobject
+     * @var array
+     */
+    /**
+     * Defines a default list of filters for the search context
+     * @var array
+     */
+    private static $searchable_fields = [
+        'Key',
+        'Value',
+        'ValueType',
     ];
 
     /**
@@ -50,7 +70,7 @@ class SalesforceDefaultContactField extends DataObject
      */
     public function getTitle()
     {
-        return $this->Key . ' = '.$this->BetterValueHumanReadable();
+        return $this->Key . ' = '.$this->BetterValueHumanReadable() . ' ('.$this->ValueType.')';
     }
 
 
@@ -76,17 +96,20 @@ class SalesforceDefaultContactField extends DataObject
      */
     public function BetterValue()
     {
-        if(strtolower($this->Value) === 'true') {
-            return 'true';
+        switch($this->ValueType) {
+            case 'Number':
+                return floatval($this->Value);
+            case 'CurrentDate':
+                return Date('Y-m-d');
+            case 'CurrentDateAndTime':
+                return Date('Y-m-d h:i:s');
+            case 'YesOrTrue':
+                return 'true';
+            case 'NoOrFalse':
+                return 'false';
+            default:
+                return trim($this->Value);
         }
-        elseif(strtolower($this->Value) === 'false') {
-            return 'false';
-        }
-        elseif(is_numeric($this->Value)) {
-            return floatval($this->Value);
-        }
-
-        return trim($this->Value);
     }
 
     /**
@@ -110,23 +133,37 @@ class SalesforceDefaultContactField extends DataObject
                 TextField::create(
                     'Value',
                     'Value'
-                )->setDescription('For a boolean value, simply enter TRUE or FALSE'),
+                ),
+                DropdownField::create(
+                    'ValueType',
+                    'Type / Predefined Value',
+                    $this->dbObject('ValueType')->enumValues()
+                ),
                 ReadonlyField::create(
                     'BetterValueHumanReadableNice',
                     'Calculated Value',
                     $this->BetterValueHumanReadable()
                 ),
-                ReadonlyField::create(
-                    'FieldType',
-                    'Field Type',
-                    gettype($this->BetterValue())
-                )
             ]
         );
-
+        switch($this->ValueType) {
+            case 'CurrentDate':
+            case 'CurrentDateAndTime':
+            case 'YesOrTrue':
+            case 'NoOrFalse':
+                return $fields->removeFieldFromTab(
+                    'Root.Main',
+                    'Value'
+                );
+                break;
+            case 'Number':
+                return $fields->removeFieldFromTab(
+                    'Root.Main',
+                    NumericField::create('Value', 'Value')
+                );
+        }
         return $fields;
     }
-
 
 
 }
