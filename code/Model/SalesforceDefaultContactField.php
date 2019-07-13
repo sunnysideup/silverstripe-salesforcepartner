@@ -155,13 +155,12 @@ class SalesforceDefaultContactField extends DataObject
             case 'CurrentDateAndTime':
             case 'YesOrTrue':
             case 'NoOrFalse':
-                return $fields->removeFieldFromTab(
+                $fields->removeFieldFromTab(
                     'Root.Main',
                     'Value'
                 );
-                break;
             case 'Number':
-                return $fields->removeFieldFromTab(
+                $fields->removeFieldFromTab(
                     'Root.Main',
                     NumericField::create('Value', 'Value')
                 );
