@@ -16,12 +16,12 @@ class MySalesforceContactConfigApiFormFields extends Object
      *
      * @return array
      */
-    public static function all_fields($dataObject, $createFieldsMethod, $updateFieldsMethod, $filterFieldsMethod)
+    public static function all_fields($dataObject, $createFieldsMethod = null, $updateFieldsMethod = null, $filterFieldsMethod = null)
     {
         return [
             self::fields_to_send_field(
                 'create',
-                $dataObject->$createFieldsMethod()
+                $dataObject->hasMethod($createFieldsMethod) ? $dataObject->$createFieldsMethod() : []
             ),
 
             self::select_default_contact_fields_field(
@@ -31,7 +31,7 @@ class MySalesforceContactConfigApiFormFields extends Object
 
             self::fields_to_send_field(
                 'update',
-                $dataObject->$updateFieldsMethod()
+                $dataObject->hasMethod($updateFieldsMethod) ? $dataObject->$updateFieldsMethod() : []
             ),
 
             self::select_default_contact_fields_field(
@@ -41,7 +41,7 @@ class MySalesforceContactConfigApiFormFields extends Object
 
             self::fields_to_send_field(
                 'filter',
-                $dataObject->$filterFieldsMethod()
+                $dataObject->hasMethod($filterFieldsMethod) ? $dataObject->$filterFieldsMethod() : []
             ),
 
             self::select_default_contact_fields_field(
