@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class describeSearchScopeOrder
 {
-
     /**
-     * @var boolean $includeRealTimeEntities
+     * @var boolean
      */
     protected $includeRealTimeEntities = null;
 
@@ -15,7 +14,7 @@ class describeSearchScopeOrder
      */
     public function __construct($includeRealTimeEntities = null)
     {
-      $this->includeRealTimeEntities = $includeRealTimeEntities;
+        $this->includeRealTimeEntities = $includeRealTimeEntities;
     }
 
     /**
@@ -23,7 +22,7 @@ class describeSearchScopeOrder
      */
     public function getIncludeRealTimeEntities()
     {
-      return $this->includeRealTimeEntities;
+        return $this->includeRealTimeEntities;
     }
 
     /**
@@ -32,8 +31,7 @@ class describeSearchScopeOrder
      */
     public function setIncludeRealTimeEntities($includeRealTimeEntities)
     {
-      $this->includeRealTimeEntities = $includeRealTimeEntities;
-      return $this;
+        $this->includeRealTimeEntities = $includeRealTimeEntities;
+        return $this;
     }
-
 }

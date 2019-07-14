@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class DuplicateError extends Error
 {
-
     /**
-     * @var DuplicateResult $duplicateResult
+     * @var DuplicateResult
      */
     protected $duplicateResult = null;
 
@@ -17,8 +16,8 @@ class DuplicateError extends Error
      */
     public function __construct($message = null, $statusCode = null, $duplicateResult = null)
     {
-      parent::__construct($message, $statusCode);
-      $this->duplicateResult = $duplicateResult;
+        parent::__construct($message, $statusCode);
+        $this->duplicateResult = $duplicateResult;
     }
 
     /**
@@ -26,7 +25,7 @@ class DuplicateError extends Error
      */
     public function getDuplicateResult()
     {
-      return $this->duplicateResult;
+        return $this->duplicateResult;
     }
 
     /**
@@ -35,8 +34,7 @@ class DuplicateError extends Error
      */
     public function setDuplicateResult($duplicateResult)
     {
-      $this->duplicateResult = $duplicateResult;
-      return $this;
+        $this->duplicateResult = $duplicateResult;
+        return $this;
     }
-
 }

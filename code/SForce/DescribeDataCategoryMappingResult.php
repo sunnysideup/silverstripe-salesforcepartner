@@ -4,49 +4,48 @@ namespace SForce\Wsdl;
 
 class DescribeDataCategoryMappingResult
 {
-
     /**
-     * @var string $dataCategoryGroupId
+     * @var string
      */
     protected $dataCategoryGroupId = null;
 
     /**
-     * @var string $dataCategoryGroupLabel
+     * @var string
      */
     protected $dataCategoryGroupLabel = null;
 
     /**
-     * @var string $dataCategoryGroupName
+     * @var string
      */
     protected $dataCategoryGroupName = null;
 
     /**
-     * @var string $dataCategoryId
+     * @var string
      */
     protected $dataCategoryId = null;
 
     /**
-     * @var string $dataCategoryLabel
+     * @var string
      */
     protected $dataCategoryLabel = null;
 
     /**
-     * @var string $dataCategoryName
+     * @var string
      */
     protected $dataCategoryName = null;
 
     /**
-     * @var string $id
+     * @var string
      */
     protected $id = null;
 
     /**
-     * @var string $mappedEntity
+     * @var string
      */
     protected $mappedEntity = null;
 
     /**
-     * @var string $mappedField
+     * @var string
      */
     protected $mappedField = null;
 
@@ -63,15 +62,15 @@ class DescribeDataCategoryMappingResult
      */
     public function __construct($dataCategoryGroupId = null, $dataCategoryGroupLabel = null, $dataCategoryGroupName = null, $dataCategoryId = null, $dataCategoryLabel = null, $dataCategoryName = null, $id = null, $mappedEntity = null, $mappedField = null)
     {
-      $this->dataCategoryGroupId = $dataCategoryGroupId;
-      $this->dataCategoryGroupLabel = $dataCategoryGroupLabel;
-      $this->dataCategoryGroupName = $dataCategoryGroupName;
-      $this->dataCategoryId = $dataCategoryId;
-      $this->dataCategoryLabel = $dataCategoryLabel;
-      $this->dataCategoryName = $dataCategoryName;
-      $this->id = $id;
-      $this->mappedEntity = $mappedEntity;
-      $this->mappedField = $mappedField;
+        $this->dataCategoryGroupId = $dataCategoryGroupId;
+        $this->dataCategoryGroupLabel = $dataCategoryGroupLabel;
+        $this->dataCategoryGroupName = $dataCategoryGroupName;
+        $this->dataCategoryId = $dataCategoryId;
+        $this->dataCategoryLabel = $dataCategoryLabel;
+        $this->dataCategoryName = $dataCategoryName;
+        $this->id = $id;
+        $this->mappedEntity = $mappedEntity;
+        $this->mappedField = $mappedField;
     }
 
     /**
@@ -79,7 +78,7 @@ class DescribeDataCategoryMappingResult
      */
     public function getDataCategoryGroupId()
     {
-      return $this->dataCategoryGroupId;
+        return $this->dataCategoryGroupId;
     }
 
     /**
@@ -88,8 +87,8 @@ class DescribeDataCategoryMappingResult
      */
     public function setDataCategoryGroupId($dataCategoryGroupId)
     {
-      $this->dataCategoryGroupId = $dataCategoryGroupId;
-      return $this;
+        $this->dataCategoryGroupId = $dataCategoryGroupId;
+        return $this;
     }
 
     /**
@@ -97,7 +96,7 @@ class DescribeDataCategoryMappingResult
      */
     public function getDataCategoryGroupLabel()
     {
-      return $this->dataCategoryGroupLabel;
+        return $this->dataCategoryGroupLabel;
     }
 
     /**
@@ -106,8 +105,8 @@ class DescribeDataCategoryMappingResult
      */
     public function setDataCategoryGroupLabel($dataCategoryGroupLabel)
     {
-      $this->dataCategoryGroupLabel = $dataCategoryGroupLabel;
-      return $this;
+        $this->dataCategoryGroupLabel = $dataCategoryGroupLabel;
+        return $this;
     }
 
     /**
@@ -115,7 +114,7 @@ class DescribeDataCategoryMappingResult
      */
     public function getDataCategoryGroupName()
     {
-      return $this->dataCategoryGroupName;
+        return $this->dataCategoryGroupName;
     }
 
     /**
@@ -124,8 +123,8 @@ class DescribeDataCategoryMappingResult
      */
     public function setDataCategoryGroupName($dataCategoryGroupName)
     {
-      $this->dataCategoryGroupName = $dataCategoryGroupName;
-      return $this;
+        $this->dataCategoryGroupName = $dataCategoryGroupName;
+        return $this;
     }
 
     /**
@@ -133,7 +132,7 @@ class DescribeDataCategoryMappingResult
      */
     public function getDataCategoryId()
     {
-      return $this->dataCategoryId;
+        return $this->dataCategoryId;
     }
 
     /**
@@ -142,8 +141,8 @@ class DescribeDataCategoryMappingResult
      */
     public function setDataCategoryId($dataCategoryId)
     {
-      $this->dataCategoryId = $dataCategoryId;
-      return $this;
+        $this->dataCategoryId = $dataCategoryId;
+        return $this;
     }
 
     /**
@@ -151,7 +150,7 @@ class DescribeDataCategoryMappingResult
      */
     public function getDataCategoryLabel()
     {
-      return $this->dataCategoryLabel;
+        return $this->dataCategoryLabel;
     }
 
     /**
@@ -160,8 +159,8 @@ class DescribeDataCategoryMappingResult
      */
     public function setDataCategoryLabel($dataCategoryLabel)
     {
-      $this->dataCategoryLabel = $dataCategoryLabel;
-      return $this;
+        $this->dataCategoryLabel = $dataCategoryLabel;
+        return $this;
     }
 
     /**
@@ -169,7 +168,7 @@ class DescribeDataCategoryMappingResult
      */
     public function getDataCategoryName()
     {
-      return $this->dataCategoryName;
+        return $this->dataCategoryName;
     }
 
     /**
@@ -178,8 +177,8 @@ class DescribeDataCategoryMappingResult
      */
     public function setDataCategoryName($dataCategoryName)
     {
-      $this->dataCategoryName = $dataCategoryName;
-      return $this;
+        $this->dataCategoryName = $dataCategoryName;
+        return $this;
     }
 
     /**
@@ -187,7 +186,7 @@ class DescribeDataCategoryMappingResult
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
@@ -196,8 +195,8 @@ class DescribeDataCategoryMappingResult
      */
     public function setId($id)
     {
-      $this->id = $id;
-      return $this;
+        $this->id = $id;
+        return $this;
     }
 
     /**
@@ -205,7 +204,7 @@ class DescribeDataCategoryMappingResult
      */
     public function getMappedEntity()
     {
-      return $this->mappedEntity;
+        return $this->mappedEntity;
     }
 
     /**
@@ -214,8 +213,8 @@ class DescribeDataCategoryMappingResult
      */
     public function setMappedEntity($mappedEntity)
     {
-      $this->mappedEntity = $mappedEntity;
-      return $this;
+        $this->mappedEntity = $mappedEntity;
+        return $this;
     }
 
     /**
@@ -223,7 +222,7 @@ class DescribeDataCategoryMappingResult
      */
     public function getMappedField()
     {
-      return $this->mappedField;
+        return $this->mappedField;
     }
 
     /**
@@ -232,8 +231,7 @@ class DescribeDataCategoryMappingResult
      */
     public function setMappedField($mappedField)
     {
-      $this->mappedField = $mappedField;
-      return $this;
+        $this->mappedField = $mappedField;
+        return $this;
     }
-
 }

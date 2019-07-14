@@ -4,54 +4,53 @@ namespace SForce\Wsdl;
 
 class DescribeLayoutSection
 {
-
     /**
-     * @var boolean $collapsed
+     * @var boolean
      */
     protected $collapsed = null;
 
     /**
-     * @var int $columns
+     * @var int
      */
     protected $columns = null;
 
     /**
-     * @var string $heading
+     * @var string
      */
     protected $heading = null;
 
     /**
-     * @var DescribeLayoutRow[] $layoutRows
+     * @var DescribeLayoutRow[]
      */
     protected $layoutRows = null;
 
     /**
-     * @var ID $layoutSectionId
+     * @var ID
      */
     protected $layoutSectionId = null;
 
     /**
-     * @var ID $parentLayoutId
+     * @var ID
      */
     protected $parentLayoutId = null;
 
     /**
-     * @var int $rows
+     * @var int
      */
     protected $rows = null;
 
     /**
-     * @var TabOrderType $tabOrder
+     * @var TabOrderType
      */
     protected $tabOrder = null;
 
     /**
-     * @var boolean $useCollapsibleSection
+     * @var boolean
      */
     protected $useCollapsibleSection = null;
 
     /**
-     * @var boolean $useHeading
+     * @var boolean
      */
     protected $useHeading = null;
 
@@ -67,14 +66,14 @@ class DescribeLayoutSection
      */
     public function __construct($collapsed = null, $columns = null, array $layoutRows = null, $parentLayoutId = null, $rows = null, $tabOrder = null, $useCollapsibleSection = null, $useHeading = null)
     {
-      $this->collapsed = $collapsed;
-      $this->columns = $columns;
-      $this->layoutRows = $layoutRows;
-      $this->parentLayoutId = $parentLayoutId;
-      $this->rows = $rows;
-      $this->tabOrder = $tabOrder;
-      $this->useCollapsibleSection = $useCollapsibleSection;
-      $this->useHeading = $useHeading;
+        $this->collapsed = $collapsed;
+        $this->columns = $columns;
+        $this->layoutRows = $layoutRows;
+        $this->parentLayoutId = $parentLayoutId;
+        $this->rows = $rows;
+        $this->tabOrder = $tabOrder;
+        $this->useCollapsibleSection = $useCollapsibleSection;
+        $this->useHeading = $useHeading;
     }
 
     /**
@@ -82,7 +81,7 @@ class DescribeLayoutSection
      */
     public function getCollapsed()
     {
-      return $this->collapsed;
+        return $this->collapsed;
     }
 
     /**
@@ -91,8 +90,8 @@ class DescribeLayoutSection
      */
     public function setCollapsed($collapsed)
     {
-      $this->collapsed = $collapsed;
-      return $this;
+        $this->collapsed = $collapsed;
+        return $this;
     }
 
     /**
@@ -100,7 +99,7 @@ class DescribeLayoutSection
      */
     public function getColumns()
     {
-      return $this->columns;
+        return $this->columns;
     }
 
     /**
@@ -109,8 +108,8 @@ class DescribeLayoutSection
      */
     public function setColumns($columns)
     {
-      $this->columns = $columns;
-      return $this;
+        $this->columns = $columns;
+        return $this;
     }
 
     /**
@@ -118,7 +117,7 @@ class DescribeLayoutSection
      */
     public function getHeading()
     {
-      return $this->heading;
+        return $this->heading;
     }
 
     /**
@@ -127,8 +126,8 @@ class DescribeLayoutSection
      */
     public function setHeading($heading)
     {
-      $this->heading = $heading;
-      return $this;
+        $this->heading = $heading;
+        return $this;
     }
 
     /**
@@ -136,7 +135,7 @@ class DescribeLayoutSection
      */
     public function getLayoutRows()
     {
-      return $this->layoutRows;
+        return $this->layoutRows;
     }
 
     /**
@@ -145,8 +144,8 @@ class DescribeLayoutSection
      */
     public function setLayoutRows(array $layoutRows)
     {
-      $this->layoutRows = $layoutRows;
-      return $this;
+        $this->layoutRows = $layoutRows;
+        return $this;
     }
 
     /**
@@ -154,7 +153,7 @@ class DescribeLayoutSection
      */
     public function getLayoutSectionId()
     {
-      return $this->layoutSectionId;
+        return $this->layoutSectionId;
     }
 
     /**
@@ -163,8 +162,8 @@ class DescribeLayoutSection
      */
     public function setLayoutSectionId($layoutSectionId)
     {
-      $this->layoutSectionId = $layoutSectionId;
-      return $this;
+        $this->layoutSectionId = $layoutSectionId;
+        return $this;
     }
 
     /**
@@ -172,7 +171,7 @@ class DescribeLayoutSection
      */
     public function getParentLayoutId()
     {
-      return $this->parentLayoutId;
+        return $this->parentLayoutId;
     }
 
     /**
@@ -181,8 +180,8 @@ class DescribeLayoutSection
      */
     public function setParentLayoutId($parentLayoutId)
     {
-      $this->parentLayoutId = $parentLayoutId;
-      return $this;
+        $this->parentLayoutId = $parentLayoutId;
+        return $this;
     }
 
     /**
@@ -190,7 +189,7 @@ class DescribeLayoutSection
      */
     public function getRows()
     {
-      return $this->rows;
+        return $this->rows;
     }
 
     /**
@@ -199,8 +198,8 @@ class DescribeLayoutSection
      */
     public function setRows($rows)
     {
-      $this->rows = $rows;
-      return $this;
+        $this->rows = $rows;
+        return $this;
     }
 
     /**
@@ -208,7 +207,7 @@ class DescribeLayoutSection
      */
     public function getTabOrder()
     {
-      return $this->tabOrder;
+        return $this->tabOrder;
     }
 
     /**
@@ -217,8 +216,8 @@ class DescribeLayoutSection
      */
     public function setTabOrder($tabOrder)
     {
-      $this->tabOrder = $tabOrder;
-      return $this;
+        $this->tabOrder = $tabOrder;
+        return $this;
     }
 
     /**
@@ -226,7 +225,7 @@ class DescribeLayoutSection
      */
     public function getUseCollapsibleSection()
     {
-      return $this->useCollapsibleSection;
+        return $this->useCollapsibleSection;
     }
 
     /**
@@ -235,8 +234,8 @@ class DescribeLayoutSection
      */
     public function setUseCollapsibleSection($useCollapsibleSection)
     {
-      $this->useCollapsibleSection = $useCollapsibleSection;
-      return $this;
+        $this->useCollapsibleSection = $useCollapsibleSection;
+        return $this;
     }
 
     /**
@@ -244,7 +243,7 @@ class DescribeLayoutSection
      */
     public function getUseHeading()
     {
-      return $this->useHeading;
+        return $this->useHeading;
     }
 
     /**
@@ -253,8 +252,7 @@ class DescribeLayoutSection
      */
     public function setUseHeading($useHeading)
     {
-      $this->useHeading = $useHeading;
-      return $this;
+        $this->useHeading = $useHeading;
+        return $this;
     }
-
 }

@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class DescribeApprovalLayout
 {
-
     /**
-     * @var ID $id
+     * @var ID
      */
     protected $id = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var DescribeLayoutItem[] $layoutItems
+     * @var DescribeLayoutItem[]
      */
     protected $layoutItems = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
@@ -33,10 +32,10 @@ class DescribeApprovalLayout
      */
     public function __construct($id = null, $label = null, array $layoutItems = null, $name = null)
     {
-      $this->id = $id;
-      $this->label = $label;
-      $this->layoutItems = $layoutItems;
-      $this->name = $name;
+        $this->id = $id;
+        $this->label = $label;
+        $this->layoutItems = $layoutItems;
+        $this->name = $name;
     }
 
     /**
@@ -44,7 +43,7 @@ class DescribeApprovalLayout
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
@@ -53,8 +52,8 @@ class DescribeApprovalLayout
      */
     public function setId($id)
     {
-      $this->id = $id;
-      return $this;
+        $this->id = $id;
+        return $this;
     }
 
     /**
@@ -62,7 +61,7 @@ class DescribeApprovalLayout
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -71,8 +70,8 @@ class DescribeApprovalLayout
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -80,7 +79,7 @@ class DescribeApprovalLayout
      */
     public function getLayoutItems()
     {
-      return $this->layoutItems;
+        return $this->layoutItems;
     }
 
     /**
@@ -89,8 +88,8 @@ class DescribeApprovalLayout
      */
     public function setLayoutItems(array $layoutItems)
     {
-      $this->layoutItems = $layoutItems;
-      return $this;
+        $this->layoutItems = $layoutItems;
+        return $this;
     }
 
     /**
@@ -98,7 +97,7 @@ class DescribeApprovalLayout
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -107,8 +106,7 @@ class DescribeApprovalLayout
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
-
 }

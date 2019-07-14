@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class DescribeTabSetResult
 {
-
     /**
-     * @var string $description
+     * @var string
      */
     protected $description = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $logoUrl
+     * @var string
      */
     protected $logoUrl = null;
 
     /**
-     * @var string $namespace
+     * @var string
      */
     protected $namespace = null;
 
     /**
-     * @var boolean $selected
+     * @var boolean
      */
     protected $selected = null;
 
     /**
-     * @var string $tabSetId
+     * @var string
      */
     protected $tabSetId = null;
 
     /**
-     * @var DescribeTab[] $tabs
+     * @var DescribeTab[]
      */
     protected $tabs = null;
 
@@ -49,11 +48,11 @@ class DescribeTabSetResult
      */
     public function __construct($description = null, $label = null, $logoUrl = null, $selected = null, $tabSetId = null)
     {
-      $this->description = $description;
-      $this->label = $label;
-      $this->logoUrl = $logoUrl;
-      $this->selected = $selected;
-      $this->tabSetId = $tabSetId;
+        $this->description = $description;
+        $this->label = $label;
+        $this->logoUrl = $logoUrl;
+        $this->selected = $selected;
+        $this->tabSetId = $tabSetId;
     }
 
     /**
@@ -61,7 +60,7 @@ class DescribeTabSetResult
      */
     public function getDescription()
     {
-      return $this->description;
+        return $this->description;
     }
 
     /**
@@ -70,8 +69,8 @@ class DescribeTabSetResult
      */
     public function setDescription($description)
     {
-      $this->description = $description;
-      return $this;
+        $this->description = $description;
+        return $this;
     }
 
     /**
@@ -79,7 +78,7 @@ class DescribeTabSetResult
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -88,8 +87,8 @@ class DescribeTabSetResult
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -97,7 +96,7 @@ class DescribeTabSetResult
      */
     public function getLogoUrl()
     {
-      return $this->logoUrl;
+        return $this->logoUrl;
     }
 
     /**
@@ -106,8 +105,8 @@ class DescribeTabSetResult
      */
     public function setLogoUrl($logoUrl)
     {
-      $this->logoUrl = $logoUrl;
-      return $this;
+        $this->logoUrl = $logoUrl;
+        return $this;
     }
 
     /**
@@ -115,7 +114,7 @@ class DescribeTabSetResult
      */
     public function getNamespace()
     {
-      return $this->namespace;
+        return $this->namespace;
     }
 
     /**
@@ -124,8 +123,8 @@ class DescribeTabSetResult
      */
     public function setNamespace($namespace)
     {
-      $this->namespace = $namespace;
-      return $this;
+        $this->namespace = $namespace;
+        return $this;
     }
 
     /**
@@ -133,7 +132,7 @@ class DescribeTabSetResult
      */
     public function getSelected()
     {
-      return $this->selected;
+        return $this->selected;
     }
 
     /**
@@ -142,8 +141,8 @@ class DescribeTabSetResult
      */
     public function setSelected($selected)
     {
-      $this->selected = $selected;
-      return $this;
+        $this->selected = $selected;
+        return $this;
     }
 
     /**
@@ -151,7 +150,7 @@ class DescribeTabSetResult
      */
     public function getTabSetId()
     {
-      return $this->tabSetId;
+        return $this->tabSetId;
     }
 
     /**
@@ -160,8 +159,8 @@ class DescribeTabSetResult
      */
     public function setTabSetId($tabSetId)
     {
-      $this->tabSetId = $tabSetId;
-      return $this;
+        $this->tabSetId = $tabSetId;
+        return $this;
     }
 
     /**
@@ -169,7 +168,7 @@ class DescribeTabSetResult
      */
     public function getTabs()
     {
-      return $this->tabs;
+        return $this->tabs;
     }
 
     /**
@@ -178,8 +177,7 @@ class DescribeTabSetResult
      */
     public function setTabs(array $tabs = null)
     {
-      $this->tabs = $tabs;
-      return $this;
+        $this->tabs = $tabs;
+        return $this;
     }
-
 }

@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class LoginScopeHeader
 {
-
     /**
-     * @var ID $organizationId
+     * @var ID
      */
     protected $organizationId = null;
 
     /**
-     * @var ID $portalId
+     * @var ID
      */
     protected $portalId = null;
 
@@ -21,8 +20,8 @@ class LoginScopeHeader
      */
     public function __construct($organizationId = null, $portalId = null)
     {
-      $this->organizationId = $organizationId;
-      $this->portalId = $portalId;
+        $this->organizationId = $organizationId;
+        $this->portalId = $portalId;
     }
 
     /**
@@ -30,7 +29,7 @@ class LoginScopeHeader
      */
     public function getOrganizationId()
     {
-      return $this->organizationId;
+        return $this->organizationId;
     }
 
     /**
@@ -39,8 +38,8 @@ class LoginScopeHeader
      */
     public function setOrganizationId($organizationId)
     {
-      $this->organizationId = $organizationId;
-      return $this;
+        $this->organizationId = $organizationId;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class LoginScopeHeader
      */
     public function getPortalId()
     {
-      return $this->portalId;
+        return $this->portalId;
     }
 
     /**
@@ -57,8 +56,7 @@ class LoginScopeHeader
      */
     public function setPortalId($portalId)
     {
-      $this->portalId = $portalId;
-      return $this;
+        $this->portalId = $portalId;
+        return $this;
     }
-
 }

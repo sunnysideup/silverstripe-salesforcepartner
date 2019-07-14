@@ -4,36 +4,33 @@ namespace SForce\Wsdl;
 
 class EntitySearchMetadata
 {
-
     /**
-     * @var string $entityName
+     * @var string
      */
     protected $entityName = null;
 
     /**
-     * @var FieldLevelSearchMetadata[] $fieldMetadata
+     * @var FieldLevelSearchMetadata[]
      */
     protected $fieldMetadata = null;
 
     /**
-     * @var EntityIntentQueryMetadata $intentQueryMetadata
+     * @var EntityIntentQueryMetadata
      */
     protected $intentQueryMetadata = null;
 
     /**
-     * @var EntitySearchPromotionMetadata $searchPromotionMetadata
+     * @var EntitySearchPromotionMetadata
      */
     protected $searchPromotionMetadata = null;
 
     /**
-     * @var EntitySpellCorrectionMetadata $spellCorrectionMetadata
+     * @var EntitySpellCorrectionMetadata
      */
     protected $spellCorrectionMetadata = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -41,7 +38,7 @@ class EntitySearchMetadata
      */
     public function getEntityName()
     {
-      return $this->entityName;
+        return $this->entityName;
     }
 
     /**
@@ -50,8 +47,8 @@ class EntitySearchMetadata
      */
     public function setEntityName($entityName)
     {
-      $this->entityName = $entityName;
-      return $this;
+        $this->entityName = $entityName;
+        return $this;
     }
 
     /**
@@ -59,7 +56,7 @@ class EntitySearchMetadata
      */
     public function getFieldMetadata()
     {
-      return $this->fieldMetadata;
+        return $this->fieldMetadata;
     }
 
     /**
@@ -68,8 +65,8 @@ class EntitySearchMetadata
      */
     public function setFieldMetadata(array $fieldMetadata = null)
     {
-      $this->fieldMetadata = $fieldMetadata;
-      return $this;
+        $this->fieldMetadata = $fieldMetadata;
+        return $this;
     }
 
     /**
@@ -77,7 +74,7 @@ class EntitySearchMetadata
      */
     public function getIntentQueryMetadata()
     {
-      return $this->intentQueryMetadata;
+        return $this->intentQueryMetadata;
     }
 
     /**
@@ -86,8 +83,8 @@ class EntitySearchMetadata
      */
     public function setIntentQueryMetadata($intentQueryMetadata)
     {
-      $this->intentQueryMetadata = $intentQueryMetadata;
-      return $this;
+        $this->intentQueryMetadata = $intentQueryMetadata;
+        return $this;
     }
 
     /**
@@ -95,7 +92,7 @@ class EntitySearchMetadata
      */
     public function getSearchPromotionMetadata()
     {
-      return $this->searchPromotionMetadata;
+        return $this->searchPromotionMetadata;
     }
 
     /**
@@ -104,8 +101,8 @@ class EntitySearchMetadata
      */
     public function setSearchPromotionMetadata($searchPromotionMetadata)
     {
-      $this->searchPromotionMetadata = $searchPromotionMetadata;
-      return $this;
+        $this->searchPromotionMetadata = $searchPromotionMetadata;
+        return $this;
     }
 
     /**
@@ -113,7 +110,7 @@ class EntitySearchMetadata
      */
     public function getSpellCorrectionMetadata()
     {
-      return $this->spellCorrectionMetadata;
+        return $this->spellCorrectionMetadata;
     }
 
     /**
@@ -122,8 +119,7 @@ class EntitySearchMetadata
      */
     public function setSpellCorrectionMetadata($spellCorrectionMetadata)
     {
-      $this->spellCorrectionMetadata = $spellCorrectionMetadata;
-      return $this;
+        $this->spellCorrectionMetadata = $spellCorrectionMetadata;
+        return $this;
     }
-
 }

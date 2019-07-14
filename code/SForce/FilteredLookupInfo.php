@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class FilteredLookupInfo
 {
-
     /**
-     * @var string[] $controllingFields
+     * @var string[]
      */
     protected $controllingFields = null;
 
     /**
-     * @var boolean $dependent
+     * @var boolean
      */
     protected $dependent = null;
 
     /**
-     * @var boolean $optionalFilter
+     * @var boolean
      */
     protected $optionalFilter = null;
 
@@ -26,8 +25,8 @@ class FilteredLookupInfo
      */
     public function __construct($dependent = null, $optionalFilter = null)
     {
-      $this->dependent = $dependent;
-      $this->optionalFilter = $optionalFilter;
+        $this->dependent = $dependent;
+        $this->optionalFilter = $optionalFilter;
     }
 
     /**
@@ -35,7 +34,7 @@ class FilteredLookupInfo
      */
     public function getControllingFields()
     {
-      return $this->controllingFields;
+        return $this->controllingFields;
     }
 
     /**
@@ -44,8 +43,8 @@ class FilteredLookupInfo
      */
     public function setControllingFields(array $controllingFields = null)
     {
-      $this->controllingFields = $controllingFields;
-      return $this;
+        $this->controllingFields = $controllingFields;
+        return $this;
     }
 
     /**
@@ -53,7 +52,7 @@ class FilteredLookupInfo
      */
     public function getDependent()
     {
-      return $this->dependent;
+        return $this->dependent;
     }
 
     /**
@@ -62,8 +61,8 @@ class FilteredLookupInfo
      */
     public function setDependent($dependent)
     {
-      $this->dependent = $dependent;
-      return $this;
+        $this->dependent = $dependent;
+        return $this;
     }
 
     /**
@@ -71,7 +70,7 @@ class FilteredLookupInfo
      */
     public function getOptionalFilter()
     {
-      return $this->optionalFilter;
+        return $this->optionalFilter;
     }
 
     /**
@@ -80,8 +79,7 @@ class FilteredLookupInfo
      */
     public function setOptionalFilter($optionalFilter)
     {
-      $this->optionalFilter = $optionalFilter;
-      return $this;
+        $this->optionalFilter = $optionalFilter;
+        return $this;
     }
-
 }

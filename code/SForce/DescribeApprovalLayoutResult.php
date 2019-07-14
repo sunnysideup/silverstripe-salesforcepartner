@@ -4,16 +4,13 @@ namespace SForce\Wsdl;
 
 class DescribeApprovalLayoutResult
 {
-
     /**
-     * @var DescribeApprovalLayout[] $approvalLayouts
+     * @var DescribeApprovalLayout[]
      */
     protected $approvalLayouts = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -21,7 +18,7 @@ class DescribeApprovalLayoutResult
      */
     public function getApprovalLayouts()
     {
-      return $this->approvalLayouts;
+        return $this->approvalLayouts;
     }
 
     /**
@@ -30,8 +27,7 @@ class DescribeApprovalLayoutResult
      */
     public function setApprovalLayouts(array $approvalLayouts = null)
     {
-      $this->approvalLayouts = $approvalLayouts;
-      return $this;
+        $this->approvalLayouts = $approvalLayouts;
+        return $this;
     }
-
 }

@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class describeQuickActionsForRecordType
 {
-
     /**
-     * @var string $quickActions
+     * @var string
      */
     protected $quickActions = null;
 
     /**
-     * @var string $recordTypeId
+     * @var string
      */
     protected $recordTypeId = null;
 
@@ -21,8 +20,8 @@ class describeQuickActionsForRecordType
      */
     public function __construct($quickActions = null, $recordTypeId = null)
     {
-      $this->quickActions = $quickActions;
-      $this->recordTypeId = $recordTypeId;
+        $this->quickActions = $quickActions;
+        $this->recordTypeId = $recordTypeId;
     }
 
     /**
@@ -30,7 +29,7 @@ class describeQuickActionsForRecordType
      */
     public function getQuickActions()
     {
-      return $this->quickActions;
+        return $this->quickActions;
     }
 
     /**
@@ -39,8 +38,8 @@ class describeQuickActionsForRecordType
      */
     public function setQuickActions($quickActions)
     {
-      $this->quickActions = $quickActions;
-      return $this;
+        $this->quickActions = $quickActions;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class describeQuickActionsForRecordType
      */
     public function getRecordTypeId()
     {
-      return $this->recordTypeId;
+        return $this->recordTypeId;
     }
 
     /**
@@ -57,8 +56,7 @@ class describeQuickActionsForRecordType
      */
     public function setRecordTypeId($recordTypeId)
     {
-      $this->recordTypeId = $recordTypeId;
-      return $this;
+        $this->recordTypeId = $recordTypeId;
+        return $this;
     }
-
 }

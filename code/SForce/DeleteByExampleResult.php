@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class DeleteByExampleResult
 {
-
     /**
-     * @var sObject $entity
+     * @var sObject
      */
     protected $entity = null;
 
     /**
-     * @var Error[] $errors
+     * @var Error[]
      */
     protected $errors = null;
 
     /**
-     * @var int $rowCount
+     * @var int
      */
     protected $rowCount = null;
 
     /**
-     * @var boolean $success
+     * @var boolean
      */
     protected $success = null;
 
@@ -30,7 +29,7 @@ class DeleteByExampleResult
      */
     public function __construct($success = null)
     {
-      $this->success = $success;
+        $this->success = $success;
     }
 
     /**
@@ -38,7 +37,7 @@ class DeleteByExampleResult
      */
     public function getEntity()
     {
-      return $this->entity;
+        return $this->entity;
     }
 
     /**
@@ -47,8 +46,8 @@ class DeleteByExampleResult
      */
     public function setEntity($entity)
     {
-      $this->entity = $entity;
-      return $this;
+        $this->entity = $entity;
+        return $this;
     }
 
     /**
@@ -56,7 +55,7 @@ class DeleteByExampleResult
      */
     public function getErrors()
     {
-      return $this->errors;
+        return $this->errors;
     }
 
     /**
@@ -65,8 +64,8 @@ class DeleteByExampleResult
      */
     public function setErrors(array $errors = null)
     {
-      $this->errors = $errors;
-      return $this;
+        $this->errors = $errors;
+        return $this;
     }
 
     /**
@@ -74,7 +73,7 @@ class DeleteByExampleResult
      */
     public function getRowCount()
     {
-      return $this->rowCount;
+        return $this->rowCount;
     }
 
     /**
@@ -83,8 +82,8 @@ class DeleteByExampleResult
      */
     public function setRowCount($rowCount)
     {
-      $this->rowCount = $rowCount;
-      return $this;
+        $this->rowCount = $rowCount;
+        return $this;
     }
 
     /**
@@ -92,7 +91,7 @@ class DeleteByExampleResult
      */
     public function getSuccess()
     {
-      return $this->success;
+        return $this->success;
     }
 
     /**
@@ -101,8 +100,7 @@ class DeleteByExampleResult
      */
     public function setSuccess($success)
     {
-      $this->success = $success;
-      return $this;
+        $this->success = $success;
+        return $this;
     }
-
 }

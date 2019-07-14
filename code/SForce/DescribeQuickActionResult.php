@@ -4,149 +4,148 @@ namespace SForce\Wsdl;
 
 class DescribeQuickActionResult
 {
-
     /**
-     * @var ShareAccessLevel $accessLevelRequired
+     * @var ShareAccessLevel
      */
     protected $accessLevelRequired = null;
 
     /**
-     * @var string $actionEnumOrId
+     * @var string
      */
     protected $actionEnumOrId = null;
 
     /**
-     * @var ID $canvasApplicationId
+     * @var ID
      */
     protected $canvasApplicationId = null;
 
     /**
-     * @var string $canvasApplicationName
+     * @var string
      */
     protected $canvasApplicationName = null;
 
     /**
-     * @var DescribeColor[] $colors
+     * @var DescribeColor[]
      */
     protected $colors = null;
 
     /**
-     * @var string $contextSobjectType
+     * @var string
      */
     protected $contextSobjectType = null;
 
     /**
-     * @var DescribeQuickActionDefaultValue[] $defaultValues
+     * @var DescribeQuickActionDefaultValue[]
      */
     protected $defaultValues = null;
 
     /**
-     * @var string $flowDevName
+     * @var string
      */
     protected $flowDevName = null;
 
     /**
-     * @var string $flowRecordIdVar
+     * @var string
      */
     protected $flowRecordIdVar = null;
 
     /**
-     * @var int $height
+     * @var int
      */
     protected $height = null;
 
     /**
-     * @var string $iconName
+     * @var string
      */
     protected $iconName = null;
 
     /**
-     * @var string $iconUrl
+     * @var string
      */
     protected $iconUrl = null;
 
     /**
-     * @var DescribeIcon[] $icons
+     * @var DescribeIcon[]
      */
     protected $icons = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var DescribeLayoutSection $layout
+     * @var DescribeLayoutSection
      */
     protected $layout = null;
 
     /**
-     * @var ID $lightningComponentBundleId
+     * @var ID
      */
     protected $lightningComponentBundleId = null;
 
     /**
-     * @var string $lightningComponentBundleName
+     * @var string
      */
     protected $lightningComponentBundleName = null;
 
     /**
-     * @var string $lightningComponentQualifiedName
+     * @var string
      */
     protected $lightningComponentQualifiedName = null;
 
     /**
-     * @var string $miniIconUrl
+     * @var string
      */
     protected $miniIconUrl = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var boolean $showQuickActionLcHeader
+     * @var boolean
      */
     protected $showQuickActionLcHeader = null;
 
     /**
-     * @var boolean $showQuickActionVfHeader
+     * @var boolean
      */
     protected $showQuickActionVfHeader = null;
 
     /**
-     * @var string $targetParentField
+     * @var string
      */
     protected $targetParentField = null;
 
     /**
-     * @var ID $targetRecordTypeId
+     * @var ID
      */
     protected $targetRecordTypeId = null;
 
     /**
-     * @var string $targetSobjectType
+     * @var string
      */
     protected $targetSobjectType = null;
 
     /**
-     * @var string $type
+     * @var string
      */
     protected $type = null;
 
     /**
-     * @var string $visualforcePageName
+     * @var string
      */
     protected $visualforcePageName = null;
 
     /**
-     * @var string $visualforcePageUrl
+     * @var string
      */
     protected $visualforcePageUrl = null;
 
     /**
-     * @var int $width
+     * @var int
      */
     protected $width = null;
 
@@ -160,12 +159,12 @@ class DescribeQuickActionResult
      */
     public function __construct($actionEnumOrId = null, $label = null, $name = null, $showQuickActionLcHeader = null, $showQuickActionVfHeader = null, $type = null)
     {
-      $this->actionEnumOrId = $actionEnumOrId;
-      $this->label = $label;
-      $this->name = $name;
-      $this->showQuickActionLcHeader = $showQuickActionLcHeader;
-      $this->showQuickActionVfHeader = $showQuickActionVfHeader;
-      $this->type = $type;
+        $this->actionEnumOrId = $actionEnumOrId;
+        $this->label = $label;
+        $this->name = $name;
+        $this->showQuickActionLcHeader = $showQuickActionLcHeader;
+        $this->showQuickActionVfHeader = $showQuickActionVfHeader;
+        $this->type = $type;
     }
 
     /**
@@ -173,7 +172,7 @@ class DescribeQuickActionResult
      */
     public function getAccessLevelRequired()
     {
-      return $this->accessLevelRequired;
+        return $this->accessLevelRequired;
     }
 
     /**
@@ -182,8 +181,8 @@ class DescribeQuickActionResult
      */
     public function setAccessLevelRequired($accessLevelRequired)
     {
-      $this->accessLevelRequired = $accessLevelRequired;
-      return $this;
+        $this->accessLevelRequired = $accessLevelRequired;
+        return $this;
     }
 
     /**
@@ -191,7 +190,7 @@ class DescribeQuickActionResult
      */
     public function getActionEnumOrId()
     {
-      return $this->actionEnumOrId;
+        return $this->actionEnumOrId;
     }
 
     /**
@@ -200,8 +199,8 @@ class DescribeQuickActionResult
      */
     public function setActionEnumOrId($actionEnumOrId)
     {
-      $this->actionEnumOrId = $actionEnumOrId;
-      return $this;
+        $this->actionEnumOrId = $actionEnumOrId;
+        return $this;
     }
 
     /**
@@ -209,7 +208,7 @@ class DescribeQuickActionResult
      */
     public function getCanvasApplicationId()
     {
-      return $this->canvasApplicationId;
+        return $this->canvasApplicationId;
     }
 
     /**
@@ -218,8 +217,8 @@ class DescribeQuickActionResult
      */
     public function setCanvasApplicationId($canvasApplicationId)
     {
-      $this->canvasApplicationId = $canvasApplicationId;
-      return $this;
+        $this->canvasApplicationId = $canvasApplicationId;
+        return $this;
     }
 
     /**
@@ -227,7 +226,7 @@ class DescribeQuickActionResult
      */
     public function getCanvasApplicationName()
     {
-      return $this->canvasApplicationName;
+        return $this->canvasApplicationName;
     }
 
     /**
@@ -236,8 +235,8 @@ class DescribeQuickActionResult
      */
     public function setCanvasApplicationName($canvasApplicationName)
     {
-      $this->canvasApplicationName = $canvasApplicationName;
-      return $this;
+        $this->canvasApplicationName = $canvasApplicationName;
+        return $this;
     }
 
     /**
@@ -245,7 +244,7 @@ class DescribeQuickActionResult
      */
     public function getColors()
     {
-      return $this->colors;
+        return $this->colors;
     }
 
     /**
@@ -254,8 +253,8 @@ class DescribeQuickActionResult
      */
     public function setColors(array $colors = null)
     {
-      $this->colors = $colors;
-      return $this;
+        $this->colors = $colors;
+        return $this;
     }
 
     /**
@@ -263,7 +262,7 @@ class DescribeQuickActionResult
      */
     public function getContextSobjectType()
     {
-      return $this->contextSobjectType;
+        return $this->contextSobjectType;
     }
 
     /**
@@ -272,8 +271,8 @@ class DescribeQuickActionResult
      */
     public function setContextSobjectType($contextSobjectType)
     {
-      $this->contextSobjectType = $contextSobjectType;
-      return $this;
+        $this->contextSobjectType = $contextSobjectType;
+        return $this;
     }
 
     /**
@@ -281,7 +280,7 @@ class DescribeQuickActionResult
      */
     public function getDefaultValues()
     {
-      return $this->defaultValues;
+        return $this->defaultValues;
     }
 
     /**
@@ -290,8 +289,8 @@ class DescribeQuickActionResult
      */
     public function setDefaultValues(array $defaultValues = null)
     {
-      $this->defaultValues = $defaultValues;
-      return $this;
+        $this->defaultValues = $defaultValues;
+        return $this;
     }
 
     /**
@@ -299,7 +298,7 @@ class DescribeQuickActionResult
      */
     public function getFlowDevName()
     {
-      return $this->flowDevName;
+        return $this->flowDevName;
     }
 
     /**
@@ -308,8 +307,8 @@ class DescribeQuickActionResult
      */
     public function setFlowDevName($flowDevName)
     {
-      $this->flowDevName = $flowDevName;
-      return $this;
+        $this->flowDevName = $flowDevName;
+        return $this;
     }
 
     /**
@@ -317,7 +316,7 @@ class DescribeQuickActionResult
      */
     public function getFlowRecordIdVar()
     {
-      return $this->flowRecordIdVar;
+        return $this->flowRecordIdVar;
     }
 
     /**
@@ -326,8 +325,8 @@ class DescribeQuickActionResult
      */
     public function setFlowRecordIdVar($flowRecordIdVar)
     {
-      $this->flowRecordIdVar = $flowRecordIdVar;
-      return $this;
+        $this->flowRecordIdVar = $flowRecordIdVar;
+        return $this;
     }
 
     /**
@@ -335,7 +334,7 @@ class DescribeQuickActionResult
      */
     public function getHeight()
     {
-      return $this->height;
+        return $this->height;
     }
 
     /**
@@ -344,8 +343,8 @@ class DescribeQuickActionResult
      */
     public function setHeight($height)
     {
-      $this->height = $height;
-      return $this;
+        $this->height = $height;
+        return $this;
     }
 
     /**
@@ -353,7 +352,7 @@ class DescribeQuickActionResult
      */
     public function getIconName()
     {
-      return $this->iconName;
+        return $this->iconName;
     }
 
     /**
@@ -362,8 +361,8 @@ class DescribeQuickActionResult
      */
     public function setIconName($iconName)
     {
-      $this->iconName = $iconName;
-      return $this;
+        $this->iconName = $iconName;
+        return $this;
     }
 
     /**
@@ -371,7 +370,7 @@ class DescribeQuickActionResult
      */
     public function getIconUrl()
     {
-      return $this->iconUrl;
+        return $this->iconUrl;
     }
 
     /**
@@ -380,8 +379,8 @@ class DescribeQuickActionResult
      */
     public function setIconUrl($iconUrl)
     {
-      $this->iconUrl = $iconUrl;
-      return $this;
+        $this->iconUrl = $iconUrl;
+        return $this;
     }
 
     /**
@@ -389,7 +388,7 @@ class DescribeQuickActionResult
      */
     public function getIcons()
     {
-      return $this->icons;
+        return $this->icons;
     }
 
     /**
@@ -398,8 +397,8 @@ class DescribeQuickActionResult
      */
     public function setIcons(array $icons = null)
     {
-      $this->icons = $icons;
-      return $this;
+        $this->icons = $icons;
+        return $this;
     }
 
     /**
@@ -407,7 +406,7 @@ class DescribeQuickActionResult
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -416,8 +415,8 @@ class DescribeQuickActionResult
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -425,7 +424,7 @@ class DescribeQuickActionResult
      */
     public function getLayout()
     {
-      return $this->layout;
+        return $this->layout;
     }
 
     /**
@@ -434,8 +433,8 @@ class DescribeQuickActionResult
      */
     public function setLayout($layout)
     {
-      $this->layout = $layout;
-      return $this;
+        $this->layout = $layout;
+        return $this;
     }
 
     /**
@@ -443,7 +442,7 @@ class DescribeQuickActionResult
      */
     public function getLightningComponentBundleId()
     {
-      return $this->lightningComponentBundleId;
+        return $this->lightningComponentBundleId;
     }
 
     /**
@@ -452,8 +451,8 @@ class DescribeQuickActionResult
      */
     public function setLightningComponentBundleId($lightningComponentBundleId)
     {
-      $this->lightningComponentBundleId = $lightningComponentBundleId;
-      return $this;
+        $this->lightningComponentBundleId = $lightningComponentBundleId;
+        return $this;
     }
 
     /**
@@ -461,7 +460,7 @@ class DescribeQuickActionResult
      */
     public function getLightningComponentBundleName()
     {
-      return $this->lightningComponentBundleName;
+        return $this->lightningComponentBundleName;
     }
 
     /**
@@ -470,8 +469,8 @@ class DescribeQuickActionResult
      */
     public function setLightningComponentBundleName($lightningComponentBundleName)
     {
-      $this->lightningComponentBundleName = $lightningComponentBundleName;
-      return $this;
+        $this->lightningComponentBundleName = $lightningComponentBundleName;
+        return $this;
     }
 
     /**
@@ -479,7 +478,7 @@ class DescribeQuickActionResult
      */
     public function getLightningComponentQualifiedName()
     {
-      return $this->lightningComponentQualifiedName;
+        return $this->lightningComponentQualifiedName;
     }
 
     /**
@@ -488,8 +487,8 @@ class DescribeQuickActionResult
      */
     public function setLightningComponentQualifiedName($lightningComponentQualifiedName)
     {
-      $this->lightningComponentQualifiedName = $lightningComponentQualifiedName;
-      return $this;
+        $this->lightningComponentQualifiedName = $lightningComponentQualifiedName;
+        return $this;
     }
 
     /**
@@ -497,7 +496,7 @@ class DescribeQuickActionResult
      */
     public function getMiniIconUrl()
     {
-      return $this->miniIconUrl;
+        return $this->miniIconUrl;
     }
 
     /**
@@ -506,8 +505,8 @@ class DescribeQuickActionResult
      */
     public function setMiniIconUrl($miniIconUrl)
     {
-      $this->miniIconUrl = $miniIconUrl;
-      return $this;
+        $this->miniIconUrl = $miniIconUrl;
+        return $this;
     }
 
     /**
@@ -515,7 +514,7 @@ class DescribeQuickActionResult
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -524,8 +523,8 @@ class DescribeQuickActionResult
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -533,7 +532,7 @@ class DescribeQuickActionResult
      */
     public function getShowQuickActionLcHeader()
     {
-      return $this->showQuickActionLcHeader;
+        return $this->showQuickActionLcHeader;
     }
 
     /**
@@ -542,8 +541,8 @@ class DescribeQuickActionResult
      */
     public function setShowQuickActionLcHeader($showQuickActionLcHeader)
     {
-      $this->showQuickActionLcHeader = $showQuickActionLcHeader;
-      return $this;
+        $this->showQuickActionLcHeader = $showQuickActionLcHeader;
+        return $this;
     }
 
     /**
@@ -551,7 +550,7 @@ class DescribeQuickActionResult
      */
     public function getShowQuickActionVfHeader()
     {
-      return $this->showQuickActionVfHeader;
+        return $this->showQuickActionVfHeader;
     }
 
     /**
@@ -560,8 +559,8 @@ class DescribeQuickActionResult
      */
     public function setShowQuickActionVfHeader($showQuickActionVfHeader)
     {
-      $this->showQuickActionVfHeader = $showQuickActionVfHeader;
-      return $this;
+        $this->showQuickActionVfHeader = $showQuickActionVfHeader;
+        return $this;
     }
 
     /**
@@ -569,7 +568,7 @@ class DescribeQuickActionResult
      */
     public function getTargetParentField()
     {
-      return $this->targetParentField;
+        return $this->targetParentField;
     }
 
     /**
@@ -578,8 +577,8 @@ class DescribeQuickActionResult
      */
     public function setTargetParentField($targetParentField)
     {
-      $this->targetParentField = $targetParentField;
-      return $this;
+        $this->targetParentField = $targetParentField;
+        return $this;
     }
 
     /**
@@ -587,7 +586,7 @@ class DescribeQuickActionResult
      */
     public function getTargetRecordTypeId()
     {
-      return $this->targetRecordTypeId;
+        return $this->targetRecordTypeId;
     }
 
     /**
@@ -596,8 +595,8 @@ class DescribeQuickActionResult
      */
     public function setTargetRecordTypeId($targetRecordTypeId)
     {
-      $this->targetRecordTypeId = $targetRecordTypeId;
-      return $this;
+        $this->targetRecordTypeId = $targetRecordTypeId;
+        return $this;
     }
 
     /**
@@ -605,7 +604,7 @@ class DescribeQuickActionResult
      */
     public function getTargetSobjectType()
     {
-      return $this->targetSobjectType;
+        return $this->targetSobjectType;
     }
 
     /**
@@ -614,8 +613,8 @@ class DescribeQuickActionResult
      */
     public function setTargetSobjectType($targetSobjectType)
     {
-      $this->targetSobjectType = $targetSobjectType;
-      return $this;
+        $this->targetSobjectType = $targetSobjectType;
+        return $this;
     }
 
     /**
@@ -623,7 +622,7 @@ class DescribeQuickActionResult
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -632,8 +631,8 @@ class DescribeQuickActionResult
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
 
     /**
@@ -641,7 +640,7 @@ class DescribeQuickActionResult
      */
     public function getVisualforcePageName()
     {
-      return $this->visualforcePageName;
+        return $this->visualforcePageName;
     }
 
     /**
@@ -650,8 +649,8 @@ class DescribeQuickActionResult
      */
     public function setVisualforcePageName($visualforcePageName)
     {
-      $this->visualforcePageName = $visualforcePageName;
-      return $this;
+        $this->visualforcePageName = $visualforcePageName;
+        return $this;
     }
 
     /**
@@ -659,7 +658,7 @@ class DescribeQuickActionResult
      */
     public function getVisualforcePageUrl()
     {
-      return $this->visualforcePageUrl;
+        return $this->visualforcePageUrl;
     }
 
     /**
@@ -668,8 +667,8 @@ class DescribeQuickActionResult
      */
     public function setVisualforcePageUrl($visualforcePageUrl)
     {
-      $this->visualforcePageUrl = $visualforcePageUrl;
-      return $this;
+        $this->visualforcePageUrl = $visualforcePageUrl;
+        return $this;
     }
 
     /**
@@ -677,7 +676,7 @@ class DescribeQuickActionResult
      */
     public function getWidth()
     {
-      return $this->width;
+        return $this->width;
     }
 
     /**
@@ -686,8 +685,7 @@ class DescribeQuickActionResult
      */
     public function setWidth($width)
     {
-      $this->width = $width;
-      return $this;
+        $this->width = $width;
+        return $this;
     }
-
 }

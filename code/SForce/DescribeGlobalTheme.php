@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class DescribeGlobalTheme
 {
-
     /**
-     * @var DescribeGlobalResult $global
+     * @var DescribeGlobalResult
      */
     protected $global = null;
 
     /**
-     * @var DescribeThemeResult $theme
+     * @var DescribeThemeResult
      */
     protected $theme = null;
 
@@ -21,8 +20,8 @@ class DescribeGlobalTheme
      */
     public function __construct($global = null, $theme = null)
     {
-      $this->global = $global;
-      $this->theme = $theme;
+        $this->global = $global;
+        $this->theme = $theme;
     }
 
     /**
@@ -30,7 +29,7 @@ class DescribeGlobalTheme
      */
     public function getGlobal()
     {
-      return $this->global;
+        return $this->global;
     }
 
     /**
@@ -39,8 +38,8 @@ class DescribeGlobalTheme
      */
     public function setGlobal($global)
     {
-      $this->global = $global;
-      return $this;
+        $this->global = $global;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class DescribeGlobalTheme
      */
     public function getTheme()
     {
-      return $this->theme;
+        return $this->theme;
     }
 
     /**
@@ -57,8 +56,7 @@ class DescribeGlobalTheme
      */
     public function setTheme($theme)
     {
-      $this->theme = $theme;
-      return $this;
+        $this->theme = $theme;
+        return $this;
     }
-
 }

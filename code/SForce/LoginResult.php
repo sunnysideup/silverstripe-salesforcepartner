@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class LoginResult
 {
-
     /**
-     * @var string $metadataServerUrl
+     * @var string
      */
     protected $metadataServerUrl = null;
 
     /**
-     * @var boolean $passwordExpired
+     * @var boolean
      */
     protected $passwordExpired = null;
 
     /**
-     * @var boolean $sandbox
+     * @var boolean
      */
     protected $sandbox = null;
 
     /**
-     * @var string $serverUrl
+     * @var string
      */
     protected $serverUrl = null;
 
     /**
-     * @var string $sessionId
+     * @var string
      */
     protected $sessionId = null;
 
     /**
-     * @var ID $userId
+     * @var ID
      */
     protected $userId = null;
 
     /**
-     * @var GetUserInfoResult $userInfo
+     * @var GetUserInfoResult
      */
     protected $userInfo = null;
 
@@ -46,8 +45,8 @@ class LoginResult
      */
     public function __construct($passwordExpired = null, $sandbox = null)
     {
-      $this->passwordExpired = $passwordExpired;
-      $this->sandbox = $sandbox;
+        $this->passwordExpired = $passwordExpired;
+        $this->sandbox = $sandbox;
     }
 
     /**
@@ -55,7 +54,7 @@ class LoginResult
      */
     public function getMetadataServerUrl()
     {
-      return $this->metadataServerUrl;
+        return $this->metadataServerUrl;
     }
 
     /**
@@ -64,8 +63,8 @@ class LoginResult
      */
     public function setMetadataServerUrl($metadataServerUrl)
     {
-      $this->metadataServerUrl = $metadataServerUrl;
-      return $this;
+        $this->metadataServerUrl = $metadataServerUrl;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class LoginResult
      */
     public function getPasswordExpired()
     {
-      return $this->passwordExpired;
+        return $this->passwordExpired;
     }
 
     /**
@@ -82,8 +81,8 @@ class LoginResult
      */
     public function setPasswordExpired($passwordExpired)
     {
-      $this->passwordExpired = $passwordExpired;
-      return $this;
+        $this->passwordExpired = $passwordExpired;
+        return $this;
     }
 
     /**
@@ -91,7 +90,7 @@ class LoginResult
      */
     public function getSandbox()
     {
-      return $this->sandbox;
+        return $this->sandbox;
     }
 
     /**
@@ -100,8 +99,8 @@ class LoginResult
      */
     public function setSandbox($sandbox)
     {
-      $this->sandbox = $sandbox;
-      return $this;
+        $this->sandbox = $sandbox;
+        return $this;
     }
 
     /**
@@ -109,7 +108,7 @@ class LoginResult
      */
     public function getServerUrl()
     {
-      return $this->serverUrl;
+        return $this->serverUrl;
     }
 
     /**
@@ -118,8 +117,8 @@ class LoginResult
      */
     public function setServerUrl($serverUrl)
     {
-      $this->serverUrl = $serverUrl;
-      return $this;
+        $this->serverUrl = $serverUrl;
+        return $this;
     }
 
     /**
@@ -127,7 +126,7 @@ class LoginResult
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
@@ -136,8 +135,8 @@ class LoginResult
      */
     public function setSessionId($sessionId)
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -145,7 +144,7 @@ class LoginResult
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
@@ -154,8 +153,8 @@ class LoginResult
      */
     public function setUserId($userId)
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
 
     /**
@@ -163,7 +162,7 @@ class LoginResult
      */
     public function getUserInfo()
     {
-      return $this->userInfo;
+        return $this->userInfo;
     }
 
     /**
@@ -172,8 +171,7 @@ class LoginResult
      */
     public function setUserInfo($userInfo)
     {
-      $this->userInfo = $userInfo;
-      return $this;
+        $this->userInfo = $userInfo;
+        return $this;
     }
-
 }

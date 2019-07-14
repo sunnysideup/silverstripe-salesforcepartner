@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class DescribeSoftphoneScreenPopOption
 {
-
     /**
-     * @var string $matchType
+     * @var string
      */
     protected $matchType = null;
 
     /**
-     * @var string $screenPopData
+     * @var string
      */
     protected $screenPopData = null;
 
     /**
-     * @var string $screenPopType
+     * @var string
      */
     protected $screenPopType = null;
 
@@ -27,9 +26,9 @@ class DescribeSoftphoneScreenPopOption
      */
     public function __construct($matchType = null, $screenPopData = null, $screenPopType = null)
     {
-      $this->matchType = $matchType;
-      $this->screenPopData = $screenPopData;
-      $this->screenPopType = $screenPopType;
+        $this->matchType = $matchType;
+        $this->screenPopData = $screenPopData;
+        $this->screenPopType = $screenPopType;
     }
 
     /**
@@ -37,7 +36,7 @@ class DescribeSoftphoneScreenPopOption
      */
     public function getMatchType()
     {
-      return $this->matchType;
+        return $this->matchType;
     }
 
     /**
@@ -46,8 +45,8 @@ class DescribeSoftphoneScreenPopOption
      */
     public function setMatchType($matchType)
     {
-      $this->matchType = $matchType;
-      return $this;
+        $this->matchType = $matchType;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class DescribeSoftphoneScreenPopOption
      */
     public function getScreenPopData()
     {
-      return $this->screenPopData;
+        return $this->screenPopData;
     }
 
     /**
@@ -64,8 +63,8 @@ class DescribeSoftphoneScreenPopOption
      */
     public function setScreenPopData($screenPopData)
     {
-      $this->screenPopData = $screenPopData;
-      return $this;
+        $this->screenPopData = $screenPopData;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class DescribeSoftphoneScreenPopOption
      */
     public function getScreenPopType()
     {
-      return $this->screenPopType;
+        return $this->screenPopType;
     }
 
     /**
@@ -82,8 +81,7 @@ class DescribeSoftphoneScreenPopOption
      */
     public function setScreenPopType($screenPopType)
     {
-      $this->screenPopType = $screenPopType;
-      return $this;
+        $this->screenPopType = $screenPopType;
+        return $this;
     }
-
 }

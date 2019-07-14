@@ -4,7 +4,6 @@ namespace SForce\Wsdl;
 
 class MalformedQueryFault extends ApiQueryFault
 {
-
     /**
      * @param ExceptionCode $exceptionCode
      * @param string $exceptionMessage
@@ -13,7 +12,6 @@ class MalformedQueryFault extends ApiQueryFault
      */
     public function __construct($exceptionCode = null, $exceptionMessage = null, $row = null, $column = null)
     {
-      parent::__construct($exceptionCode, $exceptionMessage, $row, $column);
+        parent::__construct($exceptionCode, $exceptionMessage, $row, $column);
     }
-
 }

@@ -4,49 +4,48 @@ namespace SForce\Wsdl;
 
 class RecordTypeMapping
 {
-
     /**
-     * @var boolean $active
+     * @var boolean
      */
     protected $active = null;
 
     /**
-     * @var boolean $available
+     * @var boolean
      */
     protected $available = null;
 
     /**
-     * @var boolean $defaultRecordTypeMapping
+     * @var boolean
      */
     protected $defaultRecordTypeMapping = null;
 
     /**
-     * @var string $developerName
+     * @var string
      */
     protected $developerName = null;
 
     /**
-     * @var ID $layoutId
+     * @var ID
      */
     protected $layoutId = null;
 
     /**
-     * @var boolean $master
+     * @var boolean
      */
     protected $master = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var PicklistForRecordType[] $picklistsForRecordType
+     * @var PicklistForRecordType[]
      */
     protected $picklistsForRecordType = null;
 
     /**
-     * @var ID $recordTypeId
+     * @var ID
      */
     protected $recordTypeId = null;
 
@@ -61,13 +60,13 @@ class RecordTypeMapping
      */
     public function __construct($active = null, $available = null, $defaultRecordTypeMapping = null, $developerName = null, $layoutId = null, $master = null, $name = null)
     {
-      $this->active = $active;
-      $this->available = $available;
-      $this->defaultRecordTypeMapping = $defaultRecordTypeMapping;
-      $this->developerName = $developerName;
-      $this->layoutId = $layoutId;
-      $this->master = $master;
-      $this->name = $name;
+        $this->active = $active;
+        $this->available = $available;
+        $this->defaultRecordTypeMapping = $defaultRecordTypeMapping;
+        $this->developerName = $developerName;
+        $this->layoutId = $layoutId;
+        $this->master = $master;
+        $this->name = $name;
     }
 
     /**
@@ -75,7 +74,7 @@ class RecordTypeMapping
      */
     public function getActive()
     {
-      return $this->active;
+        return $this->active;
     }
 
     /**
@@ -84,8 +83,8 @@ class RecordTypeMapping
      */
     public function setActive($active)
     {
-      $this->active = $active;
-      return $this;
+        $this->active = $active;
+        return $this;
     }
 
     /**
@@ -93,7 +92,7 @@ class RecordTypeMapping
      */
     public function getAvailable()
     {
-      return $this->available;
+        return $this->available;
     }
 
     /**
@@ -102,8 +101,8 @@ class RecordTypeMapping
      */
     public function setAvailable($available)
     {
-      $this->available = $available;
-      return $this;
+        $this->available = $available;
+        return $this;
     }
 
     /**
@@ -111,7 +110,7 @@ class RecordTypeMapping
      */
     public function getDefaultRecordTypeMapping()
     {
-      return $this->defaultRecordTypeMapping;
+        return $this->defaultRecordTypeMapping;
     }
 
     /**
@@ -120,8 +119,8 @@ class RecordTypeMapping
      */
     public function setDefaultRecordTypeMapping($defaultRecordTypeMapping)
     {
-      $this->defaultRecordTypeMapping = $defaultRecordTypeMapping;
-      return $this;
+        $this->defaultRecordTypeMapping = $defaultRecordTypeMapping;
+        return $this;
     }
 
     /**
@@ -129,7 +128,7 @@ class RecordTypeMapping
      */
     public function getDeveloperName()
     {
-      return $this->developerName;
+        return $this->developerName;
     }
 
     /**
@@ -138,8 +137,8 @@ class RecordTypeMapping
      */
     public function setDeveloperName($developerName)
     {
-      $this->developerName = $developerName;
-      return $this;
+        $this->developerName = $developerName;
+        return $this;
     }
 
     /**
@@ -147,7 +146,7 @@ class RecordTypeMapping
      */
     public function getLayoutId()
     {
-      return $this->layoutId;
+        return $this->layoutId;
     }
 
     /**
@@ -156,8 +155,8 @@ class RecordTypeMapping
      */
     public function setLayoutId($layoutId)
     {
-      $this->layoutId = $layoutId;
-      return $this;
+        $this->layoutId = $layoutId;
+        return $this;
     }
 
     /**
@@ -165,7 +164,7 @@ class RecordTypeMapping
      */
     public function getMaster()
     {
-      return $this->master;
+        return $this->master;
     }
 
     /**
@@ -174,8 +173,8 @@ class RecordTypeMapping
      */
     public function setMaster($master)
     {
-      $this->master = $master;
-      return $this;
+        $this->master = $master;
+        return $this;
     }
 
     /**
@@ -183,7 +182,7 @@ class RecordTypeMapping
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -192,8 +191,8 @@ class RecordTypeMapping
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -201,7 +200,7 @@ class RecordTypeMapping
      */
     public function getPicklistsForRecordType()
     {
-      return $this->picklistsForRecordType;
+        return $this->picklistsForRecordType;
     }
 
     /**
@@ -210,8 +209,8 @@ class RecordTypeMapping
      */
     public function setPicklistsForRecordType(array $picklistsForRecordType = null)
     {
-      $this->picklistsForRecordType = $picklistsForRecordType;
-      return $this;
+        $this->picklistsForRecordType = $picklistsForRecordType;
+        return $this;
     }
 
     /**
@@ -219,7 +218,7 @@ class RecordTypeMapping
      */
     public function getRecordTypeId()
     {
-      return $this->recordTypeId;
+        return $this->recordTypeId;
     }
 
     /**
@@ -228,8 +227,7 @@ class RecordTypeMapping
      */
     public function setRecordTypeId($recordTypeId)
     {
-      $this->recordTypeId = $recordTypeId;
-      return $this;
+        $this->recordTypeId = $recordTypeId;
+        return $this;
     }
-
 }

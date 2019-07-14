@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class RelatedContent
 {
-
     /**
-     * @var DescribeRelatedContentItem[] $relatedContentItems
+     * @var DescribeRelatedContentItem[]
      */
     protected $relatedContentItems = null;
 
@@ -15,7 +14,7 @@ class RelatedContent
      */
     public function __construct(array $relatedContentItems = null)
     {
-      $this->relatedContentItems = $relatedContentItems;
+        $this->relatedContentItems = $relatedContentItems;
     }
 
     /**
@@ -23,7 +22,7 @@ class RelatedContent
      */
     public function getRelatedContentItems()
     {
-      return $this->relatedContentItems;
+        return $this->relatedContentItems;
     }
 
     /**
@@ -32,8 +31,7 @@ class RelatedContent
      */
     public function setRelatedContentItems(array $relatedContentItems)
     {
-      $this->relatedContentItems = $relatedContentItems;
-      return $this;
+        $this->relatedContentItems = $relatedContentItems;
+        return $this;
     }
-
 }

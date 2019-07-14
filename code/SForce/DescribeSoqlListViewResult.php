@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class DescribeSoqlListViewResult
 {
-
     /**
-     * @var DescribeSoqlListView[] $describeSoqlListViews
+     * @var DescribeSoqlListView[]
      */
     protected $describeSoqlListViews = null;
 
@@ -15,7 +14,7 @@ class DescribeSoqlListViewResult
      */
     public function __construct(array $describeSoqlListViews = null)
     {
-      $this->describeSoqlListViews = $describeSoqlListViews;
+        $this->describeSoqlListViews = $describeSoqlListViews;
     }
 
     /**
@@ -23,7 +22,7 @@ class DescribeSoqlListViewResult
      */
     public function getDescribeSoqlListViews()
     {
-      return $this->describeSoqlListViews;
+        return $this->describeSoqlListViews;
     }
 
     /**
@@ -32,8 +31,7 @@ class DescribeSoqlListViewResult
      */
     public function setDescribeSoqlListViews(array $describeSoqlListViews)
     {
-      $this->describeSoqlListViews = $describeSoqlListViews;
-      return $this;
+        $this->describeSoqlListViews = $describeSoqlListViews;
+        return $this;
     }
-
 }

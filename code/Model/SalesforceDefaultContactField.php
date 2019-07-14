@@ -9,7 +9,6 @@
  */
 class SalesforceDefaultContactField extends DataObject
 {
-
     /**
      * contact fields that should be created by default...
      * @var array
@@ -29,7 +28,6 @@ class SalesforceDefaultContactField extends DataObject
     private static $plural_name = 'Default Contact Fields';
 
     /**
-     *
      * @var array
      */
     private static $db = [
@@ -49,11 +47,13 @@ class SalesforceDefaultContactField extends DataObject
         'ValueType' => 'Value Type',
         'BetterValue' => 'Calculated Value',
     ];
+
     /**
      * Defines summary fields commonly used in table columns
      * as a quick overview of the data for this dataobject
      * @var array
      */
+
     /**
      * Defines a default list of filters for the search context
      * @var array
@@ -65,33 +65,30 @@ class SalesforceDefaultContactField extends DataObject
     ];
 
     /**
-     *
      * @return string
      */
     public function getTitle()
     {
-        return $this->Key . ' = '.$this->BetterValueHumanReadable() . ' ('.$this->ValueType.')';
+        return $this->Key . ' = ' . $this->BetterValueHumanReadable() . ' (' . $this->ValueType . ')';
     }
-
 
     public function requireDefaultRecords()
     {
-        foreach($this->Config()->get('default_records') as $key => $details) {
-            $value = isset($details['Value']) ? $details['Value'] : 'please set' ;
-            $type = isset($details['ValueType']) ? $details['Value'] : 'String' ;
+        foreach ($this->Config()->get('default_records') as $key => $details) {
+            $value = isset($details['Value']) ? $details['Value'] : 'please set';
+            $type = isset($details['ValueType']) ? $details['Value'] : 'String';
             $type = $details['ValueType'];
             $filter = [
-                'Key' => $key
+                'Key' => $key,
             ];
 
-            $obj = SalesforceDefaultContactField::get()->filter($filter)->first();
-            if(! $obj) {
-                $obj = SalesforceDefaultContactField::create($filter);
+            $obj = self::get()->filter($filter)->first();
+            if (! $obj) {
+                $obj = self::create($filter);
                 $obj->Value = $value;
                 $obj->ValueType = $type;
                 $obj->write();
             }
-
         }
     }
 
@@ -100,7 +97,7 @@ class SalesforceDefaultContactField extends DataObject
      */
     public function BetterValue()
     {
-        switch($this->ValueType) {
+        switch ($this->ValueType) {
             case 'Number':
                 return floatval($this->Value);
             case 'CurrentDate':
@@ -150,7 +147,7 @@ class SalesforceDefaultContactField extends DataObject
                 ),
             ]
         );
-        switch($this->ValueType) {
+        switch ($this->ValueType) {
             case 'CurrentDate':
             case 'CurrentDateAndTime':
             case 'YesOrTrue':
@@ -159,6 +156,7 @@ class SalesforceDefaultContactField extends DataObject
                     'Root.Main',
                     'Value'
                 );
+                // no break
             case 'Number':
                 $fields->removeFieldFromTab(
                     'Root.Main',
@@ -167,6 +165,4 @@ class SalesforceDefaultContactField extends DataObject
         }
         return $fields;
     }
-
-
 }

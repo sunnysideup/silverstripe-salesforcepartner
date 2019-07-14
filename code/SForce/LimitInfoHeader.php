@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class LimitInfoHeader
 {
-
     /**
-     * @var LimitInfo $limitInfo
+     * @var LimitInfo
      */
     protected $limitInfo = null;
 
@@ -15,7 +14,7 @@ class LimitInfoHeader
      */
     public function __construct($limitInfo = null)
     {
-      $this->limitInfo = $limitInfo;
+        $this->limitInfo = $limitInfo;
     }
 
     /**
@@ -23,7 +22,7 @@ class LimitInfoHeader
      */
     public function getLimitInfo()
     {
-      return $this->limitInfo;
+        return $this->limitInfo;
     }
 
     /**
@@ -32,8 +31,7 @@ class LimitInfoHeader
      */
     public function setLimitInfo($limitInfo)
     {
-      $this->limitInfo = $limitInfo;
-      return $this;
+        $this->limitInfo = $limitInfo;
+        return $this;
     }
-
 }

@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class KnowledgeSettings
 {
-
     /**
-     * @var string $defaultLanguage
+     * @var string
      */
     protected $defaultLanguage = null;
 
     /**
-     * @var boolean $knowledgeEnabled
+     * @var boolean
      */
     protected $knowledgeEnabled = null;
 
     /**
-     * @var KnowledgeLanguageItem[] $languages
+     * @var KnowledgeLanguageItem[]
      */
     protected $languages = null;
 
@@ -25,7 +24,7 @@ class KnowledgeSettings
      */
     public function __construct($knowledgeEnabled = null)
     {
-      $this->knowledgeEnabled = $knowledgeEnabled;
+        $this->knowledgeEnabled = $knowledgeEnabled;
     }
 
     /**
@@ -33,7 +32,7 @@ class KnowledgeSettings
      */
     public function getDefaultLanguage()
     {
-      return $this->defaultLanguage;
+        return $this->defaultLanguage;
     }
 
     /**
@@ -42,8 +41,8 @@ class KnowledgeSettings
      */
     public function setDefaultLanguage($defaultLanguage)
     {
-      $this->defaultLanguage = $defaultLanguage;
-      return $this;
+        $this->defaultLanguage = $defaultLanguage;
+        return $this;
     }
 
     /**
@@ -51,7 +50,7 @@ class KnowledgeSettings
      */
     public function getKnowledgeEnabled()
     {
-      return $this->knowledgeEnabled;
+        return $this->knowledgeEnabled;
     }
 
     /**
@@ -60,8 +59,8 @@ class KnowledgeSettings
      */
     public function setKnowledgeEnabled($knowledgeEnabled)
     {
-      $this->knowledgeEnabled = $knowledgeEnabled;
-      return $this;
+        $this->knowledgeEnabled = $knowledgeEnabled;
+        return $this;
     }
 
     /**
@@ -69,7 +68,7 @@ class KnowledgeSettings
      */
     public function getLanguages()
     {
-      return $this->languages;
+        return $this->languages;
     }
 
     /**
@@ -78,8 +77,7 @@ class KnowledgeSettings
      */
     public function setLanguages(array $languages = null)
     {
-      $this->languages = $languages;
-      return $this;
+        $this->languages = $languages;
+        return $this;
     }
-
 }

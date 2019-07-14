@@ -4,26 +4,23 @@ namespace SForce\Wsdl;
 
 class SearchResult
 {
-
     /**
-     * @var string $queryId
+     * @var string
      */
     protected $queryId = null;
 
     /**
-     * @var SearchRecord[] $searchRecords
+     * @var SearchRecord[]
      */
     protected $searchRecords = null;
 
     /**
-     * @var SearchResultsMetadata $searchResultsMetadata
+     * @var SearchResultsMetadata
      */
     protected $searchResultsMetadata = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -31,7 +28,7 @@ class SearchResult
      */
     public function getQueryId()
     {
-      return $this->queryId;
+        return $this->queryId;
     }
 
     /**
@@ -40,8 +37,8 @@ class SearchResult
      */
     public function setQueryId($queryId)
     {
-      $this->queryId = $queryId;
-      return $this;
+        $this->queryId = $queryId;
+        return $this;
     }
 
     /**
@@ -49,7 +46,7 @@ class SearchResult
      */
     public function getSearchRecords()
     {
-      return $this->searchRecords;
+        return $this->searchRecords;
     }
 
     /**
@@ -58,8 +55,8 @@ class SearchResult
      */
     public function setSearchRecords(array $searchRecords = null)
     {
-      $this->searchRecords = $searchRecords;
-      return $this;
+        $this->searchRecords = $searchRecords;
+        return $this;
     }
 
     /**
@@ -67,7 +64,7 @@ class SearchResult
      */
     public function getSearchResultsMetadata()
     {
-      return $this->searchResultsMetadata;
+        return $this->searchResultsMetadata;
     }
 
     /**
@@ -76,8 +73,7 @@ class SearchResult
      */
     public function setSearchResultsMetadata($searchResultsMetadata)
     {
-      $this->searchResultsMetadata = $searchResultsMetadata;
-      return $this;
+        $this->searchResultsMetadata = $searchResultsMetadata;
+        return $this;
     }
-
 }

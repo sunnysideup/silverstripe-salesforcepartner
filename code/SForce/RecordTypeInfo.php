@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class RecordTypeInfo
 {
-
     /**
-     * @var boolean $active
+     * @var boolean
      */
     protected $active = null;
 
     /**
-     * @var boolean $available
+     * @var boolean
      */
     protected $available = null;
 
     /**
-     * @var boolean $defaultRecordTypeMapping
+     * @var boolean
      */
     protected $defaultRecordTypeMapping = null;
 
     /**
-     * @var string $developerName
+     * @var string
      */
     protected $developerName = null;
 
     /**
-     * @var boolean $master
+     * @var boolean
      */
     protected $master = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var ID $recordTypeId
+     * @var ID
      */
     protected $recordTypeId = null;
 
@@ -50,12 +49,12 @@ class RecordTypeInfo
      */
     public function __construct($active = null, $available = null, $defaultRecordTypeMapping = null, $developerName = null, $master = null, $name = null)
     {
-      $this->active = $active;
-      $this->available = $available;
-      $this->defaultRecordTypeMapping = $defaultRecordTypeMapping;
-      $this->developerName = $developerName;
-      $this->master = $master;
-      $this->name = $name;
+        $this->active = $active;
+        $this->available = $available;
+        $this->defaultRecordTypeMapping = $defaultRecordTypeMapping;
+        $this->developerName = $developerName;
+        $this->master = $master;
+        $this->name = $name;
     }
 
     /**
@@ -63,7 +62,7 @@ class RecordTypeInfo
      */
     public function getActive()
     {
-      return $this->active;
+        return $this->active;
     }
 
     /**
@@ -72,8 +71,8 @@ class RecordTypeInfo
      */
     public function setActive($active)
     {
-      $this->active = $active;
-      return $this;
+        $this->active = $active;
+        return $this;
     }
 
     /**
@@ -81,7 +80,7 @@ class RecordTypeInfo
      */
     public function getAvailable()
     {
-      return $this->available;
+        return $this->available;
     }
 
     /**
@@ -90,8 +89,8 @@ class RecordTypeInfo
      */
     public function setAvailable($available)
     {
-      $this->available = $available;
-      return $this;
+        $this->available = $available;
+        return $this;
     }
 
     /**
@@ -99,7 +98,7 @@ class RecordTypeInfo
      */
     public function getDefaultRecordTypeMapping()
     {
-      return $this->defaultRecordTypeMapping;
+        return $this->defaultRecordTypeMapping;
     }
 
     /**
@@ -108,8 +107,8 @@ class RecordTypeInfo
      */
     public function setDefaultRecordTypeMapping($defaultRecordTypeMapping)
     {
-      $this->defaultRecordTypeMapping = $defaultRecordTypeMapping;
-      return $this;
+        $this->defaultRecordTypeMapping = $defaultRecordTypeMapping;
+        return $this;
     }
 
     /**
@@ -117,7 +116,7 @@ class RecordTypeInfo
      */
     public function getDeveloperName()
     {
-      return $this->developerName;
+        return $this->developerName;
     }
 
     /**
@@ -126,8 +125,8 @@ class RecordTypeInfo
      */
     public function setDeveloperName($developerName)
     {
-      $this->developerName = $developerName;
-      return $this;
+        $this->developerName = $developerName;
+        return $this;
     }
 
     /**
@@ -135,7 +134,7 @@ class RecordTypeInfo
      */
     public function getMaster()
     {
-      return $this->master;
+        return $this->master;
     }
 
     /**
@@ -144,8 +143,8 @@ class RecordTypeInfo
      */
     public function setMaster($master)
     {
-      $this->master = $master;
-      return $this;
+        $this->master = $master;
+        return $this;
     }
 
     /**
@@ -153,7 +152,7 @@ class RecordTypeInfo
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -162,8 +161,8 @@ class RecordTypeInfo
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -171,7 +170,7 @@ class RecordTypeInfo
      */
     public function getRecordTypeId()
     {
-      return $this->recordTypeId;
+        return $this->recordTypeId;
     }
 
     /**
@@ -180,8 +179,7 @@ class RecordTypeInfo
      */
     public function setRecordTypeId($recordTypeId)
     {
-      $this->recordTypeId = $recordTypeId;
-      return $this;
+        $this->recordTypeId = $recordTypeId;
+        return $this;
     }
-
 }

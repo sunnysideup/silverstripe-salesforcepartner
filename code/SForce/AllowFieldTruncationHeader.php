@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class AllowFieldTruncationHeader
 {
-
     /**
-     * @var boolean $allowFieldTruncation
+     * @var boolean
      */
     protected $allowFieldTruncation = null;
 
@@ -15,7 +14,7 @@ class AllowFieldTruncationHeader
      */
     public function __construct($allowFieldTruncation = null)
     {
-      $this->allowFieldTruncation = $allowFieldTruncation;
+        $this->allowFieldTruncation = $allowFieldTruncation;
     }
 
     /**
@@ -23,7 +22,7 @@ class AllowFieldTruncationHeader
      */
     public function getAllowFieldTruncation()
     {
-      return $this->allowFieldTruncation;
+        return $this->allowFieldTruncation;
     }
 
     /**
@@ -32,8 +31,7 @@ class AllowFieldTruncationHeader
      */
     public function setAllowFieldTruncation($allowFieldTruncation)
     {
-      $this->allowFieldTruncation = $allowFieldTruncation;
-      return $this;
+        $this->allowFieldTruncation = $allowFieldTruncation;
+        return $this;
     }
-
 }

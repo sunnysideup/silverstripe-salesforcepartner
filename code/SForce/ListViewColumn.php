@@ -4,59 +4,58 @@ namespace SForce\Wsdl;
 
 class ListViewColumn
 {
-
     /**
-     * @var string $ascendingLabel
+     * @var string
      */
     protected $ascendingLabel = null;
 
     /**
-     * @var string $descendingLabel
+     * @var string
      */
     protected $descendingLabel = null;
 
     /**
-     * @var string $fieldNameOrPath
+     * @var string
      */
     protected $fieldNameOrPath = null;
 
     /**
-     * @var boolean $hidden
+     * @var boolean
      */
     protected $hidden = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var boolean $searchable
+     * @var boolean
      */
     protected $searchable = null;
 
     /**
-     * @var string $selectListItem
+     * @var string
      */
     protected $selectListItem = null;
 
     /**
-     * @var orderByDirection $sortDirection
+     * @var orderByDirection
      */
     protected $sortDirection = null;
 
     /**
-     * @var int $sortIndex
+     * @var int
      */
     protected $sortIndex = null;
 
     /**
-     * @var boolean $sortable
+     * @var boolean
      */
     protected $sortable = null;
 
     /**
-     * @var fieldType $type
+     * @var fieldType
      */
     protected $type = null;
 
@@ -71,13 +70,13 @@ class ListViewColumn
      */
     public function __construct($fieldNameOrPath = null, $hidden = null, $label = null, $searchable = null, $selectListItem = null, $sortable = null, $type = null)
     {
-      $this->fieldNameOrPath = $fieldNameOrPath;
-      $this->hidden = $hidden;
-      $this->label = $label;
-      $this->searchable = $searchable;
-      $this->selectListItem = $selectListItem;
-      $this->sortable = $sortable;
-      $this->type = $type;
+        $this->fieldNameOrPath = $fieldNameOrPath;
+        $this->hidden = $hidden;
+        $this->label = $label;
+        $this->searchable = $searchable;
+        $this->selectListItem = $selectListItem;
+        $this->sortable = $sortable;
+        $this->type = $type;
     }
 
     /**
@@ -85,7 +84,7 @@ class ListViewColumn
      */
     public function getAscendingLabel()
     {
-      return $this->ascendingLabel;
+        return $this->ascendingLabel;
     }
 
     /**
@@ -94,8 +93,8 @@ class ListViewColumn
      */
     public function setAscendingLabel($ascendingLabel)
     {
-      $this->ascendingLabel = $ascendingLabel;
-      return $this;
+        $this->ascendingLabel = $ascendingLabel;
+        return $this;
     }
 
     /**
@@ -103,7 +102,7 @@ class ListViewColumn
      */
     public function getDescendingLabel()
     {
-      return $this->descendingLabel;
+        return $this->descendingLabel;
     }
 
     /**
@@ -112,8 +111,8 @@ class ListViewColumn
      */
     public function setDescendingLabel($descendingLabel)
     {
-      $this->descendingLabel = $descendingLabel;
-      return $this;
+        $this->descendingLabel = $descendingLabel;
+        return $this;
     }
 
     /**
@@ -121,7 +120,7 @@ class ListViewColumn
      */
     public function getFieldNameOrPath()
     {
-      return $this->fieldNameOrPath;
+        return $this->fieldNameOrPath;
     }
 
     /**
@@ -130,8 +129,8 @@ class ListViewColumn
      */
     public function setFieldNameOrPath($fieldNameOrPath)
     {
-      $this->fieldNameOrPath = $fieldNameOrPath;
-      return $this;
+        $this->fieldNameOrPath = $fieldNameOrPath;
+        return $this;
     }
 
     /**
@@ -139,7 +138,7 @@ class ListViewColumn
      */
     public function getHidden()
     {
-      return $this->hidden;
+        return $this->hidden;
     }
 
     /**
@@ -148,8 +147,8 @@ class ListViewColumn
      */
     public function setHidden($hidden)
     {
-      $this->hidden = $hidden;
-      return $this;
+        $this->hidden = $hidden;
+        return $this;
     }
 
     /**
@@ -157,7 +156,7 @@ class ListViewColumn
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -166,8 +165,8 @@ class ListViewColumn
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -175,7 +174,7 @@ class ListViewColumn
      */
     public function getSearchable()
     {
-      return $this->searchable;
+        return $this->searchable;
     }
 
     /**
@@ -184,8 +183,8 @@ class ListViewColumn
      */
     public function setSearchable($searchable)
     {
-      $this->searchable = $searchable;
-      return $this;
+        $this->searchable = $searchable;
+        return $this;
     }
 
     /**
@@ -193,7 +192,7 @@ class ListViewColumn
      */
     public function getSelectListItem()
     {
-      return $this->selectListItem;
+        return $this->selectListItem;
     }
 
     /**
@@ -202,8 +201,8 @@ class ListViewColumn
      */
     public function setSelectListItem($selectListItem)
     {
-      $this->selectListItem = $selectListItem;
-      return $this;
+        $this->selectListItem = $selectListItem;
+        return $this;
     }
 
     /**
@@ -211,7 +210,7 @@ class ListViewColumn
      */
     public function getSortDirection()
     {
-      return $this->sortDirection;
+        return $this->sortDirection;
     }
 
     /**
@@ -220,8 +219,8 @@ class ListViewColumn
      */
     public function setSortDirection($sortDirection)
     {
-      $this->sortDirection = $sortDirection;
-      return $this;
+        $this->sortDirection = $sortDirection;
+        return $this;
     }
 
     /**
@@ -229,7 +228,7 @@ class ListViewColumn
      */
     public function getSortIndex()
     {
-      return $this->sortIndex;
+        return $this->sortIndex;
     }
 
     /**
@@ -238,8 +237,8 @@ class ListViewColumn
      */
     public function setSortIndex($sortIndex)
     {
-      $this->sortIndex = $sortIndex;
-      return $this;
+        $this->sortIndex = $sortIndex;
+        return $this;
     }
 
     /**
@@ -247,7 +246,7 @@ class ListViewColumn
      */
     public function getSortable()
     {
-      return $this->sortable;
+        return $this->sortable;
     }
 
     /**
@@ -256,8 +255,8 @@ class ListViewColumn
      */
     public function setSortable($sortable)
     {
-      $this->sortable = $sortable;
-      return $this;
+        $this->sortable = $sortable;
+        return $this;
     }
 
     /**
@@ -265,7 +264,7 @@ class ListViewColumn
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -274,8 +273,7 @@ class ListViewColumn
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
-
 }

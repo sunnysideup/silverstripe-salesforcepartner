@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class DisableFeedTrackingHeader
 {
-
     /**
-     * @var boolean $disableFeedTracking
+     * @var boolean
      */
     protected $disableFeedTracking = null;
 
@@ -15,7 +14,7 @@ class DisableFeedTrackingHeader
      */
     public function __construct($disableFeedTracking = null)
     {
-      $this->disableFeedTracking = $disableFeedTracking;
+        $this->disableFeedTracking = $disableFeedTracking;
     }
 
     /**
@@ -23,7 +22,7 @@ class DisableFeedTrackingHeader
      */
     public function getDisableFeedTracking()
     {
-      return $this->disableFeedTracking;
+        return $this->disableFeedTracking;
     }
 
     /**
@@ -32,8 +31,7 @@ class DisableFeedTrackingHeader
      */
     public function setDisableFeedTracking($disableFeedTracking)
     {
-      $this->disableFeedTracking = $disableFeedTracking;
-      return $this;
+        $this->disableFeedTracking = $disableFeedTracking;
+        return $this;
     }
-
 }

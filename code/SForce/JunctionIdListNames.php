@@ -4,16 +4,13 @@ namespace SForce\Wsdl;
 
 class JunctionIdListNames
 {
-
     /**
-     * @var string[] $names
+     * @var string[]
      */
     protected $names = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -21,7 +18,7 @@ class JunctionIdListNames
      */
     public function getNames()
     {
-      return $this->names;
+        return $this->names;
     }
 
     /**
@@ -30,8 +27,7 @@ class JunctionIdListNames
      */
     public function setNames(array $names = null)
     {
-      $this->names = $names;
-      return $this;
+        $this->names = $names;
+        return $this;
     }
-
 }

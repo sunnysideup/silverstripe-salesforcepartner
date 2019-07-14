@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class DataCategoryGroupSobjectTypePair
 {
-
     /**
-     * @var string $dataCategoryGroupName
+     * @var string
      */
     protected $dataCategoryGroupName = null;
 
     /**
-     * @var string $sobject
+     * @var string
      */
     protected $sobject = null;
 
@@ -21,8 +20,8 @@ class DataCategoryGroupSobjectTypePair
      */
     public function __construct($dataCategoryGroupName = null, $sobject = null)
     {
-      $this->dataCategoryGroupName = $dataCategoryGroupName;
-      $this->sobject = $sobject;
+        $this->dataCategoryGroupName = $dataCategoryGroupName;
+        $this->sobject = $sobject;
     }
 
     /**
@@ -30,7 +29,7 @@ class DataCategoryGroupSobjectTypePair
      */
     public function getDataCategoryGroupName()
     {
-      return $this->dataCategoryGroupName;
+        return $this->dataCategoryGroupName;
     }
 
     /**
@@ -39,8 +38,8 @@ class DataCategoryGroupSobjectTypePair
      */
     public function setDataCategoryGroupName($dataCategoryGroupName)
     {
-      $this->dataCategoryGroupName = $dataCategoryGroupName;
-      return $this;
+        $this->dataCategoryGroupName = $dataCategoryGroupName;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class DataCategoryGroupSobjectTypePair
      */
     public function getSobject()
     {
-      return $this->sobject;
+        return $this->sobject;
     }
 
     /**
@@ -57,8 +56,7 @@ class DataCategoryGroupSobjectTypePair
      */
     public function setSobject($sobject)
     {
-      $this->sobject = $sobject;
-      return $this;
+        $this->sobject = $sobject;
+        return $this;
     }
-
 }

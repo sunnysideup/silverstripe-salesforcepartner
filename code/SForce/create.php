@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class create
 {
-
     /**
-     * @var sObject $sObjects
+     * @var sObject
      */
     protected $sObjects = null;
 
@@ -15,7 +14,7 @@ class create
      */
     public function __construct($sObjects = null)
     {
-      $this->sObjects = $sObjects;
+        $this->sObjects = $sObjects;
     }
 
     /**
@@ -23,7 +22,7 @@ class create
      */
     public function getSObjects()
     {
-      return $this->sObjects;
+        return $this->sObjects;
     }
 
     /**
@@ -32,8 +31,7 @@ class create
      */
     public function setSObjects($sObjects)
     {
-      $this->sObjects = $sObjects;
-      return $this;
+        $this->sObjects = $sObjects;
+        return $this;
     }
-
 }

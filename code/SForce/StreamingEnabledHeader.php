@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class StreamingEnabledHeader
 {
-
     /**
-     * @var boolean $streamingEnabled
+     * @var boolean
      */
     protected $streamingEnabled = null;
 
@@ -15,7 +14,7 @@ class StreamingEnabledHeader
      */
     public function __construct($streamingEnabled = null)
     {
-      $this->streamingEnabled = $streamingEnabled;
+        $this->streamingEnabled = $streamingEnabled;
     }
 
     /**
@@ -23,7 +22,7 @@ class StreamingEnabledHeader
      */
     public function getStreamingEnabled()
     {
-      return $this->streamingEnabled;
+        return $this->streamingEnabled;
     }
 
     /**
@@ -32,8 +31,7 @@ class StreamingEnabledHeader
      */
     public function setStreamingEnabled($streamingEnabled)
     {
-      $this->streamingEnabled = $streamingEnabled;
-      return $this;
+        $this->streamingEnabled = $streamingEnabled;
+        return $this;
     }
-
 }

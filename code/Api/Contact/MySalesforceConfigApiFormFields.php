@@ -5,7 +5,6 @@
  */
 class MySalesforceContactConfigApiFormFields extends Object
 {
-
     /**
      * return all the fields displaying configuration
      *
@@ -21,12 +20,11 @@ class MySalesforceContactConfigApiFormFields extends Object
         $createFieldsMethod,
         $updateFieldsMethod,
         $filterFieldsMethod
-    )
-    {
+    ) {
         return [
             self::fields_to_send_field(
                 'create',
-                $dataObject->$createFieldsMethod()
+                $dataObject->{$createFieldsMethod}()
             ),
 
             self::select_default_contact_fields_field(
@@ -36,7 +34,7 @@ class MySalesforceContactConfigApiFormFields extends Object
 
             self::fields_to_send_field(
                 'update',
-                $dataObject->$updateFieldsMethod()
+                $dataObject->{$updateFieldsMethod}()
             ),
 
             self::select_default_contact_fields_field(
@@ -46,7 +44,7 @@ class MySalesforceContactConfigApiFormFields extends Object
 
             self::fields_to_send_field(
                 'filter',
-                $dataObject->$filterFieldsMethod()
+                $dataObject->{$filterFieldsMethod}()
             ),
 
             self::select_default_contact_fields_field(
@@ -63,24 +61,24 @@ class MySalesforceContactConfigApiFormFields extends Object
     public static function login_details_field(
         $title = 'Account Used',
         $fieldName = 'SalesforceLoginDetailsField'
-    )
-    {
+    ) {
         $userName = Config::inst()->get('MySalesforcePartnerApiConnectionOnly', 'username');
         $password = Config::inst()->get('MySalesforcePartnerApiConnectionOnly', 'password');
         $security_token = Config::inst()->get('MySalesforcePartnerApiConnectionOnly', 'security_token');
         $wsdl_location = Config::inst()->get('MySalesforcePartnerApiConnectionOnly', 'wsdl_location');
         $array = [
             'UserName' => $userName,
-            'Password' => substr($password, 0, 2) . '...'.substr($password,  -2),
-            'Token' => substr($security_token, 0, 2) . '...'.substr($security_token,  -2),
+            'Password' => substr($password, 0, 2) . '...' . substr($password, -2),
+            'Token' => substr($security_token, 0, 2) . '...' . substr($security_token, -2),
             'WSDLLocation' => $wsdl_location,
         ];
         return LiteralField::create(
             $fieldName,
-            '<h2>'.$title.'</h2>'.
+            '<h2>' . $title . '</h2>' .
             self::array_to_html($array)
         );
     }
+
     /**
      * Field with list of contact record types shown
      * @param  string $fieldName
@@ -91,27 +89,26 @@ class MySalesforceContactConfigApiFormFields extends Object
     public static function list_of_contact_record_types_field(
         $fieldName = 'ListOfContactRecordTypes',
         $title = 'Contact Record Types Available'
-    )
-    {
+    ) {
         $data = MySalesforceContactApi::retrieve_contact_record_types();
 
         return LiteralField::create(
             $fieldName,
-            '<h2>'.$title.'</h2>'.
-            '<pre>'.print_r($data, 1).'</pre>'
+            '<h2>' . $title . '</h2>' .
+            '<pre>' . print_r($data, 1) . '</pre>'
         );
     }
 
     /**
      * Needs to link to a many-many relationship (SalesforceDefaultContactFields)
-     * @param  array $array fields to send
+     * @param  array $fieldName fields to send
      *
      * @return FormField
      */
     public static function select_default_contact_fields_field($fieldName, $title, $desc = '')
     {
         $count = SalesforceDefaultContactField::get()->count();
-        if($count === 0) {
+        if ($count === 0) {
             return HiddenField::create(
                 $fieldName,
                 $title
@@ -123,17 +120,16 @@ class MySalesforceContactConfigApiFormFields extends Object
             SalesforceDefaultContactField::get()->map()->toArray()
         )
             ->setDescription('
-                '.$desc.'
+                ' . $desc . '
                 <br />
                 You can
-                <a href="/admin/salesforceadmin/'.SalesforceDefaultContactField::class.'/">Add or Edit the options</a>
+                <a href="/admin/salesforceadmin/' . SalesforceDefaultContactField::class . '/">Add or Edit the options</a>
                 as required. Please change with care.
             ');
     }
 
     /**
-     *
-     * @param  array|DataList|null $array fields to send
+     * @param  array|DataList|null $type fields to send
      * @param  string $fieldName fields to send
      * @param  string $title fields to send
      *
@@ -143,14 +139,13 @@ class MySalesforceContactConfigApiFormFields extends Object
         $type,
         $mixed = null,
         $fieldName = 'FieldsToSendToSalesforce',
-        $title  = 'Default Fields for'
-    )
-    {
+        $title = 'Default Fields for'
+    ) {
         $fieldName .= ucfirst($type);
-        $title .= ' '.ucfirst($type);
+        $title .= ' ' . ucfirst($type);
 
         $array = [];
-        switch( $type ) {
+        switch ($type) {
             case 'create':
                 $array = MySalesforceContactConfigApi::get_fields_to_send_on_creation($mixed);
                 break;
@@ -161,12 +156,12 @@ class MySalesforceContactConfigApiFormFields extends Object
                 $array = MySalesforceContactConfigApi::get_fields_for_filter($mixed);
                 break;
             default:
-                user_error('type needs to be create, update or filter - currently set to: '.$type);
+                user_error('type needs to be create, update or filter - currently set to: ' . $type);
                 break;
         }
         return LiteralField::create(
             $fieldName,
-            '<h2>'.$title.'</h2>'.
+            '<h2>' . $title . '</h2>' .
             self::array_to_html($array)
         );
     }
@@ -179,13 +174,13 @@ class MySalesforceContactConfigApiFormFields extends Object
     protected static function array_to_html($array)
     {
         $htmlArray = [];
-        foreach($array as $field => $value) {
-            $htmlArray[] = $field.' = '.$value;
+        foreach ($array as $field => $value) {
+            $htmlArray[] = $field . ' = ' . $value;
         }
-        if(count($htmlArray) == 0) {
+        if (count($htmlArray) === 0) {
             $htmlArray[] = 'none';
         }
 
-        return '<p>- '.implode('</p><p> - ', $htmlArray).'</p>';
+        return '<p>- ' . implode('</p><p> - ', $htmlArray) . '</p>';
     }
 }

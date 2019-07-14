@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class OwnerChangeOption
 {
-
     /**
-     * @var OwnerChangeOptionType $type
+     * @var OwnerChangeOptionType
      */
     protected $type = null;
 
     /**
-     * @var boolean $execute
+     * @var boolean
      */
     protected $execute = null;
 
@@ -21,8 +20,8 @@ class OwnerChangeOption
      */
     public function __construct($type = null, $execute = null)
     {
-      $this->type = $type;
-      $this->execute = $execute;
+        $this->type = $type;
+        $this->execute = $execute;
     }
 
     /**
@@ -30,7 +29,7 @@ class OwnerChangeOption
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -39,8 +38,8 @@ class OwnerChangeOption
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class OwnerChangeOption
      */
     public function getExecute()
     {
-      return $this->execute;
+        return $this->execute;
     }
 
     /**
@@ -57,8 +56,7 @@ class OwnerChangeOption
      */
     public function setExecute($execute)
     {
-      $this->execute = $execute;
-      return $this;
+        $this->execute = $execute;
+        return $this;
     }
-
 }

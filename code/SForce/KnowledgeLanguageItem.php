@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class KnowledgeLanguageItem
 {
-
     /**
-     * @var boolean $active
+     * @var boolean
      */
     protected $active = null;
 
     /**
-     * @var string $assigneeId
+     * @var string
      */
     protected $assigneeId = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
@@ -26,8 +25,8 @@ class KnowledgeLanguageItem
      */
     public function __construct($active = null, $name = null)
     {
-      $this->active = $active;
-      $this->name = $name;
+        $this->active = $active;
+        $this->name = $name;
     }
 
     /**
@@ -35,7 +34,7 @@ class KnowledgeLanguageItem
      */
     public function getActive()
     {
-      return $this->active;
+        return $this->active;
     }
 
     /**
@@ -44,8 +43,8 @@ class KnowledgeLanguageItem
      */
     public function setActive($active)
     {
-      $this->active = $active;
-      return $this;
+        $this->active = $active;
+        return $this;
     }
 
     /**
@@ -53,7 +52,7 @@ class KnowledgeLanguageItem
      */
     public function getAssigneeId()
     {
-      return $this->assigneeId;
+        return $this->assigneeId;
     }
 
     /**
@@ -62,8 +61,8 @@ class KnowledgeLanguageItem
      */
     public function setAssigneeId($assigneeId)
     {
-      $this->assigneeId = $assigneeId;
-      return $this;
+        $this->assigneeId = $assigneeId;
+        return $this;
     }
 
     /**
@@ -71,7 +70,7 @@ class KnowledgeLanguageItem
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -80,8 +79,7 @@ class KnowledgeLanguageItem
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
-
 }

@@ -4,16 +4,13 @@ namespace SForce\Wsdl;
 
 class DescribePathAssistantsResult
 {
-
     /**
-     * @var DescribePathAssistant[] $pathAssistants
+     * @var DescribePathAssistant[]
      */
     protected $pathAssistants = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -21,7 +18,7 @@ class DescribePathAssistantsResult
      */
     public function getPathAssistants()
     {
-      return $this->pathAssistants;
+        return $this->pathAssistants;
     }
 
     /**
@@ -30,8 +27,7 @@ class DescribePathAssistantsResult
      */
     public function setPathAssistants(array $pathAssistants = null)
     {
-      $this->pathAssistants = $pathAssistants;
-      return $this;
+        $this->pathAssistants = $pathAssistants;
+        return $this;
     }
-
 }

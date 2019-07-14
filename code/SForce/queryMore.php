@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class queryMore
 {
-
     /**
-     * @var QueryLocator $queryLocator
+     * @var QueryLocator
      */
     protected $queryLocator = null;
 
@@ -15,7 +14,7 @@ class queryMore
      */
     public function __construct($queryLocator = null)
     {
-      $this->queryLocator = $queryLocator;
+        $this->queryLocator = $queryLocator;
     }
 
     /**
@@ -23,7 +22,7 @@ class queryMore
      */
     public function getQueryLocator()
     {
-      return $this->queryLocator;
+        return $this->queryLocator;
     }
 
     /**
@@ -32,8 +31,7 @@ class queryMore
      */
     public function setQueryLocator($queryLocator)
     {
-      $this->queryLocator = $queryLocator;
-      return $this;
+        $this->queryLocator = $queryLocator;
+        return $this;
     }
-
 }

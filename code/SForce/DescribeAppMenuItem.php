@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class DescribeAppMenuItem
 {
-
     /**
-     * @var DescribeColor[] $colors
+     * @var DescribeColor[]
      */
     protected $colors = null;
 
     /**
-     * @var string $content
+     * @var string
      */
     protected $content = null;
 
     /**
-     * @var DescribeIcon[] $icons
+     * @var DescribeIcon[]
      */
     protected $icons = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var string $type
+     * @var string
      */
     protected $type = null;
 
     /**
-     * @var string $url
+     * @var string
      */
     protected $url = null;
 
@@ -49,11 +48,11 @@ class DescribeAppMenuItem
      */
     public function __construct($content = null, $label = null, $name = null, $type = null, $url = null)
     {
-      $this->content = $content;
-      $this->label = $label;
-      $this->name = $name;
-      $this->type = $type;
-      $this->url = $url;
+        $this->content = $content;
+        $this->label = $label;
+        $this->name = $name;
+        $this->type = $type;
+        $this->url = $url;
     }
 
     /**
@@ -61,7 +60,7 @@ class DescribeAppMenuItem
      */
     public function getColors()
     {
-      return $this->colors;
+        return $this->colors;
     }
 
     /**
@@ -70,8 +69,8 @@ class DescribeAppMenuItem
      */
     public function setColors(array $colors = null)
     {
-      $this->colors = $colors;
-      return $this;
+        $this->colors = $colors;
+        return $this;
     }
 
     /**
@@ -79,7 +78,7 @@ class DescribeAppMenuItem
      */
     public function getContent()
     {
-      return $this->content;
+        return $this->content;
     }
 
     /**
@@ -88,8 +87,8 @@ class DescribeAppMenuItem
      */
     public function setContent($content)
     {
-      $this->content = $content;
-      return $this;
+        $this->content = $content;
+        return $this;
     }
 
     /**
@@ -97,7 +96,7 @@ class DescribeAppMenuItem
      */
     public function getIcons()
     {
-      return $this->icons;
+        return $this->icons;
     }
 
     /**
@@ -106,8 +105,8 @@ class DescribeAppMenuItem
      */
     public function setIcons(array $icons = null)
     {
-      $this->icons = $icons;
-      return $this;
+        $this->icons = $icons;
+        return $this;
     }
 
     /**
@@ -115,7 +114,7 @@ class DescribeAppMenuItem
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -124,8 +123,8 @@ class DescribeAppMenuItem
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -133,7 +132,7 @@ class DescribeAppMenuItem
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -142,8 +141,8 @@ class DescribeAppMenuItem
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -151,7 +150,7 @@ class DescribeAppMenuItem
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -160,8 +159,8 @@ class DescribeAppMenuItem
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
 
     /**
@@ -169,7 +168,7 @@ class DescribeAppMenuItem
      */
     public function getUrl()
     {
-      return $this->url;
+        return $this->url;
     }
 
     /**
@@ -178,8 +177,7 @@ class DescribeAppMenuItem
      */
     public function setUrl($url)
     {
-      $this->url = $url;
-      return $this;
+        $this->url = $url;
+        return $this;
     }
-
 }

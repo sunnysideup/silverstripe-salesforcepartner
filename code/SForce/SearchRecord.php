@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class SearchRecord
 {
-
     /**
-     * @var sObject $record
+     * @var sObject
      */
     protected $record = null;
 
     /**
-     * @var SearchRecordMetadata $searchRecordMetadata
+     * @var SearchRecordMetadata
      */
     protected $searchRecordMetadata = null;
 
     /**
-     * @var SearchSnippet $snippet
+     * @var SearchSnippet
      */
     protected $snippet = null;
 
@@ -25,7 +24,7 @@ class SearchRecord
      */
     public function __construct($record = null)
     {
-      $this->record = $record;
+        $this->record = $record;
     }
 
     /**
@@ -33,7 +32,7 @@ class SearchRecord
      */
     public function getRecord()
     {
-      return $this->record;
+        return $this->record;
     }
 
     /**
@@ -42,8 +41,8 @@ class SearchRecord
      */
     public function setRecord($record)
     {
-      $this->record = $record;
-      return $this;
+        $this->record = $record;
+        return $this;
     }
 
     /**
@@ -51,7 +50,7 @@ class SearchRecord
      */
     public function getSearchRecordMetadata()
     {
-      return $this->searchRecordMetadata;
+        return $this->searchRecordMetadata;
     }
 
     /**
@@ -60,8 +59,8 @@ class SearchRecord
      */
     public function setSearchRecordMetadata($searchRecordMetadata)
     {
-      $this->searchRecordMetadata = $searchRecordMetadata;
-      return $this;
+        $this->searchRecordMetadata = $searchRecordMetadata;
+        return $this;
     }
 
     /**
@@ -69,7 +68,7 @@ class SearchRecord
      */
     public function getSnippet()
     {
-      return $this->snippet;
+        return $this->snippet;
     }
 
     /**
@@ -78,8 +77,7 @@ class SearchRecord
      */
     public function setSnippet($snippet)
     {
-      $this->snippet = $snippet;
-      return $this;
+        $this->snippet = $snippet;
+        return $this;
     }
-
 }

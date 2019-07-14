@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class ProcessResult
 {
-
     /**
-     * @var ID[] $actorIds
+     * @var ID[]
      */
     protected $actorIds = null;
 
     /**
-     * @var ID $entityId
+     * @var ID
      */
     protected $entityId = null;
 
     /**
-     * @var Error[] $errors
+     * @var Error[]
      */
     protected $errors = null;
 
     /**
-     * @var ID $instanceId
+     * @var ID
      */
     protected $instanceId = null;
 
     /**
-     * @var string $instanceStatus
+     * @var string
      */
     protected $instanceStatus = null;
 
     /**
-     * @var ID[] $newWorkitemIds
+     * @var ID[]
      */
     protected $newWorkitemIds = null;
 
     /**
-     * @var boolean $success
+     * @var boolean
      */
     protected $success = null;
 
@@ -45,7 +44,7 @@ class ProcessResult
      */
     public function __construct($success = null)
     {
-      $this->success = $success;
+        $this->success = $success;
     }
 
     /**
@@ -53,7 +52,7 @@ class ProcessResult
      */
     public function getActorIds()
     {
-      return $this->actorIds;
+        return $this->actorIds;
     }
 
     /**
@@ -62,8 +61,8 @@ class ProcessResult
      */
     public function setActorIds(array $actorIds = null)
     {
-      $this->actorIds = $actorIds;
-      return $this;
+        $this->actorIds = $actorIds;
+        return $this;
     }
 
     /**
@@ -71,7 +70,7 @@ class ProcessResult
      */
     public function getEntityId()
     {
-      return $this->entityId;
+        return $this->entityId;
     }
 
     /**
@@ -80,8 +79,8 @@ class ProcessResult
      */
     public function setEntityId($entityId)
     {
-      $this->entityId = $entityId;
-      return $this;
+        $this->entityId = $entityId;
+        return $this;
     }
 
     /**
@@ -89,7 +88,7 @@ class ProcessResult
      */
     public function getErrors()
     {
-      return $this->errors;
+        return $this->errors;
     }
 
     /**
@@ -98,8 +97,8 @@ class ProcessResult
      */
     public function setErrors(array $errors = null)
     {
-      $this->errors = $errors;
-      return $this;
+        $this->errors = $errors;
+        return $this;
     }
 
     /**
@@ -107,7 +106,7 @@ class ProcessResult
      */
     public function getInstanceId()
     {
-      return $this->instanceId;
+        return $this->instanceId;
     }
 
     /**
@@ -116,8 +115,8 @@ class ProcessResult
      */
     public function setInstanceId($instanceId)
     {
-      $this->instanceId = $instanceId;
-      return $this;
+        $this->instanceId = $instanceId;
+        return $this;
     }
 
     /**
@@ -125,7 +124,7 @@ class ProcessResult
      */
     public function getInstanceStatus()
     {
-      return $this->instanceStatus;
+        return $this->instanceStatus;
     }
 
     /**
@@ -134,8 +133,8 @@ class ProcessResult
      */
     public function setInstanceStatus($instanceStatus)
     {
-      $this->instanceStatus = $instanceStatus;
-      return $this;
+        $this->instanceStatus = $instanceStatus;
+        return $this;
     }
 
     /**
@@ -143,7 +142,7 @@ class ProcessResult
      */
     public function getNewWorkitemIds()
     {
-      return $this->newWorkitemIds;
+        return $this->newWorkitemIds;
     }
 
     /**
@@ -152,8 +151,8 @@ class ProcessResult
      */
     public function setNewWorkitemIds(array $newWorkitemIds = null)
     {
-      $this->newWorkitemIds = $newWorkitemIds;
-      return $this;
+        $this->newWorkitemIds = $newWorkitemIds;
+        return $this;
     }
 
     /**
@@ -161,7 +160,7 @@ class ProcessResult
      */
     public function getSuccess()
     {
-      return $this->success;
+        return $this->success;
     }
 
     /**
@@ -170,8 +169,7 @@ class ProcessResult
      */
     public function setSuccess($success)
     {
-      $this->success = $success;
-      return $this;
+        $this->success = $success;
+        return $this;
     }
-
 }

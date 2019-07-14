@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class QueryOptions
 {
-
     /**
-     * @var int $batchSize
+     * @var int
      */
     protected $batchSize = null;
 
@@ -15,7 +14,7 @@ class QueryOptions
      */
     public function __construct($batchSize = null)
     {
-      $this->batchSize = $batchSize;
+        $this->batchSize = $batchSize;
     }
 
     /**
@@ -23,7 +22,7 @@ class QueryOptions
      */
     public function getBatchSize()
     {
-      return $this->batchSize;
+        return $this->batchSize;
     }
 
     /**
@@ -32,8 +31,7 @@ class QueryOptions
      */
     public function setBatchSize($batchSize)
     {
-      $this->batchSize = $batchSize;
-      return $this;
+        $this->batchSize = $batchSize;
+        return $this;
     }
-
 }

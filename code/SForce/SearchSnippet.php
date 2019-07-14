@@ -4,21 +4,18 @@ namespace SForce\Wsdl;
 
 class SearchSnippet
 {
-
     /**
-     * @var string $text
+     * @var string
      */
     protected $text = null;
 
     /**
-     * @var NameValuePair[] $wholeFields
+     * @var NameValuePair[]
      */
     protected $wholeFields = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -26,7 +23,7 @@ class SearchSnippet
      */
     public function getText()
     {
-      return $this->text;
+        return $this->text;
     }
 
     /**
@@ -35,8 +32,8 @@ class SearchSnippet
      */
     public function setText($text)
     {
-      $this->text = $text;
-      return $this;
+        $this->text = $text;
+        return $this;
     }
 
     /**
@@ -44,7 +41,7 @@ class SearchSnippet
      */
     public function getWholeFields()
     {
-      return $this->wholeFields;
+        return $this->wholeFields;
     }
 
     /**
@@ -53,8 +50,7 @@ class SearchSnippet
      */
     public function setWholeFields(array $wholeFields = null)
     {
-      $this->wholeFields = $wholeFields;
-      return $this;
+        $this->wholeFields = $wholeFields;
+        return $this;
     }
-
 }

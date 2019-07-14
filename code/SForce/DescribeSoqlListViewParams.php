@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class DescribeSoqlListViewParams
 {
-
     /**
-     * @var string $developerNameOrId
+     * @var string
      */
     protected $developerNameOrId = null;
 
     /**
-     * @var string $sobjectType
+     * @var string
      */
     protected $sobjectType = null;
 
@@ -20,7 +19,7 @@ class DescribeSoqlListViewParams
      */
     public function __construct($developerNameOrId = null)
     {
-      $this->developerNameOrId = $developerNameOrId;
+        $this->developerNameOrId = $developerNameOrId;
     }
 
     /**
@@ -28,7 +27,7 @@ class DescribeSoqlListViewParams
      */
     public function getDeveloperNameOrId()
     {
-      return $this->developerNameOrId;
+        return $this->developerNameOrId;
     }
 
     /**
@@ -37,8 +36,8 @@ class DescribeSoqlListViewParams
      */
     public function setDeveloperNameOrId($developerNameOrId)
     {
-      $this->developerNameOrId = $developerNameOrId;
-      return $this;
+        $this->developerNameOrId = $developerNameOrId;
+        return $this;
     }
 
     /**
@@ -46,7 +45,7 @@ class DescribeSoqlListViewParams
      */
     public function getSobjectType()
     {
-      return $this->sobjectType;
+        return $this->sobjectType;
     }
 
     /**
@@ -55,8 +54,7 @@ class DescribeSoqlListViewParams
      */
     public function setSobjectType($sobjectType)
     {
-      $this->sobjectType = $sobjectType;
-      return $this;
+        $this->sobjectType = $sobjectType;
+        return $this;
     }
-
 }

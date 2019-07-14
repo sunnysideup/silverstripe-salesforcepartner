@@ -4,36 +4,33 @@ namespace SForce\Wsdl;
 
 class NameCaseValue
 {
-
     /**
-     * @var Article $article
+     * @var Article
      */
     protected $article = null;
 
     /**
-     * @var CaseType $caseType
+     * @var CaseType
      */
     protected $caseType = null;
 
     /**
-     * @var GrammaticalNumber $number
+     * @var GrammaticalNumber
      */
     protected $number = null;
 
     /**
-     * @var Possessive $possessive
+     * @var Possessive
      */
     protected $possessive = null;
 
     /**
-     * @var string $value
+     * @var string
      */
     protected $value = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -41,7 +38,7 @@ class NameCaseValue
      */
     public function getArticle()
     {
-      return $this->article;
+        return $this->article;
     }
 
     /**
@@ -50,8 +47,8 @@ class NameCaseValue
      */
     public function setArticle($article)
     {
-      $this->article = $article;
-      return $this;
+        $this->article = $article;
+        return $this;
     }
 
     /**
@@ -59,7 +56,7 @@ class NameCaseValue
      */
     public function getCaseType()
     {
-      return $this->caseType;
+        return $this->caseType;
     }
 
     /**
@@ -68,8 +65,8 @@ class NameCaseValue
      */
     public function setCaseType($caseType)
     {
-      $this->caseType = $caseType;
-      return $this;
+        $this->caseType = $caseType;
+        return $this;
     }
 
     /**
@@ -77,7 +74,7 @@ class NameCaseValue
      */
     public function getNumber()
     {
-      return $this->number;
+        return $this->number;
     }
 
     /**
@@ -86,8 +83,8 @@ class NameCaseValue
      */
     public function setNumber($number)
     {
-      $this->number = $number;
-      return $this;
+        $this->number = $number;
+        return $this;
     }
 
     /**
@@ -95,7 +92,7 @@ class NameCaseValue
      */
     public function getPossessive()
     {
-      return $this->possessive;
+        return $this->possessive;
     }
 
     /**
@@ -104,8 +101,8 @@ class NameCaseValue
      */
     public function setPossessive($possessive)
     {
-      $this->possessive = $possessive;
-      return $this;
+        $this->possessive = $possessive;
+        return $this;
     }
 
     /**
@@ -113,7 +110,7 @@ class NameCaseValue
      */
     public function getValue()
     {
-      return $this->value;
+        return $this->value;
     }
 
     /**
@@ -122,8 +119,7 @@ class NameCaseValue
      */
     public function setValue($value)
     {
-      $this->value = $value;
-      return $this;
+        $this->value = $value;
+        return $this;
     }
-
 }

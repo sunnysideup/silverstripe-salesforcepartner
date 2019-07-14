@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class resetPassword
 {
-
     /**
-     * @var ID $userId
+     * @var ID
      */
     protected $userId = null;
 
@@ -15,7 +14,7 @@ class resetPassword
      */
     public function __construct($userId = null)
     {
-      $this->userId = $userId;
+        $this->userId = $userId;
     }
 
     /**
@@ -23,7 +22,7 @@ class resetPassword
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
@@ -32,8 +31,7 @@ class resetPassword
      */
     public function setUserId($userId)
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
-
 }

@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class ApiFault
 {
-
     /**
-     * @var ExceptionCode $exceptionCode
+     * @var ExceptionCode
      */
     protected $exceptionCode = null;
 
     /**
-     * @var string $exceptionMessage
+     * @var string
      */
     protected $exceptionMessage = null;
 
     /**
-     * @var ExtendedErrorDetails[] $extendedErrorDetails
+     * @var ExtendedErrorDetails[]
      */
     protected $extendedErrorDetails = null;
 
@@ -26,8 +25,8 @@ class ApiFault
      */
     public function __construct($exceptionCode = null, $exceptionMessage = null)
     {
-      $this->exceptionCode = $exceptionCode;
-      $this->exceptionMessage = $exceptionMessage;
+        $this->exceptionCode = $exceptionCode;
+        $this->exceptionMessage = $exceptionMessage;
     }
 
     /**
@@ -35,7 +34,7 @@ class ApiFault
      */
     public function getExceptionCode()
     {
-      return $this->exceptionCode;
+        return $this->exceptionCode;
     }
 
     /**
@@ -44,8 +43,8 @@ class ApiFault
      */
     public function setExceptionCode($exceptionCode)
     {
-      $this->exceptionCode = $exceptionCode;
-      return $this;
+        $this->exceptionCode = $exceptionCode;
+        return $this;
     }
 
     /**
@@ -53,7 +52,7 @@ class ApiFault
      */
     public function getExceptionMessage()
     {
-      return $this->exceptionMessage;
+        return $this->exceptionMessage;
     }
 
     /**
@@ -62,8 +61,8 @@ class ApiFault
      */
     public function setExceptionMessage($exceptionMessage)
     {
-      $this->exceptionMessage = $exceptionMessage;
-      return $this;
+        $this->exceptionMessage = $exceptionMessage;
+        return $this;
     }
 
     /**
@@ -71,7 +70,7 @@ class ApiFault
      */
     public function getExtendedErrorDetails()
     {
-      return $this->extendedErrorDetails;
+        return $this->extendedErrorDetails;
     }
 
     /**
@@ -80,8 +79,7 @@ class ApiFault
      */
     public function setExtendedErrorDetails(array $extendedErrorDetails = null)
     {
-      $this->extendedErrorDetails = $extendedErrorDetails;
-      return $this;
+        $this->extendedErrorDetails = $extendedErrorDetails;
+        return $this;
     }
-
 }

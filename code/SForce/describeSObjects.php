@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class describeSObjects
 {
-
     /**
-     * @var string $sObjectType
+     * @var string
      */
     protected $sObjectType = null;
 
@@ -15,7 +14,7 @@ class describeSObjects
      */
     public function __construct($sObjectType = null)
     {
-      $this->sObjectType = $sObjectType;
+        $this->sObjectType = $sObjectType;
     }
 
     /**
@@ -23,7 +22,7 @@ class describeSObjects
      */
     public function getSObjectType()
     {
-      return $this->sObjectType;
+        return $this->sObjectType;
     }
 
     /**
@@ -32,8 +31,7 @@ class describeSObjects
      */
     public function setSObjectType($sObjectType)
     {
-      $this->sObjectType = $sObjectType;
-      return $this;
+        $this->sObjectType = $sObjectType;
+        return $this;
     }
-
 }

@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class MergeRequest
 {
-
     /**
-     * @var AdditionalInformationMap[] $additionalInformationMap
+     * @var AdditionalInformationMap[]
      */
     protected $additionalInformationMap = null;
 
     /**
-     * @var sObject $masterRecord
+     * @var sObject
      */
     protected $masterRecord = null;
 
     /**
-     * @var ID[] $recordToMergeIds
+     * @var ID[]
      */
     protected $recordToMergeIds = null;
 
@@ -26,8 +25,8 @@ class MergeRequest
      */
     public function __construct($masterRecord = null, array $recordToMergeIds = null)
     {
-      $this->masterRecord = $masterRecord;
-      $this->recordToMergeIds = $recordToMergeIds;
+        $this->masterRecord = $masterRecord;
+        $this->recordToMergeIds = $recordToMergeIds;
     }
 
     /**
@@ -35,7 +34,7 @@ class MergeRequest
      */
     public function getAdditionalInformationMap()
     {
-      return $this->additionalInformationMap;
+        return $this->additionalInformationMap;
     }
 
     /**
@@ -44,8 +43,8 @@ class MergeRequest
      */
     public function setAdditionalInformationMap(array $additionalInformationMap = null)
     {
-      $this->additionalInformationMap = $additionalInformationMap;
-      return $this;
+        $this->additionalInformationMap = $additionalInformationMap;
+        return $this;
     }
 
     /**
@@ -53,7 +52,7 @@ class MergeRequest
      */
     public function getMasterRecord()
     {
-      return $this->masterRecord;
+        return $this->masterRecord;
     }
 
     /**
@@ -62,8 +61,8 @@ class MergeRequest
      */
     public function setMasterRecord($masterRecord)
     {
-      $this->masterRecord = $masterRecord;
-      return $this;
+        $this->masterRecord = $masterRecord;
+        return $this;
     }
 
     /**
@@ -71,7 +70,7 @@ class MergeRequest
      */
     public function getRecordToMergeIds()
     {
-      return $this->recordToMergeIds;
+        return $this->recordToMergeIds;
     }
 
     /**
@@ -80,8 +79,7 @@ class MergeRequest
      */
     public function setRecordToMergeIds(array $recordToMergeIds)
     {
-      $this->recordToMergeIds = $recordToMergeIds;
-      return $this;
+        $this->recordToMergeIds = $recordToMergeIds;
+        return $this;
     }
-
 }

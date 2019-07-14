@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class describeSoqlListViews
 {
-
     /**
-     * @var DescribeSoqlListViewsRequest $request
+     * @var DescribeSoqlListViewsRequest
      */
     protected $request = null;
 
@@ -15,7 +14,7 @@ class describeSoqlListViews
      */
     public function __construct($request = null)
     {
-      $this->request = $request;
+        $this->request = $request;
     }
 
     /**
@@ -23,7 +22,7 @@ class describeSoqlListViews
      */
     public function getRequest()
     {
-      return $this->request;
+        return $this->request;
     }
 
     /**
@@ -32,8 +31,7 @@ class describeSoqlListViews
      */
     public function setRequest($request)
     {
-      $this->request = $request;
-      return $this;
+        $this->request = $request;
+        return $this;
     }
-
 }

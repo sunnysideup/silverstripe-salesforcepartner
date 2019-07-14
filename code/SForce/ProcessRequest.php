@@ -4,21 +4,18 @@ namespace SForce\Wsdl;
 
 class ProcessRequest
 {
-
     /**
-     * @var string $comments
+     * @var string
      */
     protected $comments = null;
 
     /**
-     * @var ID[] $nextApproverIds
+     * @var ID[]
      */
     protected $nextApproverIds = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -26,7 +23,7 @@ class ProcessRequest
      */
     public function getComments()
     {
-      return $this->comments;
+        return $this->comments;
     }
 
     /**
@@ -35,8 +32,8 @@ class ProcessRequest
      */
     public function setComments($comments)
     {
-      $this->comments = $comments;
-      return $this;
+        $this->comments = $comments;
+        return $this;
     }
 
     /**
@@ -44,7 +41,7 @@ class ProcessRequest
      */
     public function getNextApproverIds()
     {
-      return $this->nextApproverIds;
+        return $this->nextApproverIds;
     }
 
     /**
@@ -53,8 +50,7 @@ class ProcessRequest
      */
     public function setNextApproverIds(array $nextApproverIds = null)
     {
-      $this->nextApproverIds = $nextApproverIds;
-      return $this;
+        $this->nextApproverIds = $nextApproverIds;
+        return $this;
     }
-
 }

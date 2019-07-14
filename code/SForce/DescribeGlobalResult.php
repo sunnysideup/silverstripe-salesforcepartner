@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class DescribeGlobalResult
 {
-
     /**
-     * @var string $encoding
+     * @var string
      */
     protected $encoding = null;
 
     /**
-     * @var int $maxBatchSize
+     * @var int
      */
     protected $maxBatchSize = null;
 
     /**
-     * @var DescribeGlobalSObjectResult[] $sobjects
+     * @var DescribeGlobalSObjectResult[]
      */
     protected $sobjects = null;
 
@@ -25,7 +24,7 @@ class DescribeGlobalResult
      */
     public function __construct($maxBatchSize = null)
     {
-      $this->maxBatchSize = $maxBatchSize;
+        $this->maxBatchSize = $maxBatchSize;
     }
 
     /**
@@ -33,7 +32,7 @@ class DescribeGlobalResult
      */
     public function getEncoding()
     {
-      return $this->encoding;
+        return $this->encoding;
     }
 
     /**
@@ -42,8 +41,8 @@ class DescribeGlobalResult
      */
     public function setEncoding($encoding)
     {
-      $this->encoding = $encoding;
-      return $this;
+        $this->encoding = $encoding;
+        return $this;
     }
 
     /**
@@ -51,7 +50,7 @@ class DescribeGlobalResult
      */
     public function getMaxBatchSize()
     {
-      return $this->maxBatchSize;
+        return $this->maxBatchSize;
     }
 
     /**
@@ -60,8 +59,8 @@ class DescribeGlobalResult
      */
     public function setMaxBatchSize($maxBatchSize)
     {
-      $this->maxBatchSize = $maxBatchSize;
-      return $this;
+        $this->maxBatchSize = $maxBatchSize;
+        return $this;
     }
 
     /**
@@ -69,7 +68,7 @@ class DescribeGlobalResult
      */
     public function getSobjects()
     {
-      return $this->sobjects;
+        return $this->sobjects;
     }
 
     /**
@@ -78,8 +77,7 @@ class DescribeGlobalResult
      */
     public function setSobjects(array $sobjects = null)
     {
-      $this->sobjects = $sobjects;
-      return $this;
+        $this->sobjects = $sobjects;
+        return $this;
     }
-
 }

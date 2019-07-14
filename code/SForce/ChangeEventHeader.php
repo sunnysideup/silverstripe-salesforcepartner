@@ -4,59 +4,58 @@ namespace SForce\Wsdl;
 
 class ChangeEventHeader
 {
-
     /**
-     * @var string $entityName
+     * @var string
      */
     protected $entityName = null;
 
     /**
-     * @var string[] $recordIds
+     * @var string[]
      */
     protected $recordIds = null;
 
     /**
-     * @var int $commitTimestamp
+     * @var int
      */
     protected $commitTimestamp = null;
 
     /**
-     * @var int $commitNumber
+     * @var int
      */
     protected $commitNumber = null;
 
     /**
-     * @var string $commitUser
+     * @var string
      */
     protected $commitUser = null;
 
     /**
-     * @var string[] $diffFields
+     * @var string[]
      */
     protected $diffFields = null;
 
     /**
-     * @var changeEventType $changeType
+     * @var changeEventType
      */
     protected $changeType = null;
 
     /**
-     * @var string $changeOrigin
+     * @var string
      */
     protected $changeOrigin = null;
 
     /**
-     * @var string $transactionKey
+     * @var string
      */
     protected $transactionKey = null;
 
     /**
-     * @var int $sequenceNumber
+     * @var int
      */
     protected $sequenceNumber = null;
 
     /**
-     * @var string[] $nulledFields
+     * @var string[]
      */
     protected $nulledFields = null;
 
@@ -73,15 +72,15 @@ class ChangeEventHeader
      */
     public function __construct($entityName = null, array $recordIds = null, $commitTimestamp = null, $commitNumber = null, $commitUser = null, $changeType = null, $changeOrigin = null, $transactionKey = null, $sequenceNumber = null)
     {
-      $this->entityName = $entityName;
-      $this->recordIds = $recordIds;
-      $this->commitTimestamp = $commitTimestamp;
-      $this->commitNumber = $commitNumber;
-      $this->commitUser = $commitUser;
-      $this->changeType = $changeType;
-      $this->changeOrigin = $changeOrigin;
-      $this->transactionKey = $transactionKey;
-      $this->sequenceNumber = $sequenceNumber;
+        $this->entityName = $entityName;
+        $this->recordIds = $recordIds;
+        $this->commitTimestamp = $commitTimestamp;
+        $this->commitNumber = $commitNumber;
+        $this->commitUser = $commitUser;
+        $this->changeType = $changeType;
+        $this->changeOrigin = $changeOrigin;
+        $this->transactionKey = $transactionKey;
+        $this->sequenceNumber = $sequenceNumber;
     }
 
     /**
@@ -89,7 +88,7 @@ class ChangeEventHeader
      */
     public function getEntityName()
     {
-      return $this->entityName;
+        return $this->entityName;
     }
 
     /**
@@ -98,8 +97,8 @@ class ChangeEventHeader
      */
     public function setEntityName($entityName)
     {
-      $this->entityName = $entityName;
-      return $this;
+        $this->entityName = $entityName;
+        return $this;
     }
 
     /**
@@ -107,7 +106,7 @@ class ChangeEventHeader
      */
     public function getRecordIds()
     {
-      return $this->recordIds;
+        return $this->recordIds;
     }
 
     /**
@@ -116,8 +115,8 @@ class ChangeEventHeader
      */
     public function setRecordIds(array $recordIds)
     {
-      $this->recordIds = $recordIds;
-      return $this;
+        $this->recordIds = $recordIds;
+        return $this;
     }
 
     /**
@@ -125,7 +124,7 @@ class ChangeEventHeader
      */
     public function getCommitTimestamp()
     {
-      return $this->commitTimestamp;
+        return $this->commitTimestamp;
     }
 
     /**
@@ -134,8 +133,8 @@ class ChangeEventHeader
      */
     public function setCommitTimestamp($commitTimestamp)
     {
-      $this->commitTimestamp = $commitTimestamp;
-      return $this;
+        $this->commitTimestamp = $commitTimestamp;
+        return $this;
     }
 
     /**
@@ -143,7 +142,7 @@ class ChangeEventHeader
      */
     public function getCommitNumber()
     {
-      return $this->commitNumber;
+        return $this->commitNumber;
     }
 
     /**
@@ -152,8 +151,8 @@ class ChangeEventHeader
      */
     public function setCommitNumber($commitNumber)
     {
-      $this->commitNumber = $commitNumber;
-      return $this;
+        $this->commitNumber = $commitNumber;
+        return $this;
     }
 
     /**
@@ -161,7 +160,7 @@ class ChangeEventHeader
      */
     public function getCommitUser()
     {
-      return $this->commitUser;
+        return $this->commitUser;
     }
 
     /**
@@ -170,8 +169,8 @@ class ChangeEventHeader
      */
     public function setCommitUser($commitUser)
     {
-      $this->commitUser = $commitUser;
-      return $this;
+        $this->commitUser = $commitUser;
+        return $this;
     }
 
     /**
@@ -179,7 +178,7 @@ class ChangeEventHeader
      */
     public function getDiffFields()
     {
-      return $this->diffFields;
+        return $this->diffFields;
     }
 
     /**
@@ -188,8 +187,8 @@ class ChangeEventHeader
      */
     public function setDiffFields(array $diffFields = null)
     {
-      $this->diffFields = $diffFields;
-      return $this;
+        $this->diffFields = $diffFields;
+        return $this;
     }
 
     /**
@@ -197,7 +196,7 @@ class ChangeEventHeader
      */
     public function getChangeType()
     {
-      return $this->changeType;
+        return $this->changeType;
     }
 
     /**
@@ -206,8 +205,8 @@ class ChangeEventHeader
      */
     public function setChangeType($changeType)
     {
-      $this->changeType = $changeType;
-      return $this;
+        $this->changeType = $changeType;
+        return $this;
     }
 
     /**
@@ -215,7 +214,7 @@ class ChangeEventHeader
      */
     public function getChangeOrigin()
     {
-      return $this->changeOrigin;
+        return $this->changeOrigin;
     }
 
     /**
@@ -224,8 +223,8 @@ class ChangeEventHeader
      */
     public function setChangeOrigin($changeOrigin)
     {
-      $this->changeOrigin = $changeOrigin;
-      return $this;
+        $this->changeOrigin = $changeOrigin;
+        return $this;
     }
 
     /**
@@ -233,7 +232,7 @@ class ChangeEventHeader
      */
     public function getTransactionKey()
     {
-      return $this->transactionKey;
+        return $this->transactionKey;
     }
 
     /**
@@ -242,8 +241,8 @@ class ChangeEventHeader
      */
     public function setTransactionKey($transactionKey)
     {
-      $this->transactionKey = $transactionKey;
-      return $this;
+        $this->transactionKey = $transactionKey;
+        return $this;
     }
 
     /**
@@ -251,7 +250,7 @@ class ChangeEventHeader
      */
     public function getSequenceNumber()
     {
-      return $this->sequenceNumber;
+        return $this->sequenceNumber;
     }
 
     /**
@@ -260,8 +259,8 @@ class ChangeEventHeader
      */
     public function setSequenceNumber($sequenceNumber)
     {
-      $this->sequenceNumber = $sequenceNumber;
-      return $this;
+        $this->sequenceNumber = $sequenceNumber;
+        return $this;
     }
 
     /**
@@ -269,7 +268,7 @@ class ChangeEventHeader
      */
     public function getNulledFields()
     {
-      return $this->nulledFields;
+        return $this->nulledFields;
     }
 
     /**
@@ -278,8 +277,7 @@ class ChangeEventHeader
      */
     public function setNulledFields(array $nulledFields = null)
     {
-      $this->nulledFields = $nulledFields;
-      return $this;
+        $this->nulledFields = $nulledFields;
+        return $this;
     }
-
 }

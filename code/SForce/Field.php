@@ -4,294 +4,293 @@ namespace SForce\Wsdl;
 
 class Field
 {
-
     /**
-     * @var boolean $aggregatable
+     * @var boolean
      */
     protected $aggregatable = null;
 
     /**
-     * @var boolean $aiPredictionField
+     * @var boolean
      */
     protected $aiPredictionField = null;
 
     /**
-     * @var boolean $autoNumber
+     * @var boolean
      */
     protected $autoNumber = null;
 
     /**
-     * @var int $byteLength
+     * @var int
      */
     protected $byteLength = null;
 
     /**
-     * @var boolean $calculated
+     * @var boolean
      */
     protected $calculated = null;
 
     /**
-     * @var string $calculatedFormula
+     * @var string
      */
     protected $calculatedFormula = null;
 
     /**
-     * @var boolean $cascadeDelete
+     * @var boolean
      */
     protected $cascadeDelete = null;
 
     /**
-     * @var boolean $caseSensitive
+     * @var boolean
      */
     protected $caseSensitive = null;
 
     /**
-     * @var string $compoundFieldName
+     * @var string
      */
     protected $compoundFieldName = null;
 
     /**
-     * @var string $controllerName
+     * @var string
      */
     protected $controllerName = null;
 
     /**
-     * @var boolean $createable
+     * @var boolean
      */
     protected $createable = null;
 
     /**
-     * @var boolean $custom
+     * @var boolean
      */
     protected $custom = null;
 
     /**
-     * @var boolean $dataTranslationEnabled
+     * @var boolean
      */
     protected $dataTranslationEnabled = null;
 
     /**
-     * @var anyType $defaultValue
+     * @var anyType
      */
     protected $defaultValue = null;
 
     /**
-     * @var string $defaultValueFormula
+     * @var string
      */
     protected $defaultValueFormula = null;
 
     /**
-     * @var boolean $defaultedOnCreate
+     * @var boolean
      */
     protected $defaultedOnCreate = null;
 
     /**
-     * @var boolean $dependentPicklist
+     * @var boolean
      */
     protected $dependentPicklist = null;
 
     /**
-     * @var boolean $deprecatedAndHidden
+     * @var boolean
      */
     protected $deprecatedAndHidden = null;
 
     /**
-     * @var int $digits
+     * @var int
      */
     protected $digits = null;
 
     /**
-     * @var boolean $displayLocationInDecimal
+     * @var boolean
      */
     protected $displayLocationInDecimal = null;
 
     /**
-     * @var boolean $encrypted
+     * @var boolean
      */
     protected $encrypted = null;
 
     /**
-     * @var boolean $externalId
+     * @var boolean
      */
     protected $externalId = null;
 
     /**
-     * @var string $extraTypeInfo
+     * @var string
      */
     protected $extraTypeInfo = null;
 
     /**
-     * @var boolean $filterable
+     * @var boolean
      */
     protected $filterable = null;
 
     /**
-     * @var FilteredLookupInfo $filteredLookupInfo
+     * @var FilteredLookupInfo
      */
     protected $filteredLookupInfo = null;
 
     /**
-     * @var boolean $formulaTreatNullNumberAsZero
+     * @var boolean
      */
     protected $formulaTreatNullNumberAsZero = null;
 
     /**
-     * @var boolean $groupable
+     * @var boolean
      */
     protected $groupable = null;
 
     /**
-     * @var boolean $highScaleNumber
+     * @var boolean
      */
     protected $highScaleNumber = null;
 
     /**
-     * @var boolean $htmlFormatted
+     * @var boolean
      */
     protected $htmlFormatted = null;
 
     /**
-     * @var boolean $idLookup
+     * @var boolean
      */
     protected $idLookup = null;
 
     /**
-     * @var string $inlineHelpText
+     * @var string
      */
     protected $inlineHelpText = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var int $length
+     * @var int
      */
     protected $length = null;
 
     /**
-     * @var string $mask
+     * @var string
      */
     protected $mask = null;
 
     /**
-     * @var string $maskType
+     * @var string
      */
     protected $maskType = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var boolean $nameField
+     * @var boolean
      */
     protected $nameField = null;
 
     /**
-     * @var boolean $namePointing
+     * @var boolean
      */
     protected $namePointing = null;
 
     /**
-     * @var boolean $nillable
+     * @var boolean
      */
     protected $nillable = null;
 
     /**
-     * @var boolean $permissionable
+     * @var boolean
      */
     protected $permissionable = null;
 
     /**
-     * @var PicklistEntry[] $picklistValues
+     * @var PicklistEntry[]
      */
     protected $picklistValues = null;
 
     /**
-     * @var boolean $polymorphicForeignKey
+     * @var boolean
      */
     protected $polymorphicForeignKey = null;
 
     /**
-     * @var int $precision
+     * @var int
      */
     protected $precision = null;
 
     /**
-     * @var boolean $queryByDistance
+     * @var boolean
      */
     protected $queryByDistance = null;
 
     /**
-     * @var string $referenceTargetField
+     * @var string
      */
     protected $referenceTargetField = null;
 
     /**
-     * @var string[] $referenceTo
+     * @var string[]
      */
     protected $referenceTo = null;
 
     /**
-     * @var string $relationshipName
+     * @var string
      */
     protected $relationshipName = null;
 
     /**
-     * @var int $relationshipOrder
+     * @var int
      */
     protected $relationshipOrder = null;
 
     /**
-     * @var boolean $restrictedDelete
+     * @var boolean
      */
     protected $restrictedDelete = null;
 
     /**
-     * @var boolean $restrictedPicklist
+     * @var boolean
      */
     protected $restrictedPicklist = null;
 
     /**
-     * @var int $scale
+     * @var int
      */
     protected $scale = null;
 
     /**
-     * @var boolean $searchPrefilterable
+     * @var boolean
      */
     protected $searchPrefilterable = null;
 
     /**
-     * @var soapType $soapType
+     * @var soapType
      */
     protected $soapType = null;
 
     /**
-     * @var boolean $sortable
+     * @var boolean
      */
     protected $sortable = null;
 
     /**
-     * @var fieldType $type
+     * @var fieldType
      */
     protected $type = null;
 
     /**
-     * @var boolean $unique
+     * @var boolean
      */
     protected $unique = null;
 
     /**
-     * @var boolean $updateable
+     * @var boolean
      */
     protected $updateable = null;
 
     /**
-     * @var boolean $writeRequiresMasterRead
+     * @var boolean
      */
     protected $writeRequiresMasterRead = null;
 
@@ -329,36 +328,36 @@ class Field
      */
     public function __construct($aggregatable = null, $aiPredictionField = null, $autoNumber = null, $byteLength = null, $calculated = null, $caseSensitive = null, $createable = null, $custom = null, $defaultedOnCreate = null, $deprecatedAndHidden = null, $digits = null, $filterable = null, $groupable = null, $idLookup = null, $label = null, $length = null, $name = null, $nameField = null, $nillable = null, $permissionable = null, $polymorphicForeignKey = null, $precision = null, $queryByDistance = null, $restrictedPicklist = null, $scale = null, $searchPrefilterable = null, $soapType = null, $type = null, $unique = null, $updateable = null)
     {
-      $this->aggregatable = $aggregatable;
-      $this->aiPredictionField = $aiPredictionField;
-      $this->autoNumber = $autoNumber;
-      $this->byteLength = $byteLength;
-      $this->calculated = $calculated;
-      $this->caseSensitive = $caseSensitive;
-      $this->createable = $createable;
-      $this->custom = $custom;
-      $this->defaultedOnCreate = $defaultedOnCreate;
-      $this->deprecatedAndHidden = $deprecatedAndHidden;
-      $this->digits = $digits;
-      $this->filterable = $filterable;
-      $this->groupable = $groupable;
-      $this->idLookup = $idLookup;
-      $this->label = $label;
-      $this->length = $length;
-      $this->name = $name;
-      $this->nameField = $nameField;
-      $this->nillable = $nillable;
-      $this->permissionable = $permissionable;
-      $this->polymorphicForeignKey = $polymorphicForeignKey;
-      $this->precision = $precision;
-      $this->queryByDistance = $queryByDistance;
-      $this->restrictedPicklist = $restrictedPicklist;
-      $this->scale = $scale;
-      $this->searchPrefilterable = $searchPrefilterable;
-      $this->soapType = $soapType;
-      $this->type = $type;
-      $this->unique = $unique;
-      $this->updateable = $updateable;
+        $this->aggregatable = $aggregatable;
+        $this->aiPredictionField = $aiPredictionField;
+        $this->autoNumber = $autoNumber;
+        $this->byteLength = $byteLength;
+        $this->calculated = $calculated;
+        $this->caseSensitive = $caseSensitive;
+        $this->createable = $createable;
+        $this->custom = $custom;
+        $this->defaultedOnCreate = $defaultedOnCreate;
+        $this->deprecatedAndHidden = $deprecatedAndHidden;
+        $this->digits = $digits;
+        $this->filterable = $filterable;
+        $this->groupable = $groupable;
+        $this->idLookup = $idLookup;
+        $this->label = $label;
+        $this->length = $length;
+        $this->name = $name;
+        $this->nameField = $nameField;
+        $this->nillable = $nillable;
+        $this->permissionable = $permissionable;
+        $this->polymorphicForeignKey = $polymorphicForeignKey;
+        $this->precision = $precision;
+        $this->queryByDistance = $queryByDistance;
+        $this->restrictedPicklist = $restrictedPicklist;
+        $this->scale = $scale;
+        $this->searchPrefilterable = $searchPrefilterable;
+        $this->soapType = $soapType;
+        $this->type = $type;
+        $this->unique = $unique;
+        $this->updateable = $updateable;
     }
 
     /**
@@ -366,7 +365,7 @@ class Field
      */
     public function getAggregatable()
     {
-      return $this->aggregatable;
+        return $this->aggregatable;
     }
 
     /**
@@ -375,8 +374,8 @@ class Field
      */
     public function setAggregatable($aggregatable)
     {
-      $this->aggregatable = $aggregatable;
-      return $this;
+        $this->aggregatable = $aggregatable;
+        return $this;
     }
 
     /**
@@ -384,7 +383,7 @@ class Field
      */
     public function getAiPredictionField()
     {
-      return $this->aiPredictionField;
+        return $this->aiPredictionField;
     }
 
     /**
@@ -393,8 +392,8 @@ class Field
      */
     public function setAiPredictionField($aiPredictionField)
     {
-      $this->aiPredictionField = $aiPredictionField;
-      return $this;
+        $this->aiPredictionField = $aiPredictionField;
+        return $this;
     }
 
     /**
@@ -402,7 +401,7 @@ class Field
      */
     public function getAutoNumber()
     {
-      return $this->autoNumber;
+        return $this->autoNumber;
     }
 
     /**
@@ -411,8 +410,8 @@ class Field
      */
     public function setAutoNumber($autoNumber)
     {
-      $this->autoNumber = $autoNumber;
-      return $this;
+        $this->autoNumber = $autoNumber;
+        return $this;
     }
 
     /**
@@ -420,7 +419,7 @@ class Field
      */
     public function getByteLength()
     {
-      return $this->byteLength;
+        return $this->byteLength;
     }
 
     /**
@@ -429,8 +428,8 @@ class Field
      */
     public function setByteLength($byteLength)
     {
-      $this->byteLength = $byteLength;
-      return $this;
+        $this->byteLength = $byteLength;
+        return $this;
     }
 
     /**
@@ -438,7 +437,7 @@ class Field
      */
     public function getCalculated()
     {
-      return $this->calculated;
+        return $this->calculated;
     }
 
     /**
@@ -447,8 +446,8 @@ class Field
      */
     public function setCalculated($calculated)
     {
-      $this->calculated = $calculated;
-      return $this;
+        $this->calculated = $calculated;
+        return $this;
     }
 
     /**
@@ -456,7 +455,7 @@ class Field
      */
     public function getCalculatedFormula()
     {
-      return $this->calculatedFormula;
+        return $this->calculatedFormula;
     }
 
     /**
@@ -465,8 +464,8 @@ class Field
      */
     public function setCalculatedFormula($calculatedFormula)
     {
-      $this->calculatedFormula = $calculatedFormula;
-      return $this;
+        $this->calculatedFormula = $calculatedFormula;
+        return $this;
     }
 
     /**
@@ -474,7 +473,7 @@ class Field
      */
     public function getCascadeDelete()
     {
-      return $this->cascadeDelete;
+        return $this->cascadeDelete;
     }
 
     /**
@@ -483,8 +482,8 @@ class Field
      */
     public function setCascadeDelete($cascadeDelete)
     {
-      $this->cascadeDelete = $cascadeDelete;
-      return $this;
+        $this->cascadeDelete = $cascadeDelete;
+        return $this;
     }
 
     /**
@@ -492,7 +491,7 @@ class Field
      */
     public function getCaseSensitive()
     {
-      return $this->caseSensitive;
+        return $this->caseSensitive;
     }
 
     /**
@@ -501,8 +500,8 @@ class Field
      */
     public function setCaseSensitive($caseSensitive)
     {
-      $this->caseSensitive = $caseSensitive;
-      return $this;
+        $this->caseSensitive = $caseSensitive;
+        return $this;
     }
 
     /**
@@ -510,7 +509,7 @@ class Field
      */
     public function getCompoundFieldName()
     {
-      return $this->compoundFieldName;
+        return $this->compoundFieldName;
     }
 
     /**
@@ -519,8 +518,8 @@ class Field
      */
     public function setCompoundFieldName($compoundFieldName)
     {
-      $this->compoundFieldName = $compoundFieldName;
-      return $this;
+        $this->compoundFieldName = $compoundFieldName;
+        return $this;
     }
 
     /**
@@ -528,7 +527,7 @@ class Field
      */
     public function getControllerName()
     {
-      return $this->controllerName;
+        return $this->controllerName;
     }
 
     /**
@@ -537,8 +536,8 @@ class Field
      */
     public function setControllerName($controllerName)
     {
-      $this->controllerName = $controllerName;
-      return $this;
+        $this->controllerName = $controllerName;
+        return $this;
     }
 
     /**
@@ -546,7 +545,7 @@ class Field
      */
     public function getCreateable()
     {
-      return $this->createable;
+        return $this->createable;
     }
 
     /**
@@ -555,8 +554,8 @@ class Field
      */
     public function setCreateable($createable)
     {
-      $this->createable = $createable;
-      return $this;
+        $this->createable = $createable;
+        return $this;
     }
 
     /**
@@ -564,7 +563,7 @@ class Field
      */
     public function getCustom()
     {
-      return $this->custom;
+        return $this->custom;
     }
 
     /**
@@ -573,8 +572,8 @@ class Field
      */
     public function setCustom($custom)
     {
-      $this->custom = $custom;
-      return $this;
+        $this->custom = $custom;
+        return $this;
     }
 
     /**
@@ -582,7 +581,7 @@ class Field
      */
     public function getDataTranslationEnabled()
     {
-      return $this->dataTranslationEnabled;
+        return $this->dataTranslationEnabled;
     }
 
     /**
@@ -591,8 +590,8 @@ class Field
      */
     public function setDataTranslationEnabled($dataTranslationEnabled)
     {
-      $this->dataTranslationEnabled = $dataTranslationEnabled;
-      return $this;
+        $this->dataTranslationEnabled = $dataTranslationEnabled;
+        return $this;
     }
 
     /**
@@ -600,7 +599,7 @@ class Field
      */
     public function getDefaultValue()
     {
-      return $this->defaultValue;
+        return $this->defaultValue;
     }
 
     /**
@@ -609,8 +608,8 @@ class Field
      */
     public function setDefaultValue($defaultValue)
     {
-      $this->defaultValue = $defaultValue;
-      return $this;
+        $this->defaultValue = $defaultValue;
+        return $this;
     }
 
     /**
@@ -618,7 +617,7 @@ class Field
      */
     public function getDefaultValueFormula()
     {
-      return $this->defaultValueFormula;
+        return $this->defaultValueFormula;
     }
 
     /**
@@ -627,8 +626,8 @@ class Field
      */
     public function setDefaultValueFormula($defaultValueFormula)
     {
-      $this->defaultValueFormula = $defaultValueFormula;
-      return $this;
+        $this->defaultValueFormula = $defaultValueFormula;
+        return $this;
     }
 
     /**
@@ -636,7 +635,7 @@ class Field
      */
     public function getDefaultedOnCreate()
     {
-      return $this->defaultedOnCreate;
+        return $this->defaultedOnCreate;
     }
 
     /**
@@ -645,8 +644,8 @@ class Field
      */
     public function setDefaultedOnCreate($defaultedOnCreate)
     {
-      $this->defaultedOnCreate = $defaultedOnCreate;
-      return $this;
+        $this->defaultedOnCreate = $defaultedOnCreate;
+        return $this;
     }
 
     /**
@@ -654,7 +653,7 @@ class Field
      */
     public function getDependentPicklist()
     {
-      return $this->dependentPicklist;
+        return $this->dependentPicklist;
     }
 
     /**
@@ -663,8 +662,8 @@ class Field
      */
     public function setDependentPicklist($dependentPicklist)
     {
-      $this->dependentPicklist = $dependentPicklist;
-      return $this;
+        $this->dependentPicklist = $dependentPicklist;
+        return $this;
     }
 
     /**
@@ -672,7 +671,7 @@ class Field
      */
     public function getDeprecatedAndHidden()
     {
-      return $this->deprecatedAndHidden;
+        return $this->deprecatedAndHidden;
     }
 
     /**
@@ -681,8 +680,8 @@ class Field
      */
     public function setDeprecatedAndHidden($deprecatedAndHidden)
     {
-      $this->deprecatedAndHidden = $deprecatedAndHidden;
-      return $this;
+        $this->deprecatedAndHidden = $deprecatedAndHidden;
+        return $this;
     }
 
     /**
@@ -690,7 +689,7 @@ class Field
      */
     public function getDigits()
     {
-      return $this->digits;
+        return $this->digits;
     }
 
     /**
@@ -699,8 +698,8 @@ class Field
      */
     public function setDigits($digits)
     {
-      $this->digits = $digits;
-      return $this;
+        $this->digits = $digits;
+        return $this;
     }
 
     /**
@@ -708,7 +707,7 @@ class Field
      */
     public function getDisplayLocationInDecimal()
     {
-      return $this->displayLocationInDecimal;
+        return $this->displayLocationInDecimal;
     }
 
     /**
@@ -717,8 +716,8 @@ class Field
      */
     public function setDisplayLocationInDecimal($displayLocationInDecimal)
     {
-      $this->displayLocationInDecimal = $displayLocationInDecimal;
-      return $this;
+        $this->displayLocationInDecimal = $displayLocationInDecimal;
+        return $this;
     }
 
     /**
@@ -726,7 +725,7 @@ class Field
      */
     public function getEncrypted()
     {
-      return $this->encrypted;
+        return $this->encrypted;
     }
 
     /**
@@ -735,8 +734,8 @@ class Field
      */
     public function setEncrypted($encrypted)
     {
-      $this->encrypted = $encrypted;
-      return $this;
+        $this->encrypted = $encrypted;
+        return $this;
     }
 
     /**
@@ -744,7 +743,7 @@ class Field
      */
     public function getExternalId()
     {
-      return $this->externalId;
+        return $this->externalId;
     }
 
     /**
@@ -753,8 +752,8 @@ class Field
      */
     public function setExternalId($externalId)
     {
-      $this->externalId = $externalId;
-      return $this;
+        $this->externalId = $externalId;
+        return $this;
     }
 
     /**
@@ -762,7 +761,7 @@ class Field
      */
     public function getExtraTypeInfo()
     {
-      return $this->extraTypeInfo;
+        return $this->extraTypeInfo;
     }
 
     /**
@@ -771,8 +770,8 @@ class Field
      */
     public function setExtraTypeInfo($extraTypeInfo)
     {
-      $this->extraTypeInfo = $extraTypeInfo;
-      return $this;
+        $this->extraTypeInfo = $extraTypeInfo;
+        return $this;
     }
 
     /**
@@ -780,7 +779,7 @@ class Field
      */
     public function getFilterable()
     {
-      return $this->filterable;
+        return $this->filterable;
     }
 
     /**
@@ -789,8 +788,8 @@ class Field
      */
     public function setFilterable($filterable)
     {
-      $this->filterable = $filterable;
-      return $this;
+        $this->filterable = $filterable;
+        return $this;
     }
 
     /**
@@ -798,7 +797,7 @@ class Field
      */
     public function getFilteredLookupInfo()
     {
-      return $this->filteredLookupInfo;
+        return $this->filteredLookupInfo;
     }
 
     /**
@@ -807,8 +806,8 @@ class Field
      */
     public function setFilteredLookupInfo($filteredLookupInfo)
     {
-      $this->filteredLookupInfo = $filteredLookupInfo;
-      return $this;
+        $this->filteredLookupInfo = $filteredLookupInfo;
+        return $this;
     }
 
     /**
@@ -816,7 +815,7 @@ class Field
      */
     public function getFormulaTreatNullNumberAsZero()
     {
-      return $this->formulaTreatNullNumberAsZero;
+        return $this->formulaTreatNullNumberAsZero;
     }
 
     /**
@@ -825,8 +824,8 @@ class Field
      */
     public function setFormulaTreatNullNumberAsZero($formulaTreatNullNumberAsZero)
     {
-      $this->formulaTreatNullNumberAsZero = $formulaTreatNullNumberAsZero;
-      return $this;
+        $this->formulaTreatNullNumberAsZero = $formulaTreatNullNumberAsZero;
+        return $this;
     }
 
     /**
@@ -834,7 +833,7 @@ class Field
      */
     public function getGroupable()
     {
-      return $this->groupable;
+        return $this->groupable;
     }
 
     /**
@@ -843,8 +842,8 @@ class Field
      */
     public function setGroupable($groupable)
     {
-      $this->groupable = $groupable;
-      return $this;
+        $this->groupable = $groupable;
+        return $this;
     }
 
     /**
@@ -852,7 +851,7 @@ class Field
      */
     public function getHighScaleNumber()
     {
-      return $this->highScaleNumber;
+        return $this->highScaleNumber;
     }
 
     /**
@@ -861,8 +860,8 @@ class Field
      */
     public function setHighScaleNumber($highScaleNumber)
     {
-      $this->highScaleNumber = $highScaleNumber;
-      return $this;
+        $this->highScaleNumber = $highScaleNumber;
+        return $this;
     }
 
     /**
@@ -870,7 +869,7 @@ class Field
      */
     public function getHtmlFormatted()
     {
-      return $this->htmlFormatted;
+        return $this->htmlFormatted;
     }
 
     /**
@@ -879,8 +878,8 @@ class Field
      */
     public function setHtmlFormatted($htmlFormatted)
     {
-      $this->htmlFormatted = $htmlFormatted;
-      return $this;
+        $this->htmlFormatted = $htmlFormatted;
+        return $this;
     }
 
     /**
@@ -888,7 +887,7 @@ class Field
      */
     public function getIdLookup()
     {
-      return $this->idLookup;
+        return $this->idLookup;
     }
 
     /**
@@ -897,8 +896,8 @@ class Field
      */
     public function setIdLookup($idLookup)
     {
-      $this->idLookup = $idLookup;
-      return $this;
+        $this->idLookup = $idLookup;
+        return $this;
     }
 
     /**
@@ -906,7 +905,7 @@ class Field
      */
     public function getInlineHelpText()
     {
-      return $this->inlineHelpText;
+        return $this->inlineHelpText;
     }
 
     /**
@@ -915,8 +914,8 @@ class Field
      */
     public function setInlineHelpText($inlineHelpText)
     {
-      $this->inlineHelpText = $inlineHelpText;
-      return $this;
+        $this->inlineHelpText = $inlineHelpText;
+        return $this;
     }
 
     /**
@@ -924,7 +923,7 @@ class Field
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -933,8 +932,8 @@ class Field
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -942,7 +941,7 @@ class Field
      */
     public function getLength()
     {
-      return $this->length;
+        return $this->length;
     }
 
     /**
@@ -951,8 +950,8 @@ class Field
      */
     public function setLength($length)
     {
-      $this->length = $length;
-      return $this;
+        $this->length = $length;
+        return $this;
     }
 
     /**
@@ -960,7 +959,7 @@ class Field
      */
     public function getMask()
     {
-      return $this->mask;
+        return $this->mask;
     }
 
     /**
@@ -969,8 +968,8 @@ class Field
      */
     public function setMask($mask)
     {
-      $this->mask = $mask;
-      return $this;
+        $this->mask = $mask;
+        return $this;
     }
 
     /**
@@ -978,7 +977,7 @@ class Field
      */
     public function getMaskType()
     {
-      return $this->maskType;
+        return $this->maskType;
     }
 
     /**
@@ -987,8 +986,8 @@ class Field
      */
     public function setMaskType($maskType)
     {
-      $this->maskType = $maskType;
-      return $this;
+        $this->maskType = $maskType;
+        return $this;
     }
 
     /**
@@ -996,7 +995,7 @@ class Field
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -1005,8 +1004,8 @@ class Field
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -1014,7 +1013,7 @@ class Field
      */
     public function getNameField()
     {
-      return $this->nameField;
+        return $this->nameField;
     }
 
     /**
@@ -1023,8 +1022,8 @@ class Field
      */
     public function setNameField($nameField)
     {
-      $this->nameField = $nameField;
-      return $this;
+        $this->nameField = $nameField;
+        return $this;
     }
 
     /**
@@ -1032,7 +1031,7 @@ class Field
      */
     public function getNamePointing()
     {
-      return $this->namePointing;
+        return $this->namePointing;
     }
 
     /**
@@ -1041,8 +1040,8 @@ class Field
      */
     public function setNamePointing($namePointing)
     {
-      $this->namePointing = $namePointing;
-      return $this;
+        $this->namePointing = $namePointing;
+        return $this;
     }
 
     /**
@@ -1050,7 +1049,7 @@ class Field
      */
     public function getNillable()
     {
-      return $this->nillable;
+        return $this->nillable;
     }
 
     /**
@@ -1059,8 +1058,8 @@ class Field
      */
     public function setNillable($nillable)
     {
-      $this->nillable = $nillable;
-      return $this;
+        $this->nillable = $nillable;
+        return $this;
     }
 
     /**
@@ -1068,7 +1067,7 @@ class Field
      */
     public function getPermissionable()
     {
-      return $this->permissionable;
+        return $this->permissionable;
     }
 
     /**
@@ -1077,8 +1076,8 @@ class Field
      */
     public function setPermissionable($permissionable)
     {
-      $this->permissionable = $permissionable;
-      return $this;
+        $this->permissionable = $permissionable;
+        return $this;
     }
 
     /**
@@ -1086,7 +1085,7 @@ class Field
      */
     public function getPicklistValues()
     {
-      return $this->picklistValues;
+        return $this->picklistValues;
     }
 
     /**
@@ -1095,8 +1094,8 @@ class Field
      */
     public function setPicklistValues(array $picklistValues = null)
     {
-      $this->picklistValues = $picklistValues;
-      return $this;
+        $this->picklistValues = $picklistValues;
+        return $this;
     }
 
     /**
@@ -1104,7 +1103,7 @@ class Field
      */
     public function getPolymorphicForeignKey()
     {
-      return $this->polymorphicForeignKey;
+        return $this->polymorphicForeignKey;
     }
 
     /**
@@ -1113,8 +1112,8 @@ class Field
      */
     public function setPolymorphicForeignKey($polymorphicForeignKey)
     {
-      $this->polymorphicForeignKey = $polymorphicForeignKey;
-      return $this;
+        $this->polymorphicForeignKey = $polymorphicForeignKey;
+        return $this;
     }
 
     /**
@@ -1122,7 +1121,7 @@ class Field
      */
     public function getPrecision()
     {
-      return $this->precision;
+        return $this->precision;
     }
 
     /**
@@ -1131,8 +1130,8 @@ class Field
      */
     public function setPrecision($precision)
     {
-      $this->precision = $precision;
-      return $this;
+        $this->precision = $precision;
+        return $this;
     }
 
     /**
@@ -1140,7 +1139,7 @@ class Field
      */
     public function getQueryByDistance()
     {
-      return $this->queryByDistance;
+        return $this->queryByDistance;
     }
 
     /**
@@ -1149,8 +1148,8 @@ class Field
      */
     public function setQueryByDistance($queryByDistance)
     {
-      $this->queryByDistance = $queryByDistance;
-      return $this;
+        $this->queryByDistance = $queryByDistance;
+        return $this;
     }
 
     /**
@@ -1158,7 +1157,7 @@ class Field
      */
     public function getReferenceTargetField()
     {
-      return $this->referenceTargetField;
+        return $this->referenceTargetField;
     }
 
     /**
@@ -1167,8 +1166,8 @@ class Field
      */
     public function setReferenceTargetField($referenceTargetField)
     {
-      $this->referenceTargetField = $referenceTargetField;
-      return $this;
+        $this->referenceTargetField = $referenceTargetField;
+        return $this;
     }
 
     /**
@@ -1176,7 +1175,7 @@ class Field
      */
     public function getReferenceTo()
     {
-      return $this->referenceTo;
+        return $this->referenceTo;
     }
 
     /**
@@ -1185,8 +1184,8 @@ class Field
      */
     public function setReferenceTo(array $referenceTo = null)
     {
-      $this->referenceTo = $referenceTo;
-      return $this;
+        $this->referenceTo = $referenceTo;
+        return $this;
     }
 
     /**
@@ -1194,7 +1193,7 @@ class Field
      */
     public function getRelationshipName()
     {
-      return $this->relationshipName;
+        return $this->relationshipName;
     }
 
     /**
@@ -1203,8 +1202,8 @@ class Field
      */
     public function setRelationshipName($relationshipName)
     {
-      $this->relationshipName = $relationshipName;
-      return $this;
+        $this->relationshipName = $relationshipName;
+        return $this;
     }
 
     /**
@@ -1212,7 +1211,7 @@ class Field
      */
     public function getRelationshipOrder()
     {
-      return $this->relationshipOrder;
+        return $this->relationshipOrder;
     }
 
     /**
@@ -1221,8 +1220,8 @@ class Field
      */
     public function setRelationshipOrder($relationshipOrder)
     {
-      $this->relationshipOrder = $relationshipOrder;
-      return $this;
+        $this->relationshipOrder = $relationshipOrder;
+        return $this;
     }
 
     /**
@@ -1230,7 +1229,7 @@ class Field
      */
     public function getRestrictedDelete()
     {
-      return $this->restrictedDelete;
+        return $this->restrictedDelete;
     }
 
     /**
@@ -1239,8 +1238,8 @@ class Field
      */
     public function setRestrictedDelete($restrictedDelete)
     {
-      $this->restrictedDelete = $restrictedDelete;
-      return $this;
+        $this->restrictedDelete = $restrictedDelete;
+        return $this;
     }
 
     /**
@@ -1248,7 +1247,7 @@ class Field
      */
     public function getRestrictedPicklist()
     {
-      return $this->restrictedPicklist;
+        return $this->restrictedPicklist;
     }
 
     /**
@@ -1257,8 +1256,8 @@ class Field
      */
     public function setRestrictedPicklist($restrictedPicklist)
     {
-      $this->restrictedPicklist = $restrictedPicklist;
-      return $this;
+        $this->restrictedPicklist = $restrictedPicklist;
+        return $this;
     }
 
     /**
@@ -1266,7 +1265,7 @@ class Field
      */
     public function getScale()
     {
-      return $this->scale;
+        return $this->scale;
     }
 
     /**
@@ -1275,8 +1274,8 @@ class Field
      */
     public function setScale($scale)
     {
-      $this->scale = $scale;
-      return $this;
+        $this->scale = $scale;
+        return $this;
     }
 
     /**
@@ -1284,7 +1283,7 @@ class Field
      */
     public function getSearchPrefilterable()
     {
-      return $this->searchPrefilterable;
+        return $this->searchPrefilterable;
     }
 
     /**
@@ -1293,8 +1292,8 @@ class Field
      */
     public function setSearchPrefilterable($searchPrefilterable)
     {
-      $this->searchPrefilterable = $searchPrefilterable;
-      return $this;
+        $this->searchPrefilterable = $searchPrefilterable;
+        return $this;
     }
 
     /**
@@ -1302,7 +1301,7 @@ class Field
      */
     public function getSoapType()
     {
-      return $this->soapType;
+        return $this->soapType;
     }
 
     /**
@@ -1311,8 +1310,8 @@ class Field
      */
     public function setSoapType($soapType)
     {
-      $this->soapType = $soapType;
-      return $this;
+        $this->soapType = $soapType;
+        return $this;
     }
 
     /**
@@ -1320,7 +1319,7 @@ class Field
      */
     public function getSortable()
     {
-      return $this->sortable;
+        return $this->sortable;
     }
 
     /**
@@ -1329,8 +1328,8 @@ class Field
      */
     public function setSortable($sortable)
     {
-      $this->sortable = $sortable;
-      return $this;
+        $this->sortable = $sortable;
+        return $this;
     }
 
     /**
@@ -1338,7 +1337,7 @@ class Field
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -1347,8 +1346,8 @@ class Field
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
 
     /**
@@ -1356,7 +1355,7 @@ class Field
      */
     public function getUnique()
     {
-      return $this->unique;
+        return $this->unique;
     }
 
     /**
@@ -1365,8 +1364,8 @@ class Field
      */
     public function setUnique($unique)
     {
-      $this->unique = $unique;
-      return $this;
+        $this->unique = $unique;
+        return $this;
     }
 
     /**
@@ -1374,7 +1373,7 @@ class Field
      */
     public function getUpdateable()
     {
-      return $this->updateable;
+        return $this->updateable;
     }
 
     /**
@@ -1383,8 +1382,8 @@ class Field
      */
     public function setUpdateable($updateable)
     {
-      $this->updateable = $updateable;
-      return $this;
+        $this->updateable = $updateable;
+        return $this;
     }
 
     /**
@@ -1392,7 +1391,7 @@ class Field
      */
     public function getWriteRequiresMasterRead()
     {
-      return $this->writeRequiresMasterRead;
+        return $this->writeRequiresMasterRead;
     }
 
     /**
@@ -1401,8 +1400,7 @@ class Field
      */
     public function setWriteRequiresMasterRead($writeRequiresMasterRead)
     {
-      $this->writeRequiresMasterRead = $writeRequiresMasterRead;
-      return $this;
+        $this->writeRequiresMasterRead = $writeRequiresMasterRead;
+        return $this;
     }
-
 }

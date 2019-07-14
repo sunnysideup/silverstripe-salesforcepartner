@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class describeDataCategoryGroupStructures
 {
-
     /**
-     * @var DataCategoryGroupSobjectTypePair $pairs
+     * @var DataCategoryGroupSobjectTypePair
      */
     protected $pairs = null;
 
     /**
-     * @var boolean $topCategoriesOnly
+     * @var boolean
      */
     protected $topCategoriesOnly = null;
 
@@ -21,8 +20,8 @@ class describeDataCategoryGroupStructures
      */
     public function __construct($pairs = null, $topCategoriesOnly = null)
     {
-      $this->pairs = $pairs;
-      $this->topCategoriesOnly = $topCategoriesOnly;
+        $this->pairs = $pairs;
+        $this->topCategoriesOnly = $topCategoriesOnly;
     }
 
     /**
@@ -30,7 +29,7 @@ class describeDataCategoryGroupStructures
      */
     public function getPairs()
     {
-      return $this->pairs;
+        return $this->pairs;
     }
 
     /**
@@ -39,8 +38,8 @@ class describeDataCategoryGroupStructures
      */
     public function setPairs($pairs)
     {
-      $this->pairs = $pairs;
-      return $this;
+        $this->pairs = $pairs;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class describeDataCategoryGroupStructures
      */
     public function getTopCategoriesOnly()
     {
-      return $this->topCategoriesOnly;
+        return $this->topCategoriesOnly;
     }
 
     /**
@@ -57,8 +56,7 @@ class describeDataCategoryGroupStructures
      */
     public function setTopCategoriesOnly($topCategoriesOnly)
     {
-      $this->topCategoriesOnly = $topCategoriesOnly;
-      return $this;
+        $this->topCategoriesOnly = $topCategoriesOnly;
+        return $this;
     }
-
 }

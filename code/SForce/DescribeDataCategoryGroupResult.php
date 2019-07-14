@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class DescribeDataCategoryGroupResult
 {
-
     /**
-     * @var int $categoryCount
+     * @var int
      */
     protected $categoryCount = null;
 
     /**
-     * @var string $description
+     * @var string
      */
     protected $description = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var string $sobject
+     * @var string
      */
     protected $sobject = null;
 
@@ -39,11 +38,11 @@ class DescribeDataCategoryGroupResult
      */
     public function __construct($categoryCount = null, $description = null, $label = null, $name = null, $sobject = null)
     {
-      $this->categoryCount = $categoryCount;
-      $this->description = $description;
-      $this->label = $label;
-      $this->name = $name;
-      $this->sobject = $sobject;
+        $this->categoryCount = $categoryCount;
+        $this->description = $description;
+        $this->label = $label;
+        $this->name = $name;
+        $this->sobject = $sobject;
     }
 
     /**
@@ -51,7 +50,7 @@ class DescribeDataCategoryGroupResult
      */
     public function getCategoryCount()
     {
-      return $this->categoryCount;
+        return $this->categoryCount;
     }
 
     /**
@@ -60,8 +59,8 @@ class DescribeDataCategoryGroupResult
      */
     public function setCategoryCount($categoryCount)
     {
-      $this->categoryCount = $categoryCount;
-      return $this;
+        $this->categoryCount = $categoryCount;
+        return $this;
     }
 
     /**
@@ -69,7 +68,7 @@ class DescribeDataCategoryGroupResult
      */
     public function getDescription()
     {
-      return $this->description;
+        return $this->description;
     }
 
     /**
@@ -78,8 +77,8 @@ class DescribeDataCategoryGroupResult
      */
     public function setDescription($description)
     {
-      $this->description = $description;
-      return $this;
+        $this->description = $description;
+        return $this;
     }
 
     /**
@@ -87,7 +86,7 @@ class DescribeDataCategoryGroupResult
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -96,8 +95,8 @@ class DescribeDataCategoryGroupResult
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -105,7 +104,7 @@ class DescribeDataCategoryGroupResult
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -114,8 +113,8 @@ class DescribeDataCategoryGroupResult
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -123,7 +122,7 @@ class DescribeDataCategoryGroupResult
      */
     public function getSobject()
     {
-      return $this->sobject;
+        return $this->sobject;
     }
 
     /**
@@ -132,8 +131,7 @@ class DescribeDataCategoryGroupResult
      */
     public function setSobject($sobject)
     {
-      $this->sobject = $sobject;
-      return $this;
+        $this->sobject = $sobject;
+        return $this;
     }
-
 }

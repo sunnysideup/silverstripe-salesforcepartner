@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class PackageVersionHeader
 {
-
     /**
-     * @var PackageVersion $packageVersions
+     * @var PackageVersion
      */
     protected $packageVersions = null;
 
@@ -15,7 +14,7 @@ class PackageVersionHeader
      */
     public function __construct($packageVersions = null)
     {
-      $this->packageVersions = $packageVersions;
+        $this->packageVersions = $packageVersions;
     }
 
     /**
@@ -23,7 +22,7 @@ class PackageVersionHeader
      */
     public function getPackageVersions()
     {
-      return $this->packageVersions;
+        return $this->packageVersions;
     }
 
     /**
@@ -32,8 +31,7 @@ class PackageVersionHeader
      */
     public function setPackageVersions($packageVersions)
     {
-      $this->packageVersions = $packageVersions;
-      return $this;
+        $this->packageVersions = $packageVersions;
+        return $this;
     }
-
 }

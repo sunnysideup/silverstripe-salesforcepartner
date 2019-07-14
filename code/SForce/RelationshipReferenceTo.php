@@ -4,16 +4,13 @@ namespace SForce\Wsdl;
 
 class RelationshipReferenceTo
 {
-
     /**
-     * @var string[] $referenceTo
+     * @var string[]
      */
     protected $referenceTo = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -21,7 +18,7 @@ class RelationshipReferenceTo
      */
     public function getReferenceTo()
     {
-      return $this->referenceTo;
+        return $this->referenceTo;
     }
 
     /**
@@ -30,8 +27,7 @@ class RelationshipReferenceTo
      */
     public function setReferenceTo(array $referenceTo = null)
     {
-      $this->referenceTo = $referenceTo;
-      return $this;
+        $this->referenceTo = $referenceTo;
+        return $this;
     }
-
 }

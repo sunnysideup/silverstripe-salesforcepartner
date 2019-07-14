@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class EmailFileAttachment
 {
-
     /**
-     * @var base64Binary $body
+     * @var base64Binary
      */
     protected $body = null;
 
     /**
-     * @var string $contentType
+     * @var string
      */
     protected $contentType = null;
 
     /**
-     * @var string $fileName
+     * @var string
      */
     protected $fileName = null;
 
     /**
-     * @var ID $id
+     * @var ID
      */
     protected $id = null;
 
     /**
-     * @var boolean $inline
+     * @var boolean
      */
     protected $inline = null;
 
@@ -35,7 +34,7 @@ class EmailFileAttachment
      */
     public function __construct($fileName = null)
     {
-      $this->fileName = $fileName;
+        $this->fileName = $fileName;
     }
 
     /**
@@ -43,7 +42,7 @@ class EmailFileAttachment
      */
     public function getBody()
     {
-      return $this->body;
+        return $this->body;
     }
 
     /**
@@ -52,8 +51,8 @@ class EmailFileAttachment
      */
     public function setBody($body)
     {
-      $this->body = $body;
-      return $this;
+        $this->body = $body;
+        return $this;
     }
 
     /**
@@ -61,7 +60,7 @@ class EmailFileAttachment
      */
     public function getContentType()
     {
-      return $this->contentType;
+        return $this->contentType;
     }
 
     /**
@@ -70,8 +69,8 @@ class EmailFileAttachment
      */
     public function setContentType($contentType)
     {
-      $this->contentType = $contentType;
-      return $this;
+        $this->contentType = $contentType;
+        return $this;
     }
 
     /**
@@ -79,7 +78,7 @@ class EmailFileAttachment
      */
     public function getFileName()
     {
-      return $this->fileName;
+        return $this->fileName;
     }
 
     /**
@@ -88,8 +87,8 @@ class EmailFileAttachment
      */
     public function setFileName($fileName)
     {
-      $this->fileName = $fileName;
-      return $this;
+        $this->fileName = $fileName;
+        return $this;
     }
 
     /**
@@ -97,7 +96,7 @@ class EmailFileAttachment
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
@@ -106,8 +105,8 @@ class EmailFileAttachment
      */
     public function setId($id)
     {
-      $this->id = $id;
-      return $this;
+        $this->id = $id;
+        return $this;
     }
 
     /**
@@ -115,7 +114,7 @@ class EmailFileAttachment
      */
     public function getInline()
     {
-      return $this->inline;
+        return $this->inline;
     }
 
     /**
@@ -124,8 +123,7 @@ class EmailFileAttachment
      */
     public function setInline($inline)
     {
-      $this->inline = $inline;
-      return $this;
+        $this->inline = $inline;
+        return $this;
     }
-
 }

@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class ExecuteListViewRequest
 {
-
     /**
-     * @var string $developerNameOrId
+     * @var string
      */
     protected $developerNameOrId = null;
 
     /**
-     * @var int $limit
+     * @var int
      */
     protected $limit = null;
 
     /**
-     * @var int $offset
+     * @var int
      */
     protected $offset = null;
 
     /**
-     * @var ListViewOrderBy[] $orderBy
+     * @var ListViewOrderBy[]
      */
     protected $orderBy = null;
 
     /**
-     * @var string $sobjectType
+     * @var string
      */
     protected $sobjectType = null;
 
@@ -37,9 +36,9 @@ class ExecuteListViewRequest
      */
     public function __construct($developerNameOrId = null, array $orderBy = null, $sobjectType = null)
     {
-      $this->developerNameOrId = $developerNameOrId;
-      $this->orderBy = $orderBy;
-      $this->sobjectType = $sobjectType;
+        $this->developerNameOrId = $developerNameOrId;
+        $this->orderBy = $orderBy;
+        $this->sobjectType = $sobjectType;
     }
 
     /**
@@ -47,7 +46,7 @@ class ExecuteListViewRequest
      */
     public function getDeveloperNameOrId()
     {
-      return $this->developerNameOrId;
+        return $this->developerNameOrId;
     }
 
     /**
@@ -56,8 +55,8 @@ class ExecuteListViewRequest
      */
     public function setDeveloperNameOrId($developerNameOrId)
     {
-      $this->developerNameOrId = $developerNameOrId;
-      return $this;
+        $this->developerNameOrId = $developerNameOrId;
+        return $this;
     }
 
     /**
@@ -65,7 +64,7 @@ class ExecuteListViewRequest
      */
     public function getLimit()
     {
-      return $this->limit;
+        return $this->limit;
     }
 
     /**
@@ -74,8 +73,8 @@ class ExecuteListViewRequest
      */
     public function setLimit($limit)
     {
-      $this->limit = $limit;
-      return $this;
+        $this->limit = $limit;
+        return $this;
     }
 
     /**
@@ -83,7 +82,7 @@ class ExecuteListViewRequest
      */
     public function getOffset()
     {
-      return $this->offset;
+        return $this->offset;
     }
 
     /**
@@ -92,8 +91,8 @@ class ExecuteListViewRequest
      */
     public function setOffset($offset)
     {
-      $this->offset = $offset;
-      return $this;
+        $this->offset = $offset;
+        return $this;
     }
 
     /**
@@ -101,7 +100,7 @@ class ExecuteListViewRequest
      */
     public function getOrderBy()
     {
-      return $this->orderBy;
+        return $this->orderBy;
     }
 
     /**
@@ -110,8 +109,8 @@ class ExecuteListViewRequest
      */
     public function setOrderBy(array $orderBy)
     {
-      $this->orderBy = $orderBy;
-      return $this;
+        $this->orderBy = $orderBy;
+        return $this;
     }
 
     /**
@@ -119,7 +118,7 @@ class ExecuteListViewRequest
      */
     public function getSobjectType()
     {
-      return $this->sobjectType;
+        return $this->sobjectType;
     }
 
     /**
@@ -128,8 +127,7 @@ class ExecuteListViewRequest
      */
     public function setSobjectType($sobjectType)
     {
-      $this->sobjectType = $sobjectType;
-      return $this;
+        $this->sobjectType = $sobjectType;
+        return $this;
     }
-
 }

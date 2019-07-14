@@ -4,34 +4,33 @@ namespace SForce\Wsdl;
 
 class DescribeNounResult
 {
-
     /**
-     * @var NameCaseValue[] $caseValues
+     * @var NameCaseValue[]
      */
     protected $caseValues = null;
 
     /**
-     * @var string $developerName
+     * @var string
      */
     protected $developerName = null;
 
     /**
-     * @var Gender $gender
+     * @var Gender
      */
     protected $gender = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var string $pluralAlias
+     * @var string
      */
     protected $pluralAlias = null;
 
     /**
-     * @var StartsWith $startsWith
+     * @var StartsWith
      */
     protected $startsWith = null;
 
@@ -41,8 +40,8 @@ class DescribeNounResult
      */
     public function __construct($developerName = null, $name = null)
     {
-      $this->developerName = $developerName;
-      $this->name = $name;
+        $this->developerName = $developerName;
+        $this->name = $name;
     }
 
     /**
@@ -50,7 +49,7 @@ class DescribeNounResult
      */
     public function getCaseValues()
     {
-      return $this->caseValues;
+        return $this->caseValues;
     }
 
     /**
@@ -59,8 +58,8 @@ class DescribeNounResult
      */
     public function setCaseValues(array $caseValues = null)
     {
-      $this->caseValues = $caseValues;
-      return $this;
+        $this->caseValues = $caseValues;
+        return $this;
     }
 
     /**
@@ -68,7 +67,7 @@ class DescribeNounResult
      */
     public function getDeveloperName()
     {
-      return $this->developerName;
+        return $this->developerName;
     }
 
     /**
@@ -77,8 +76,8 @@ class DescribeNounResult
      */
     public function setDeveloperName($developerName)
     {
-      $this->developerName = $developerName;
-      return $this;
+        $this->developerName = $developerName;
+        return $this;
     }
 
     /**
@@ -86,7 +85,7 @@ class DescribeNounResult
      */
     public function getGender()
     {
-      return $this->gender;
+        return $this->gender;
     }
 
     /**
@@ -95,8 +94,8 @@ class DescribeNounResult
      */
     public function setGender($gender)
     {
-      $this->gender = $gender;
-      return $this;
+        $this->gender = $gender;
+        return $this;
     }
 
     /**
@@ -104,7 +103,7 @@ class DescribeNounResult
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -113,8 +112,8 @@ class DescribeNounResult
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -122,7 +121,7 @@ class DescribeNounResult
      */
     public function getPluralAlias()
     {
-      return $this->pluralAlias;
+        return $this->pluralAlias;
     }
 
     /**
@@ -131,8 +130,8 @@ class DescribeNounResult
      */
     public function setPluralAlias($pluralAlias)
     {
-      $this->pluralAlias = $pluralAlias;
-      return $this;
+        $this->pluralAlias = $pluralAlias;
+        return $this;
     }
 
     /**
@@ -140,7 +139,7 @@ class DescribeNounResult
      */
     public function getStartsWith()
     {
-      return $this->startsWith;
+        return $this->startsWith;
     }
 
     /**
@@ -149,8 +148,7 @@ class DescribeNounResult
      */
     public function setStartsWith($startsWith)
     {
-      $this->startsWith = $startsWith;
-      return $this;
+        $this->startsWith = $startsWith;
+        return $this;
     }
-
 }

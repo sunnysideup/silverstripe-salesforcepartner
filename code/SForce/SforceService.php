@@ -2,366 +2,364 @@
 
 namespace SForce\Wsdl;
 
-
 /**
  * Sforce SOAP API
  */
 class SforceService extends \SoapClient
 {
-
     /**
-     * @var array $classmap The defined classes
+     * @var array The defined classes
      */
-    private static $classmap = array (
-      'sObject' => 'SForce\\Wsdl\\sObject',
-      'address' => 'SForce\\Wsdl\\address',
-      'location' => 'SForce\\Wsdl\\location',
-      'QueryResult' => 'SForce\\Wsdl\\QueryResult',
-      'SearchResult' => 'SForce\\Wsdl\\SearchResult',
-      'SearchRecord' => 'SForce\\Wsdl\\SearchRecord',
-      'SearchRecordMetadata' => 'SForce\\Wsdl\\SearchRecordMetadata',
-      'SearchSnippet' => 'SForce\\Wsdl\\SearchSnippet',
-      'SearchResultsMetadata' => 'SForce\\Wsdl\\SearchResultsMetadata',
-      'LabelsSearchMetadata' => 'SForce\\Wsdl\\LabelsSearchMetadata',
-      'EntitySearchMetadata' => 'SForce\\Wsdl\\EntitySearchMetadata',
-      'FieldLevelSearchMetadata' => 'SForce\\Wsdl\\FieldLevelSearchMetadata',
-      'EntitySpellCorrectionMetadata' => 'SForce\\Wsdl\\EntitySpellCorrectionMetadata',
-      'EntitySearchPromotionMetadata' => 'SForce\\Wsdl\\EntitySearchPromotionMetadata',
-      'EntityIntentQueryMetadata' => 'SForce\\Wsdl\\EntityIntentQueryMetadata',
-      'RelationshipReferenceTo' => 'SForce\\Wsdl\\RelationshipReferenceTo',
-      'RecordTypesSupported' => 'SForce\\Wsdl\\RecordTypesSupported',
-      'JunctionIdListNames' => 'SForce\\Wsdl\\JunctionIdListNames',
-      'SearchLayoutButtonsDisplayed' => 'SForce\\Wsdl\\SearchLayoutButtonsDisplayed',
-      'SearchLayoutButton' => 'SForce\\Wsdl\\SearchLayoutButton',
-      'SearchLayoutFieldsDisplayed' => 'SForce\\Wsdl\\SearchLayoutFieldsDisplayed',
-      'SearchLayoutField' => 'SForce\\Wsdl\\SearchLayoutField',
-      'NameValuePair' => 'SForce\\Wsdl\\NameValuePair',
-      'NameObjectValuePair' => 'SForce\\Wsdl\\NameObjectValuePair',
-      'GetUpdatedResult' => 'SForce\\Wsdl\\GetUpdatedResult',
-      'GetDeletedResult' => 'SForce\\Wsdl\\GetDeletedResult',
-      'DeletedRecord' => 'SForce\\Wsdl\\DeletedRecord',
-      'GetServerTimestampResult' => 'SForce\\Wsdl\\GetServerTimestampResult',
-      'InvalidateSessionsResult' => 'SForce\\Wsdl\\InvalidateSessionsResult',
-      'SetPasswordResult' => 'SForce\\Wsdl\\SetPasswordResult',
-      'ChangeOwnPasswordResult' => 'SForce\\Wsdl\\ChangeOwnPasswordResult',
-      'ResetPasswordResult' => 'SForce\\Wsdl\\ResetPasswordResult',
-      'GetUserInfoResult' => 'SForce\\Wsdl\\GetUserInfoResult',
-      'LoginResult' => 'SForce\\Wsdl\\LoginResult',
-      'ExtendedErrorDetails' => 'SForce\\Wsdl\\ExtendedErrorDetails',
-      'Error' => 'SForce\\Wsdl\\Error',
-      'SendEmailError' => 'SForce\\Wsdl\\SendEmailError',
-      'SaveResult' => 'SForce\\Wsdl\\SaveResult',
-      'RenderEmailTemplateError' => 'SForce\\Wsdl\\RenderEmailTemplateError',
-      'UpsertResult' => 'SForce\\Wsdl\\UpsertResult',
-      'PerformQuickActionResult' => 'SForce\\Wsdl\\PerformQuickActionResult',
-      'QuickActionTemplateResult' => 'SForce\\Wsdl\\QuickActionTemplateResult',
-      'MergeRequest' => 'SForce\\Wsdl\\MergeRequest',
-      'MergeResult' => 'SForce\\Wsdl\\MergeResult',
-      'ProcessRequest' => 'SForce\\Wsdl\\ProcessRequest',
-      'ProcessSubmitRequest' => 'SForce\\Wsdl\\ProcessSubmitRequest',
-      'ProcessWorkitemRequest' => 'SForce\\Wsdl\\ProcessWorkitemRequest',
-      'PerformQuickActionRequest' => 'SForce\\Wsdl\\PerformQuickActionRequest',
-      'DescribeAvailableQuickActionResult' => 'SForce\\Wsdl\\DescribeAvailableQuickActionResult',
-      'DescribeQuickActionResult' => 'SForce\\Wsdl\\DescribeQuickActionResult',
-      'DescribeQuickActionDefaultValue' => 'SForce\\Wsdl\\DescribeQuickActionDefaultValue',
-      'DescribeVisualForceResult' => 'SForce\\Wsdl\\DescribeVisualForceResult',
-      'ProcessResult' => 'SForce\\Wsdl\\ProcessResult',
-      'DeleteResult' => 'SForce\\Wsdl\\DeleteResult',
-      'UndeleteResult' => 'SForce\\Wsdl\\UndeleteResult',
-      'DeleteByExampleResult' => 'SForce\\Wsdl\\DeleteByExampleResult',
-      'EmptyRecycleBinResult' => 'SForce\\Wsdl\\EmptyRecycleBinResult',
-      'LeadConvert' => 'SForce\\Wsdl\\LeadConvert',
-      'LeadConvertResult' => 'SForce\\Wsdl\\LeadConvertResult',
-      'DescribeSObjectResult' => 'SForce\\Wsdl\\DescribeSObjectResult',
-      'DescribeGlobalSObjectResult' => 'SForce\\Wsdl\\DescribeGlobalSObjectResult',
-      'ChildRelationship' => 'SForce\\Wsdl\\ChildRelationship',
-      'DescribeGlobalResult' => 'SForce\\Wsdl\\DescribeGlobalResult',
-      'DescribeGlobalTheme' => 'SForce\\Wsdl\\DescribeGlobalTheme',
-      'ScopeInfo' => 'SForce\\Wsdl\\ScopeInfo',
-      'StringList' => 'SForce\\Wsdl\\StringList',
-      'ChangeEventHeader' => 'SForce\\Wsdl\\ChangeEventHeader',
-      'FilteredLookupInfo' => 'SForce\\Wsdl\\FilteredLookupInfo',
-      'Field' => 'SForce\\Wsdl\\Field',
-      'PicklistEntry' => 'SForce\\Wsdl\\PicklistEntry',
-      'DescribeDataCategoryGroupResult' => 'SForce\\Wsdl\\DescribeDataCategoryGroupResult',
-      'DescribeDataCategoryGroupStructureResult' => 'SForce\\Wsdl\\DescribeDataCategoryGroupStructureResult',
-      'DataCategoryGroupSobjectTypePair' => 'SForce\\Wsdl\\DataCategoryGroupSobjectTypePair',
-      'DataCategory' => 'SForce\\Wsdl\\DataCategory',
-      'DescribeDataCategoryMappingResult' => 'SForce\\Wsdl\\DescribeDataCategoryMappingResult',
-      'KnowledgeSettings' => 'SForce\\Wsdl\\KnowledgeSettings',
-      'KnowledgeLanguageItem' => 'SForce\\Wsdl\\KnowledgeLanguageItem',
-      'FieldDiff' => 'SForce\\Wsdl\\FieldDiff',
-      'AdditionalInformationMap' => 'SForce\\Wsdl\\AdditionalInformationMap',
-      'MatchRecord' => 'SForce\\Wsdl\\MatchRecord',
-      'MatchResult' => 'SForce\\Wsdl\\MatchResult',
-      'DuplicateResult' => 'SForce\\Wsdl\\DuplicateResult',
-      'DuplicateError' => 'SForce\\Wsdl\\DuplicateError',
-      'DescribeNounResult' => 'SForce\\Wsdl\\DescribeNounResult',
-      'NameCaseValue' => 'SForce\\Wsdl\\NameCaseValue',
-      'findDuplicates' => 'SForce\\Wsdl\\findDuplicates',
-      'findDuplicatesByIds' => 'SForce\\Wsdl\\findDuplicatesByIds',
-      'findDuplicatesByIdsResponse' => 'SForce\\Wsdl\\findDuplicatesByIdsResponse',
-      'findDuplicatesResponse' => 'SForce\\Wsdl\\findDuplicatesResponse',
-      'FindDuplicatesResult' => 'SForce\\Wsdl\\FindDuplicatesResult',
-      'DescribeAppMenuResult' => 'SForce\\Wsdl\\DescribeAppMenuResult',
-      'DescribeAppMenuItem' => 'SForce\\Wsdl\\DescribeAppMenuItem',
-      'DescribeThemeResult' => 'SForce\\Wsdl\\DescribeThemeResult',
-      'DescribeThemeItem' => 'SForce\\Wsdl\\DescribeThemeItem',
-      'DescribeSoftphoneLayoutResult' => 'SForce\\Wsdl\\DescribeSoftphoneLayoutResult',
-      'DescribeSoftphoneLayoutCallType' => 'SForce\\Wsdl\\DescribeSoftphoneLayoutCallType',
-      'DescribeSoftphoneScreenPopOption' => 'SForce\\Wsdl\\DescribeSoftphoneScreenPopOption',
-      'DescribeSoftphoneLayoutInfoField' => 'SForce\\Wsdl\\DescribeSoftphoneLayoutInfoField',
-      'DescribeSoftphoneLayoutSection' => 'SForce\\Wsdl\\DescribeSoftphoneLayoutSection',
-      'DescribeSoftphoneLayoutItem' => 'SForce\\Wsdl\\DescribeSoftphoneLayoutItem',
-      'DescribeCompactLayoutsResult' => 'SForce\\Wsdl\\DescribeCompactLayoutsResult',
-      'DescribeCompactLayout' => 'SForce\\Wsdl\\DescribeCompactLayout',
-      'RecordTypeCompactLayoutMapping' => 'SForce\\Wsdl\\RecordTypeCompactLayoutMapping',
-      'DescribePathAssistantsResult' => 'SForce\\Wsdl\\DescribePathAssistantsResult',
-      'DescribePathAssistant' => 'SForce\\Wsdl\\DescribePathAssistant',
-      'DescribePathAssistantStep' => 'SForce\\Wsdl\\DescribePathAssistantStep',
-      'DescribePathAssistantField' => 'SForce\\Wsdl\\DescribePathAssistantField',
-      'DescribeApprovalLayoutResult' => 'SForce\\Wsdl\\DescribeApprovalLayoutResult',
-      'DescribeApprovalLayout' => 'SForce\\Wsdl\\DescribeApprovalLayout',
-      'DescribeLayoutResult' => 'SForce\\Wsdl\\DescribeLayoutResult',
-      'DescribeLayout' => 'SForce\\Wsdl\\DescribeLayout',
-      'DescribeQuickActionListResult' => 'SForce\\Wsdl\\DescribeQuickActionListResult',
-      'DescribeQuickActionListItemResult' => 'SForce\\Wsdl\\DescribeQuickActionListItemResult',
-      'DescribeLayoutFeedView' => 'SForce\\Wsdl\\DescribeLayoutFeedView',
-      'DescribeLayoutFeedFilter' => 'SForce\\Wsdl\\DescribeLayoutFeedFilter',
-      'DescribeLayoutSaveOption' => 'SForce\\Wsdl\\DescribeLayoutSaveOption',
-      'DescribeLayoutSection' => 'SForce\\Wsdl\\DescribeLayoutSection',
-      'DescribeLayoutButtonSection' => 'SForce\\Wsdl\\DescribeLayoutButtonSection',
-      'DescribeLayoutRow' => 'SForce\\Wsdl\\DescribeLayoutRow',
-      'DescribeLayoutItem' => 'SForce\\Wsdl\\DescribeLayoutItem',
-      'DescribeLayoutButton' => 'SForce\\Wsdl\\DescribeLayoutButton',
-      'DescribeLayoutComponent' => 'SForce\\Wsdl\\DescribeLayoutComponent',
-      'FieldComponent' => 'SForce\\Wsdl\\FieldComponent',
-      'FieldLayoutComponent' => 'SForce\\Wsdl\\FieldLayoutComponent',
-      'VisualforcePage' => 'SForce\\Wsdl\\VisualforcePage',
-      'Canvas' => 'SForce\\Wsdl\\Canvas',
-      'ReportChartComponent' => 'SForce\\Wsdl\\ReportChartComponent',
-      'AnalyticsCloudComponent' => 'SForce\\Wsdl\\AnalyticsCloudComponent',
-      'CustomLinkComponent' => 'SForce\\Wsdl\\CustomLinkComponent',
-      'NamedLayoutInfo' => 'SForce\\Wsdl\\NamedLayoutInfo',
-      'RecordTypeInfo' => 'SForce\\Wsdl\\RecordTypeInfo',
-      'RecordTypeMapping' => 'SForce\\Wsdl\\RecordTypeMapping',
-      'PicklistForRecordType' => 'SForce\\Wsdl\\PicklistForRecordType',
-      'RelatedContent' => 'SForce\\Wsdl\\RelatedContent',
-      'DescribeRelatedContentItem' => 'SForce\\Wsdl\\DescribeRelatedContentItem',
-      'RelatedList' => 'SForce\\Wsdl\\RelatedList',
-      'RelatedListColumn' => 'SForce\\Wsdl\\RelatedListColumn',
-      'RelatedListSort' => 'SForce\\Wsdl\\RelatedListSort',
-      'EmailFileAttachment' => 'SForce\\Wsdl\\EmailFileAttachment',
-      'Email' => 'SForce\\Wsdl\\Email',
-      'MassEmailMessage' => 'SForce\\Wsdl\\MassEmailMessage',
-      'SingleEmailMessage' => 'SForce\\Wsdl\\SingleEmailMessage',
-      'SendEmailResult' => 'SForce\\Wsdl\\SendEmailResult',
-      'ListViewColumn' => 'SForce\\Wsdl\\ListViewColumn',
-      'ListViewOrderBy' => 'SForce\\Wsdl\\ListViewOrderBy',
-      'DescribeSoqlListView' => 'SForce\\Wsdl\\DescribeSoqlListView',
-      'DescribeSoqlListViewsRequest' => 'SForce\\Wsdl\\DescribeSoqlListViewsRequest',
-      'DescribeSoqlListViewParams' => 'SForce\\Wsdl\\DescribeSoqlListViewParams',
-      'DescribeSoqlListViewResult' => 'SForce\\Wsdl\\DescribeSoqlListViewResult',
-      'ExecuteListViewRequest' => 'SForce\\Wsdl\\ExecuteListViewRequest',
-      'ExecuteListViewResult' => 'SForce\\Wsdl\\ExecuteListViewResult',
-      'ListViewRecord' => 'SForce\\Wsdl\\ListViewRecord',
-      'ListViewRecordColumn' => 'SForce\\Wsdl\\ListViewRecordColumn',
-      'SoqlWhereCondition' => 'SForce\\Wsdl\\SoqlWhereCondition',
-      'SoqlCondition' => 'SForce\\Wsdl\\SoqlCondition',
-      'SoqlNotCondition' => 'SForce\\Wsdl\\SoqlNotCondition',
-      'SoqlConditionGroup' => 'SForce\\Wsdl\\SoqlConditionGroup',
-      'SoqlSubQueryCondition' => 'SForce\\Wsdl\\SoqlSubQueryCondition',
-      'DescribeSearchLayoutResult' => 'SForce\\Wsdl\\DescribeSearchLayoutResult',
-      'DescribeColumn' => 'SForce\\Wsdl\\DescribeColumn',
-      'DescribeSearchScopeOrderResult' => 'SForce\\Wsdl\\DescribeSearchScopeOrderResult',
-      'DescribeSearchableEntityResult' => 'SForce\\Wsdl\\DescribeSearchableEntityResult',
-      'DescribeTabSetResult' => 'SForce\\Wsdl\\DescribeTabSetResult',
-      'DescribeTab' => 'SForce\\Wsdl\\DescribeTab',
-      'DescribeColor' => 'SForce\\Wsdl\\DescribeColor',
-      'DescribeIcon' => 'SForce\\Wsdl\\DescribeIcon',
-      'ActionOverride' => 'SForce\\Wsdl\\ActionOverride',
-      'login' => 'SForce\\Wsdl\\login',
-      'loginResponse' => 'SForce\\Wsdl\\loginResponse',
-      'describeSObject' => 'SForce\\Wsdl\\describeSObject',
-      'describeSObjectResponse' => 'SForce\\Wsdl\\describeSObjectResponse',
-      'describeSObjects' => 'SForce\\Wsdl\\describeSObjects',
-      'describeSObjectsResponse' => 'SForce\\Wsdl\\describeSObjectsResponse',
-      'describeGlobal' => 'SForce\\Wsdl\\describeGlobal',
-      'describeGlobalResponse' => 'SForce\\Wsdl\\describeGlobalResponse',
-      'describeGlobalThemeDouble' => 'SForce\\Wsdl\\describeGlobalThemeDouble',
-      'describeGlobalThemeResponse' => 'SForce\\Wsdl\\describeGlobalThemeResponse',
-      'describeTheme' => 'SForce\\Wsdl\\describeTheme',
-      'describeThemeResponse' => 'SForce\\Wsdl\\describeThemeResponse',
-      'describeDataCategoryGroups' => 'SForce\\Wsdl\\describeDataCategoryGroups',
-      'describeDataCategoryGroupsResponse' => 'SForce\\Wsdl\\describeDataCategoryGroupsResponse',
-      'describeDataCategoryGroupStructures' => 'SForce\\Wsdl\\describeDataCategoryGroupStructures',
-      'describeDataCategoryGroupStructuresResponse' => 'SForce\\Wsdl\\describeDataCategoryGroupStructuresResponse',
-      'describeDataCategoryMappings' => 'SForce\\Wsdl\\describeDataCategoryMappings',
-      'describeDataCategoryMappingsResponse' => 'SForce\\Wsdl\\describeDataCategoryMappingsResponse',
-      'describeKnowledgeSettings' => 'SForce\\Wsdl\\describeKnowledgeSettings',
-      'describeKnowledgeSettingsResponse' => 'SForce\\Wsdl\\describeKnowledgeSettingsResponse',
-      'describeAppMenu' => 'SForce\\Wsdl\\describeAppMenu',
-      'describeAppMenuResponse' => 'SForce\\Wsdl\\describeAppMenuResponse',
-      'describeLayoutDouble' => 'SForce\\Wsdl\\describeLayoutDouble',
-      'describeLayoutResponse' => 'SForce\\Wsdl\\describeLayoutResponse',
-      'describeCompactLayouts' => 'SForce\\Wsdl\\describeCompactLayouts',
-      'describeCompactLayoutsResponse' => 'SForce\\Wsdl\\describeCompactLayoutsResponse',
-      'describePrimaryCompactLayouts' => 'SForce\\Wsdl\\describePrimaryCompactLayouts',
-      'describePrimaryCompactLayoutsResponse' => 'SForce\\Wsdl\\describePrimaryCompactLayoutsResponse',
-      'describePathAssistants' => 'SForce\\Wsdl\\describePathAssistants',
-      'describePathAssistantsResponse' => 'SForce\\Wsdl\\describePathAssistantsResponse',
-      'describeApprovalLayoutDouble' => 'SForce\\Wsdl\\describeApprovalLayoutDouble',
-      'describeApprovalLayoutResponse' => 'SForce\\Wsdl\\describeApprovalLayoutResponse',
-      'describeSoftphoneLayout' => 'SForce\\Wsdl\\describeSoftphoneLayout',
-      'describeSoftphoneLayoutResponse' => 'SForce\\Wsdl\\describeSoftphoneLayoutResponse',
-      'describeSoqlListViews' => 'SForce\\Wsdl\\describeSoqlListViews',
-      'describeSoqlListViewsResponse' => 'SForce\\Wsdl\\describeSoqlListViewsResponse',
-      'executeListView' => 'SForce\\Wsdl\\executeListView',
-      'executeListViewResponse' => 'SForce\\Wsdl\\executeListViewResponse',
-      'describeSObjectListViews' => 'SForce\\Wsdl\\describeSObjectListViews',
-      'describeSObjectListViewsResponse' => 'SForce\\Wsdl\\describeSObjectListViewsResponse',
-      'describeSearchLayouts' => 'SForce\\Wsdl\\describeSearchLayouts',
-      'describeSearchLayoutsResponse' => 'SForce\\Wsdl\\describeSearchLayoutsResponse',
-      'describeSearchScopeOrder' => 'SForce\\Wsdl\\describeSearchScopeOrder',
-      'describeSearchScopeOrderResponse' => 'SForce\\Wsdl\\describeSearchScopeOrderResponse',
-      'describeSearchableEntities' => 'SForce\\Wsdl\\describeSearchableEntities',
-      'describeSearchableEntitiesResponse' => 'SForce\\Wsdl\\describeSearchableEntitiesResponse',
-      'describeTabs' => 'SForce\\Wsdl\\describeTabs',
-      'describeTabsResponse' => 'SForce\\Wsdl\\describeTabsResponse',
-      'describeAllTabs' => 'SForce\\Wsdl\\describeAllTabs',
-      'describeAllTabsResponse' => 'SForce\\Wsdl\\describeAllTabsResponse',
-      'describeNouns' => 'SForce\\Wsdl\\describeNouns',
-      'describeNounsResponse' => 'SForce\\Wsdl\\describeNounsResponse',
-      'create' => 'SForce\\Wsdl\\create',
-      'createResponse' => 'SForce\\Wsdl\\createResponse',
-      'sendEmail' => 'SForce\\Wsdl\\sendEmail',
-      'sendEmailResponse' => 'SForce\\Wsdl\\sendEmailResponse',
-      'RenderEmailTemplateRequest' => 'SForce\\Wsdl\\RenderEmailTemplateRequest',
-      'RenderEmailTemplateBodyResult' => 'SForce\\Wsdl\\RenderEmailTemplateBodyResult',
-      'RenderEmailTemplateResult' => 'SForce\\Wsdl\\RenderEmailTemplateResult',
-      'renderEmailTemplate' => 'SForce\\Wsdl\\renderEmailTemplate',
-      'renderEmailTemplateResponse' => 'SForce\\Wsdl\\renderEmailTemplateResponse',
-      'RenderStoredEmailTemplateRequest' => 'SForce\\Wsdl\\RenderStoredEmailTemplateRequest',
-      'RenderStoredEmailTemplateResult' => 'SForce\\Wsdl\\RenderStoredEmailTemplateResult',
-      'renderStoredEmailTemplate' => 'SForce\\Wsdl\\renderStoredEmailTemplate',
-      'renderStoredEmailTemplateResponse' => 'SForce\\Wsdl\\renderStoredEmailTemplateResponse',
-      'sendEmailMessage' => 'SForce\\Wsdl\\sendEmailMessage',
-      'sendEmailMessageResponse' => 'SForce\\Wsdl\\sendEmailMessageResponse',
-      'update' => 'SForce\\Wsdl\\update',
-      'updateResponse' => 'SForce\\Wsdl\\updateResponse',
-      'upsert' => 'SForce\\Wsdl\\upsert',
-      'upsertResponse' => 'SForce\\Wsdl\\upsertResponse',
-      'merge' => 'SForce\\Wsdl\\merge',
-      'mergeResponse' => 'SForce\\Wsdl\\mergeResponse',
-      'delete' => 'SForce\\Wsdl\\delete',
-      'deleteResponse' => 'SForce\\Wsdl\\deleteResponse',
-      'deleteByExample' => 'SForce\\Wsdl\\deleteByExample',
-      'deleteByExampleResponse' => 'SForce\\Wsdl\\deleteByExampleResponse',
-      'undelete' => 'SForce\\Wsdl\\undelete',
-      'undeleteResponse' => 'SForce\\Wsdl\\undeleteResponse',
-      'emptyRecycleBin' => 'SForce\\Wsdl\\emptyRecycleBin',
-      'emptyRecycleBinResponse' => 'SForce\\Wsdl\\emptyRecycleBinResponse',
-      'process' => 'SForce\\Wsdl\\process',
-      'processResponse' => 'SForce\\Wsdl\\processResponse',
-      'performQuickActions' => 'SForce\\Wsdl\\performQuickActions',
-      'performQuickActionsResponse' => 'SForce\\Wsdl\\performQuickActionsResponse',
-      'retrieveMassQuickActionTemplates' => 'SForce\\Wsdl\\retrieveMassQuickActionTemplates',
-      'retrieveMassQuickActionTemplatesResponse' => 'SForce\\Wsdl\\retrieveMassQuickActionTemplatesResponse',
-      'retrieveQuickActionTemplates' => 'SForce\\Wsdl\\retrieveQuickActionTemplates',
-      'retrieveQuickActionTemplatesResponse' => 'SForce\\Wsdl\\retrieveQuickActionTemplatesResponse',
-      'describeQuickActions' => 'SForce\\Wsdl\\describeQuickActions',
-      'describeQuickActionsResponse' => 'SForce\\Wsdl\\describeQuickActionsResponse',
-      'describeQuickActionsForRecordType' => 'SForce\\Wsdl\\describeQuickActionsForRecordType',
-      'describeQuickActionsForRecordTypeResponse' => 'SForce\\Wsdl\\describeQuickActionsForRecordTypeResponse',
-      'describeAvailableQuickActions' => 'SForce\\Wsdl\\describeAvailableQuickActions',
-      'describeAvailableQuickActionsResponse' => 'SForce\\Wsdl\\describeAvailableQuickActionsResponse',
-      'describeVisualForce' => 'SForce\\Wsdl\\describeVisualForce',
-      'describeVisualForceResponse' => 'SForce\\Wsdl\\describeVisualForceResponse',
-      'retrieve' => 'SForce\\Wsdl\\retrieve',
-      'retrieveResponse' => 'SForce\\Wsdl\\retrieveResponse',
-      'convertLead' => 'SForce\\Wsdl\\convertLead',
-      'convertLeadResponse' => 'SForce\\Wsdl\\convertLeadResponse',
-      'getUpdated' => 'SForce\\Wsdl\\getUpdated',
-      'getUpdatedResponse' => 'SForce\\Wsdl\\getUpdatedResponse',
-      'getDeleted' => 'SForce\\Wsdl\\getDeleted',
-      'getDeletedResponse' => 'SForce\\Wsdl\\getDeletedResponse',
-      'logout' => 'SForce\\Wsdl\\logout',
-      'logoutResponse' => 'SForce\\Wsdl\\logoutResponse',
-      'invalidateSessions' => 'SForce\\Wsdl\\invalidateSessions',
-      'invalidateSessionsResponse' => 'SForce\\Wsdl\\invalidateSessionsResponse',
-      'query' => 'SForce\\Wsdl\\query',
-      'queryResponse' => 'SForce\\Wsdl\\queryResponse',
-      'queryAll' => 'SForce\\Wsdl\\queryAll',
-      'queryAllResponse' => 'SForce\\Wsdl\\queryAllResponse',
-      'queryMore' => 'SForce\\Wsdl\\queryMore',
-      'queryMoreResponse' => 'SForce\\Wsdl\\queryMoreResponse',
-      'search' => 'SForce\\Wsdl\\search',
-      'searchResponse' => 'SForce\\Wsdl\\searchResponse',
-      'getServerTimestamp' => 'SForce\\Wsdl\\getServerTimestamp',
-      'getServerTimestampResponse' => 'SForce\\Wsdl\\getServerTimestampResponse',
-      'setPassword' => 'SForce\\Wsdl\\setPassword',
-      'setPasswordResponse' => 'SForce\\Wsdl\\setPasswordResponse',
-      'changeOwnPassword' => 'SForce\\Wsdl\\changeOwnPassword',
-      'changeOwnPasswordResponse' => 'SForce\\Wsdl\\changeOwnPasswordResponse',
-      'resetPassword' => 'SForce\\Wsdl\\resetPassword',
-      'resetPasswordResponse' => 'SForce\\Wsdl\\resetPasswordResponse',
-      'getUserInfo' => 'SForce\\Wsdl\\getUserInfo',
-      'getUserInfoResponse' => 'SForce\\Wsdl\\getUserInfoResponse',
-      'SessionHeader' => 'SForce\\Wsdl\\SessionHeader',
-      'LoginScopeHeader' => 'SForce\\Wsdl\\LoginScopeHeader',
-      'CallOptions' => 'SForce\\Wsdl\\CallOptions',
-      'QueryOptions' => 'SForce\\Wsdl\\QueryOptions',
-      'DebuggingHeader' => 'SForce\\Wsdl\\DebuggingHeader',
-      'LogInfo' => 'SForce\\Wsdl\\LogInfo',
-      'DebuggingInfo' => 'SForce\\Wsdl\\DebuggingInfo',
-      'PackageVersion' => 'SForce\\Wsdl\\PackageVersion',
-      'PackageVersionHeader' => 'SForce\\Wsdl\\PackageVersionHeader',
-      'AllowFieldTruncationHeader' => 'SForce\\Wsdl\\AllowFieldTruncationHeader',
-      'DisableFeedTrackingHeader' => 'SForce\\Wsdl\\DisableFeedTrackingHeader',
-      'StreamingEnabledHeader' => 'SForce\\Wsdl\\StreamingEnabledHeader',
-      'AllOrNoneHeader' => 'SForce\\Wsdl\\AllOrNoneHeader',
-      'DuplicateRuleHeader' => 'SForce\\Wsdl\\DuplicateRuleHeader',
-      'LimitInfo' => 'SForce\\Wsdl\\LimitInfo',
-      'LimitInfoHeader' => 'SForce\\Wsdl\\LimitInfoHeader',
-      'MruHeader' => 'SForce\\Wsdl\\MruHeader',
-      'EmailHeader' => 'SForce\\Wsdl\\EmailHeader',
-      'AssignmentRuleHeader' => 'SForce\\Wsdl\\AssignmentRuleHeader',
-      'UserTerritoryDeleteHeader' => 'SForce\\Wsdl\\UserTerritoryDeleteHeader',
-      'LocaleOptions' => 'SForce\\Wsdl\\LocaleOptions',
-      'OwnerChangeOption' => 'SForce\\Wsdl\\OwnerChangeOption',
-      'OwnerChangeOptions' => 'SForce\\Wsdl\\OwnerChangeOptions',
-      'ApiFault' => 'SForce\\Wsdl\\ApiFault',
-      'ApiQueryFault' => 'SForce\\Wsdl\\ApiQueryFault',
-      'LoginFault' => 'SForce\\Wsdl\\LoginFault',
-      'InvalidQueryLocatorFault' => 'SForce\\Wsdl\\InvalidQueryLocatorFault',
-      'InvalidNewPasswordFault' => 'SForce\\Wsdl\\InvalidNewPasswordFault',
-      'InvalidOldPasswordFault' => 'SForce\\Wsdl\\InvalidOldPasswordFault',
-      'InvalidIdFault' => 'SForce\\Wsdl\\InvalidIdFault',
-      'UnexpectedErrorFault' => 'SForce\\Wsdl\\UnexpectedErrorFault',
-      'InvalidFieldFault' => 'SForce\\Wsdl\\InvalidFieldFault',
-      'InvalidSObjectFault' => 'SForce\\Wsdl\\InvalidSObjectFault',
-      'MalformedQueryFault' => 'SForce\\Wsdl\\MalformedQueryFault',
-      'MalformedSearchFault' => 'SForce\\Wsdl\\MalformedSearchFault',
-    );
+    private static $classmap = [
+        'sObject' => 'SForce\\Wsdl\\sObject',
+        'address' => 'SForce\\Wsdl\\address',
+        'location' => 'SForce\\Wsdl\\location',
+        'QueryResult' => 'SForce\\Wsdl\\QueryResult',
+        'SearchResult' => 'SForce\\Wsdl\\SearchResult',
+        'SearchRecord' => 'SForce\\Wsdl\\SearchRecord',
+        'SearchRecordMetadata' => 'SForce\\Wsdl\\SearchRecordMetadata',
+        'SearchSnippet' => 'SForce\\Wsdl\\SearchSnippet',
+        'SearchResultsMetadata' => 'SForce\\Wsdl\\SearchResultsMetadata',
+        'LabelsSearchMetadata' => 'SForce\\Wsdl\\LabelsSearchMetadata',
+        'EntitySearchMetadata' => 'SForce\\Wsdl\\EntitySearchMetadata',
+        'FieldLevelSearchMetadata' => 'SForce\\Wsdl\\FieldLevelSearchMetadata',
+        'EntitySpellCorrectionMetadata' => 'SForce\\Wsdl\\EntitySpellCorrectionMetadata',
+        'EntitySearchPromotionMetadata' => 'SForce\\Wsdl\\EntitySearchPromotionMetadata',
+        'EntityIntentQueryMetadata' => 'SForce\\Wsdl\\EntityIntentQueryMetadata',
+        'RelationshipReferenceTo' => 'SForce\\Wsdl\\RelationshipReferenceTo',
+        'RecordTypesSupported' => 'SForce\\Wsdl\\RecordTypesSupported',
+        'JunctionIdListNames' => 'SForce\\Wsdl\\JunctionIdListNames',
+        'SearchLayoutButtonsDisplayed' => 'SForce\\Wsdl\\SearchLayoutButtonsDisplayed',
+        'SearchLayoutButton' => 'SForce\\Wsdl\\SearchLayoutButton',
+        'SearchLayoutFieldsDisplayed' => 'SForce\\Wsdl\\SearchLayoutFieldsDisplayed',
+        'SearchLayoutField' => 'SForce\\Wsdl\\SearchLayoutField',
+        'NameValuePair' => 'SForce\\Wsdl\\NameValuePair',
+        'NameObjectValuePair' => 'SForce\\Wsdl\\NameObjectValuePair',
+        'GetUpdatedResult' => 'SForce\\Wsdl\\GetUpdatedResult',
+        'GetDeletedResult' => 'SForce\\Wsdl\\GetDeletedResult',
+        'DeletedRecord' => 'SForce\\Wsdl\\DeletedRecord',
+        'GetServerTimestampResult' => 'SForce\\Wsdl\\GetServerTimestampResult',
+        'InvalidateSessionsResult' => 'SForce\\Wsdl\\InvalidateSessionsResult',
+        'SetPasswordResult' => 'SForce\\Wsdl\\SetPasswordResult',
+        'ChangeOwnPasswordResult' => 'SForce\\Wsdl\\ChangeOwnPasswordResult',
+        'ResetPasswordResult' => 'SForce\\Wsdl\\ResetPasswordResult',
+        'GetUserInfoResult' => 'SForce\\Wsdl\\GetUserInfoResult',
+        'LoginResult' => 'SForce\\Wsdl\\LoginResult',
+        'ExtendedErrorDetails' => 'SForce\\Wsdl\\ExtendedErrorDetails',
+        'Error' => 'SForce\\Wsdl\\Error',
+        'SendEmailError' => 'SForce\\Wsdl\\SendEmailError',
+        'SaveResult' => 'SForce\\Wsdl\\SaveResult',
+        'RenderEmailTemplateError' => 'SForce\\Wsdl\\RenderEmailTemplateError',
+        'UpsertResult' => 'SForce\\Wsdl\\UpsertResult',
+        'PerformQuickActionResult' => 'SForce\\Wsdl\\PerformQuickActionResult',
+        'QuickActionTemplateResult' => 'SForce\\Wsdl\\QuickActionTemplateResult',
+        'MergeRequest' => 'SForce\\Wsdl\\MergeRequest',
+        'MergeResult' => 'SForce\\Wsdl\\MergeResult',
+        'ProcessRequest' => 'SForce\\Wsdl\\ProcessRequest',
+        'ProcessSubmitRequest' => 'SForce\\Wsdl\\ProcessSubmitRequest',
+        'ProcessWorkitemRequest' => 'SForce\\Wsdl\\ProcessWorkitemRequest',
+        'PerformQuickActionRequest' => 'SForce\\Wsdl\\PerformQuickActionRequest',
+        'DescribeAvailableQuickActionResult' => 'SForce\\Wsdl\\DescribeAvailableQuickActionResult',
+        'DescribeQuickActionResult' => 'SForce\\Wsdl\\DescribeQuickActionResult',
+        'DescribeQuickActionDefaultValue' => 'SForce\\Wsdl\\DescribeQuickActionDefaultValue',
+        'DescribeVisualForceResult' => 'SForce\\Wsdl\\DescribeVisualForceResult',
+        'ProcessResult' => 'SForce\\Wsdl\\ProcessResult',
+        'DeleteResult' => 'SForce\\Wsdl\\DeleteResult',
+        'UndeleteResult' => 'SForce\\Wsdl\\UndeleteResult',
+        'DeleteByExampleResult' => 'SForce\\Wsdl\\DeleteByExampleResult',
+        'EmptyRecycleBinResult' => 'SForce\\Wsdl\\EmptyRecycleBinResult',
+        'LeadConvert' => 'SForce\\Wsdl\\LeadConvert',
+        'LeadConvertResult' => 'SForce\\Wsdl\\LeadConvertResult',
+        'DescribeSObjectResult' => 'SForce\\Wsdl\\DescribeSObjectResult',
+        'DescribeGlobalSObjectResult' => 'SForce\\Wsdl\\DescribeGlobalSObjectResult',
+        'ChildRelationship' => 'SForce\\Wsdl\\ChildRelationship',
+        'DescribeGlobalResult' => 'SForce\\Wsdl\\DescribeGlobalResult',
+        'DescribeGlobalTheme' => 'SForce\\Wsdl\\DescribeGlobalTheme',
+        'ScopeInfo' => 'SForce\\Wsdl\\ScopeInfo',
+        'StringList' => 'SForce\\Wsdl\\StringList',
+        'ChangeEventHeader' => 'SForce\\Wsdl\\ChangeEventHeader',
+        'FilteredLookupInfo' => 'SForce\\Wsdl\\FilteredLookupInfo',
+        'Field' => 'SForce\\Wsdl\\Field',
+        'PicklistEntry' => 'SForce\\Wsdl\\PicklistEntry',
+        'DescribeDataCategoryGroupResult' => 'SForce\\Wsdl\\DescribeDataCategoryGroupResult',
+        'DescribeDataCategoryGroupStructureResult' => 'SForce\\Wsdl\\DescribeDataCategoryGroupStructureResult',
+        'DataCategoryGroupSobjectTypePair' => 'SForce\\Wsdl\\DataCategoryGroupSobjectTypePair',
+        'DataCategory' => 'SForce\\Wsdl\\DataCategory',
+        'DescribeDataCategoryMappingResult' => 'SForce\\Wsdl\\DescribeDataCategoryMappingResult',
+        'KnowledgeSettings' => 'SForce\\Wsdl\\KnowledgeSettings',
+        'KnowledgeLanguageItem' => 'SForce\\Wsdl\\KnowledgeLanguageItem',
+        'FieldDiff' => 'SForce\\Wsdl\\FieldDiff',
+        'AdditionalInformationMap' => 'SForce\\Wsdl\\AdditionalInformationMap',
+        'MatchRecord' => 'SForce\\Wsdl\\MatchRecord',
+        'MatchResult' => 'SForce\\Wsdl\\MatchResult',
+        'DuplicateResult' => 'SForce\\Wsdl\\DuplicateResult',
+        'DuplicateError' => 'SForce\\Wsdl\\DuplicateError',
+        'DescribeNounResult' => 'SForce\\Wsdl\\DescribeNounResult',
+        'NameCaseValue' => 'SForce\\Wsdl\\NameCaseValue',
+        'findDuplicates' => 'SForce\\Wsdl\\findDuplicates',
+        'findDuplicatesByIds' => 'SForce\\Wsdl\\findDuplicatesByIds',
+        'findDuplicatesByIdsResponse' => 'SForce\\Wsdl\\findDuplicatesByIdsResponse',
+        'findDuplicatesResponse' => 'SForce\\Wsdl\\findDuplicatesResponse',
+        'FindDuplicatesResult' => 'SForce\\Wsdl\\FindDuplicatesResult',
+        'DescribeAppMenuResult' => 'SForce\\Wsdl\\DescribeAppMenuResult',
+        'DescribeAppMenuItem' => 'SForce\\Wsdl\\DescribeAppMenuItem',
+        'DescribeThemeResult' => 'SForce\\Wsdl\\DescribeThemeResult',
+        'DescribeThemeItem' => 'SForce\\Wsdl\\DescribeThemeItem',
+        'DescribeSoftphoneLayoutResult' => 'SForce\\Wsdl\\DescribeSoftphoneLayoutResult',
+        'DescribeSoftphoneLayoutCallType' => 'SForce\\Wsdl\\DescribeSoftphoneLayoutCallType',
+        'DescribeSoftphoneScreenPopOption' => 'SForce\\Wsdl\\DescribeSoftphoneScreenPopOption',
+        'DescribeSoftphoneLayoutInfoField' => 'SForce\\Wsdl\\DescribeSoftphoneLayoutInfoField',
+        'DescribeSoftphoneLayoutSection' => 'SForce\\Wsdl\\DescribeSoftphoneLayoutSection',
+        'DescribeSoftphoneLayoutItem' => 'SForce\\Wsdl\\DescribeSoftphoneLayoutItem',
+        'DescribeCompactLayoutsResult' => 'SForce\\Wsdl\\DescribeCompactLayoutsResult',
+        'DescribeCompactLayout' => 'SForce\\Wsdl\\DescribeCompactLayout',
+        'RecordTypeCompactLayoutMapping' => 'SForce\\Wsdl\\RecordTypeCompactLayoutMapping',
+        'DescribePathAssistantsResult' => 'SForce\\Wsdl\\DescribePathAssistantsResult',
+        'DescribePathAssistant' => 'SForce\\Wsdl\\DescribePathAssistant',
+        'DescribePathAssistantStep' => 'SForce\\Wsdl\\DescribePathAssistantStep',
+        'DescribePathAssistantField' => 'SForce\\Wsdl\\DescribePathAssistantField',
+        'DescribeApprovalLayoutResult' => 'SForce\\Wsdl\\DescribeApprovalLayoutResult',
+        'DescribeApprovalLayout' => 'SForce\\Wsdl\\DescribeApprovalLayout',
+        'DescribeLayoutResult' => 'SForce\\Wsdl\\DescribeLayoutResult',
+        'DescribeLayout' => 'SForce\\Wsdl\\DescribeLayout',
+        'DescribeQuickActionListResult' => 'SForce\\Wsdl\\DescribeQuickActionListResult',
+        'DescribeQuickActionListItemResult' => 'SForce\\Wsdl\\DescribeQuickActionListItemResult',
+        'DescribeLayoutFeedView' => 'SForce\\Wsdl\\DescribeLayoutFeedView',
+        'DescribeLayoutFeedFilter' => 'SForce\\Wsdl\\DescribeLayoutFeedFilter',
+        'DescribeLayoutSaveOption' => 'SForce\\Wsdl\\DescribeLayoutSaveOption',
+        'DescribeLayoutSection' => 'SForce\\Wsdl\\DescribeLayoutSection',
+        'DescribeLayoutButtonSection' => 'SForce\\Wsdl\\DescribeLayoutButtonSection',
+        'DescribeLayoutRow' => 'SForce\\Wsdl\\DescribeLayoutRow',
+        'DescribeLayoutItem' => 'SForce\\Wsdl\\DescribeLayoutItem',
+        'DescribeLayoutButton' => 'SForce\\Wsdl\\DescribeLayoutButton',
+        'DescribeLayoutComponent' => 'SForce\\Wsdl\\DescribeLayoutComponent',
+        'FieldComponent' => 'SForce\\Wsdl\\FieldComponent',
+        'FieldLayoutComponent' => 'SForce\\Wsdl\\FieldLayoutComponent',
+        'VisualforcePage' => 'SForce\\Wsdl\\VisualforcePage',
+        'Canvas' => 'SForce\\Wsdl\\Canvas',
+        'ReportChartComponent' => 'SForce\\Wsdl\\ReportChartComponent',
+        'AnalyticsCloudComponent' => 'SForce\\Wsdl\\AnalyticsCloudComponent',
+        'CustomLinkComponent' => 'SForce\\Wsdl\\CustomLinkComponent',
+        'NamedLayoutInfo' => 'SForce\\Wsdl\\NamedLayoutInfo',
+        'RecordTypeInfo' => 'SForce\\Wsdl\\RecordTypeInfo',
+        'RecordTypeMapping' => 'SForce\\Wsdl\\RecordTypeMapping',
+        'PicklistForRecordType' => 'SForce\\Wsdl\\PicklistForRecordType',
+        'RelatedContent' => 'SForce\\Wsdl\\RelatedContent',
+        'DescribeRelatedContentItem' => 'SForce\\Wsdl\\DescribeRelatedContentItem',
+        'RelatedList' => 'SForce\\Wsdl\\RelatedList',
+        'RelatedListColumn' => 'SForce\\Wsdl\\RelatedListColumn',
+        'RelatedListSort' => 'SForce\\Wsdl\\RelatedListSort',
+        'EmailFileAttachment' => 'SForce\\Wsdl\\EmailFileAttachment',
+        'Email' => 'SForce\\Wsdl\\Email',
+        'MassEmailMessage' => 'SForce\\Wsdl\\MassEmailMessage',
+        'SingleEmailMessage' => 'SForce\\Wsdl\\SingleEmailMessage',
+        'SendEmailResult' => 'SForce\\Wsdl\\SendEmailResult',
+        'ListViewColumn' => 'SForce\\Wsdl\\ListViewColumn',
+        'ListViewOrderBy' => 'SForce\\Wsdl\\ListViewOrderBy',
+        'DescribeSoqlListView' => 'SForce\\Wsdl\\DescribeSoqlListView',
+        'DescribeSoqlListViewsRequest' => 'SForce\\Wsdl\\DescribeSoqlListViewsRequest',
+        'DescribeSoqlListViewParams' => 'SForce\\Wsdl\\DescribeSoqlListViewParams',
+        'DescribeSoqlListViewResult' => 'SForce\\Wsdl\\DescribeSoqlListViewResult',
+        'ExecuteListViewRequest' => 'SForce\\Wsdl\\ExecuteListViewRequest',
+        'ExecuteListViewResult' => 'SForce\\Wsdl\\ExecuteListViewResult',
+        'ListViewRecord' => 'SForce\\Wsdl\\ListViewRecord',
+        'ListViewRecordColumn' => 'SForce\\Wsdl\\ListViewRecordColumn',
+        'SoqlWhereCondition' => 'SForce\\Wsdl\\SoqlWhereCondition',
+        'SoqlCondition' => 'SForce\\Wsdl\\SoqlCondition',
+        'SoqlNotCondition' => 'SForce\\Wsdl\\SoqlNotCondition',
+        'SoqlConditionGroup' => 'SForce\\Wsdl\\SoqlConditionGroup',
+        'SoqlSubQueryCondition' => 'SForce\\Wsdl\\SoqlSubQueryCondition',
+        'DescribeSearchLayoutResult' => 'SForce\\Wsdl\\DescribeSearchLayoutResult',
+        'DescribeColumn' => 'SForce\\Wsdl\\DescribeColumn',
+        'DescribeSearchScopeOrderResult' => 'SForce\\Wsdl\\DescribeSearchScopeOrderResult',
+        'DescribeSearchableEntityResult' => 'SForce\\Wsdl\\DescribeSearchableEntityResult',
+        'DescribeTabSetResult' => 'SForce\\Wsdl\\DescribeTabSetResult',
+        'DescribeTab' => 'SForce\\Wsdl\\DescribeTab',
+        'DescribeColor' => 'SForce\\Wsdl\\DescribeColor',
+        'DescribeIcon' => 'SForce\\Wsdl\\DescribeIcon',
+        'ActionOverride' => 'SForce\\Wsdl\\ActionOverride',
+        'login' => 'SForce\\Wsdl\\login',
+        'loginResponse' => 'SForce\\Wsdl\\loginResponse',
+        'describeSObject' => 'SForce\\Wsdl\\describeSObject',
+        'describeSObjectResponse' => 'SForce\\Wsdl\\describeSObjectResponse',
+        'describeSObjects' => 'SForce\\Wsdl\\describeSObjects',
+        'describeSObjectsResponse' => 'SForce\\Wsdl\\describeSObjectsResponse',
+        'describeGlobal' => 'SForce\\Wsdl\\describeGlobal',
+        'describeGlobalResponse' => 'SForce\\Wsdl\\describeGlobalResponse',
+        'describeGlobalThemeDouble' => 'SForce\\Wsdl\\describeGlobalThemeDouble',
+        'describeGlobalThemeResponse' => 'SForce\\Wsdl\\describeGlobalThemeResponse',
+        'describeTheme' => 'SForce\\Wsdl\\describeTheme',
+        'describeThemeResponse' => 'SForce\\Wsdl\\describeThemeResponse',
+        'describeDataCategoryGroups' => 'SForce\\Wsdl\\describeDataCategoryGroups',
+        'describeDataCategoryGroupsResponse' => 'SForce\\Wsdl\\describeDataCategoryGroupsResponse',
+        'describeDataCategoryGroupStructures' => 'SForce\\Wsdl\\describeDataCategoryGroupStructures',
+        'describeDataCategoryGroupStructuresResponse' => 'SForce\\Wsdl\\describeDataCategoryGroupStructuresResponse',
+        'describeDataCategoryMappings' => 'SForce\\Wsdl\\describeDataCategoryMappings',
+        'describeDataCategoryMappingsResponse' => 'SForce\\Wsdl\\describeDataCategoryMappingsResponse',
+        'describeKnowledgeSettings' => 'SForce\\Wsdl\\describeKnowledgeSettings',
+        'describeKnowledgeSettingsResponse' => 'SForce\\Wsdl\\describeKnowledgeSettingsResponse',
+        'describeAppMenu' => 'SForce\\Wsdl\\describeAppMenu',
+        'describeAppMenuResponse' => 'SForce\\Wsdl\\describeAppMenuResponse',
+        'describeLayoutDouble' => 'SForce\\Wsdl\\describeLayoutDouble',
+        'describeLayoutResponse' => 'SForce\\Wsdl\\describeLayoutResponse',
+        'describeCompactLayouts' => 'SForce\\Wsdl\\describeCompactLayouts',
+        'describeCompactLayoutsResponse' => 'SForce\\Wsdl\\describeCompactLayoutsResponse',
+        'describePrimaryCompactLayouts' => 'SForce\\Wsdl\\describePrimaryCompactLayouts',
+        'describePrimaryCompactLayoutsResponse' => 'SForce\\Wsdl\\describePrimaryCompactLayoutsResponse',
+        'describePathAssistants' => 'SForce\\Wsdl\\describePathAssistants',
+        'describePathAssistantsResponse' => 'SForce\\Wsdl\\describePathAssistantsResponse',
+        'describeApprovalLayoutDouble' => 'SForce\\Wsdl\\describeApprovalLayoutDouble',
+        'describeApprovalLayoutResponse' => 'SForce\\Wsdl\\describeApprovalLayoutResponse',
+        'describeSoftphoneLayout' => 'SForce\\Wsdl\\describeSoftphoneLayout',
+        'describeSoftphoneLayoutResponse' => 'SForce\\Wsdl\\describeSoftphoneLayoutResponse',
+        'describeSoqlListViews' => 'SForce\\Wsdl\\describeSoqlListViews',
+        'describeSoqlListViewsResponse' => 'SForce\\Wsdl\\describeSoqlListViewsResponse',
+        'executeListView' => 'SForce\\Wsdl\\executeListView',
+        'executeListViewResponse' => 'SForce\\Wsdl\\executeListViewResponse',
+        'describeSObjectListViews' => 'SForce\\Wsdl\\describeSObjectListViews',
+        'describeSObjectListViewsResponse' => 'SForce\\Wsdl\\describeSObjectListViewsResponse',
+        'describeSearchLayouts' => 'SForce\\Wsdl\\describeSearchLayouts',
+        'describeSearchLayoutsResponse' => 'SForce\\Wsdl\\describeSearchLayoutsResponse',
+        'describeSearchScopeOrder' => 'SForce\\Wsdl\\describeSearchScopeOrder',
+        'describeSearchScopeOrderResponse' => 'SForce\\Wsdl\\describeSearchScopeOrderResponse',
+        'describeSearchableEntities' => 'SForce\\Wsdl\\describeSearchableEntities',
+        'describeSearchableEntitiesResponse' => 'SForce\\Wsdl\\describeSearchableEntitiesResponse',
+        'describeTabs' => 'SForce\\Wsdl\\describeTabs',
+        'describeTabsResponse' => 'SForce\\Wsdl\\describeTabsResponse',
+        'describeAllTabs' => 'SForce\\Wsdl\\describeAllTabs',
+        'describeAllTabsResponse' => 'SForce\\Wsdl\\describeAllTabsResponse',
+        'describeNouns' => 'SForce\\Wsdl\\describeNouns',
+        'describeNounsResponse' => 'SForce\\Wsdl\\describeNounsResponse',
+        'create' => 'SForce\\Wsdl\\create',
+        'createResponse' => 'SForce\\Wsdl\\createResponse',
+        'sendEmail' => 'SForce\\Wsdl\\sendEmail',
+        'sendEmailResponse' => 'SForce\\Wsdl\\sendEmailResponse',
+        'RenderEmailTemplateRequest' => 'SForce\\Wsdl\\RenderEmailTemplateRequest',
+        'RenderEmailTemplateBodyResult' => 'SForce\\Wsdl\\RenderEmailTemplateBodyResult',
+        'RenderEmailTemplateResult' => 'SForce\\Wsdl\\RenderEmailTemplateResult',
+        'renderEmailTemplate' => 'SForce\\Wsdl\\renderEmailTemplate',
+        'renderEmailTemplateResponse' => 'SForce\\Wsdl\\renderEmailTemplateResponse',
+        'RenderStoredEmailTemplateRequest' => 'SForce\\Wsdl\\RenderStoredEmailTemplateRequest',
+        'RenderStoredEmailTemplateResult' => 'SForce\\Wsdl\\RenderStoredEmailTemplateResult',
+        'renderStoredEmailTemplate' => 'SForce\\Wsdl\\renderStoredEmailTemplate',
+        'renderStoredEmailTemplateResponse' => 'SForce\\Wsdl\\renderStoredEmailTemplateResponse',
+        'sendEmailMessage' => 'SForce\\Wsdl\\sendEmailMessage',
+        'sendEmailMessageResponse' => 'SForce\\Wsdl\\sendEmailMessageResponse',
+        'update' => 'SForce\\Wsdl\\update',
+        'updateResponse' => 'SForce\\Wsdl\\updateResponse',
+        'upsert' => 'SForce\\Wsdl\\upsert',
+        'upsertResponse' => 'SForce\\Wsdl\\upsertResponse',
+        'merge' => 'SForce\\Wsdl\\merge',
+        'mergeResponse' => 'SForce\\Wsdl\\mergeResponse',
+        'delete' => 'SForce\\Wsdl\\delete',
+        'deleteResponse' => 'SForce\\Wsdl\\deleteResponse',
+        'deleteByExample' => 'SForce\\Wsdl\\deleteByExample',
+        'deleteByExampleResponse' => 'SForce\\Wsdl\\deleteByExampleResponse',
+        'undelete' => 'SForce\\Wsdl\\undelete',
+        'undeleteResponse' => 'SForce\\Wsdl\\undeleteResponse',
+        'emptyRecycleBin' => 'SForce\\Wsdl\\emptyRecycleBin',
+        'emptyRecycleBinResponse' => 'SForce\\Wsdl\\emptyRecycleBinResponse',
+        'process' => 'SForce\\Wsdl\\process',
+        'processResponse' => 'SForce\\Wsdl\\processResponse',
+        'performQuickActions' => 'SForce\\Wsdl\\performQuickActions',
+        'performQuickActionsResponse' => 'SForce\\Wsdl\\performQuickActionsResponse',
+        'retrieveMassQuickActionTemplates' => 'SForce\\Wsdl\\retrieveMassQuickActionTemplates',
+        'retrieveMassQuickActionTemplatesResponse' => 'SForce\\Wsdl\\retrieveMassQuickActionTemplatesResponse',
+        'retrieveQuickActionTemplates' => 'SForce\\Wsdl\\retrieveQuickActionTemplates',
+        'retrieveQuickActionTemplatesResponse' => 'SForce\\Wsdl\\retrieveQuickActionTemplatesResponse',
+        'describeQuickActions' => 'SForce\\Wsdl\\describeQuickActions',
+        'describeQuickActionsResponse' => 'SForce\\Wsdl\\describeQuickActionsResponse',
+        'describeQuickActionsForRecordType' => 'SForce\\Wsdl\\describeQuickActionsForRecordType',
+        'describeQuickActionsForRecordTypeResponse' => 'SForce\\Wsdl\\describeQuickActionsForRecordTypeResponse',
+        'describeAvailableQuickActions' => 'SForce\\Wsdl\\describeAvailableQuickActions',
+        'describeAvailableQuickActionsResponse' => 'SForce\\Wsdl\\describeAvailableQuickActionsResponse',
+        'describeVisualForce' => 'SForce\\Wsdl\\describeVisualForce',
+        'describeVisualForceResponse' => 'SForce\\Wsdl\\describeVisualForceResponse',
+        'retrieve' => 'SForce\\Wsdl\\retrieve',
+        'retrieveResponse' => 'SForce\\Wsdl\\retrieveResponse',
+        'convertLead' => 'SForce\\Wsdl\\convertLead',
+        'convertLeadResponse' => 'SForce\\Wsdl\\convertLeadResponse',
+        'getUpdated' => 'SForce\\Wsdl\\getUpdated',
+        'getUpdatedResponse' => 'SForce\\Wsdl\\getUpdatedResponse',
+        'getDeleted' => 'SForce\\Wsdl\\getDeleted',
+        'getDeletedResponse' => 'SForce\\Wsdl\\getDeletedResponse',
+        'logout' => 'SForce\\Wsdl\\logout',
+        'logoutResponse' => 'SForce\\Wsdl\\logoutResponse',
+        'invalidateSessions' => 'SForce\\Wsdl\\invalidateSessions',
+        'invalidateSessionsResponse' => 'SForce\\Wsdl\\invalidateSessionsResponse',
+        'query' => 'SForce\\Wsdl\\query',
+        'queryResponse' => 'SForce\\Wsdl\\queryResponse',
+        'queryAll' => 'SForce\\Wsdl\\queryAll',
+        'queryAllResponse' => 'SForce\\Wsdl\\queryAllResponse',
+        'queryMore' => 'SForce\\Wsdl\\queryMore',
+        'queryMoreResponse' => 'SForce\\Wsdl\\queryMoreResponse',
+        'search' => 'SForce\\Wsdl\\search',
+        'searchResponse' => 'SForce\\Wsdl\\searchResponse',
+        'getServerTimestamp' => 'SForce\\Wsdl\\getServerTimestamp',
+        'getServerTimestampResponse' => 'SForce\\Wsdl\\getServerTimestampResponse',
+        'setPassword' => 'SForce\\Wsdl\\setPassword',
+        'setPasswordResponse' => 'SForce\\Wsdl\\setPasswordResponse',
+        'changeOwnPassword' => 'SForce\\Wsdl\\changeOwnPassword',
+        'changeOwnPasswordResponse' => 'SForce\\Wsdl\\changeOwnPasswordResponse',
+        'resetPassword' => 'SForce\\Wsdl\\resetPassword',
+        'resetPasswordResponse' => 'SForce\\Wsdl\\resetPasswordResponse',
+        'getUserInfo' => 'SForce\\Wsdl\\getUserInfo',
+        'getUserInfoResponse' => 'SForce\\Wsdl\\getUserInfoResponse',
+        'SessionHeader' => 'SForce\\Wsdl\\SessionHeader',
+        'LoginScopeHeader' => 'SForce\\Wsdl\\LoginScopeHeader',
+        'CallOptions' => 'SForce\\Wsdl\\CallOptions',
+        'QueryOptions' => 'SForce\\Wsdl\\QueryOptions',
+        'DebuggingHeader' => 'SForce\\Wsdl\\DebuggingHeader',
+        'LogInfo' => 'SForce\\Wsdl\\LogInfo',
+        'DebuggingInfo' => 'SForce\\Wsdl\\DebuggingInfo',
+        'PackageVersion' => 'SForce\\Wsdl\\PackageVersion',
+        'PackageVersionHeader' => 'SForce\\Wsdl\\PackageVersionHeader',
+        'AllowFieldTruncationHeader' => 'SForce\\Wsdl\\AllowFieldTruncationHeader',
+        'DisableFeedTrackingHeader' => 'SForce\\Wsdl\\DisableFeedTrackingHeader',
+        'StreamingEnabledHeader' => 'SForce\\Wsdl\\StreamingEnabledHeader',
+        'AllOrNoneHeader' => 'SForce\\Wsdl\\AllOrNoneHeader',
+        'DuplicateRuleHeader' => 'SForce\\Wsdl\\DuplicateRuleHeader',
+        'LimitInfo' => 'SForce\\Wsdl\\LimitInfo',
+        'LimitInfoHeader' => 'SForce\\Wsdl\\LimitInfoHeader',
+        'MruHeader' => 'SForce\\Wsdl\\MruHeader',
+        'EmailHeader' => 'SForce\\Wsdl\\EmailHeader',
+        'AssignmentRuleHeader' => 'SForce\\Wsdl\\AssignmentRuleHeader',
+        'UserTerritoryDeleteHeader' => 'SForce\\Wsdl\\UserTerritoryDeleteHeader',
+        'LocaleOptions' => 'SForce\\Wsdl\\LocaleOptions',
+        'OwnerChangeOption' => 'SForce\\Wsdl\\OwnerChangeOption',
+        'OwnerChangeOptions' => 'SForce\\Wsdl\\OwnerChangeOptions',
+        'ApiFault' => 'SForce\\Wsdl\\ApiFault',
+        'ApiQueryFault' => 'SForce\\Wsdl\\ApiQueryFault',
+        'LoginFault' => 'SForce\\Wsdl\\LoginFault',
+        'InvalidQueryLocatorFault' => 'SForce\\Wsdl\\InvalidQueryLocatorFault',
+        'InvalidNewPasswordFault' => 'SForce\\Wsdl\\InvalidNewPasswordFault',
+        'InvalidOldPasswordFault' => 'SForce\\Wsdl\\InvalidOldPasswordFault',
+        'InvalidIdFault' => 'SForce\\Wsdl\\InvalidIdFault',
+        'UnexpectedErrorFault' => 'SForce\\Wsdl\\UnexpectedErrorFault',
+        'InvalidFieldFault' => 'SForce\\Wsdl\\InvalidFieldFault',
+        'InvalidSObjectFault' => 'SForce\\Wsdl\\InvalidSObjectFault',
+        'MalformedQueryFault' => 'SForce\\Wsdl\\MalformedQueryFault',
+        'MalformedSearchFault' => 'SForce\\Wsdl\\MalformedSearchFault',
+    ];
 
     /**
      * @param array $options A array of config values
      * @param string $wsdl The wsdl file to use
      */
-    public function __construct(array $options = array(), $wsdl = null)
+    public function __construct(array $options = [], $wsdl = null)
     {
-      foreach (self::$classmap as $key => $value) {
-        if (!isset($options['classmap'][$key])) {
-          $options['classmap'][$key] = $value;
+        foreach (self::$classmap as $key => $value) {
+            if (! isset($options['classmap'][$key])) {
+                $options['classmap'][$key] = $value;
+            }
         }
-      }
-      $options = array_merge(array (
-      'features' => 1,
-    ), $options);
-      if (!$wsdl) {
-        user_error('no wsdl supplied');
-      }
-      parent::__construct($wsdl, $options);
+        $options = array_merge([
+            'features' => 1,
+        ], $options);
+        if (! $wsdl) {
+            user_error('no wsdl supplied');
+        }
+        parent::__construct($wsdl, $options);
     }
 
     /**
@@ -372,7 +370,7 @@ class SforceService extends \SoapClient
      */
     public function login(login $parameters)
     {
-      return $this->__soapCall('login', array($parameters));
+        return $this->__soapCall('login', [$parameters]);
     }
 
     /**
@@ -383,7 +381,7 @@ class SforceService extends \SoapClient
      */
     public function describeSObject(describeSObject $parameters)
     {
-      return $this->__soapCall('describeSObject', array($parameters));
+        return $this->__soapCall('describeSObject', [$parameters]);
     }
 
     /**
@@ -394,7 +392,7 @@ class SforceService extends \SoapClient
      */
     public function describeSObjects(describeSObjects $parameters)
     {
-      return $this->__soapCall('describeSObjects', array($parameters));
+        return $this->__soapCall('describeSObjects', [$parameters]);
     }
 
     /**
@@ -405,7 +403,7 @@ class SforceService extends \SoapClient
      */
     public function describeGlobal(describeGlobal $parameters)
     {
-      return $this->__soapCall('describeGlobal', array($parameters));
+        return $this->__soapCall('describeGlobal', [$parameters]);
     }
 
     /**
@@ -416,7 +414,7 @@ class SforceService extends \SoapClient
      */
     public function describeDataCategoryGroups(describeDataCategoryGroups $parameters)
     {
-      return $this->__soapCall('describeDataCategoryGroups', array($parameters));
+        return $this->__soapCall('describeDataCategoryGroups', [$parameters]);
     }
 
     /**
@@ -427,7 +425,7 @@ class SforceService extends \SoapClient
      */
     public function describeDataCategoryGroupStructures(describeDataCategoryGroupStructures $parameters)
     {
-      return $this->__soapCall('describeDataCategoryGroupStructures', array($parameters));
+        return $this->__soapCall('describeDataCategoryGroupStructures', [$parameters]);
     }
 
     /**
@@ -438,7 +436,7 @@ class SforceService extends \SoapClient
      */
     public function describeDataCategoryMappings(describeDataCategoryMappings $parameters)
     {
-      return $this->__soapCall('describeDataCategoryMappings', array($parameters));
+        return $this->__soapCall('describeDataCategoryMappings', [$parameters]);
     }
 
     /**
@@ -449,7 +447,7 @@ class SforceService extends \SoapClient
      */
     public function describeKnowledgeSettings(describeKnowledgeSettings $parameters)
     {
-      return $this->__soapCall('describeKnowledgeSettings', array($parameters));
+        return $this->__soapCall('describeKnowledgeSettings', [$parameters]);
     }
 
     /**
@@ -460,7 +458,7 @@ class SforceService extends \SoapClient
      */
     public function describeAppMenu(describeAppMenu $parameters)
     {
-      return $this->__soapCall('describeAppMenu', array($parameters));
+        return $this->__soapCall('describeAppMenu', [$parameters]);
     }
 
     /**
@@ -471,7 +469,7 @@ class SforceService extends \SoapClient
      */
     public function describeGlobalThemeDouble(describeGlobalThemeDouble $parameters)
     {
-      return $this->__soapCall('describeGlobalThemeDouble', array($parameters));
+        return $this->__soapCall('describeGlobalThemeDouble', [$parameters]);
     }
 
     /**
@@ -482,7 +480,7 @@ class SforceService extends \SoapClient
      */
     public function describeTheme(describeTheme $parameters)
     {
-      return $this->__soapCall('describeTheme', array($parameters));
+        return $this->__soapCall('describeTheme', [$parameters]);
     }
 
     /**
@@ -493,7 +491,7 @@ class SforceService extends \SoapClient
      */
     public function describeLayoutDouble(describeLayoutDouble $parameters)
     {
-      return $this->__soapCall('describeLayoutDouble', array($parameters));
+        return $this->__soapCall('describeLayoutDouble', [$parameters]);
     }
 
     /**
@@ -504,7 +502,7 @@ class SforceService extends \SoapClient
      */
     public function describeSoftphoneLayout(describeSoftphoneLayout $parameters)
     {
-      return $this->__soapCall('describeSoftphoneLayout', array($parameters));
+        return $this->__soapCall('describeSoftphoneLayout', [$parameters]);
     }
 
     /**
@@ -515,7 +513,7 @@ class SforceService extends \SoapClient
      */
     public function describeSearchLayouts(describeSearchLayouts $parameters)
     {
-      return $this->__soapCall('describeSearchLayouts', array($parameters));
+        return $this->__soapCall('describeSearchLayouts', [$parameters]);
     }
 
     /**
@@ -526,7 +524,7 @@ class SforceService extends \SoapClient
      */
     public function describeSearchableEntities(describeSearchableEntities $parameters)
     {
-      return $this->__soapCall('describeSearchableEntities', array($parameters));
+        return $this->__soapCall('describeSearchableEntities', [$parameters]);
     }
 
     /**
@@ -537,7 +535,7 @@ class SforceService extends \SoapClient
      */
     public function describeSearchScopeOrder(describeSearchScopeOrder $parameters)
     {
-      return $this->__soapCall('describeSearchScopeOrder', array($parameters));
+        return $this->__soapCall('describeSearchScopeOrder', [$parameters]);
     }
 
     /**
@@ -548,7 +546,7 @@ class SforceService extends \SoapClient
      */
     public function describeCompactLayouts(describeCompactLayouts $parameters)
     {
-      return $this->__soapCall('describeCompactLayouts', array($parameters));
+        return $this->__soapCall('describeCompactLayouts', [$parameters]);
     }
 
     /**
@@ -559,7 +557,7 @@ class SforceService extends \SoapClient
      */
     public function describePathAssistants(describePathAssistants $parameters)
     {
-      return $this->__soapCall('describePathAssistants', array($parameters));
+        return $this->__soapCall('describePathAssistants', [$parameters]);
     }
 
     /**
@@ -570,7 +568,7 @@ class SforceService extends \SoapClient
      */
     public function describeApprovalLayoutDouble(describeApprovalLayoutDouble $parameters)
     {
-      return $this->__soapCall('describeApprovalLayoutDouble', array($parameters));
+        return $this->__soapCall('describeApprovalLayoutDouble', [$parameters]);
     }
 
     /**
@@ -581,7 +579,7 @@ class SforceService extends \SoapClient
      */
     public function describeSoqlListViews(describeSoqlListViews $parameters)
     {
-      return $this->__soapCall('describeSoqlListViews', array($parameters));
+        return $this->__soapCall('describeSoqlListViews', [$parameters]);
     }
 
     /**
@@ -592,7 +590,7 @@ class SforceService extends \SoapClient
      */
     public function executeListView(executeListView $parameters)
     {
-      return $this->__soapCall('executeListView', array($parameters));
+        return $this->__soapCall('executeListView', [$parameters]);
     }
 
     /**
@@ -603,7 +601,7 @@ class SforceService extends \SoapClient
      */
     public function describeSObjectListViews(describeSObjectListViews $parameters)
     {
-      return $this->__soapCall('describeSObjectListViews', array($parameters));
+        return $this->__soapCall('describeSObjectListViews', [$parameters]);
     }
 
     /**
@@ -614,7 +612,7 @@ class SforceService extends \SoapClient
      */
     public function describeTabs(describeTabs $parameters)
     {
-      return $this->__soapCall('describeTabs', array($parameters));
+        return $this->__soapCall('describeTabs', [$parameters]);
     }
 
     /**
@@ -625,7 +623,7 @@ class SforceService extends \SoapClient
      */
     public function describeAllTabs(describeAllTabs $parameters)
     {
-      return $this->__soapCall('describeAllTabs', array($parameters));
+        return $this->__soapCall('describeAllTabs', [$parameters]);
     }
 
     /**
@@ -636,7 +634,7 @@ class SforceService extends \SoapClient
      */
     public function describePrimaryCompactLayouts(describePrimaryCompactLayouts $parameters)
     {
-      return $this->__soapCall('describePrimaryCompactLayouts', array($parameters));
+        return $this->__soapCall('describePrimaryCompactLayouts', [$parameters]);
     }
 
     /**
@@ -647,7 +645,7 @@ class SforceService extends \SoapClient
      */
     public function create(create $parameters)
     {
-      return $this->__soapCall('create', array($parameters));
+        return $this->__soapCall('create', [$parameters]);
     }
 
     /**
@@ -658,7 +656,7 @@ class SforceService extends \SoapClient
      */
     public function update(update $parameters)
     {
-      return $this->__soapCall('update', array($parameters));
+        return $this->__soapCall('update', [$parameters]);
     }
 
     /**
@@ -669,7 +667,7 @@ class SforceService extends \SoapClient
      */
     public function upsert(upsert $parameters)
     {
-      return $this->__soapCall('upsert', array($parameters));
+        return $this->__soapCall('upsert', [$parameters]);
     }
 
     /**
@@ -680,7 +678,7 @@ class SforceService extends \SoapClient
      */
     public function merge(merge $parameters)
     {
-      return $this->__soapCall('merge', array($parameters));
+        return $this->__soapCall('merge', [$parameters]);
     }
 
     /**
@@ -691,7 +689,7 @@ class SforceService extends \SoapClient
      */
     public function delete(delete $parameters)
     {
-      return $this->__soapCall('delete', array($parameters));
+        return $this->__soapCall('delete', [$parameters]);
     }
 
     /**
@@ -702,7 +700,7 @@ class SforceService extends \SoapClient
      */
     public function undelete(undelete $parameters)
     {
-      return $this->__soapCall('undelete', array($parameters));
+        return $this->__soapCall('undelete', [$parameters]);
     }
 
     /**
@@ -713,7 +711,7 @@ class SforceService extends \SoapClient
      */
     public function emptyRecycleBin(emptyRecycleBin $parameters)
     {
-      return $this->__soapCall('emptyRecycleBin', array($parameters));
+        return $this->__soapCall('emptyRecycleBin', [$parameters]);
     }
 
     /**
@@ -724,7 +722,7 @@ class SforceService extends \SoapClient
      */
     public function retrieve(retrieve $parameters)
     {
-      return $this->__soapCall('retrieve', array($parameters));
+        return $this->__soapCall('retrieve', [$parameters]);
     }
 
     /**
@@ -735,7 +733,7 @@ class SforceService extends \SoapClient
      */
     public function process(process $parameters)
     {
-      return $this->__soapCall('process', array($parameters));
+        return $this->__soapCall('process', [$parameters]);
     }
 
     /**
@@ -746,7 +744,7 @@ class SforceService extends \SoapClient
      */
     public function convertLead(convertLead $parameters)
     {
-      return $this->__soapCall('convertLead', array($parameters));
+        return $this->__soapCall('convertLead', [$parameters]);
     }
 
     /**
@@ -757,7 +755,7 @@ class SforceService extends \SoapClient
      */
     public function logout(logout $parameters)
     {
-      return $this->__soapCall('logout', array($parameters));
+        return $this->__soapCall('logout', [$parameters]);
     }
 
     /**
@@ -768,7 +766,7 @@ class SforceService extends \SoapClient
      */
     public function invalidateSessions(invalidateSessions $parameters)
     {
-      return $this->__soapCall('invalidateSessions', array($parameters));
+        return $this->__soapCall('invalidateSessions', [$parameters]);
     }
 
     /**
@@ -779,7 +777,7 @@ class SforceService extends \SoapClient
      */
     public function getDeleted(getDeleted $parameters)
     {
-      return $this->__soapCall('getDeleted', array($parameters));
+        return $this->__soapCall('getDeleted', [$parameters]);
     }
 
     /**
@@ -790,7 +788,7 @@ class SforceService extends \SoapClient
      */
     public function getUpdated(getUpdated $parameters)
     {
-      return $this->__soapCall('getUpdated', array($parameters));
+        return $this->__soapCall('getUpdated', [$parameters]);
     }
 
     /**
@@ -801,7 +799,7 @@ class SforceService extends \SoapClient
      */
     public function query(query $parameters)
     {
-      return $this->__soapCall('query', array($parameters));
+        return $this->__soapCall('query', [$parameters]);
     }
 
     /**
@@ -812,7 +810,7 @@ class SforceService extends \SoapClient
      */
     public function queryAll(queryAll $parameters)
     {
-      return $this->__soapCall('queryAll', array($parameters));
+        return $this->__soapCall('queryAll', [$parameters]);
     }
 
     /**
@@ -823,7 +821,7 @@ class SforceService extends \SoapClient
      */
     public function queryMore(queryMore $parameters)
     {
-      return $this->__soapCall('queryMore', array($parameters));
+        return $this->__soapCall('queryMore', [$parameters]);
     }
 
     /**
@@ -834,7 +832,7 @@ class SforceService extends \SoapClient
      */
     public function search(search $parameters)
     {
-      return $this->__soapCall('search', array($parameters));
+        return $this->__soapCall('search', [$parameters]);
     }
 
     /**
@@ -845,7 +843,7 @@ class SforceService extends \SoapClient
      */
     public function getServerTimestamp(getServerTimestamp $parameters)
     {
-      return $this->__soapCall('getServerTimestamp', array($parameters));
+        return $this->__soapCall('getServerTimestamp', [$parameters]);
     }
 
     /**
@@ -856,7 +854,7 @@ class SforceService extends \SoapClient
      */
     public function setPassword(setPassword $parameters)
     {
-      return $this->__soapCall('setPassword', array($parameters));
+        return $this->__soapCall('setPassword', [$parameters]);
     }
 
     /**
@@ -867,7 +865,7 @@ class SforceService extends \SoapClient
      */
     public function changeOwnPassword(changeOwnPassword $parameters)
     {
-      return $this->__soapCall('changeOwnPassword', array($parameters));
+        return $this->__soapCall('changeOwnPassword', [$parameters]);
     }
 
     /**
@@ -878,7 +876,7 @@ class SforceService extends \SoapClient
      */
     public function resetPassword(resetPassword $parameters)
     {
-      return $this->__soapCall('resetPassword', array($parameters));
+        return $this->__soapCall('resetPassword', [$parameters]);
     }
 
     /**
@@ -889,7 +887,7 @@ class SforceService extends \SoapClient
      */
     public function getUserInfo(getUserInfo $parameters)
     {
-      return $this->__soapCall('getUserInfo', array($parameters));
+        return $this->__soapCall('getUserInfo', [$parameters]);
     }
 
     /**
@@ -900,7 +898,7 @@ class SforceService extends \SoapClient
      */
     public function deleteByExample(deleteByExample $parameters)
     {
-      return $this->__soapCall('deleteByExample', array($parameters));
+        return $this->__soapCall('deleteByExample', [$parameters]);
     }
 
     /**
@@ -911,7 +909,7 @@ class SforceService extends \SoapClient
      */
     public function sendEmailMessage(sendEmailMessage $parameters)
     {
-      return $this->__soapCall('sendEmailMessage', array($parameters));
+        return $this->__soapCall('sendEmailMessage', [$parameters]);
     }
 
     /**
@@ -922,7 +920,7 @@ class SforceService extends \SoapClient
      */
     public function sendEmail(sendEmail $parameters)
     {
-      return $this->__soapCall('sendEmail', array($parameters));
+        return $this->__soapCall('sendEmail', [$parameters]);
     }
 
     /**
@@ -933,7 +931,7 @@ class SforceService extends \SoapClient
      */
     public function renderEmailTemplate(renderEmailTemplate $parameters)
     {
-      return $this->__soapCall('renderEmailTemplate', array($parameters));
+        return $this->__soapCall('renderEmailTemplate', [$parameters]);
     }
 
     /**
@@ -944,7 +942,7 @@ class SforceService extends \SoapClient
      */
     public function renderStoredEmailTemplate(renderStoredEmailTemplate $parameters)
     {
-      return $this->__soapCall('renderStoredEmailTemplate', array($parameters));
+        return $this->__soapCall('renderStoredEmailTemplate', [$parameters]);
     }
 
     /**
@@ -955,7 +953,7 @@ class SforceService extends \SoapClient
      */
     public function performQuickActions(performQuickActions $parameters)
     {
-      return $this->__soapCall('performQuickActions', array($parameters));
+        return $this->__soapCall('performQuickActions', [$parameters]);
     }
 
     /**
@@ -966,7 +964,7 @@ class SforceService extends \SoapClient
      */
     public function describeQuickActions(describeQuickActions $parameters)
     {
-      return $this->__soapCall('describeQuickActions', array($parameters));
+        return $this->__soapCall('describeQuickActions', [$parameters]);
     }
 
     /**
@@ -977,7 +975,7 @@ class SforceService extends \SoapClient
      */
     public function describeQuickActionsForRecordType(describeQuickActionsForRecordType $parameters)
     {
-      return $this->__soapCall('describeQuickActionsForRecordType', array($parameters));
+        return $this->__soapCall('describeQuickActionsForRecordType', [$parameters]);
     }
 
     /**
@@ -988,7 +986,7 @@ class SforceService extends \SoapClient
      */
     public function describeAvailableQuickActions(describeAvailableQuickActions $parameters)
     {
-      return $this->__soapCall('describeAvailableQuickActions', array($parameters));
+        return $this->__soapCall('describeAvailableQuickActions', [$parameters]);
     }
 
     /**
@@ -999,7 +997,7 @@ class SforceService extends \SoapClient
      */
     public function retrieveQuickActionTemplates(retrieveQuickActionTemplates $parameters)
     {
-      return $this->__soapCall('retrieveQuickActionTemplates', array($parameters));
+        return $this->__soapCall('retrieveQuickActionTemplates', [$parameters]);
     }
 
     /**
@@ -1010,7 +1008,7 @@ class SforceService extends \SoapClient
      */
     public function retrieveMassQuickActionTemplates(retrieveMassQuickActionTemplates $parameters)
     {
-      return $this->__soapCall('retrieveMassQuickActionTemplates', array($parameters));
+        return $this->__soapCall('retrieveMassQuickActionTemplates', [$parameters]);
     }
 
     /**
@@ -1021,7 +1019,7 @@ class SforceService extends \SoapClient
      */
     public function describeVisualForce(describeVisualForce $parameters)
     {
-      return $this->__soapCall('describeVisualForce', array($parameters));
+        return $this->__soapCall('describeVisualForce', [$parameters]);
     }
 
     /**
@@ -1032,7 +1030,7 @@ class SforceService extends \SoapClient
      */
     public function findDuplicates(findDuplicates $parameters)
     {
-      return $this->__soapCall('findDuplicates', array($parameters));
+        return $this->__soapCall('findDuplicates', [$parameters]);
     }
 
     /**
@@ -1043,7 +1041,7 @@ class SforceService extends \SoapClient
      */
     public function findDuplicatesByIds(findDuplicatesByIds $parameters)
     {
-      return $this->__soapCall('findDuplicatesByIds', array($parameters));
+        return $this->__soapCall('findDuplicatesByIds', [$parameters]);
     }
 
     /**
@@ -1054,7 +1052,6 @@ class SforceService extends \SoapClient
      */
     public function describeNouns(describeNouns $parameters)
     {
-      return $this->__soapCall('describeNouns', array($parameters));
+        return $this->__soapCall('describeNouns', [$parameters]);
     }
-
 }

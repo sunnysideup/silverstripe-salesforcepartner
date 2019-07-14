@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class describeAppMenu
 {
-
     /**
-     * @var AppMenuType $appMenuType
+     * @var AppMenuType
      */
     protected $appMenuType = null;
 
     /**
-     * @var ID $networkId
+     * @var ID
      */
     protected $networkId = null;
 
@@ -21,8 +20,8 @@ class describeAppMenu
      */
     public function __construct($appMenuType = null, $networkId = null)
     {
-      $this->appMenuType = $appMenuType;
-      $this->networkId = $networkId;
+        $this->appMenuType = $appMenuType;
+        $this->networkId = $networkId;
     }
 
     /**
@@ -30,7 +29,7 @@ class describeAppMenu
      */
     public function getAppMenuType()
     {
-      return $this->appMenuType;
+        return $this->appMenuType;
     }
 
     /**
@@ -39,8 +38,8 @@ class describeAppMenu
      */
     public function setAppMenuType($appMenuType)
     {
-      $this->appMenuType = $appMenuType;
-      return $this;
+        $this->appMenuType = $appMenuType;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class describeAppMenu
      */
     public function getNetworkId()
     {
-      return $this->networkId;
+        return $this->networkId;
     }
 
     /**
@@ -57,8 +56,7 @@ class describeAppMenu
      */
     public function setNetworkId($networkId)
     {
-      $this->networkId = $networkId;
-      return $this;
+        $this->networkId = $networkId;
+        return $this;
     }
-
 }

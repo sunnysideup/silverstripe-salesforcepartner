@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class DescribeSearchScopeOrderResult
 {
-
     /**
-     * @var string $keyPrefix
+     * @var string
      */
     protected $keyPrefix = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
@@ -21,8 +20,8 @@ class DescribeSearchScopeOrderResult
      */
     public function __construct($keyPrefix = null, $name = null)
     {
-      $this->keyPrefix = $keyPrefix;
-      $this->name = $name;
+        $this->keyPrefix = $keyPrefix;
+        $this->name = $name;
     }
 
     /**
@@ -30,7 +29,7 @@ class DescribeSearchScopeOrderResult
      */
     public function getKeyPrefix()
     {
-      return $this->keyPrefix;
+        return $this->keyPrefix;
     }
 
     /**
@@ -39,8 +38,8 @@ class DescribeSearchScopeOrderResult
      */
     public function setKeyPrefix($keyPrefix)
     {
-      $this->keyPrefix = $keyPrefix;
-      return $this;
+        $this->keyPrefix = $keyPrefix;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class DescribeSearchScopeOrderResult
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -57,8 +56,7 @@ class DescribeSearchScopeOrderResult
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
-
 }

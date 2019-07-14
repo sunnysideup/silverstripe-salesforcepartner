@@ -4,49 +4,48 @@ namespace SForce\Wsdl;
 
 class DescribeSoqlListView
 {
-
     /**
-     * @var ListViewColumn[] $columns
+     * @var ListViewColumn[]
      */
     protected $columns = null;
 
     /**
-     * @var ID $id
+     * @var ID
      */
     protected $id = null;
 
     /**
-     * @var ListViewOrderBy[] $orderBy
+     * @var ListViewOrderBy[]
      */
     protected $orderBy = null;
 
     /**
-     * @var string $query
+     * @var string
      */
     protected $query = null;
 
     /**
-     * @var ID $relatedEntityId
+     * @var ID
      */
     protected $relatedEntityId = null;
 
     /**
-     * @var string $scope
+     * @var string
      */
     protected $scope = null;
 
     /**
-     * @var ID $scopeEntityId
+     * @var ID
      */
     protected $scopeEntityId = null;
 
     /**
-     * @var string $sobjectType
+     * @var string
      */
     protected $sobjectType = null;
 
     /**
-     * @var SoqlWhereCondition $whereCondition
+     * @var SoqlWhereCondition
      */
     protected $whereCondition = null;
 
@@ -59,11 +58,11 @@ class DescribeSoqlListView
      */
     public function __construct(array $columns = null, $id = null, array $orderBy = null, $query = null, $sobjectType = null)
     {
-      $this->columns = $columns;
-      $this->id = $id;
-      $this->orderBy = $orderBy;
-      $this->query = $query;
-      $this->sobjectType = $sobjectType;
+        $this->columns = $columns;
+        $this->id = $id;
+        $this->orderBy = $orderBy;
+        $this->query = $query;
+        $this->sobjectType = $sobjectType;
     }
 
     /**
@@ -71,7 +70,7 @@ class DescribeSoqlListView
      */
     public function getColumns()
     {
-      return $this->columns;
+        return $this->columns;
     }
 
     /**
@@ -80,8 +79,8 @@ class DescribeSoqlListView
      */
     public function setColumns(array $columns)
     {
-      $this->columns = $columns;
-      return $this;
+        $this->columns = $columns;
+        return $this;
     }
 
     /**
@@ -89,7 +88,7 @@ class DescribeSoqlListView
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
@@ -98,8 +97,8 @@ class DescribeSoqlListView
      */
     public function setId($id)
     {
-      $this->id = $id;
-      return $this;
+        $this->id = $id;
+        return $this;
     }
 
     /**
@@ -107,7 +106,7 @@ class DescribeSoqlListView
      */
     public function getOrderBy()
     {
-      return $this->orderBy;
+        return $this->orderBy;
     }
 
     /**
@@ -116,8 +115,8 @@ class DescribeSoqlListView
      */
     public function setOrderBy(array $orderBy)
     {
-      $this->orderBy = $orderBy;
-      return $this;
+        $this->orderBy = $orderBy;
+        return $this;
     }
 
     /**
@@ -125,7 +124,7 @@ class DescribeSoqlListView
      */
     public function getQuery()
     {
-      return $this->query;
+        return $this->query;
     }
 
     /**
@@ -134,8 +133,8 @@ class DescribeSoqlListView
      */
     public function setQuery($query)
     {
-      $this->query = $query;
-      return $this;
+        $this->query = $query;
+        return $this;
     }
 
     /**
@@ -143,7 +142,7 @@ class DescribeSoqlListView
      */
     public function getRelatedEntityId()
     {
-      return $this->relatedEntityId;
+        return $this->relatedEntityId;
     }
 
     /**
@@ -152,8 +151,8 @@ class DescribeSoqlListView
      */
     public function setRelatedEntityId($relatedEntityId)
     {
-      $this->relatedEntityId = $relatedEntityId;
-      return $this;
+        $this->relatedEntityId = $relatedEntityId;
+        return $this;
     }
 
     /**
@@ -161,7 +160,7 @@ class DescribeSoqlListView
      */
     public function getScope()
     {
-      return $this->scope;
+        return $this->scope;
     }
 
     /**
@@ -170,8 +169,8 @@ class DescribeSoqlListView
      */
     public function setScope($scope)
     {
-      $this->scope = $scope;
-      return $this;
+        $this->scope = $scope;
+        return $this;
     }
 
     /**
@@ -179,7 +178,7 @@ class DescribeSoqlListView
      */
     public function getScopeEntityId()
     {
-      return $this->scopeEntityId;
+        return $this->scopeEntityId;
     }
 
     /**
@@ -188,8 +187,8 @@ class DescribeSoqlListView
      */
     public function setScopeEntityId($scopeEntityId)
     {
-      $this->scopeEntityId = $scopeEntityId;
-      return $this;
+        $this->scopeEntityId = $scopeEntityId;
+        return $this;
     }
 
     /**
@@ -197,7 +196,7 @@ class DescribeSoqlListView
      */
     public function getSobjectType()
     {
-      return $this->sobjectType;
+        return $this->sobjectType;
     }
 
     /**
@@ -206,8 +205,8 @@ class DescribeSoqlListView
      */
     public function setSobjectType($sobjectType)
     {
-      $this->sobjectType = $sobjectType;
-      return $this;
+        $this->sobjectType = $sobjectType;
+        return $this;
     }
 
     /**
@@ -215,7 +214,7 @@ class DescribeSoqlListView
      */
     public function getWhereCondition()
     {
-      return $this->whereCondition;
+        return $this->whereCondition;
     }
 
     /**
@@ -224,8 +223,7 @@ class DescribeSoqlListView
      */
     public function setWhereCondition($whereCondition)
     {
-      $this->whereCondition = $whereCondition;
-      return $this;
+        $this->whereCondition = $whereCondition;
+        return $this;
     }
-
 }

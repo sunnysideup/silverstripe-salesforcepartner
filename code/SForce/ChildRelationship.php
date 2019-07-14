@@ -4,44 +4,43 @@ namespace SForce\Wsdl;
 
 class ChildRelationship
 {
-
     /**
-     * @var boolean $cascadeDelete
+     * @var boolean
      */
     protected $cascadeDelete = null;
 
     /**
-     * @var string $childSObject
+     * @var string
      */
     protected $childSObject = null;
 
     /**
-     * @var boolean $deprecatedAndHidden
+     * @var boolean
      */
     protected $deprecatedAndHidden = null;
 
     /**
-     * @var string $field
+     * @var string
      */
     protected $field = null;
 
     /**
-     * @var string[] $junctionIdListNames
+     * @var string[]
      */
     protected $junctionIdListNames = null;
 
     /**
-     * @var string[] $junctionReferenceTo
+     * @var string[]
      */
     protected $junctionReferenceTo = null;
 
     /**
-     * @var string $relationshipName
+     * @var string
      */
     protected $relationshipName = null;
 
     /**
-     * @var boolean $restrictedDelete
+     * @var boolean
      */
     protected $restrictedDelete = null;
 
@@ -53,10 +52,10 @@ class ChildRelationship
      */
     public function __construct($cascadeDelete = null, $childSObject = null, $deprecatedAndHidden = null, $field = null)
     {
-      $this->cascadeDelete = $cascadeDelete;
-      $this->childSObject = $childSObject;
-      $this->deprecatedAndHidden = $deprecatedAndHidden;
-      $this->field = $field;
+        $this->cascadeDelete = $cascadeDelete;
+        $this->childSObject = $childSObject;
+        $this->deprecatedAndHidden = $deprecatedAndHidden;
+        $this->field = $field;
     }
 
     /**
@@ -64,7 +63,7 @@ class ChildRelationship
      */
     public function getCascadeDelete()
     {
-      return $this->cascadeDelete;
+        return $this->cascadeDelete;
     }
 
     /**
@@ -73,8 +72,8 @@ class ChildRelationship
      */
     public function setCascadeDelete($cascadeDelete)
     {
-      $this->cascadeDelete = $cascadeDelete;
-      return $this;
+        $this->cascadeDelete = $cascadeDelete;
+        return $this;
     }
 
     /**
@@ -82,7 +81,7 @@ class ChildRelationship
      */
     public function getChildSObject()
     {
-      return $this->childSObject;
+        return $this->childSObject;
     }
 
     /**
@@ -91,8 +90,8 @@ class ChildRelationship
      */
     public function setChildSObject($childSObject)
     {
-      $this->childSObject = $childSObject;
-      return $this;
+        $this->childSObject = $childSObject;
+        return $this;
     }
 
     /**
@@ -100,7 +99,7 @@ class ChildRelationship
      */
     public function getDeprecatedAndHidden()
     {
-      return $this->deprecatedAndHidden;
+        return $this->deprecatedAndHidden;
     }
 
     /**
@@ -109,8 +108,8 @@ class ChildRelationship
      */
     public function setDeprecatedAndHidden($deprecatedAndHidden)
     {
-      $this->deprecatedAndHidden = $deprecatedAndHidden;
-      return $this;
+        $this->deprecatedAndHidden = $deprecatedAndHidden;
+        return $this;
     }
 
     /**
@@ -118,7 +117,7 @@ class ChildRelationship
      */
     public function getField()
     {
-      return $this->field;
+        return $this->field;
     }
 
     /**
@@ -127,8 +126,8 @@ class ChildRelationship
      */
     public function setField($field)
     {
-      $this->field = $field;
-      return $this;
+        $this->field = $field;
+        return $this;
     }
 
     /**
@@ -136,7 +135,7 @@ class ChildRelationship
      */
     public function getJunctionIdListNames()
     {
-      return $this->junctionIdListNames;
+        return $this->junctionIdListNames;
     }
 
     /**
@@ -145,8 +144,8 @@ class ChildRelationship
      */
     public function setJunctionIdListNames(array $junctionIdListNames = null)
     {
-      $this->junctionIdListNames = $junctionIdListNames;
-      return $this;
+        $this->junctionIdListNames = $junctionIdListNames;
+        return $this;
     }
 
     /**
@@ -154,7 +153,7 @@ class ChildRelationship
      */
     public function getJunctionReferenceTo()
     {
-      return $this->junctionReferenceTo;
+        return $this->junctionReferenceTo;
     }
 
     /**
@@ -163,8 +162,8 @@ class ChildRelationship
      */
     public function setJunctionReferenceTo(array $junctionReferenceTo = null)
     {
-      $this->junctionReferenceTo = $junctionReferenceTo;
-      return $this;
+        $this->junctionReferenceTo = $junctionReferenceTo;
+        return $this;
     }
 
     /**
@@ -172,7 +171,7 @@ class ChildRelationship
      */
     public function getRelationshipName()
     {
-      return $this->relationshipName;
+        return $this->relationshipName;
     }
 
     /**
@@ -181,8 +180,8 @@ class ChildRelationship
      */
     public function setRelationshipName($relationshipName)
     {
-      $this->relationshipName = $relationshipName;
-      return $this;
+        $this->relationshipName = $relationshipName;
+        return $this;
     }
 
     /**
@@ -190,7 +189,7 @@ class ChildRelationship
      */
     public function getRestrictedDelete()
     {
-      return $this->restrictedDelete;
+        return $this->restrictedDelete;
     }
 
     /**
@@ -199,8 +198,7 @@ class ChildRelationship
      */
     public function setRestrictedDelete($restrictedDelete)
     {
-      $this->restrictedDelete = $restrictedDelete;
-      return $this;
+        $this->restrictedDelete = $restrictedDelete;
+        return $this;
     }
-
 }

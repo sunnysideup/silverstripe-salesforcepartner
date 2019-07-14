@@ -4,79 +4,78 @@ namespace SForce\Wsdl;
 
 class LeadConvert
 {
-
     /**
-     * @var ID $accountId
+     * @var ID
      */
     protected $accountId = null;
 
     /**
-     * @var sObject $accountRecord
+     * @var sObject
      */
     protected $accountRecord = null;
 
     /**
-     * @var boolean $bypassAccountDedupeCheck
+     * @var boolean
      */
     protected $bypassAccountDedupeCheck = null;
 
     /**
-     * @var boolean $bypassContactDedupeCheck
+     * @var boolean
      */
     protected $bypassContactDedupeCheck = null;
 
     /**
-     * @var ID $contactId
+     * @var ID
      */
     protected $contactId = null;
 
     /**
-     * @var sObject $contactRecord
+     * @var sObject
      */
     protected $contactRecord = null;
 
     /**
-     * @var string $convertedStatus
+     * @var string
      */
     protected $convertedStatus = null;
 
     /**
-     * @var boolean $doNotCreateOpportunity
+     * @var boolean
      */
     protected $doNotCreateOpportunity = null;
 
     /**
-     * @var ID $leadId
+     * @var ID
      */
     protected $leadId = null;
 
     /**
-     * @var ID $opportunityId
+     * @var ID
      */
     protected $opportunityId = null;
 
     /**
-     * @var string $opportunityName
+     * @var string
      */
     protected $opportunityName = null;
 
     /**
-     * @var sObject $opportunityRecord
+     * @var sObject
      */
     protected $opportunityRecord = null;
 
     /**
-     * @var boolean $overwriteLeadSource
+     * @var boolean
      */
     protected $overwriteLeadSource = null;
 
     /**
-     * @var ID $ownerId
+     * @var ID
      */
     protected $ownerId = null;
 
     /**
-     * @var boolean $sendNotificationEmail
+     * @var boolean
      */
     protected $sendNotificationEmail = null;
 
@@ -89,11 +88,11 @@ class LeadConvert
      */
     public function __construct($convertedStatus = null, $doNotCreateOpportunity = null, $leadId = null, $overwriteLeadSource = null, $sendNotificationEmail = null)
     {
-      $this->convertedStatus = $convertedStatus;
-      $this->doNotCreateOpportunity = $doNotCreateOpportunity;
-      $this->leadId = $leadId;
-      $this->overwriteLeadSource = $overwriteLeadSource;
-      $this->sendNotificationEmail = $sendNotificationEmail;
+        $this->convertedStatus = $convertedStatus;
+        $this->doNotCreateOpportunity = $doNotCreateOpportunity;
+        $this->leadId = $leadId;
+        $this->overwriteLeadSource = $overwriteLeadSource;
+        $this->sendNotificationEmail = $sendNotificationEmail;
     }
 
     /**
@@ -101,7 +100,7 @@ class LeadConvert
      */
     public function getAccountId()
     {
-      return $this->accountId;
+        return $this->accountId;
     }
 
     /**
@@ -110,8 +109,8 @@ class LeadConvert
      */
     public function setAccountId($accountId)
     {
-      $this->accountId = $accountId;
-      return $this;
+        $this->accountId = $accountId;
+        return $this;
     }
 
     /**
@@ -119,7 +118,7 @@ class LeadConvert
      */
     public function getAccountRecord()
     {
-      return $this->accountRecord;
+        return $this->accountRecord;
     }
 
     /**
@@ -128,8 +127,8 @@ class LeadConvert
      */
     public function setAccountRecord($accountRecord)
     {
-      $this->accountRecord = $accountRecord;
-      return $this;
+        $this->accountRecord = $accountRecord;
+        return $this;
     }
 
     /**
@@ -137,7 +136,7 @@ class LeadConvert
      */
     public function getBypassAccountDedupeCheck()
     {
-      return $this->bypassAccountDedupeCheck;
+        return $this->bypassAccountDedupeCheck;
     }
 
     /**
@@ -146,8 +145,8 @@ class LeadConvert
      */
     public function setBypassAccountDedupeCheck($bypassAccountDedupeCheck)
     {
-      $this->bypassAccountDedupeCheck = $bypassAccountDedupeCheck;
-      return $this;
+        $this->bypassAccountDedupeCheck = $bypassAccountDedupeCheck;
+        return $this;
     }
 
     /**
@@ -155,7 +154,7 @@ class LeadConvert
      */
     public function getBypassContactDedupeCheck()
     {
-      return $this->bypassContactDedupeCheck;
+        return $this->bypassContactDedupeCheck;
     }
 
     /**
@@ -164,8 +163,8 @@ class LeadConvert
      */
     public function setBypassContactDedupeCheck($bypassContactDedupeCheck)
     {
-      $this->bypassContactDedupeCheck = $bypassContactDedupeCheck;
-      return $this;
+        $this->bypassContactDedupeCheck = $bypassContactDedupeCheck;
+        return $this;
     }
 
     /**
@@ -173,7 +172,7 @@ class LeadConvert
      */
     public function getContactId()
     {
-      return $this->contactId;
+        return $this->contactId;
     }
 
     /**
@@ -182,8 +181,8 @@ class LeadConvert
      */
     public function setContactId($contactId)
     {
-      $this->contactId = $contactId;
-      return $this;
+        $this->contactId = $contactId;
+        return $this;
     }
 
     /**
@@ -191,7 +190,7 @@ class LeadConvert
      */
     public function getContactRecord()
     {
-      return $this->contactRecord;
+        return $this->contactRecord;
     }
 
     /**
@@ -200,8 +199,8 @@ class LeadConvert
      */
     public function setContactRecord($contactRecord)
     {
-      $this->contactRecord = $contactRecord;
-      return $this;
+        $this->contactRecord = $contactRecord;
+        return $this;
     }
 
     /**
@@ -209,7 +208,7 @@ class LeadConvert
      */
     public function getConvertedStatus()
     {
-      return $this->convertedStatus;
+        return $this->convertedStatus;
     }
 
     /**
@@ -218,8 +217,8 @@ class LeadConvert
      */
     public function setConvertedStatus($convertedStatus)
     {
-      $this->convertedStatus = $convertedStatus;
-      return $this;
+        $this->convertedStatus = $convertedStatus;
+        return $this;
     }
 
     /**
@@ -227,7 +226,7 @@ class LeadConvert
      */
     public function getDoNotCreateOpportunity()
     {
-      return $this->doNotCreateOpportunity;
+        return $this->doNotCreateOpportunity;
     }
 
     /**
@@ -236,8 +235,8 @@ class LeadConvert
      */
     public function setDoNotCreateOpportunity($doNotCreateOpportunity)
     {
-      $this->doNotCreateOpportunity = $doNotCreateOpportunity;
-      return $this;
+        $this->doNotCreateOpportunity = $doNotCreateOpportunity;
+        return $this;
     }
 
     /**
@@ -245,7 +244,7 @@ class LeadConvert
      */
     public function getLeadId()
     {
-      return $this->leadId;
+        return $this->leadId;
     }
 
     /**
@@ -254,8 +253,8 @@ class LeadConvert
      */
     public function setLeadId($leadId)
     {
-      $this->leadId = $leadId;
-      return $this;
+        $this->leadId = $leadId;
+        return $this;
     }
 
     /**
@@ -263,7 +262,7 @@ class LeadConvert
      */
     public function getOpportunityId()
     {
-      return $this->opportunityId;
+        return $this->opportunityId;
     }
 
     /**
@@ -272,8 +271,8 @@ class LeadConvert
      */
     public function setOpportunityId($opportunityId)
     {
-      $this->opportunityId = $opportunityId;
-      return $this;
+        $this->opportunityId = $opportunityId;
+        return $this;
     }
 
     /**
@@ -281,7 +280,7 @@ class LeadConvert
      */
     public function getOpportunityName()
     {
-      return $this->opportunityName;
+        return $this->opportunityName;
     }
 
     /**
@@ -290,8 +289,8 @@ class LeadConvert
      */
     public function setOpportunityName($opportunityName)
     {
-      $this->opportunityName = $opportunityName;
-      return $this;
+        $this->opportunityName = $opportunityName;
+        return $this;
     }
 
     /**
@@ -299,7 +298,7 @@ class LeadConvert
      */
     public function getOpportunityRecord()
     {
-      return $this->opportunityRecord;
+        return $this->opportunityRecord;
     }
 
     /**
@@ -308,8 +307,8 @@ class LeadConvert
      */
     public function setOpportunityRecord($opportunityRecord)
     {
-      $this->opportunityRecord = $opportunityRecord;
-      return $this;
+        $this->opportunityRecord = $opportunityRecord;
+        return $this;
     }
 
     /**
@@ -317,7 +316,7 @@ class LeadConvert
      */
     public function getOverwriteLeadSource()
     {
-      return $this->overwriteLeadSource;
+        return $this->overwriteLeadSource;
     }
 
     /**
@@ -326,8 +325,8 @@ class LeadConvert
      */
     public function setOverwriteLeadSource($overwriteLeadSource)
     {
-      $this->overwriteLeadSource = $overwriteLeadSource;
-      return $this;
+        $this->overwriteLeadSource = $overwriteLeadSource;
+        return $this;
     }
 
     /**
@@ -335,7 +334,7 @@ class LeadConvert
      */
     public function getOwnerId()
     {
-      return $this->ownerId;
+        return $this->ownerId;
     }
 
     /**
@@ -344,8 +343,8 @@ class LeadConvert
      */
     public function setOwnerId($ownerId)
     {
-      $this->ownerId = $ownerId;
-      return $this;
+        $this->ownerId = $ownerId;
+        return $this;
     }
 
     /**
@@ -353,7 +352,7 @@ class LeadConvert
      */
     public function getSendNotificationEmail()
     {
-      return $this->sendNotificationEmail;
+        return $this->sendNotificationEmail;
     }
 
     /**
@@ -362,8 +361,7 @@ class LeadConvert
      */
     public function setSendNotificationEmail($sendNotificationEmail)
     {
-      $this->sendNotificationEmail = $sendNotificationEmail;
-      return $this;
+        $this->sendNotificationEmail = $sendNotificationEmail;
+        return $this;
     }
-
 }

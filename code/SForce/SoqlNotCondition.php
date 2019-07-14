@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class SoqlNotCondition extends SoqlWhereCondition
 {
-
     /**
-     * @var SoqlWhereCondition $condition
+     * @var SoqlWhereCondition
      */
     protected $condition = null;
 
@@ -15,7 +14,7 @@ class SoqlNotCondition extends SoqlWhereCondition
      */
     public function __construct($condition = null)
     {
-      $this->condition = $condition;
+        $this->condition = $condition;
     }
 
     /**
@@ -23,7 +22,7 @@ class SoqlNotCondition extends SoqlWhereCondition
      */
     public function getCondition()
     {
-      return $this->condition;
+        return $this->condition;
     }
 
     /**
@@ -32,8 +31,7 @@ class SoqlNotCondition extends SoqlWhereCondition
      */
     public function setCondition($condition)
     {
-      $this->condition = $condition;
-      return $this;
+        $this->condition = $condition;
+        return $this;
     }
-
 }

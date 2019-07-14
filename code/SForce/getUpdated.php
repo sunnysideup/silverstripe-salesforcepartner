@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class getUpdated
 {
-
     /**
-     * @var string $sObjectType
+     * @var string
      */
     protected $sObjectType = null;
 
     /**
-     * @var \DateTime $startDate
+     * @var \DateTime
      */
     protected $startDate = null;
 
     /**
-     * @var \DateTime $endDate
+     * @var \DateTime
      */
     protected $endDate = null;
 
@@ -27,9 +26,9 @@ class getUpdated
      */
     public function __construct($sObjectType = null, \DateTime $startDate = null, \DateTime $endDate = null)
     {
-      $this->sObjectType = $sObjectType;
-      $this->startDate = $startDate ? $startDate->format(\DateTime::ATOM) : null;
-      $this->endDate = $endDate ? $endDate->format(\DateTime::ATOM) : null;
+        $this->sObjectType = $sObjectType;
+        $this->startDate = $startDate ? $startDate->format(\DateTime::ATOM) : null;
+        $this->endDate = $endDate ? $endDate->format(\DateTime::ATOM) : null;
     }
 
     /**
@@ -37,7 +36,7 @@ class getUpdated
      */
     public function getSObjectType()
     {
-      return $this->sObjectType;
+        return $this->sObjectType;
     }
 
     /**
@@ -46,8 +45,8 @@ class getUpdated
      */
     public function setSObjectType($sObjectType)
     {
-      $this->sObjectType = $sObjectType;
-      return $this;
+        $this->sObjectType = $sObjectType;
+        return $this;
     }
 
     /**
@@ -55,15 +54,14 @@ class getUpdated
      */
     public function getStartDate()
     {
-      if ($this->startDate == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->startDate);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->startDate === null) {
+            return null;
         }
-      }
+        try {
+            return new \DateTime($this->startDate);
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     /**
@@ -72,8 +70,8 @@ class getUpdated
      */
     public function setStartDate(\DateTime $startDate)
     {
-      $this->startDate = $startDate->format(\DateTime::ATOM);
-      return $this;
+        $this->startDate = $startDate->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -81,15 +79,14 @@ class getUpdated
      */
     public function getEndDate()
     {
-      if ($this->endDate == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->endDate);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->endDate === null) {
+            return null;
         }
-      }
+        try {
+            return new \DateTime($this->endDate);
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     /**
@@ -98,8 +95,7 @@ class getUpdated
      */
     public function setEndDate(\DateTime $endDate)
     {
-      $this->endDate = $endDate->format(\DateTime::ATOM);
-      return $this;
+        $this->endDate = $endDate->format(\DateTime::ATOM);
+        return $this;
     }
-
 }

@@ -4,16 +4,13 @@ namespace SForce\Wsdl;
 
 class DescribeQuickActionListResult
 {
-
     /**
-     * @var DescribeQuickActionListItemResult[] $quickActionListItems
+     * @var DescribeQuickActionListItemResult[]
      */
     protected $quickActionListItems = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -21,7 +18,7 @@ class DescribeQuickActionListResult
      */
     public function getQuickActionListItems()
     {
-      return $this->quickActionListItems;
+        return $this->quickActionListItems;
     }
 
     /**
@@ -30,8 +27,7 @@ class DescribeQuickActionListResult
      */
     public function setQuickActionListItems(array $quickActionListItems = null)
     {
-      $this->quickActionListItems = $quickActionListItems;
-      return $this;
+        $this->quickActionListItems = $quickActionListItems;
+        return $this;
     }
-
 }

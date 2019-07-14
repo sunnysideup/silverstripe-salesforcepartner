@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class DescribeSoftphoneLayoutResult
 {
-
     /**
-     * @var DescribeSoftphoneLayoutCallType[] $callTypes
+     * @var DescribeSoftphoneLayoutCallType[]
      */
     protected $callTypes = null;
 
     /**
-     * @var ID $id
+     * @var ID
      */
     protected $id = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
@@ -27,9 +26,9 @@ class DescribeSoftphoneLayoutResult
      */
     public function __construct(array $callTypes = null, $id = null, $name = null)
     {
-      $this->callTypes = $callTypes;
-      $this->id = $id;
-      $this->name = $name;
+        $this->callTypes = $callTypes;
+        $this->id = $id;
+        $this->name = $name;
     }
 
     /**
@@ -37,7 +36,7 @@ class DescribeSoftphoneLayoutResult
      */
     public function getCallTypes()
     {
-      return $this->callTypes;
+        return $this->callTypes;
     }
 
     /**
@@ -46,8 +45,8 @@ class DescribeSoftphoneLayoutResult
      */
     public function setCallTypes(array $callTypes)
     {
-      $this->callTypes = $callTypes;
-      return $this;
+        $this->callTypes = $callTypes;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class DescribeSoftphoneLayoutResult
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
@@ -64,8 +63,8 @@ class DescribeSoftphoneLayoutResult
      */
     public function setId($id)
     {
-      $this->id = $id;
-      return $this;
+        $this->id = $id;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class DescribeSoftphoneLayoutResult
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -82,8 +81,7 @@ class DescribeSoftphoneLayoutResult
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
-
 }

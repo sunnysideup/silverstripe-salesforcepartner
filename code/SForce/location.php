@@ -4,21 +4,18 @@ namespace SForce\Wsdl;
 
 class location
 {
-
     /**
-     * @var float $latitude
+     * @var float
      */
     protected $latitude = null;
 
     /**
-     * @var float $longitude
+     * @var float
      */
     protected $longitude = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -26,7 +23,7 @@ class location
      */
     public function getLatitude()
     {
-      return $this->latitude;
+        return $this->latitude;
     }
 
     /**
@@ -35,8 +32,8 @@ class location
      */
     public function setLatitude($latitude)
     {
-      $this->latitude = $latitude;
-      return $this;
+        $this->latitude = $latitude;
+        return $this;
     }
 
     /**
@@ -44,7 +41,7 @@ class location
      */
     public function getLongitude()
     {
-      return $this->longitude;
+        return $this->longitude;
     }
 
     /**
@@ -53,8 +50,7 @@ class location
      */
     public function setLongitude($longitude)
     {
-      $this->longitude = $longitude;
-      return $this;
+        $this->longitude = $longitude;
+        return $this;
     }
-
 }

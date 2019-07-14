@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class LimitInfo
 {
-
     /**
-     * @var int $current
+     * @var int
      */
     protected $current = null;
 
     /**
-     * @var int $limit
+     * @var int
      */
     protected $limit = null;
 
     /**
-     * @var string $type
+     * @var string
      */
     protected $type = null;
 
@@ -27,9 +26,9 @@ class LimitInfo
      */
     public function __construct($current = null, $limit = null, $type = null)
     {
-      $this->current = $current;
-      $this->limit = $limit;
-      $this->type = $type;
+        $this->current = $current;
+        $this->limit = $limit;
+        $this->type = $type;
     }
 
     /**
@@ -37,7 +36,7 @@ class LimitInfo
      */
     public function getCurrent()
     {
-      return $this->current;
+        return $this->current;
     }
 
     /**
@@ -46,8 +45,8 @@ class LimitInfo
      */
     public function setCurrent($current)
     {
-      $this->current = $current;
-      return $this;
+        $this->current = $current;
+        return $this;
     }
 
     /**
@@ -55,7 +54,7 @@ class LimitInfo
      */
     public function getLimit()
     {
-      return $this->limit;
+        return $this->limit;
     }
 
     /**
@@ -64,8 +63,8 @@ class LimitInfo
      */
     public function setLimit($limit)
     {
-      $this->limit = $limit;
-      return $this;
+        $this->limit = $limit;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class LimitInfo
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -82,8 +81,7 @@ class LimitInfo
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
-
 }

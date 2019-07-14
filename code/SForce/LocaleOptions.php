@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class LocaleOptions
 {
-
     /**
-     * @var string $language
+     * @var string
      */
     protected $language = null;
 
     /**
-     * @var boolean $localizeErrors
+     * @var boolean
      */
     protected $localizeErrors = null;
 
@@ -21,8 +20,8 @@ class LocaleOptions
      */
     public function __construct($language = null, $localizeErrors = null)
     {
-      $this->language = $language;
-      $this->localizeErrors = $localizeErrors;
+        $this->language = $language;
+        $this->localizeErrors = $localizeErrors;
     }
 
     /**
@@ -30,7 +29,7 @@ class LocaleOptions
      */
     public function getLanguage()
     {
-      return $this->language;
+        return $this->language;
     }
 
     /**
@@ -39,8 +38,8 @@ class LocaleOptions
      */
     public function setLanguage($language)
     {
-      $this->language = $language;
-      return $this;
+        $this->language = $language;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class LocaleOptions
      */
     public function getLocalizeErrors()
     {
-      return $this->localizeErrors;
+        return $this->localizeErrors;
     }
 
     /**
@@ -57,8 +56,7 @@ class LocaleOptions
      */
     public function setLocalizeErrors($localizeErrors)
     {
-      $this->localizeErrors = $localizeErrors;
-      return $this;
+        $this->localizeErrors = $localizeErrors;
+        return $this;
     }
-
 }

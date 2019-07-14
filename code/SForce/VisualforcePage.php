@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class VisualforcePage extends DescribeLayoutComponent
 {
-
     /**
-     * @var boolean $showLabel
+     * @var boolean
      */
     protected $showLabel = null;
 
     /**
-     * @var boolean $showScrollbars
+     * @var boolean
      */
     protected $showScrollbars = null;
 
     /**
-     * @var string $suggestedHeight
+     * @var string
      */
     protected $suggestedHeight = null;
 
     /**
-     * @var string $suggestedWidth
+     * @var string
      */
     protected $suggestedWidth = null;
 
     /**
-     * @var string $url
+     * @var string
      */
     protected $url = null;
 
@@ -42,12 +41,12 @@ class VisualforcePage extends DescribeLayoutComponent
      */
     public function __construct($displayLines = null, $tabOrder = null, $type = null, $showLabel = null, $showScrollbars = null, $suggestedHeight = null, $suggestedWidth = null, $url = null)
     {
-      parent::__construct($displayLines, $tabOrder, $type);
-      $this->showLabel = $showLabel;
-      $this->showScrollbars = $showScrollbars;
-      $this->suggestedHeight = $suggestedHeight;
-      $this->suggestedWidth = $suggestedWidth;
-      $this->url = $url;
+        parent::__construct($displayLines, $tabOrder, $type);
+        $this->showLabel = $showLabel;
+        $this->showScrollbars = $showScrollbars;
+        $this->suggestedHeight = $suggestedHeight;
+        $this->suggestedWidth = $suggestedWidth;
+        $this->url = $url;
     }
 
     /**
@@ -55,7 +54,7 @@ class VisualforcePage extends DescribeLayoutComponent
      */
     public function getShowLabel()
     {
-      return $this->showLabel;
+        return $this->showLabel;
     }
 
     /**
@@ -64,8 +63,8 @@ class VisualforcePage extends DescribeLayoutComponent
      */
     public function setShowLabel($showLabel)
     {
-      $this->showLabel = $showLabel;
-      return $this;
+        $this->showLabel = $showLabel;
+        return $this;
     }
 
     /**
@@ -73,7 +72,7 @@ class VisualforcePage extends DescribeLayoutComponent
      */
     public function getShowScrollbars()
     {
-      return $this->showScrollbars;
+        return $this->showScrollbars;
     }
 
     /**
@@ -82,8 +81,8 @@ class VisualforcePage extends DescribeLayoutComponent
      */
     public function setShowScrollbars($showScrollbars)
     {
-      $this->showScrollbars = $showScrollbars;
-      return $this;
+        $this->showScrollbars = $showScrollbars;
+        return $this;
     }
 
     /**
@@ -91,7 +90,7 @@ class VisualforcePage extends DescribeLayoutComponent
      */
     public function getSuggestedHeight()
     {
-      return $this->suggestedHeight;
+        return $this->suggestedHeight;
     }
 
     /**
@@ -100,8 +99,8 @@ class VisualforcePage extends DescribeLayoutComponent
      */
     public function setSuggestedHeight($suggestedHeight)
     {
-      $this->suggestedHeight = $suggestedHeight;
-      return $this;
+        $this->suggestedHeight = $suggestedHeight;
+        return $this;
     }
 
     /**
@@ -109,7 +108,7 @@ class VisualforcePage extends DescribeLayoutComponent
      */
     public function getSuggestedWidth()
     {
-      return $this->suggestedWidth;
+        return $this->suggestedWidth;
     }
 
     /**
@@ -118,8 +117,8 @@ class VisualforcePage extends DescribeLayoutComponent
      */
     public function setSuggestedWidth($suggestedWidth)
     {
-      $this->suggestedWidth = $suggestedWidth;
-      return $this;
+        $this->suggestedWidth = $suggestedWidth;
+        return $this;
     }
 
     /**
@@ -127,7 +126,7 @@ class VisualforcePage extends DescribeLayoutComponent
      */
     public function getUrl()
     {
-      return $this->url;
+        return $this->url;
     }
 
     /**
@@ -136,8 +135,7 @@ class VisualforcePage extends DescribeLayoutComponent
      */
     public function setUrl($url)
     {
-      $this->url = $url;
-      return $this;
+        $this->url = $url;
+        return $this;
     }
-
 }

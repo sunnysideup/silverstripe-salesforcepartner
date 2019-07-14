@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class NamedLayoutInfo
 {
-
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
@@ -15,7 +14,7 @@ class NamedLayoutInfo
      */
     public function __construct($name = null)
     {
-      $this->name = $name;
+        $this->name = $name;
     }
 
     /**
@@ -23,7 +22,7 @@ class NamedLayoutInfo
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -32,8 +31,7 @@ class NamedLayoutInfo
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
-
 }

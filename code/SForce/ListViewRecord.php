@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class ListViewRecord
 {
-
     /**
-     * @var ListViewRecordColumn[] $columns
+     * @var ListViewRecordColumn[]
      */
     protected $columns = null;
 
@@ -15,7 +14,7 @@ class ListViewRecord
      */
     public function __construct(array $columns = null)
     {
-      $this->columns = $columns;
+        $this->columns = $columns;
     }
 
     /**
@@ -23,7 +22,7 @@ class ListViewRecord
      */
     public function getColumns()
     {
-      return $this->columns;
+        return $this->columns;
     }
 
     /**
@@ -32,8 +31,7 @@ class ListViewRecord
      */
     public function setColumns(array $columns)
     {
-      $this->columns = $columns;
-      return $this;
+        $this->columns = $columns;
+        return $this;
     }
-
 }

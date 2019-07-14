@@ -4,34 +4,33 @@ namespace SForce\Wsdl;
 
 class DescribeLayoutSaveOption
 {
-
     /**
-     * @var boolean $defaultValue
+     * @var boolean
      */
     protected $defaultValue = null;
 
     /**
-     * @var boolean $isDisplayed
+     * @var boolean
      */
     protected $isDisplayed = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var string $restHeaderName
+     * @var string
      */
     protected $restHeaderName = null;
 
     /**
-     * @var string $soapHeaderName
+     * @var string
      */
     protected $soapHeaderName = null;
 
@@ -45,12 +44,12 @@ class DescribeLayoutSaveOption
      */
     public function __construct($defaultValue = null, $isDisplayed = null, $label = null, $name = null, $restHeaderName = null, $soapHeaderName = null)
     {
-      $this->defaultValue = $defaultValue;
-      $this->isDisplayed = $isDisplayed;
-      $this->label = $label;
-      $this->name = $name;
-      $this->restHeaderName = $restHeaderName;
-      $this->soapHeaderName = $soapHeaderName;
+        $this->defaultValue = $defaultValue;
+        $this->isDisplayed = $isDisplayed;
+        $this->label = $label;
+        $this->name = $name;
+        $this->restHeaderName = $restHeaderName;
+        $this->soapHeaderName = $soapHeaderName;
     }
 
     /**
@@ -58,7 +57,7 @@ class DescribeLayoutSaveOption
      */
     public function getDefaultValue()
     {
-      return $this->defaultValue;
+        return $this->defaultValue;
     }
 
     /**
@@ -67,8 +66,8 @@ class DescribeLayoutSaveOption
      */
     public function setDefaultValue($defaultValue)
     {
-      $this->defaultValue = $defaultValue;
-      return $this;
+        $this->defaultValue = $defaultValue;
+        return $this;
     }
 
     /**
@@ -76,7 +75,7 @@ class DescribeLayoutSaveOption
      */
     public function getIsDisplayed()
     {
-      return $this->isDisplayed;
+        return $this->isDisplayed;
     }
 
     /**
@@ -85,8 +84,8 @@ class DescribeLayoutSaveOption
      */
     public function setIsDisplayed($isDisplayed)
     {
-      $this->isDisplayed = $isDisplayed;
-      return $this;
+        $this->isDisplayed = $isDisplayed;
+        return $this;
     }
 
     /**
@@ -94,7 +93,7 @@ class DescribeLayoutSaveOption
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -103,8 +102,8 @@ class DescribeLayoutSaveOption
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -112,7 +111,7 @@ class DescribeLayoutSaveOption
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -121,8 +120,8 @@ class DescribeLayoutSaveOption
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -130,7 +129,7 @@ class DescribeLayoutSaveOption
      */
     public function getRestHeaderName()
     {
-      return $this->restHeaderName;
+        return $this->restHeaderName;
     }
 
     /**
@@ -139,8 +138,8 @@ class DescribeLayoutSaveOption
      */
     public function setRestHeaderName($restHeaderName)
     {
-      $this->restHeaderName = $restHeaderName;
-      return $this;
+        $this->restHeaderName = $restHeaderName;
+        return $this;
     }
 
     /**
@@ -148,7 +147,7 @@ class DescribeLayoutSaveOption
      */
     public function getSoapHeaderName()
     {
-      return $this->soapHeaderName;
+        return $this->soapHeaderName;
     }
 
     /**
@@ -157,8 +156,7 @@ class DescribeLayoutSaveOption
      */
     public function setSoapHeaderName($soapHeaderName)
     {
-      $this->soapHeaderName = $soapHeaderName;
-      return $this;
+        $this->soapHeaderName = $soapHeaderName;
+        return $this;
     }
-
 }

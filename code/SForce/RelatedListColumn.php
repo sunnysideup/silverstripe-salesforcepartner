@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class RelatedListColumn
 {
-
     /**
-     * @var string $field
+     * @var string
      */
     protected $field = null;
 
     /**
-     * @var string $fieldApiName
+     * @var string
      */
     protected $fieldApiName = null;
 
     /**
-     * @var string $format
+     * @var string
      */
     protected $format = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $lookupId
+     * @var string
      */
     protected $lookupId = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var boolean $sortable
+     * @var boolean
      */
     protected $sortable = null;
 
@@ -48,10 +47,10 @@ class RelatedListColumn
      */
     public function __construct($fieldApiName = null, $label = null, $name = null, $sortable = null)
     {
-      $this->fieldApiName = $fieldApiName;
-      $this->label = $label;
-      $this->name = $name;
-      $this->sortable = $sortable;
+        $this->fieldApiName = $fieldApiName;
+        $this->label = $label;
+        $this->name = $name;
+        $this->sortable = $sortable;
     }
 
     /**
@@ -59,7 +58,7 @@ class RelatedListColumn
      */
     public function getField()
     {
-      return $this->field;
+        return $this->field;
     }
 
     /**
@@ -68,8 +67,8 @@ class RelatedListColumn
      */
     public function setField($field)
     {
-      $this->field = $field;
-      return $this;
+        $this->field = $field;
+        return $this;
     }
 
     /**
@@ -77,7 +76,7 @@ class RelatedListColumn
      */
     public function getFieldApiName()
     {
-      return $this->fieldApiName;
+        return $this->fieldApiName;
     }
 
     /**
@@ -86,8 +85,8 @@ class RelatedListColumn
      */
     public function setFieldApiName($fieldApiName)
     {
-      $this->fieldApiName = $fieldApiName;
-      return $this;
+        $this->fieldApiName = $fieldApiName;
+        return $this;
     }
 
     /**
@@ -95,7 +94,7 @@ class RelatedListColumn
      */
     public function getFormat()
     {
-      return $this->format;
+        return $this->format;
     }
 
     /**
@@ -104,8 +103,8 @@ class RelatedListColumn
      */
     public function setFormat($format)
     {
-      $this->format = $format;
-      return $this;
+        $this->format = $format;
+        return $this;
     }
 
     /**
@@ -113,7 +112,7 @@ class RelatedListColumn
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -122,8 +121,8 @@ class RelatedListColumn
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -131,7 +130,7 @@ class RelatedListColumn
      */
     public function getLookupId()
     {
-      return $this->lookupId;
+        return $this->lookupId;
     }
 
     /**
@@ -140,8 +139,8 @@ class RelatedListColumn
      */
     public function setLookupId($lookupId)
     {
-      $this->lookupId = $lookupId;
-      return $this;
+        $this->lookupId = $lookupId;
+        return $this;
     }
 
     /**
@@ -149,7 +148,7 @@ class RelatedListColumn
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -158,8 +157,8 @@ class RelatedListColumn
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -167,7 +166,7 @@ class RelatedListColumn
      */
     public function getSortable()
     {
-      return $this->sortable;
+        return $this->sortable;
     }
 
     /**
@@ -176,8 +175,7 @@ class RelatedListColumn
      */
     public function setSortable($sortable)
     {
-      $this->sortable = $sortable;
-      return $this;
+        $this->sortable = $sortable;
+        return $this;
     }
-
 }

@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class performQuickActions
 {
-
     /**
-     * @var PerformQuickActionRequest $quickActions
+     * @var PerformQuickActionRequest
      */
     protected $quickActions = null;
 
@@ -15,7 +14,7 @@ class performQuickActions
      */
     public function __construct($quickActions = null)
     {
-      $this->quickActions = $quickActions;
+        $this->quickActions = $quickActions;
     }
 
     /**
@@ -23,7 +22,7 @@ class performQuickActions
      */
     public function getQuickActions()
     {
-      return $this->quickActions;
+        return $this->quickActions;
     }
 
     /**
@@ -32,8 +31,7 @@ class performQuickActions
      */
     public function setQuickActions($quickActions)
     {
-      $this->quickActions = $quickActions;
-      return $this;
+        $this->quickActions = $quickActions;
+        return $this;
     }
-
 }

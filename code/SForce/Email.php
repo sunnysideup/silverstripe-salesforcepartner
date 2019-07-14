@@ -4,46 +4,43 @@ namespace SForce\Wsdl;
 
 class Email
 {
-
     /**
-     * @var boolean $bccSender
+     * @var boolean
      */
     protected $bccSender = null;
 
     /**
-     * @var EmailPriority $emailPriority
+     * @var EmailPriority
      */
     protected $emailPriority = null;
 
     /**
-     * @var string $replyTo
+     * @var string
      */
     protected $replyTo = null;
 
     /**
-     * @var boolean $saveAsActivity
+     * @var boolean
      */
     protected $saveAsActivity = null;
 
     /**
-     * @var string $senderDisplayName
+     * @var string
      */
     protected $senderDisplayName = null;
 
     /**
-     * @var string $subject
+     * @var string
      */
     protected $subject = null;
 
     /**
-     * @var boolean $useSignature
+     * @var boolean
      */
     protected $useSignature = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -51,7 +48,7 @@ class Email
      */
     public function getBccSender()
     {
-      return $this->bccSender;
+        return $this->bccSender;
     }
 
     /**
@@ -60,8 +57,8 @@ class Email
      */
     public function setBccSender($bccSender)
     {
-      $this->bccSender = $bccSender;
-      return $this;
+        $this->bccSender = $bccSender;
+        return $this;
     }
 
     /**
@@ -69,7 +66,7 @@ class Email
      */
     public function getEmailPriority()
     {
-      return $this->emailPriority;
+        return $this->emailPriority;
     }
 
     /**
@@ -78,8 +75,8 @@ class Email
      */
     public function setEmailPriority($emailPriority)
     {
-      $this->emailPriority = $emailPriority;
-      return $this;
+        $this->emailPriority = $emailPriority;
+        return $this;
     }
 
     /**
@@ -87,7 +84,7 @@ class Email
      */
     public function getReplyTo()
     {
-      return $this->replyTo;
+        return $this->replyTo;
     }
 
     /**
@@ -96,8 +93,8 @@ class Email
      */
     public function setReplyTo($replyTo)
     {
-      $this->replyTo = $replyTo;
-      return $this;
+        $this->replyTo = $replyTo;
+        return $this;
     }
 
     /**
@@ -105,7 +102,7 @@ class Email
      */
     public function getSaveAsActivity()
     {
-      return $this->saveAsActivity;
+        return $this->saveAsActivity;
     }
 
     /**
@@ -114,8 +111,8 @@ class Email
      */
     public function setSaveAsActivity($saveAsActivity)
     {
-      $this->saveAsActivity = $saveAsActivity;
-      return $this;
+        $this->saveAsActivity = $saveAsActivity;
+        return $this;
     }
 
     /**
@@ -123,7 +120,7 @@ class Email
      */
     public function getSenderDisplayName()
     {
-      return $this->senderDisplayName;
+        return $this->senderDisplayName;
     }
 
     /**
@@ -132,8 +129,8 @@ class Email
      */
     public function setSenderDisplayName($senderDisplayName)
     {
-      $this->senderDisplayName = $senderDisplayName;
-      return $this;
+        $this->senderDisplayName = $senderDisplayName;
+        return $this;
     }
 
     /**
@@ -141,7 +138,7 @@ class Email
      */
     public function getSubject()
     {
-      return $this->subject;
+        return $this->subject;
     }
 
     /**
@@ -150,8 +147,8 @@ class Email
      */
     public function setSubject($subject)
     {
-      $this->subject = $subject;
-      return $this;
+        $this->subject = $subject;
+        return $this;
     }
 
     /**
@@ -159,7 +156,7 @@ class Email
      */
     public function getUseSignature()
     {
-      return $this->useSignature;
+        return $this->useSignature;
     }
 
     /**
@@ -168,8 +165,7 @@ class Email
      */
     public function setUseSignature($useSignature)
     {
-      $this->useSignature = $useSignature;
-      return $this;
+        $this->useSignature = $useSignature;
+        return $this;
     }
-
 }

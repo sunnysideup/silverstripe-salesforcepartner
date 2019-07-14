@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class UpsertResult
 {
-
     /**
-     * @var boolean $created
+     * @var boolean
      */
     protected $created = null;
 
     /**
-     * @var Error[] $errors
+     * @var Error[]
      */
     protected $errors = null;
 
     /**
-     * @var ID $id
+     * @var ID
      */
     protected $id = null;
 
     /**
-     * @var boolean $success
+     * @var boolean
      */
     protected $success = null;
 
@@ -31,8 +30,8 @@ class UpsertResult
      */
     public function __construct($created = null, $success = null)
     {
-      $this->created = $created;
-      $this->success = $success;
+        $this->created = $created;
+        $this->success = $success;
     }
 
     /**
@@ -40,7 +39,7 @@ class UpsertResult
      */
     public function getCreated()
     {
-      return $this->created;
+        return $this->created;
     }
 
     /**
@@ -49,8 +48,8 @@ class UpsertResult
      */
     public function setCreated($created)
     {
-      $this->created = $created;
-      return $this;
+        $this->created = $created;
+        return $this;
     }
 
     /**
@@ -58,7 +57,7 @@ class UpsertResult
      */
     public function getErrors()
     {
-      return $this->errors;
+        return $this->errors;
     }
 
     /**
@@ -67,8 +66,8 @@ class UpsertResult
      */
     public function setErrors(array $errors = null)
     {
-      $this->errors = $errors;
-      return $this;
+        $this->errors = $errors;
+        return $this;
     }
 
     /**
@@ -76,7 +75,7 @@ class UpsertResult
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
@@ -85,8 +84,8 @@ class UpsertResult
      */
     public function setId($id)
     {
-      $this->id = $id;
-      return $this;
+        $this->id = $id;
+        return $this;
     }
 
     /**
@@ -94,7 +93,7 @@ class UpsertResult
      */
     public function getSuccess()
     {
-      return $this->success;
+        return $this->success;
     }
 
     /**
@@ -103,8 +102,7 @@ class UpsertResult
      */
     public function setSuccess($success)
     {
-      $this->success = $success;
-      return $this;
+        $this->success = $success;
+        return $this;
     }
-
 }

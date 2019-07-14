@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class OwnerChangeOptions
 {
-
     /**
-     * @var OwnerChangeOption $options
+     * @var OwnerChangeOption
      */
     protected $options = null;
 
@@ -15,7 +14,7 @@ class OwnerChangeOptions
      */
     public function __construct($options = null)
     {
-      $this->options = $options;
+        $this->options = $options;
     }
 
     /**
@@ -23,7 +22,7 @@ class OwnerChangeOptions
      */
     public function getOptions()
     {
-      return $this->options;
+        return $this->options;
     }
 
     /**
@@ -32,8 +31,7 @@ class OwnerChangeOptions
      */
     public function setOptions($options)
     {
-      $this->options = $options;
-      return $this;
+        $this->options = $options;
+        return $this;
     }
-
 }

@@ -4,36 +4,33 @@ namespace SForce\Wsdl;
 
 class RenderStoredEmailTemplateRequest
 {
-
     /**
-     * @var AttachmentRetrievalOption $attachmentRetrievalOption
+     * @var AttachmentRetrievalOption
      */
     protected $attachmentRetrievalOption = null;
 
     /**
-     * @var ID $templateId
+     * @var ID
      */
     protected $templateId = null;
 
     /**
-     * @var boolean $updateTemplateUsage
+     * @var boolean
      */
     protected $updateTemplateUsage = null;
 
     /**
-     * @var ID $whatId
+     * @var ID
      */
     protected $whatId = null;
 
     /**
-     * @var ID $whoId
+     * @var ID
      */
     protected $whoId = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -41,7 +38,7 @@ class RenderStoredEmailTemplateRequest
      */
     public function getAttachmentRetrievalOption()
     {
-      return $this->attachmentRetrievalOption;
+        return $this->attachmentRetrievalOption;
     }
 
     /**
@@ -50,8 +47,8 @@ class RenderStoredEmailTemplateRequest
      */
     public function setAttachmentRetrievalOption($attachmentRetrievalOption)
     {
-      $this->attachmentRetrievalOption = $attachmentRetrievalOption;
-      return $this;
+        $this->attachmentRetrievalOption = $attachmentRetrievalOption;
+        return $this;
     }
 
     /**
@@ -59,7 +56,7 @@ class RenderStoredEmailTemplateRequest
      */
     public function getTemplateId()
     {
-      return $this->templateId;
+        return $this->templateId;
     }
 
     /**
@@ -68,8 +65,8 @@ class RenderStoredEmailTemplateRequest
      */
     public function setTemplateId($templateId)
     {
-      $this->templateId = $templateId;
-      return $this;
+        $this->templateId = $templateId;
+        return $this;
     }
 
     /**
@@ -77,7 +74,7 @@ class RenderStoredEmailTemplateRequest
      */
     public function getUpdateTemplateUsage()
     {
-      return $this->updateTemplateUsage;
+        return $this->updateTemplateUsage;
     }
 
     /**
@@ -86,8 +83,8 @@ class RenderStoredEmailTemplateRequest
      */
     public function setUpdateTemplateUsage($updateTemplateUsage)
     {
-      $this->updateTemplateUsage = $updateTemplateUsage;
-      return $this;
+        $this->updateTemplateUsage = $updateTemplateUsage;
+        return $this;
     }
 
     /**
@@ -95,7 +92,7 @@ class RenderStoredEmailTemplateRequest
      */
     public function getWhatId()
     {
-      return $this->whatId;
+        return $this->whatId;
     }
 
     /**
@@ -104,8 +101,8 @@ class RenderStoredEmailTemplateRequest
      */
     public function setWhatId($whatId)
     {
-      $this->whatId = $whatId;
-      return $this;
+        $this->whatId = $whatId;
+        return $this;
     }
 
     /**
@@ -113,7 +110,7 @@ class RenderStoredEmailTemplateRequest
      */
     public function getWhoId()
     {
-      return $this->whoId;
+        return $this->whoId;
     }
 
     /**
@@ -122,8 +119,7 @@ class RenderStoredEmailTemplateRequest
      */
     public function setWhoId($whoId)
     {
-      $this->whoId = $whoId;
-      return $this;
+        $this->whoId = $whoId;
+        return $this;
     }
-
 }

@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class GetServerTimestampResult
 {
-
     /**
-     * @var \DateTime $timestamp
+     * @var \DateTime
      */
     protected $timestamp = null;
 
@@ -15,7 +14,7 @@ class GetServerTimestampResult
      */
     public function __construct(\DateTime $timestamp = null)
     {
-      $this->timestamp = $timestamp ? $timestamp->format(\DateTime::ATOM) : null;
+        $this->timestamp = $timestamp ? $timestamp->format(\DateTime::ATOM) : null;
     }
 
     /**
@@ -23,15 +22,14 @@ class GetServerTimestampResult
      */
     public function getTimestamp()
     {
-      if ($this->timestamp == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->timestamp);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->timestamp === null) {
+            return null;
         }
-      }
+        try {
+            return new \DateTime($this->timestamp);
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     /**
@@ -40,8 +38,7 @@ class GetServerTimestampResult
      */
     public function setTimestamp(\DateTime $timestamp)
     {
-      $this->timestamp = $timestamp->format(\DateTime::ATOM);
-      return $this;
+        $this->timestamp = $timestamp->format(\DateTime::ATOM);
+        return $this;
     }
-
 }

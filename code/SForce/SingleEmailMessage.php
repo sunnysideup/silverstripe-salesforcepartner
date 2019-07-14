@@ -4,106 +4,104 @@ namespace SForce\Wsdl;
 
 class SingleEmailMessage extends Email
 {
-
     /**
-     * @var string[] $bccAddresses
+     * @var string[]
      */
     protected $bccAddresses = null;
 
     /**
-     * @var string[] $ccAddresses
+     * @var string[]
      */
     protected $ccAddresses = null;
 
     /**
-     * @var string $charset
+     * @var string
      */
     protected $charset = null;
 
     /**
-     * @var ID[] $documentAttachments
+     * @var ID[]
      */
     protected $documentAttachments = null;
 
     /**
-     * @var ID[] $entityAttachments
+     * @var ID[]
      */
     protected $entityAttachments = null;
 
     /**
-     * @var EmailFileAttachment[] $fileAttachments
+     * @var EmailFileAttachment[]
      */
     protected $fileAttachments = null;
 
     /**
-     * @var string $htmlBody
+     * @var string
      */
     protected $htmlBody = null;
 
     /**
-     * @var string $inReplyTo
+     * @var string
      */
     protected $inReplyTo = null;
 
     /**
-     * @var SendEmailOptOutPolicy $optOutPolicy
+     * @var SendEmailOptOutPolicy
      */
     protected $optOutPolicy = null;
 
     /**
-     * @var ID $orgWideEmailAddressId
+     * @var ID
      */
     protected $orgWideEmailAddressId = null;
 
     /**
-     * @var string $plainTextBody
+     * @var string
      */
     protected $plainTextBody = null;
 
     /**
-     * @var string $references
+     * @var string
      */
     protected $references = null;
 
     /**
-     * @var ID $targetObjectId
+     * @var ID
      */
     protected $targetObjectId = null;
 
     /**
-     * @var ID $templateId
+     * @var ID
      */
     protected $templateId = null;
 
     /**
-     * @var string $templateName
+     * @var string
      */
     protected $templateName = null;
 
     /**
-     * @var string[] $toAddresses
+     * @var string[]
      */
     protected $toAddresses = null;
 
     /**
-     * @var boolean $treatBodiesAsTemplate
+     * @var boolean
      */
     protected $treatBodiesAsTemplate = null;
 
     /**
-     * @var boolean $treatTargetObjectAsRecipient
+     * @var boolean
      */
     protected $treatTargetObjectAsRecipient = null;
 
     /**
-     * @var ID $whatId
+     * @var ID
      */
     protected $whatId = null;
 
-    
     public function __construct()
     {
-      parent::__construct();
+        parent::__construct();
     }
 
     /**
@@ -111,7 +109,7 @@ class SingleEmailMessage extends Email
      */
     public function getBccAddresses()
     {
-      return $this->bccAddresses;
+        return $this->bccAddresses;
     }
 
     /**
@@ -120,8 +118,8 @@ class SingleEmailMessage extends Email
      */
     public function setBccAddresses(array $bccAddresses = null)
     {
-      $this->bccAddresses = $bccAddresses;
-      return $this;
+        $this->bccAddresses = $bccAddresses;
+        return $this;
     }
 
     /**
@@ -129,7 +127,7 @@ class SingleEmailMessage extends Email
      */
     public function getCcAddresses()
     {
-      return $this->ccAddresses;
+        return $this->ccAddresses;
     }
 
     /**
@@ -138,8 +136,8 @@ class SingleEmailMessage extends Email
      */
     public function setCcAddresses(array $ccAddresses = null)
     {
-      $this->ccAddresses = $ccAddresses;
-      return $this;
+        $this->ccAddresses = $ccAddresses;
+        return $this;
     }
 
     /**
@@ -147,7 +145,7 @@ class SingleEmailMessage extends Email
      */
     public function getCharset()
     {
-      return $this->charset;
+        return $this->charset;
     }
 
     /**
@@ -156,8 +154,8 @@ class SingleEmailMessage extends Email
      */
     public function setCharset($charset)
     {
-      $this->charset = $charset;
-      return $this;
+        $this->charset = $charset;
+        return $this;
     }
 
     /**
@@ -165,7 +163,7 @@ class SingleEmailMessage extends Email
      */
     public function getDocumentAttachments()
     {
-      return $this->documentAttachments;
+        return $this->documentAttachments;
     }
 
     /**
@@ -174,8 +172,8 @@ class SingleEmailMessage extends Email
      */
     public function setDocumentAttachments(array $documentAttachments = null)
     {
-      $this->documentAttachments = $documentAttachments;
-      return $this;
+        $this->documentAttachments = $documentAttachments;
+        return $this;
     }
 
     /**
@@ -183,7 +181,7 @@ class SingleEmailMessage extends Email
      */
     public function getEntityAttachments()
     {
-      return $this->entityAttachments;
+        return $this->entityAttachments;
     }
 
     /**
@@ -192,8 +190,8 @@ class SingleEmailMessage extends Email
      */
     public function setEntityAttachments(array $entityAttachments = null)
     {
-      $this->entityAttachments = $entityAttachments;
-      return $this;
+        $this->entityAttachments = $entityAttachments;
+        return $this;
     }
 
     /**
@@ -201,7 +199,7 @@ class SingleEmailMessage extends Email
      */
     public function getFileAttachments()
     {
-      return $this->fileAttachments;
+        return $this->fileAttachments;
     }
 
     /**
@@ -210,8 +208,8 @@ class SingleEmailMessage extends Email
      */
     public function setFileAttachments(array $fileAttachments = null)
     {
-      $this->fileAttachments = $fileAttachments;
-      return $this;
+        $this->fileAttachments = $fileAttachments;
+        return $this;
     }
 
     /**
@@ -219,7 +217,7 @@ class SingleEmailMessage extends Email
      */
     public function getHtmlBody()
     {
-      return $this->htmlBody;
+        return $this->htmlBody;
     }
 
     /**
@@ -228,8 +226,8 @@ class SingleEmailMessage extends Email
      */
     public function setHtmlBody($htmlBody)
     {
-      $this->htmlBody = $htmlBody;
-      return $this;
+        $this->htmlBody = $htmlBody;
+        return $this;
     }
 
     /**
@@ -237,7 +235,7 @@ class SingleEmailMessage extends Email
      */
     public function getInReplyTo()
     {
-      return $this->inReplyTo;
+        return $this->inReplyTo;
     }
 
     /**
@@ -246,8 +244,8 @@ class SingleEmailMessage extends Email
      */
     public function setInReplyTo($inReplyTo)
     {
-      $this->inReplyTo = $inReplyTo;
-      return $this;
+        $this->inReplyTo = $inReplyTo;
+        return $this;
     }
 
     /**
@@ -255,7 +253,7 @@ class SingleEmailMessage extends Email
      */
     public function getOptOutPolicy()
     {
-      return $this->optOutPolicy;
+        return $this->optOutPolicy;
     }
 
     /**
@@ -264,8 +262,8 @@ class SingleEmailMessage extends Email
      */
     public function setOptOutPolicy($optOutPolicy)
     {
-      $this->optOutPolicy = $optOutPolicy;
-      return $this;
+        $this->optOutPolicy = $optOutPolicy;
+        return $this;
     }
 
     /**
@@ -273,7 +271,7 @@ class SingleEmailMessage extends Email
      */
     public function getOrgWideEmailAddressId()
     {
-      return $this->orgWideEmailAddressId;
+        return $this->orgWideEmailAddressId;
     }
 
     /**
@@ -282,8 +280,8 @@ class SingleEmailMessage extends Email
      */
     public function setOrgWideEmailAddressId($orgWideEmailAddressId)
     {
-      $this->orgWideEmailAddressId = $orgWideEmailAddressId;
-      return $this;
+        $this->orgWideEmailAddressId = $orgWideEmailAddressId;
+        return $this;
     }
 
     /**
@@ -291,7 +289,7 @@ class SingleEmailMessage extends Email
      */
     public function getPlainTextBody()
     {
-      return $this->plainTextBody;
+        return $this->plainTextBody;
     }
 
     /**
@@ -300,8 +298,8 @@ class SingleEmailMessage extends Email
      */
     public function setPlainTextBody($plainTextBody)
     {
-      $this->plainTextBody = $plainTextBody;
-      return $this;
+        $this->plainTextBody = $plainTextBody;
+        return $this;
     }
 
     /**
@@ -309,7 +307,7 @@ class SingleEmailMessage extends Email
      */
     public function getReferences()
     {
-      return $this->references;
+        return $this->references;
     }
 
     /**
@@ -318,8 +316,8 @@ class SingleEmailMessage extends Email
      */
     public function setReferences($references)
     {
-      $this->references = $references;
-      return $this;
+        $this->references = $references;
+        return $this;
     }
 
     /**
@@ -327,7 +325,7 @@ class SingleEmailMessage extends Email
      */
     public function getTargetObjectId()
     {
-      return $this->targetObjectId;
+        return $this->targetObjectId;
     }
 
     /**
@@ -336,8 +334,8 @@ class SingleEmailMessage extends Email
      */
     public function setTargetObjectId($targetObjectId)
     {
-      $this->targetObjectId = $targetObjectId;
-      return $this;
+        $this->targetObjectId = $targetObjectId;
+        return $this;
     }
 
     /**
@@ -345,7 +343,7 @@ class SingleEmailMessage extends Email
      */
     public function getTemplateId()
     {
-      return $this->templateId;
+        return $this->templateId;
     }
 
     /**
@@ -354,8 +352,8 @@ class SingleEmailMessage extends Email
      */
     public function setTemplateId($templateId)
     {
-      $this->templateId = $templateId;
-      return $this;
+        $this->templateId = $templateId;
+        return $this;
     }
 
     /**
@@ -363,7 +361,7 @@ class SingleEmailMessage extends Email
      */
     public function getTemplateName()
     {
-      return $this->templateName;
+        return $this->templateName;
     }
 
     /**
@@ -372,8 +370,8 @@ class SingleEmailMessage extends Email
      */
     public function setTemplateName($templateName)
     {
-      $this->templateName = $templateName;
-      return $this;
+        $this->templateName = $templateName;
+        return $this;
     }
 
     /**
@@ -381,7 +379,7 @@ class SingleEmailMessage extends Email
      */
     public function getToAddresses()
     {
-      return $this->toAddresses;
+        return $this->toAddresses;
     }
 
     /**
@@ -390,8 +388,8 @@ class SingleEmailMessage extends Email
      */
     public function setToAddresses(array $toAddresses = null)
     {
-      $this->toAddresses = $toAddresses;
-      return $this;
+        $this->toAddresses = $toAddresses;
+        return $this;
     }
 
     /**
@@ -399,7 +397,7 @@ class SingleEmailMessage extends Email
      */
     public function getTreatBodiesAsTemplate()
     {
-      return $this->treatBodiesAsTemplate;
+        return $this->treatBodiesAsTemplate;
     }
 
     /**
@@ -408,8 +406,8 @@ class SingleEmailMessage extends Email
      */
     public function setTreatBodiesAsTemplate($treatBodiesAsTemplate)
     {
-      $this->treatBodiesAsTemplate = $treatBodiesAsTemplate;
-      return $this;
+        $this->treatBodiesAsTemplate = $treatBodiesAsTemplate;
+        return $this;
     }
 
     /**
@@ -417,7 +415,7 @@ class SingleEmailMessage extends Email
      */
     public function getTreatTargetObjectAsRecipient()
     {
-      return $this->treatTargetObjectAsRecipient;
+        return $this->treatTargetObjectAsRecipient;
     }
 
     /**
@@ -426,8 +424,8 @@ class SingleEmailMessage extends Email
      */
     public function setTreatTargetObjectAsRecipient($treatTargetObjectAsRecipient)
     {
-      $this->treatTargetObjectAsRecipient = $treatTargetObjectAsRecipient;
-      return $this;
+        $this->treatTargetObjectAsRecipient = $treatTargetObjectAsRecipient;
+        return $this;
     }
 
     /**
@@ -435,7 +433,7 @@ class SingleEmailMessage extends Email
      */
     public function getWhatId()
     {
-      return $this->whatId;
+        return $this->whatId;
     }
 
     /**
@@ -444,8 +442,7 @@ class SingleEmailMessage extends Email
      */
     public function setWhatId($whatId)
     {
-      $this->whatId = $whatId;
-      return $this;
+        $this->whatId = $whatId;
+        return $this;
     }
-
 }

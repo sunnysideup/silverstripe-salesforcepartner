@@ -1,25 +1,27 @@
 <?php
 
-use SForce\Client\Partner;
 
 use SForce\Wsdl\create;
 
 class MySalesforcePartnerApiConnectionOnly extends Object
 {
-    private static $username = '';
-    private static $password = '';
-    private static $security_token = '';
-    private static $wsdl_location = '';
-
     protected static $my_connection = null;
+
     protected static $my_soap_client = null;
+
+    private static $username = '';
+
+    private static $password = '';
+
+    private static $security_token = '';
+
+    private static $wsdl_location = '';
 
     public static function singleton()
     {
         self::$my_connection = self::create_from_cache();
 
         if (! self::$my_connection) {
-
             // Get details from yml
             $wsdlLocation = Director::baseFolder() . '/' . self::config()->wsdl_location;
             $username = self::config()->username;
@@ -40,6 +42,24 @@ class MySalesforcePartnerApiConnectionOnly extends Object
         }
 
         return self::$my_connection;
+    }
+
+    public static function debug($showSessionID = false)
+    {
+        $xml = self::$my_soap_client->__getLastRequest();
+        $domxml = new \DOMDocument('1.0');
+        $domxml->preserveWhiteSpace = false;
+        $domxml->formatOutput = true;
+        /** @var SimpleXMLElement $xml */
+        $domxml->loadXML($xml);
+        if ($showSessionID === false) {
+            $list = $domxml->getElementsByTagName('sessionId');
+            foreach ($list as $domElement) {
+                $domElement->nodeValue = '--- hidden for security reasons ---';
+            }
+        }
+
+        return $domxml->saveXML();
     }
 
     protected static function create_from_cache()
@@ -85,24 +105,5 @@ class MySalesforcePartnerApiConnectionOnly extends Object
             'location' => $location,
             'sessionId' => $sessionId,
         ];
-    }
-
-
-    public static function debug($showSessionID = false)
-    {
-        $xml = self::$my_soap_client->__getLastRequest();
-        $domxml = new \DOMDocument('1.0');
-        $domxml->preserveWhiteSpace = false;
-        $domxml->formatOutput = true;
-        /* @var $xml SimpleXMLElement */
-        $domxml->loadXML($xml);
-        if ($showSessionID === false) {
-            $list = $domxml->getElementsByTagName('sessionId');
-            foreach ($list as $domElement) {
-                $domElement->nodeValue = '--- hidden for security reasons ---';
-            }
-        }
-
-        return $domxml->saveXML();
     }
 }

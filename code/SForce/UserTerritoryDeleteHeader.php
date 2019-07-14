@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class UserTerritoryDeleteHeader
 {
-
     /**
-     * @var ID $transferToUserId
+     * @var ID
      */
     protected $transferToUserId = null;
 
@@ -15,7 +14,7 @@ class UserTerritoryDeleteHeader
      */
     public function __construct($transferToUserId = null)
     {
-      $this->transferToUserId = $transferToUserId;
+        $this->transferToUserId = $transferToUserId;
     }
 
     /**
@@ -23,7 +22,7 @@ class UserTerritoryDeleteHeader
      */
     public function getTransferToUserId()
     {
-      return $this->transferToUserId;
+        return $this->transferToUserId;
     }
 
     /**
@@ -32,8 +31,7 @@ class UserTerritoryDeleteHeader
      */
     public function setTransferToUserId($transferToUserId)
     {
-      $this->transferToUserId = $transferToUserId;
-      return $this;
+        $this->transferToUserId = $transferToUserId;
+        return $this;
     }
-
 }

@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class DescribeVisualForceResult
 {
-
     /**
-     * @var string $domain
+     * @var string
      */
     protected $domain = null;
 
@@ -15,7 +14,7 @@ class DescribeVisualForceResult
      */
     public function __construct($domain = null)
     {
-      $this->domain = $domain;
+        $this->domain = $domain;
     }
 
     /**
@@ -23,7 +22,7 @@ class DescribeVisualForceResult
      */
     public function getDomain()
     {
-      return $this->domain;
+        return $this->domain;
     }
 
     /**
@@ -32,8 +31,7 @@ class DescribeVisualForceResult
      */
     public function setDomain($domain)
     {
-      $this->domain = $domain;
-      return $this;
+        $this->domain = $domain;
+        return $this;
     }
-
 }

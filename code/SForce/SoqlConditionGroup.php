@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class SoqlConditionGroup extends SoqlWhereCondition
 {
-
     /**
-     * @var SoqlWhereCondition[] $conditions
+     * @var SoqlWhereCondition[]
      */
     protected $conditions = null;
 
     /**
-     * @var soqlConjunction $conjunction
+     * @var soqlConjunction
      */
     protected $conjunction = null;
 
@@ -20,7 +19,7 @@ class SoqlConditionGroup extends SoqlWhereCondition
      */
     public function __construct($conjunction = null)
     {
-      $this->conjunction = $conjunction;
+        $this->conjunction = $conjunction;
     }
 
     /**
@@ -28,7 +27,7 @@ class SoqlConditionGroup extends SoqlWhereCondition
      */
     public function getConditions()
     {
-      return $this->conditions;
+        return $this->conditions;
     }
 
     /**
@@ -37,8 +36,8 @@ class SoqlConditionGroup extends SoqlWhereCondition
      */
     public function setConditions(array $conditions = null)
     {
-      $this->conditions = $conditions;
-      return $this;
+        $this->conditions = $conditions;
+        return $this;
     }
 
     /**
@@ -46,7 +45,7 @@ class SoqlConditionGroup extends SoqlWhereCondition
      */
     public function getConjunction()
     {
-      return $this->conjunction;
+        return $this->conjunction;
     }
 
     /**
@@ -55,8 +54,7 @@ class SoqlConditionGroup extends SoqlWhereCondition
      */
     public function setConjunction($conjunction)
     {
-      $this->conjunction = $conjunction;
-      return $this;
+        $this->conjunction = $conjunction;
+        return $this;
     }
-
 }

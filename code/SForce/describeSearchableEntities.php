@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class describeSearchableEntities
 {
-
     /**
-     * @var boolean $includeOnlyEntitiesWithTabs
+     * @var boolean
      */
     protected $includeOnlyEntitiesWithTabs = null;
 
@@ -15,7 +14,7 @@ class describeSearchableEntities
      */
     public function __construct($includeOnlyEntitiesWithTabs = null)
     {
-      $this->includeOnlyEntitiesWithTabs = $includeOnlyEntitiesWithTabs;
+        $this->includeOnlyEntitiesWithTabs = $includeOnlyEntitiesWithTabs;
     }
 
     /**
@@ -23,7 +22,7 @@ class describeSearchableEntities
      */
     public function getIncludeOnlyEntitiesWithTabs()
     {
-      return $this->includeOnlyEntitiesWithTabs;
+        return $this->includeOnlyEntitiesWithTabs;
     }
 
     /**
@@ -32,8 +31,7 @@ class describeSearchableEntities
      */
     public function setIncludeOnlyEntitiesWithTabs($includeOnlyEntitiesWithTabs)
     {
-      $this->includeOnlyEntitiesWithTabs = $includeOnlyEntitiesWithTabs;
-      return $this;
+        $this->includeOnlyEntitiesWithTabs = $includeOnlyEntitiesWithTabs;
+        return $this;
     }
-
 }

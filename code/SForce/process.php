@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class process
 {
-
     /**
-     * @var ProcessRequest $actions
+     * @var ProcessRequest
      */
     protected $actions = null;
 
@@ -15,7 +14,7 @@ class process
      */
     public function __construct($actions = null)
     {
-      $this->actions = $actions;
+        $this->actions = $actions;
     }
 
     /**
@@ -23,7 +22,7 @@ class process
      */
     public function getActions()
     {
-      return $this->actions;
+        return $this->actions;
     }
 
     /**
@@ -32,8 +31,7 @@ class process
      */
     public function setActions($actions)
     {
-      $this->actions = $actions;
-      return $this;
+        $this->actions = $actions;
+        return $this;
     }
-
 }

@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class SearchLayoutFieldsDisplayed
 {
-
     /**
-     * @var boolean $applicable
+     * @var boolean
      */
     protected $applicable = null;
 
     /**
-     * @var SearchLayoutField[] $fields
+     * @var SearchLayoutField[]
      */
     protected $fields = null;
 
@@ -20,7 +19,7 @@ class SearchLayoutFieldsDisplayed
      */
     public function __construct($applicable = null)
     {
-      $this->applicable = $applicable;
+        $this->applicable = $applicable;
     }
 
     /**
@@ -28,7 +27,7 @@ class SearchLayoutFieldsDisplayed
      */
     public function getApplicable()
     {
-      return $this->applicable;
+        return $this->applicable;
     }
 
     /**
@@ -37,8 +36,8 @@ class SearchLayoutFieldsDisplayed
      */
     public function setApplicable($applicable)
     {
-      $this->applicable = $applicable;
-      return $this;
+        $this->applicable = $applicable;
+        return $this;
     }
 
     /**
@@ -46,7 +45,7 @@ class SearchLayoutFieldsDisplayed
      */
     public function getFields()
     {
-      return $this->fields;
+        return $this->fields;
     }
 
     /**
@@ -55,8 +54,7 @@ class SearchLayoutFieldsDisplayed
      */
     public function setFields(array $fields = null)
     {
-      $this->fields = $fields;
-      return $this;
+        $this->fields = $fields;
+        return $this;
     }
-
 }

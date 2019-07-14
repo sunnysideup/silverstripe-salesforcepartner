@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class renderStoredEmailTemplate
 {
-
     /**
-     * @var RenderStoredEmailTemplateRequest $request
+     * @var RenderStoredEmailTemplateRequest
      */
     protected $request = null;
 
@@ -15,7 +14,7 @@ class renderStoredEmailTemplate
      */
     public function __construct($request = null)
     {
-      $this->request = $request;
+        $this->request = $request;
     }
 
     /**
@@ -23,7 +22,7 @@ class renderStoredEmailTemplate
      */
     public function getRequest()
     {
-      return $this->request;
+        return $this->request;
     }
 
     /**
@@ -32,8 +31,7 @@ class renderStoredEmailTemplate
      */
     public function setRequest($request)
     {
-      $this->request = $request;
-      return $this;
+        $this->request = $request;
+        return $this;
     }
-
 }

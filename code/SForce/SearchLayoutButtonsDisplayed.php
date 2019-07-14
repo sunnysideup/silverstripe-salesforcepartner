@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class SearchLayoutButtonsDisplayed
 {
-
     /**
-     * @var boolean $applicable
+     * @var boolean
      */
     protected $applicable = null;
 
     /**
-     * @var SearchLayoutButton[] $buttons
+     * @var SearchLayoutButton[]
      */
     protected $buttons = null;
 
@@ -20,7 +19,7 @@ class SearchLayoutButtonsDisplayed
      */
     public function __construct($applicable = null)
     {
-      $this->applicable = $applicable;
+        $this->applicable = $applicable;
     }
 
     /**
@@ -28,7 +27,7 @@ class SearchLayoutButtonsDisplayed
      */
     public function getApplicable()
     {
-      return $this->applicable;
+        return $this->applicable;
     }
 
     /**
@@ -37,8 +36,8 @@ class SearchLayoutButtonsDisplayed
      */
     public function setApplicable($applicable)
     {
-      $this->applicable = $applicable;
-      return $this;
+        $this->applicable = $applicable;
+        return $this;
     }
 
     /**
@@ -46,7 +45,7 @@ class SearchLayoutButtonsDisplayed
      */
     public function getButtons()
     {
-      return $this->buttons;
+        return $this->buttons;
     }
 
     /**
@@ -55,8 +54,7 @@ class SearchLayoutButtonsDisplayed
      */
     public function setButtons(array $buttons = null)
     {
-      $this->buttons = $buttons;
-      return $this;
+        $this->buttons = $buttons;
+        return $this;
     }
-
 }

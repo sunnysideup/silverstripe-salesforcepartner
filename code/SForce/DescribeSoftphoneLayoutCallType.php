@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class DescribeSoftphoneLayoutCallType
 {
-
     /**
-     * @var DescribeSoftphoneLayoutInfoField[] $infoFields
+     * @var DescribeSoftphoneLayoutInfoField[]
      */
     protected $infoFields = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var DescribeSoftphoneScreenPopOption[] $screenPopOptions
+     * @var DescribeSoftphoneScreenPopOption[]
      */
     protected $screenPopOptions = null;
 
     /**
-     * @var string $screenPopsOpenWithin
+     * @var string
      */
     protected $screenPopsOpenWithin = null;
 
     /**
-     * @var DescribeSoftphoneLayoutSection[] $sections
+     * @var DescribeSoftphoneLayoutSection[]
      */
     protected $sections = null;
 
@@ -36,8 +35,8 @@ class DescribeSoftphoneLayoutCallType
      */
     public function __construct(array $infoFields = null, $name = null)
     {
-      $this->infoFields = $infoFields;
-      $this->name = $name;
+        $this->infoFields = $infoFields;
+        $this->name = $name;
     }
 
     /**
@@ -45,7 +44,7 @@ class DescribeSoftphoneLayoutCallType
      */
     public function getInfoFields()
     {
-      return $this->infoFields;
+        return $this->infoFields;
     }
 
     /**
@@ -54,8 +53,8 @@ class DescribeSoftphoneLayoutCallType
      */
     public function setInfoFields(array $infoFields)
     {
-      $this->infoFields = $infoFields;
-      return $this;
+        $this->infoFields = $infoFields;
+        return $this;
     }
 
     /**
@@ -63,7 +62,7 @@ class DescribeSoftphoneLayoutCallType
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -72,8 +71,8 @@ class DescribeSoftphoneLayoutCallType
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -81,7 +80,7 @@ class DescribeSoftphoneLayoutCallType
      */
     public function getScreenPopOptions()
     {
-      return $this->screenPopOptions;
+        return $this->screenPopOptions;
     }
 
     /**
@@ -90,8 +89,8 @@ class DescribeSoftphoneLayoutCallType
      */
     public function setScreenPopOptions(array $screenPopOptions = null)
     {
-      $this->screenPopOptions = $screenPopOptions;
-      return $this;
+        $this->screenPopOptions = $screenPopOptions;
+        return $this;
     }
 
     /**
@@ -99,7 +98,7 @@ class DescribeSoftphoneLayoutCallType
      */
     public function getScreenPopsOpenWithin()
     {
-      return $this->screenPopsOpenWithin;
+        return $this->screenPopsOpenWithin;
     }
 
     /**
@@ -108,8 +107,8 @@ class DescribeSoftphoneLayoutCallType
      */
     public function setScreenPopsOpenWithin($screenPopsOpenWithin)
     {
-      $this->screenPopsOpenWithin = $screenPopsOpenWithin;
-      return $this;
+        $this->screenPopsOpenWithin = $screenPopsOpenWithin;
+        return $this;
     }
 
     /**
@@ -117,7 +116,7 @@ class DescribeSoftphoneLayoutCallType
      */
     public function getSections()
     {
-      return $this->sections;
+        return $this->sections;
     }
 
     /**
@@ -126,8 +125,7 @@ class DescribeSoftphoneLayoutCallType
      */
     public function setSections(array $sections = null)
     {
-      $this->sections = $sections;
-      return $this;
+        $this->sections = $sections;
+        return $this;
     }
-
 }

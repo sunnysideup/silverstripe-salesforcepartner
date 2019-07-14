@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class DescribeIcon
 {
-
     /**
-     * @var string $contentType
+     * @var string
      */
     protected $contentType = null;
 
     /**
-     * @var int $height
+     * @var int
      */
     protected $height = null;
 
     /**
-     * @var string $theme
+     * @var string
      */
     protected $theme = null;
 
     /**
-     * @var string $url
+     * @var string
      */
     protected $url = null;
 
     /**
-     * @var int $width
+     * @var int
      */
     protected $width = null;
 
@@ -37,9 +36,9 @@ class DescribeIcon
      */
     public function __construct($contentType = null, $theme = null, $url = null)
     {
-      $this->contentType = $contentType;
-      $this->theme = $theme;
-      $this->url = $url;
+        $this->contentType = $contentType;
+        $this->theme = $theme;
+        $this->url = $url;
     }
 
     /**
@@ -47,7 +46,7 @@ class DescribeIcon
      */
     public function getContentType()
     {
-      return $this->contentType;
+        return $this->contentType;
     }
 
     /**
@@ -56,8 +55,8 @@ class DescribeIcon
      */
     public function setContentType($contentType)
     {
-      $this->contentType = $contentType;
-      return $this;
+        $this->contentType = $contentType;
+        return $this;
     }
 
     /**
@@ -65,7 +64,7 @@ class DescribeIcon
      */
     public function getHeight()
     {
-      return $this->height;
+        return $this->height;
     }
 
     /**
@@ -74,8 +73,8 @@ class DescribeIcon
      */
     public function setHeight($height)
     {
-      $this->height = $height;
-      return $this;
+        $this->height = $height;
+        return $this;
     }
 
     /**
@@ -83,7 +82,7 @@ class DescribeIcon
      */
     public function getTheme()
     {
-      return $this->theme;
+        return $this->theme;
     }
 
     /**
@@ -92,8 +91,8 @@ class DescribeIcon
      */
     public function setTheme($theme)
     {
-      $this->theme = $theme;
-      return $this;
+        $this->theme = $theme;
+        return $this;
     }
 
     /**
@@ -101,7 +100,7 @@ class DescribeIcon
      */
     public function getUrl()
     {
-      return $this->url;
+        return $this->url;
     }
 
     /**
@@ -110,8 +109,8 @@ class DescribeIcon
      */
     public function setUrl($url)
     {
-      $this->url = $url;
-      return $this;
+        $this->url = $url;
+        return $this;
     }
 
     /**
@@ -119,7 +118,7 @@ class DescribeIcon
      */
     public function getWidth()
     {
-      return $this->width;
+        return $this->width;
     }
 
     /**
@@ -128,8 +127,7 @@ class DescribeIcon
      */
     public function setWidth($width)
     {
-      $this->width = $width;
-      return $this;
+        $this->width = $width;
+        return $this;
     }
-
 }

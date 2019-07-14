@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class DescribeRelatedContentItem
 {
-
     /**
-     * @var DescribeLayoutItem $describeLayoutItem
+     * @var DescribeLayoutItem
      */
     protected $describeLayoutItem = null;
 
@@ -15,7 +14,7 @@ class DescribeRelatedContentItem
      */
     public function __construct($describeLayoutItem = null)
     {
-      $this->describeLayoutItem = $describeLayoutItem;
+        $this->describeLayoutItem = $describeLayoutItem;
     }
 
     /**
@@ -23,7 +22,7 @@ class DescribeRelatedContentItem
      */
     public function getDescribeLayoutItem()
     {
-      return $this->describeLayoutItem;
+        return $this->describeLayoutItem;
     }
 
     /**
@@ -32,8 +31,7 @@ class DescribeRelatedContentItem
      */
     public function setDescribeLayoutItem($describeLayoutItem)
     {
-      $this->describeLayoutItem = $describeLayoutItem;
-      return $this;
+        $this->describeLayoutItem = $describeLayoutItem;
+        return $this;
     }
-
 }

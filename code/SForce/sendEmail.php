@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class sendEmail
 {
-
     /**
-     * @var Email $messages
+     * @var Email
      */
     protected $messages = null;
 
@@ -15,7 +14,7 @@ class sendEmail
      */
     public function __construct($messages = null)
     {
-      $this->messages = $messages;
+        $this->messages = $messages;
     }
 
     /**
@@ -23,7 +22,7 @@ class sendEmail
      */
     public function getMessages()
     {
-      return $this->messages;
+        return $this->messages;
     }
 
     /**
@@ -32,8 +31,7 @@ class sendEmail
      */
     public function setMessages($messages)
     {
-      $this->messages = $messages;
-      return $this;
+        $this->messages = $messages;
+        return $this;
     }
-
 }

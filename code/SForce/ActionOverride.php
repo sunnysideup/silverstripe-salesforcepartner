@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class ActionOverride
 {
-
     /**
-     * @var string $formFactor
+     * @var string
      */
     protected $formFactor = null;
 
     /**
-     * @var boolean $isAvailableInTouch
+     * @var boolean
      */
     protected $isAvailableInTouch = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var ID $pageId
+     * @var ID
      */
     protected $pageId = null;
 
     /**
-     * @var string $url
+     * @var string
      */
     protected $url = null;
 
@@ -38,10 +37,10 @@ class ActionOverride
      */
     public function __construct($formFactor = null, $isAvailableInTouch = null, $name = null, $pageId = null)
     {
-      $this->formFactor = $formFactor;
-      $this->isAvailableInTouch = $isAvailableInTouch;
-      $this->name = $name;
-      $this->pageId = $pageId;
+        $this->formFactor = $formFactor;
+        $this->isAvailableInTouch = $isAvailableInTouch;
+        $this->name = $name;
+        $this->pageId = $pageId;
     }
 
     /**
@@ -49,7 +48,7 @@ class ActionOverride
      */
     public function getFormFactor()
     {
-      return $this->formFactor;
+        return $this->formFactor;
     }
 
     /**
@@ -58,8 +57,8 @@ class ActionOverride
      */
     public function setFormFactor($formFactor)
     {
-      $this->formFactor = $formFactor;
-      return $this;
+        $this->formFactor = $formFactor;
+        return $this;
     }
 
     /**
@@ -67,7 +66,7 @@ class ActionOverride
      */
     public function getIsAvailableInTouch()
     {
-      return $this->isAvailableInTouch;
+        return $this->isAvailableInTouch;
     }
 
     /**
@@ -76,8 +75,8 @@ class ActionOverride
      */
     public function setIsAvailableInTouch($isAvailableInTouch)
     {
-      $this->isAvailableInTouch = $isAvailableInTouch;
-      return $this;
+        $this->isAvailableInTouch = $isAvailableInTouch;
+        return $this;
     }
 
     /**
@@ -85,7 +84,7 @@ class ActionOverride
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -94,8 +93,8 @@ class ActionOverride
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -103,7 +102,7 @@ class ActionOverride
      */
     public function getPageId()
     {
-      return $this->pageId;
+        return $this->pageId;
     }
 
     /**
@@ -112,8 +111,8 @@ class ActionOverride
      */
     public function setPageId($pageId)
     {
-      $this->pageId = $pageId;
-      return $this;
+        $this->pageId = $pageId;
+        return $this;
     }
 
     /**
@@ -121,7 +120,7 @@ class ActionOverride
      */
     public function getUrl()
     {
-      return $this->url;
+        return $this->url;
     }
 
     /**
@@ -130,8 +129,7 @@ class ActionOverride
      */
     public function setUrl($url)
     {
-      $this->url = $url;
-      return $this;
+        $this->url = $url;
+        return $this;
     }
-
 }

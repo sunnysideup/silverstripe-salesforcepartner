@@ -4,19 +4,18 @@ namespace SForce\Wsdl;
 
 class PerformQuickActionRequest
 {
-
     /**
-     * @var ID $contextId
+     * @var ID
      */
     protected $contextId = null;
 
     /**
-     * @var string $quickActionName
+     * @var string
      */
     protected $quickActionName = null;
 
     /**
-     * @var sObject[] $records
+     * @var sObject[]
      */
     protected $records = null;
 
@@ -25,7 +24,7 @@ class PerformQuickActionRequest
      */
     public function __construct($quickActionName = null)
     {
-      $this->quickActionName = $quickActionName;
+        $this->quickActionName = $quickActionName;
     }
 
     /**
@@ -33,7 +32,7 @@ class PerformQuickActionRequest
      */
     public function getContextId()
     {
-      return $this->contextId;
+        return $this->contextId;
     }
 
     /**
@@ -42,8 +41,8 @@ class PerformQuickActionRequest
      */
     public function setContextId($contextId)
     {
-      $this->contextId = $contextId;
-      return $this;
+        $this->contextId = $contextId;
+        return $this;
     }
 
     /**
@@ -51,7 +50,7 @@ class PerformQuickActionRequest
      */
     public function getQuickActionName()
     {
-      return $this->quickActionName;
+        return $this->quickActionName;
     }
 
     /**
@@ -60,8 +59,8 @@ class PerformQuickActionRequest
      */
     public function setQuickActionName($quickActionName)
     {
-      $this->quickActionName = $quickActionName;
-      return $this;
+        $this->quickActionName = $quickActionName;
+        return $this;
     }
 
     /**
@@ -69,7 +68,7 @@ class PerformQuickActionRequest
      */
     public function getRecords()
     {
-      return $this->records;
+        return $this->records;
     }
 
     /**
@@ -78,8 +77,7 @@ class PerformQuickActionRequest
      */
     public function setRecords(array $records = null)
     {
-      $this->records = $records;
-      return $this;
+        $this->records = $records;
+        return $this;
     }
-
 }

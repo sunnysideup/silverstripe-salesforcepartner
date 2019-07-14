@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class describeSObjectListViews
 {
-
     /**
-     * @var string $sObjectType
+     * @var string
      */
     protected $sObjectType = null;
 
     /**
-     * @var boolean $recentsOnly
+     * @var boolean
      */
     protected $recentsOnly = null;
 
     /**
-     * @var listViewIsSoqlCompatible $isSoqlCompatible
+     * @var listViewIsSoqlCompatible
      */
     protected $isSoqlCompatible = null;
 
     /**
-     * @var int $limit
+     * @var int
      */
     protected $limit = null;
 
     /**
-     * @var int $offset
+     * @var int
      */
     protected $offset = null;
 
@@ -39,11 +38,11 @@ class describeSObjectListViews
      */
     public function __construct($sObjectType = null, $recentsOnly = null, $isSoqlCompatible = null, $limit = null, $offset = null)
     {
-      $this->sObjectType = $sObjectType;
-      $this->recentsOnly = $recentsOnly;
-      $this->isSoqlCompatible = $isSoqlCompatible;
-      $this->limit = $limit;
-      $this->offset = $offset;
+        $this->sObjectType = $sObjectType;
+        $this->recentsOnly = $recentsOnly;
+        $this->isSoqlCompatible = $isSoqlCompatible;
+        $this->limit = $limit;
+        $this->offset = $offset;
     }
 
     /**
@@ -51,7 +50,7 @@ class describeSObjectListViews
      */
     public function getSObjectType()
     {
-      return $this->sObjectType;
+        return $this->sObjectType;
     }
 
     /**
@@ -60,8 +59,8 @@ class describeSObjectListViews
      */
     public function setSObjectType($sObjectType)
     {
-      $this->sObjectType = $sObjectType;
-      return $this;
+        $this->sObjectType = $sObjectType;
+        return $this;
     }
 
     /**
@@ -69,7 +68,7 @@ class describeSObjectListViews
      */
     public function getRecentsOnly()
     {
-      return $this->recentsOnly;
+        return $this->recentsOnly;
     }
 
     /**
@@ -78,8 +77,8 @@ class describeSObjectListViews
      */
     public function setRecentsOnly($recentsOnly)
     {
-      $this->recentsOnly = $recentsOnly;
-      return $this;
+        $this->recentsOnly = $recentsOnly;
+        return $this;
     }
 
     /**
@@ -87,7 +86,7 @@ class describeSObjectListViews
      */
     public function getIsSoqlCompatible()
     {
-      return $this->isSoqlCompatible;
+        return $this->isSoqlCompatible;
     }
 
     /**
@@ -96,8 +95,8 @@ class describeSObjectListViews
      */
     public function setIsSoqlCompatible($isSoqlCompatible)
     {
-      $this->isSoqlCompatible = $isSoqlCompatible;
-      return $this;
+        $this->isSoqlCompatible = $isSoqlCompatible;
+        return $this;
     }
 
     /**
@@ -105,7 +104,7 @@ class describeSObjectListViews
      */
     public function getLimit()
     {
-      return $this->limit;
+        return $this->limit;
     }
 
     /**
@@ -114,8 +113,8 @@ class describeSObjectListViews
      */
     public function setLimit($limit)
     {
-      $this->limit = $limit;
-      return $this;
+        $this->limit = $limit;
+        return $this;
     }
 
     /**
@@ -123,7 +122,7 @@ class describeSObjectListViews
      */
     public function getOffset()
     {
-      return $this->offset;
+        return $this->offset;
     }
 
     /**
@@ -132,8 +131,7 @@ class describeSObjectListViews
      */
     public function setOffset($offset)
     {
-      $this->offset = $offset;
-      return $this;
+        $this->offset = $offset;
+        return $this;
     }
-
 }

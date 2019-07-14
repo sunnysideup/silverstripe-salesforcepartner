@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class DeletedRecord
 {
-
     /**
-     * @var \DateTime $deletedDate
+     * @var \DateTime
      */
     protected $deletedDate = null;
 
     /**
-     * @var ID $id
+     * @var ID
      */
     protected $id = null;
 
@@ -21,8 +20,8 @@ class DeletedRecord
      */
     public function __construct(\DateTime $deletedDate = null, $id = null)
     {
-      $this->deletedDate = $deletedDate ? $deletedDate->format(\DateTime::ATOM) : null;
-      $this->id = $id;
+        $this->deletedDate = $deletedDate ? $deletedDate->format(\DateTime::ATOM) : null;
+        $this->id = $id;
     }
 
     /**
@@ -30,15 +29,14 @@ class DeletedRecord
      */
     public function getDeletedDate()
     {
-      if ($this->deletedDate == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->deletedDate);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->deletedDate === null) {
+            return null;
         }
-      }
+        try {
+            return new \DateTime($this->deletedDate);
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     /**
@@ -47,8 +45,8 @@ class DeletedRecord
      */
     public function setDeletedDate(\DateTime $deletedDate)
     {
-      $this->deletedDate = $deletedDate->format(\DateTime::ATOM);
-      return $this;
+        $this->deletedDate = $deletedDate->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -56,7 +54,7 @@ class DeletedRecord
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
@@ -65,8 +63,7 @@ class DeletedRecord
      */
     public function setId($id)
     {
-      $this->id = $id;
-      return $this;
+        $this->id = $id;
+        return $this;
     }
-
 }

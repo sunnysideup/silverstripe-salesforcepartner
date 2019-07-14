@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class DescribeSoftphoneLayoutItem
 {
-
     /**
-     * @var string $itemApiName
+     * @var string
      */
     protected $itemApiName = null;
 
@@ -15,7 +14,7 @@ class DescribeSoftphoneLayoutItem
      */
     public function __construct($itemApiName = null)
     {
-      $this->itemApiName = $itemApiName;
+        $this->itemApiName = $itemApiName;
     }
 
     /**
@@ -23,7 +22,7 @@ class DescribeSoftphoneLayoutItem
      */
     public function getItemApiName()
     {
-      return $this->itemApiName;
+        return $this->itemApiName;
     }
 
     /**
@@ -32,8 +31,7 @@ class DescribeSoftphoneLayoutItem
      */
     public function setItemApiName($itemApiName)
     {
-      $this->itemApiName = $itemApiName;
-      return $this;
+        $this->itemApiName = $itemApiName;
+        return $this;
     }
-
 }

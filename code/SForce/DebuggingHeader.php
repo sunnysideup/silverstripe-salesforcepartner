@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class DebuggingHeader
 {
-
     /**
-     * @var LogInfo $categories
+     * @var LogInfo
      */
     protected $categories = null;
 
     /**
-     * @var DebugLevel $debugLevel
+     * @var DebugLevel
      */
     protected $debugLevel = null;
 
@@ -21,8 +20,8 @@ class DebuggingHeader
      */
     public function __construct($categories = null, $debugLevel = null)
     {
-      $this->categories = $categories;
-      $this->debugLevel = $debugLevel;
+        $this->categories = $categories;
+        $this->debugLevel = $debugLevel;
     }
 
     /**
@@ -30,7 +29,7 @@ class DebuggingHeader
      */
     public function getCategories()
     {
-      return $this->categories;
+        return $this->categories;
     }
 
     /**
@@ -39,8 +38,8 @@ class DebuggingHeader
      */
     public function setCategories($categories)
     {
-      $this->categories = $categories;
-      return $this;
+        $this->categories = $categories;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class DebuggingHeader
      */
     public function getDebugLevel()
     {
-      return $this->debugLevel;
+        return $this->debugLevel;
     }
 
     /**
@@ -57,8 +56,7 @@ class DebuggingHeader
      */
     public function setDebugLevel($debugLevel)
     {
-      $this->debugLevel = $debugLevel;
-      return $this;
+        $this->debugLevel = $debugLevel;
+        return $this;
     }
-
 }

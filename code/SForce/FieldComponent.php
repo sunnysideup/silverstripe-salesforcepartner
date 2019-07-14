@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class FieldComponent extends DescribeLayoutComponent
 {
-
     /**
-     * @var Field $field
+     * @var Field
      */
     protected $field = null;
 
@@ -18,8 +17,8 @@ class FieldComponent extends DescribeLayoutComponent
      */
     public function __construct($displayLines = null, $tabOrder = null, $type = null, $field = null)
     {
-      parent::__construct($displayLines, $tabOrder, $type);
-      $this->field = $field;
+        parent::__construct($displayLines, $tabOrder, $type);
+        $this->field = $field;
     }
 
     /**
@@ -27,7 +26,7 @@ class FieldComponent extends DescribeLayoutComponent
      */
     public function getField()
     {
-      return $this->field;
+        return $this->field;
     }
 
     /**
@@ -36,8 +35,7 @@ class FieldComponent extends DescribeLayoutComponent
      */
     public function setField($field)
     {
-      $this->field = $field;
-      return $this;
+        $this->field = $field;
+        return $this;
     }
-
 }

@@ -2,12 +2,9 @@
 /**
  * Provides CMS Administration of {@link: RedirectedURL} objects
  *
- * @package redirectedurls
- * @author sam@silverstripe.com
- * @author scienceninjas@silverstripe.com
  */
-class SalesforceAdmin extends ModelAdmin {
-
+class SalesforceAdmin extends ModelAdmin
+{
     /**
      * @var string
      */
@@ -26,8 +23,8 @@ class SalesforceAdmin extends ModelAdmin {
     /**
      * @var array
      */
-    private static $managed_models = array(
+    private static $managed_models = [
         'SalesforceDefaultContactField',
         'SalesforceContactLog',
-    );
+    ];
 }

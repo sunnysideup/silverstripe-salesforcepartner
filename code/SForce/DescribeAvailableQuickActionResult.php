@@ -4,24 +4,23 @@ namespace SForce\Wsdl;
 
 class DescribeAvailableQuickActionResult
 {
-
     /**
-     * @var string $actionEnumOrId
+     * @var string
      */
     protected $actionEnumOrId = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name = null;
 
     /**
-     * @var string $type
+     * @var string
      */
     protected $type = null;
 
@@ -33,10 +32,10 @@ class DescribeAvailableQuickActionResult
      */
     public function __construct($actionEnumOrId = null, $label = null, $name = null, $type = null)
     {
-      $this->actionEnumOrId = $actionEnumOrId;
-      $this->label = $label;
-      $this->name = $name;
-      $this->type = $type;
+        $this->actionEnumOrId = $actionEnumOrId;
+        $this->label = $label;
+        $this->name = $name;
+        $this->type = $type;
     }
 
     /**
@@ -44,7 +43,7 @@ class DescribeAvailableQuickActionResult
      */
     public function getActionEnumOrId()
     {
-      return $this->actionEnumOrId;
+        return $this->actionEnumOrId;
     }
 
     /**
@@ -53,8 +52,8 @@ class DescribeAvailableQuickActionResult
      */
     public function setActionEnumOrId($actionEnumOrId)
     {
-      $this->actionEnumOrId = $actionEnumOrId;
-      return $this;
+        $this->actionEnumOrId = $actionEnumOrId;
+        return $this;
     }
 
     /**
@@ -62,7 +61,7 @@ class DescribeAvailableQuickActionResult
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -71,8 +70,8 @@ class DescribeAvailableQuickActionResult
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
 
     /**
@@ -80,7 +79,7 @@ class DescribeAvailableQuickActionResult
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
@@ -89,8 +88,8 @@ class DescribeAvailableQuickActionResult
      */
     public function setName($name)
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -98,7 +97,7 @@ class DescribeAvailableQuickActionResult
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -107,8 +106,7 @@ class DescribeAvailableQuickActionResult
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
-
 }

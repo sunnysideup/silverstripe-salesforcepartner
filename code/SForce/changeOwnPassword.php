@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class changeOwnPassword
 {
-
     /**
-     * @var string $oldPassword
+     * @var string
      */
     protected $oldPassword = null;
 
     /**
-     * @var string $newPassword
+     * @var string
      */
     protected $newPassword = null;
 
@@ -21,8 +20,8 @@ class changeOwnPassword
      */
     public function __construct($oldPassword = null, $newPassword = null)
     {
-      $this->oldPassword = $oldPassword;
-      $this->newPassword = $newPassword;
+        $this->oldPassword = $oldPassword;
+        $this->newPassword = $newPassword;
     }
 
     /**
@@ -30,7 +29,7 @@ class changeOwnPassword
      */
     public function getOldPassword()
     {
-      return $this->oldPassword;
+        return $this->oldPassword;
     }
 
     /**
@@ -39,8 +38,8 @@ class changeOwnPassword
      */
     public function setOldPassword($oldPassword)
     {
-      $this->oldPassword = $oldPassword;
-      return $this;
+        $this->oldPassword = $oldPassword;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class changeOwnPassword
      */
     public function getNewPassword()
     {
-      return $this->newPassword;
+        return $this->newPassword;
     }
 
     /**
@@ -57,8 +56,7 @@ class changeOwnPassword
      */
     public function setNewPassword($newPassword)
     {
-      $this->newPassword = $newPassword;
-      return $this;
+        $this->newPassword = $newPassword;
+        return $this;
     }
-
 }

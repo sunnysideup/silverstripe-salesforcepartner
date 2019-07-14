@@ -4,29 +4,28 @@ namespace SForce\Wsdl;
 
 class QuickActionTemplateResult
 {
-
     /**
-     * @var string $contextId
+     * @var string
      */
     protected $contextId = null;
 
     /**
-     * @var sObject $defaultValueFormulas
+     * @var sObject
      */
     protected $defaultValueFormulas = null;
 
     /**
-     * @var sObject $defaultValues
+     * @var sObject
      */
     protected $defaultValues = null;
 
     /**
-     * @var Error[] $errors
+     * @var Error[]
      */
     protected $errors = null;
 
     /**
-     * @var boolean $success
+     * @var boolean
      */
     protected $success = null;
 
@@ -35,7 +34,7 @@ class QuickActionTemplateResult
      */
     public function __construct($success = null)
     {
-      $this->success = $success;
+        $this->success = $success;
     }
 
     /**
@@ -43,7 +42,7 @@ class QuickActionTemplateResult
      */
     public function getContextId()
     {
-      return $this->contextId;
+        return $this->contextId;
     }
 
     /**
@@ -52,8 +51,8 @@ class QuickActionTemplateResult
      */
     public function setContextId($contextId)
     {
-      $this->contextId = $contextId;
-      return $this;
+        $this->contextId = $contextId;
+        return $this;
     }
 
     /**
@@ -61,7 +60,7 @@ class QuickActionTemplateResult
      */
     public function getDefaultValueFormulas()
     {
-      return $this->defaultValueFormulas;
+        return $this->defaultValueFormulas;
     }
 
     /**
@@ -70,8 +69,8 @@ class QuickActionTemplateResult
      */
     public function setDefaultValueFormulas($defaultValueFormulas)
     {
-      $this->defaultValueFormulas = $defaultValueFormulas;
-      return $this;
+        $this->defaultValueFormulas = $defaultValueFormulas;
+        return $this;
     }
 
     /**
@@ -79,7 +78,7 @@ class QuickActionTemplateResult
      */
     public function getDefaultValues()
     {
-      return $this->defaultValues;
+        return $this->defaultValues;
     }
 
     /**
@@ -88,8 +87,8 @@ class QuickActionTemplateResult
      */
     public function setDefaultValues($defaultValues)
     {
-      $this->defaultValues = $defaultValues;
-      return $this;
+        $this->defaultValues = $defaultValues;
+        return $this;
     }
 
     /**
@@ -97,7 +96,7 @@ class QuickActionTemplateResult
      */
     public function getErrors()
     {
-      return $this->errors;
+        return $this->errors;
     }
 
     /**
@@ -106,8 +105,8 @@ class QuickActionTemplateResult
      */
     public function setErrors(array $errors = null)
     {
-      $this->errors = $errors;
-      return $this;
+        $this->errors = $errors;
+        return $this;
     }
 
     /**
@@ -115,7 +114,7 @@ class QuickActionTemplateResult
      */
     public function getSuccess()
     {
-      return $this->success;
+        return $this->success;
     }
 
     /**
@@ -124,8 +123,7 @@ class QuickActionTemplateResult
      */
     public function setSuccess($success)
     {
-      $this->success = $success;
-      return $this;
+        $this->success = $success;
+        return $this;
     }
-
 }

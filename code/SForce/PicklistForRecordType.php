@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class PicklistForRecordType
 {
-
     /**
-     * @var string $picklistName
+     * @var string
      */
     protected $picklistName = null;
 
     /**
-     * @var PicklistEntry[] $picklistValues
+     * @var PicklistEntry[]
      */
     protected $picklistValues = null;
 
@@ -20,7 +19,7 @@ class PicklistForRecordType
      */
     public function __construct($picklistName = null)
     {
-      $this->picklistName = $picklistName;
+        $this->picklistName = $picklistName;
     }
 
     /**
@@ -28,7 +27,7 @@ class PicklistForRecordType
      */
     public function getPicklistName()
     {
-      return $this->picklistName;
+        return $this->picklistName;
     }
 
     /**
@@ -37,8 +36,8 @@ class PicklistForRecordType
      */
     public function setPicklistName($picklistName)
     {
-      $this->picklistName = $picklistName;
-      return $this;
+        $this->picklistName = $picklistName;
+        return $this;
     }
 
     /**
@@ -46,7 +45,7 @@ class PicklistForRecordType
      */
     public function getPicklistValues()
     {
-      return $this->picklistValues;
+        return $this->picklistValues;
     }
 
     /**
@@ -55,8 +54,7 @@ class PicklistForRecordType
      */
     public function setPicklistValues(array $picklistValues = null)
     {
-      $this->picklistValues = $picklistValues;
-      return $this;
+        $this->picklistValues = $picklistValues;
+        return $this;
     }
-
 }

@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class SearchLayoutButton
 {
-
     /**
-     * @var string $apiName
+     * @var string
      */
     protected $apiName = null;
 
     /**
-     * @var string $label
+     * @var string
      */
     protected $label = null;
 
@@ -21,8 +20,8 @@ class SearchLayoutButton
      */
     public function __construct($apiName = null, $label = null)
     {
-      $this->apiName = $apiName;
-      $this->label = $label;
+        $this->apiName = $apiName;
+        $this->label = $label;
     }
 
     /**
@@ -30,7 +29,7 @@ class SearchLayoutButton
      */
     public function getApiName()
     {
-      return $this->apiName;
+        return $this->apiName;
     }
 
     /**
@@ -39,8 +38,8 @@ class SearchLayoutButton
      */
     public function setApiName($apiName)
     {
-      $this->apiName = $apiName;
-      return $this;
+        $this->apiName = $apiName;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class SearchLayoutButton
      */
     public function getLabel()
     {
-      return $this->label;
+        return $this->label;
     }
 
     /**
@@ -57,8 +56,7 @@ class SearchLayoutButton
      */
     public function setLabel($label)
     {
-      $this->label = $label;
-      return $this;
+        $this->label = $label;
+        return $this;
     }
-
 }

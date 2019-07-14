@@ -4,39 +4,38 @@ namespace SForce\Wsdl;
 
 class MatchResult
 {
-
     /**
-     * @var string $entityType
+     * @var string
      */
     protected $entityType = null;
 
     /**
-     * @var Error[] $errors
+     * @var Error[]
      */
     protected $errors = null;
 
     /**
-     * @var string $matchEngine
+     * @var string
      */
     protected $matchEngine = null;
 
     /**
-     * @var MatchRecord[] $matchRecords
+     * @var MatchRecord[]
      */
     protected $matchRecords = null;
 
     /**
-     * @var string $rule
+     * @var string
      */
     protected $rule = null;
 
     /**
-     * @var int $size
+     * @var int
      */
     protected $size = null;
 
     /**
-     * @var boolean $success
+     * @var boolean
      */
     protected $success = null;
 
@@ -49,11 +48,11 @@ class MatchResult
      */
     public function __construct($entityType = null, $matchEngine = null, $rule = null, $size = null, $success = null)
     {
-      $this->entityType = $entityType;
-      $this->matchEngine = $matchEngine;
-      $this->rule = $rule;
-      $this->size = $size;
-      $this->success = $success;
+        $this->entityType = $entityType;
+        $this->matchEngine = $matchEngine;
+        $this->rule = $rule;
+        $this->size = $size;
+        $this->success = $success;
     }
 
     /**
@@ -61,7 +60,7 @@ class MatchResult
      */
     public function getEntityType()
     {
-      return $this->entityType;
+        return $this->entityType;
     }
 
     /**
@@ -70,8 +69,8 @@ class MatchResult
      */
     public function setEntityType($entityType)
     {
-      $this->entityType = $entityType;
-      return $this;
+        $this->entityType = $entityType;
+        return $this;
     }
 
     /**
@@ -79,7 +78,7 @@ class MatchResult
      */
     public function getErrors()
     {
-      return $this->errors;
+        return $this->errors;
     }
 
     /**
@@ -88,8 +87,8 @@ class MatchResult
      */
     public function setErrors(array $errors = null)
     {
-      $this->errors = $errors;
-      return $this;
+        $this->errors = $errors;
+        return $this;
     }
 
     /**
@@ -97,7 +96,7 @@ class MatchResult
      */
     public function getMatchEngine()
     {
-      return $this->matchEngine;
+        return $this->matchEngine;
     }
 
     /**
@@ -106,8 +105,8 @@ class MatchResult
      */
     public function setMatchEngine($matchEngine)
     {
-      $this->matchEngine = $matchEngine;
-      return $this;
+        $this->matchEngine = $matchEngine;
+        return $this;
     }
 
     /**
@@ -115,7 +114,7 @@ class MatchResult
      */
     public function getMatchRecords()
     {
-      return $this->matchRecords;
+        return $this->matchRecords;
     }
 
     /**
@@ -124,8 +123,8 @@ class MatchResult
      */
     public function setMatchRecords(array $matchRecords = null)
     {
-      $this->matchRecords = $matchRecords;
-      return $this;
+        $this->matchRecords = $matchRecords;
+        return $this;
     }
 
     /**
@@ -133,7 +132,7 @@ class MatchResult
      */
     public function getRule()
     {
-      return $this->rule;
+        return $this->rule;
     }
 
     /**
@@ -142,8 +141,8 @@ class MatchResult
      */
     public function setRule($rule)
     {
-      $this->rule = $rule;
-      return $this;
+        $this->rule = $rule;
+        return $this;
     }
 
     /**
@@ -151,7 +150,7 @@ class MatchResult
      */
     public function getSize()
     {
-      return $this->size;
+        return $this->size;
     }
 
     /**
@@ -160,8 +159,8 @@ class MatchResult
      */
     public function setSize($size)
     {
-      $this->size = $size;
-      return $this;
+        $this->size = $size;
+        return $this;
     }
 
     /**
@@ -169,7 +168,7 @@ class MatchResult
      */
     public function getSuccess()
     {
-      return $this->success;
+        return $this->success;
     }
 
     /**
@@ -178,8 +177,7 @@ class MatchResult
      */
     public function setSuccess($success)
     {
-      $this->success = $success;
-      return $this;
+        $this->success = $success;
+        return $this;
     }
-
 }

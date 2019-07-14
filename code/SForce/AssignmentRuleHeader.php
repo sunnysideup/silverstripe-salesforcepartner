@@ -4,14 +4,13 @@ namespace SForce\Wsdl;
 
 class AssignmentRuleHeader
 {
-
     /**
-     * @var ID $assignmentRuleId
+     * @var ID
      */
     protected $assignmentRuleId = null;
 
     /**
-     * @var boolean $useDefaultRule
+     * @var boolean
      */
     protected $useDefaultRule = null;
 
@@ -21,8 +20,8 @@ class AssignmentRuleHeader
      */
     public function __construct($assignmentRuleId = null, $useDefaultRule = null)
     {
-      $this->assignmentRuleId = $assignmentRuleId;
-      $this->useDefaultRule = $useDefaultRule;
+        $this->assignmentRuleId = $assignmentRuleId;
+        $this->useDefaultRule = $useDefaultRule;
     }
 
     /**
@@ -30,7 +29,7 @@ class AssignmentRuleHeader
      */
     public function getAssignmentRuleId()
     {
-      return $this->assignmentRuleId;
+        return $this->assignmentRuleId;
     }
 
     /**
@@ -39,8 +38,8 @@ class AssignmentRuleHeader
      */
     public function setAssignmentRuleId($assignmentRuleId)
     {
-      $this->assignmentRuleId = $assignmentRuleId;
-      return $this;
+        $this->assignmentRuleId = $assignmentRuleId;
+        return $this;
     }
 
     /**
@@ -48,7 +47,7 @@ class AssignmentRuleHeader
      */
     public function getUseDefaultRule()
     {
-      return $this->useDefaultRule;
+        return $this->useDefaultRule;
     }
 
     /**
@@ -57,8 +56,7 @@ class AssignmentRuleHeader
      */
     public function setUseDefaultRule($useDefaultRule)
     {
-      $this->useDefaultRule = $useDefaultRule;
-      return $this;
+        $this->useDefaultRule = $useDefaultRule;
+        return $this;
     }
-
 }

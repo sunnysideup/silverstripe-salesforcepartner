@@ -1,11 +1,8 @@
 <?php
 
 
-use SForce\Client\Partner;
 
-use SForce\SObject;
 
-use SForce\Wsdl\create;
 
 class SalesforceTest extends BuildTask
 {
@@ -64,9 +61,8 @@ class SalesforceTest extends BuildTask
     {
         $isRegistered = MySalesforceContactApi::is_email_registered($this->email);
 
-        echo '<h1>Does '.$this->email.' exist '.($isRegistered ? 'YES' : 'NO').'</h1>';
+        echo '<h1>Does ' . $this->email . ' exist ' . ($isRegistered ? 'YES' : 'NO') . '</h1>';
     }
-
 
     protected function createSubscriber()
     {
@@ -90,7 +86,6 @@ class SalesforceTest extends BuildTask
         );
     }
 
-
     protected function createBadContact()
     {
         MySalesforceContactApi::create_contact(
@@ -103,11 +98,8 @@ class SalesforceTest extends BuildTask
         );
     }
 
-
     protected function setEmail()
     {
-        $this->email = 'test'.rand(0,99999).$this->emailStub;
-
+        $this->email = 'test' . rand(0, 99999) . $this->emailStub;
     }
-
 }

@@ -4,61 +4,58 @@ namespace SForce\Wsdl;
 
 class DescribeLayout
 {
-
     /**
-     * @var DescribeLayoutButtonSection $buttonLayoutSection
+     * @var DescribeLayoutButtonSection
      */
     protected $buttonLayoutSection = null;
 
     /**
-     * @var DescribeLayoutSection[] $detailLayoutSections
+     * @var DescribeLayoutSection[]
      */
     protected $detailLayoutSections = null;
 
     /**
-     * @var DescribeLayoutSection[] $editLayoutSections
+     * @var DescribeLayoutSection[]
      */
     protected $editLayoutSections = null;
 
     /**
-     * @var DescribeLayoutFeedView $feedView
+     * @var DescribeLayoutFeedView
      */
     protected $feedView = null;
 
     /**
-     * @var DescribeLayoutSection $highlightsPanelLayoutSection
+     * @var DescribeLayoutSection
      */
     protected $highlightsPanelLayoutSection = null;
 
     /**
-     * @var ID $id
+     * @var ID
      */
     protected $id = null;
 
     /**
-     * @var DescribeQuickActionListResult $quickActionList
+     * @var DescribeQuickActionListResult
      */
     protected $quickActionList = null;
 
     /**
-     * @var RelatedContent $relatedContent
+     * @var RelatedContent
      */
     protected $relatedContent = null;
 
     /**
-     * @var RelatedList[] $relatedLists
+     * @var RelatedList[]
      */
     protected $relatedLists = null;
 
     /**
-     * @var DescribeLayoutSaveOption[] $saveOptions
+     * @var DescribeLayoutSaveOption[]
      */
     protected $saveOptions = null;
 
-    
     public function __construct()
     {
-    
     }
 
     /**
@@ -66,7 +63,7 @@ class DescribeLayout
      */
     public function getButtonLayoutSection()
     {
-      return $this->buttonLayoutSection;
+        return $this->buttonLayoutSection;
     }
 
     /**
@@ -75,8 +72,8 @@ class DescribeLayout
      */
     public function setButtonLayoutSection($buttonLayoutSection)
     {
-      $this->buttonLayoutSection = $buttonLayoutSection;
-      return $this;
+        $this->buttonLayoutSection = $buttonLayoutSection;
+        return $this;
     }
 
     /**
@@ -84,7 +81,7 @@ class DescribeLayout
      */
     public function getDetailLayoutSections()
     {
-      return $this->detailLayoutSections;
+        return $this->detailLayoutSections;
     }
 
     /**
@@ -93,8 +90,8 @@ class DescribeLayout
      */
     public function setDetailLayoutSections(array $detailLayoutSections = null)
     {
-      $this->detailLayoutSections = $detailLayoutSections;
-      return $this;
+        $this->detailLayoutSections = $detailLayoutSections;
+        return $this;
     }
 
     /**
@@ -102,7 +99,7 @@ class DescribeLayout
      */
     public function getEditLayoutSections()
     {
-      return $this->editLayoutSections;
+        return $this->editLayoutSections;
     }
 
     /**
@@ -111,8 +108,8 @@ class DescribeLayout
      */
     public function setEditLayoutSections(array $editLayoutSections = null)
     {
-      $this->editLayoutSections = $editLayoutSections;
-      return $this;
+        $this->editLayoutSections = $editLayoutSections;
+        return $this;
     }
 
     /**
@@ -120,7 +117,7 @@ class DescribeLayout
      */
     public function getFeedView()
     {
-      return $this->feedView;
+        return $this->feedView;
     }
 
     /**
@@ -129,8 +126,8 @@ class DescribeLayout
      */
     public function setFeedView($feedView)
     {
-      $this->feedView = $feedView;
-      return $this;
+        $this->feedView = $feedView;
+        return $this;
     }
 
     /**
@@ -138,7 +135,7 @@ class DescribeLayout
      */
     public function getHighlightsPanelLayoutSection()
     {
-      return $this->highlightsPanelLayoutSection;
+        return $this->highlightsPanelLayoutSection;
     }
 
     /**
@@ -147,8 +144,8 @@ class DescribeLayout
      */
     public function setHighlightsPanelLayoutSection($highlightsPanelLayoutSection)
     {
-      $this->highlightsPanelLayoutSection = $highlightsPanelLayoutSection;
-      return $this;
+        $this->highlightsPanelLayoutSection = $highlightsPanelLayoutSection;
+        return $this;
     }
 
     /**
@@ -156,7 +153,7 @@ class DescribeLayout
      */
     public function getId()
     {
-      return $this->id;
+        return $this->id;
     }
 
     /**
@@ -165,8 +162,8 @@ class DescribeLayout
      */
     public function setId($id)
     {
-      $this->id = $id;
-      return $this;
+        $this->id = $id;
+        return $this;
     }
 
     /**
@@ -174,7 +171,7 @@ class DescribeLayout
      */
     public function getQuickActionList()
     {
-      return $this->quickActionList;
+        return $this->quickActionList;
     }
 
     /**
@@ -183,8 +180,8 @@ class DescribeLayout
      */
     public function setQuickActionList($quickActionList)
     {
-      $this->quickActionList = $quickActionList;
-      return $this;
+        $this->quickActionList = $quickActionList;
+        return $this;
     }
 
     /**
@@ -192,7 +189,7 @@ class DescribeLayout
      */
     public function getRelatedContent()
     {
-      return $this->relatedContent;
+        return $this->relatedContent;
     }
 
     /**
@@ -201,8 +198,8 @@ class DescribeLayout
      */
     public function setRelatedContent($relatedContent)
     {
-      $this->relatedContent = $relatedContent;
-      return $this;
+        $this->relatedContent = $relatedContent;
+        return $this;
     }
 
     /**
@@ -210,7 +207,7 @@ class DescribeLayout
      */
     public function getRelatedLists()
     {
-      return $this->relatedLists;
+        return $this->relatedLists;
     }
 
     /**
@@ -219,8 +216,8 @@ class DescribeLayout
      */
     public function setRelatedLists(array $relatedLists = null)
     {
-      $this->relatedLists = $relatedLists;
-      return $this;
+        $this->relatedLists = $relatedLists;
+        return $this;
     }
 
     /**
@@ -228,7 +225,7 @@ class DescribeLayout
      */
     public function getSaveOptions()
     {
-      return $this->saveOptions;
+        return $this->saveOptions;
     }
 
     /**
@@ -237,8 +234,7 @@ class DescribeLayout
      */
     public function setSaveOptions(array $saveOptions = null)
     {
-      $this->saveOptions = $saveOptions;
-      return $this;
+        $this->saveOptions = $saveOptions;
+        return $this;
     }
-
 }

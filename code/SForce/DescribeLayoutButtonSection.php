@@ -4,9 +4,8 @@ namespace SForce\Wsdl;
 
 class DescribeLayoutButtonSection
 {
-
     /**
-     * @var DescribeLayoutButton[] $detailButtons
+     * @var DescribeLayoutButton[]
      */
     protected $detailButtons = null;
 
@@ -15,7 +14,7 @@ class DescribeLayoutButtonSection
      */
     public function __construct(array $detailButtons = null)
     {
-      $this->detailButtons = $detailButtons;
+        $this->detailButtons = $detailButtons;
     }
 
     /**
@@ -23,7 +22,7 @@ class DescribeLayoutButtonSection
      */
     public function getDetailButtons()
     {
-      return $this->detailButtons;
+        return $this->detailButtons;
     }
 
     /**
@@ -32,8 +31,7 @@ class DescribeLayoutButtonSection
      */
     public function setDetailButtons(array $detailButtons)
     {
-      $this->detailButtons = $detailButtons;
-      return $this;
+        $this->detailButtons = $detailButtons;
+        return $this;
     }
-
 }
