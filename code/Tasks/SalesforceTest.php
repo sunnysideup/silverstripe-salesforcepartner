@@ -64,7 +64,7 @@ class SalesforceTest extends BuildTask
     {
         $isRegistered = MySalesforceContactApi::is_email_registered($this->email);
 
-        echo '<h1>Does '.$this->Email.' exist '.($isRegistered ? 'YES' : 'NO').'</h1>';
+        echo '<h1>Does '.$this->email.' exist '.($isRegistered ? 'YES' : 'NO').'</h1>';
     }
 
 
