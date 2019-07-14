@@ -47,6 +47,7 @@ class SalesforceDefaultContactField extends DataObject
         'Key' => 'Field Name',
         'Value' => 'Field Value',
         'ValueType' => 'Value Type',
+        'BetterValue' => 'Calculated Value',
     ];
     /**
      * Defines summary fields commonly used in table columns
