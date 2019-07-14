@@ -101,7 +101,9 @@ class MySalesforceContactConfigApiFormFields extends Object
 
     /**
      * Needs to link to a many-many relationship (SalesforceDefaultContactFields)
-     * @param  array $fieldName fields to send
+     * @param string $fieldName name of the field
+     * @param string $title fields to send
+     * @param string $desc field description
      *
      * @return FormField
      */
@@ -129,7 +131,8 @@ class MySalesforceContactConfigApiFormFields extends Object
     }
 
     /**
-     * @param  array|DataList|null $type fields to send
+     * @param  string $type type of fields
+     * @param  array|DataList|null $mixed fields to send
      * @param  string $fieldName fields to send
      * @param  string $title fields to send
      *

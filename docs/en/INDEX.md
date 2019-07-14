@@ -99,7 +99,7 @@ In the `MySalesforceForm` form, add the following:
     public function sendToSalesforce(
         $email, $phoneNumber = '', $firstName = '', $lastName = '', $extraFields = [], $extraFilterFields = []
     ) {
-        if ($this->isSubscriberRegisteredInSalesforce($email)) {
+        if (MySalesforceContactApi::is_email_registered($email, $extraFilterFields)) {
             //update
             $success = MySalesforceContactApi::update_email_subscriber(
                 $email,
