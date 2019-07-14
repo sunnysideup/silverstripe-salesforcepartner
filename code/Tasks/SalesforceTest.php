@@ -62,7 +62,9 @@ class SalesforceTest extends BuildTask
 
     protected function findContact()
     {
-        $contact = MySalesforceContactApi::is_email_registered($this->email);
+        $isRegistered = MySalesforceContactApi::is_email_registered($this->email);
+
+        echo '<h1>Does '.$this->Email.' exist '.($isRegistered ? 'YES' : 'NO').'</h1>';
     }
 
 
