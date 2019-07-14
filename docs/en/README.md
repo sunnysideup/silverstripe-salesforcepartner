@@ -96,7 +96,7 @@ In the `MySalesforceForm` form, add the following:
 
 ```php
 
-    public function sendToSalesForce(
+    public function sendToSalesforce(
         $email, $phoneNumber = '', $firstName = '', $lastName = '', $extraFields = [], $extraFilterFields = []
     ) {
         if ($this->isSubscriberRegisteredInSalesforce($email)) {
