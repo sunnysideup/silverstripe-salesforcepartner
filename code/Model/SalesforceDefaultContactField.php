@@ -1,6 +1,5 @@
 <?php
 
-use SilverStripe\Forms\DropdownField;
 /**
  * this can be linked to pages / other objects using many_many relationships
  * so that you can send default record values to Salesforce.
