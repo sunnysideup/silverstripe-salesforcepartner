@@ -76,8 +76,7 @@ class SalesforceDefaultContactField extends DataObject
     {
         foreach ($this->Config()->get('default_records') as $key => $details) {
             $value = isset($details['Value']) ? $details['Value'] : 'please set';
-            $type = isset($details['ValueType']) ? $details['Value'] : 'String';
-            $type = $details['ValueType'];
+            $type = isset($details['ValueType']) ? $details['ValueType'] : 'String';
             $filter = [
                 'Key' => $key,
             ];
