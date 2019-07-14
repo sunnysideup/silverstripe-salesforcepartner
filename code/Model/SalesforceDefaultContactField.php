@@ -75,8 +75,6 @@ class SalesforceDefaultContactField extends DataObject
     public function requireDefaultRecords()
     {
         foreach ($this->Config()->get('default_records') as $key => $details) {
-            $value = isset($details['Value']) ? $details['Value'] : 'please set';
-            $type = isset($details['ValueType']) ? $details['ValueType'] : 'String';
             $filter = [
                 'Key' => $key,
             ];
@@ -84,6 +82,10 @@ class SalesforceDefaultContactField extends DataObject
             $obj = self::get()->filter($filter)->first();
             if (! $obj) {
                 $obj = self::create($filter);
+                // get values
+                $value = isset($details['Value']) ? $details['Value'] : 'please set';
+                $type = isset($details['ValueType']) ? $details['ValueType'] : 'String';
+                // set values
                 $obj->Value = $value;
                 $obj->ValueType = $type;
                 $obj->write();
