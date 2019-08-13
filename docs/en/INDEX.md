@@ -60,7 +60,6 @@ You should set up dataobjects / pages with the following methods:
 
     public function setDefaultFieldsForSalesforce()
     {
-        // Send info to Salesforce if the user has opted in
         MySalesforceContactConfigApi::add_fields_to_send_on_creation(
             $this->SalesforceDefaultCreateContactFields()
         );
@@ -74,7 +73,7 @@ You should set up dataobjects / pages with the following methods:
 
 ```
 
-set up controller with the following form:
+set up controller with the following form (you will have to make your own Form, as you see see fit):
 
 ```php
 
@@ -92,7 +91,7 @@ set up controller with the following form:
     }
 ```
 
-In the `MySalesforceForm` form, add the following:
+In the `MySalesforceForm` form, add the following (this will be called on "saving" / "actioning" you form (saving the results of the form):
 
 ```php
 
