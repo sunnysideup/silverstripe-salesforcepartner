@@ -16,7 +16,7 @@
     "uuf6429/force.com-toolkit-for-php": "dev-Major-refactor#5509a1705dc5413eaf41705da77d82275162a888",
     "silverstripe/framework": "3.6.*"
   },
-  "suggested": {
+  "suggests": {
      "symplify/easy-coding-standard": "^6.0"
   },
   "extra-examples": {
