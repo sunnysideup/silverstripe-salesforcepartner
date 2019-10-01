@@ -1,6 +1,7 @@
 <?php
 
 use SForce\SObject;
+use SForce\Wsdl\SaveResult;
 
 /**
  * This class adds / updates subscribers to Salesforce
@@ -55,6 +56,8 @@ class MySalesforceContactApi extends Object
     }
 
     /**
+     * @todo: allow adding by phone number
+     *
      * @param string $email
      * @param array $extraFields - OPTIONAL
      * @param array $extraFilterArray - OPTIONAL
@@ -182,7 +185,7 @@ class MySalesforceContactApi extends Object
             $contact->setType('Contact');
             $contact->setId($existingContact->getId());
             foreach ($fieldsArray as $fieldName => $fieldValue) {
-                if ($fieldValue !== $existingContact->{$fieldName}) {
+                if ($fieldValue != $existingContact->{$fieldName}) {
                     $contact->{$fieldName} = $fieldValue;
                 }
             }
@@ -216,7 +219,7 @@ class MySalesforceContactApi extends Object
      *
      * @return SForce\SObject|null
      */
-    public static function retrieve_contact($fieldsArray, $extraFilterArray = [])
+    public static function retrieve_contact($fieldsArray, $extraFilterArray = [], $otherFields = [])
     {
         $connection = self::get_my_singleton_connection();
         // Check for existing Contact
@@ -244,9 +247,23 @@ class MySalesforceContactApi extends Object
             if (count($extraFilterArray)) {
                 $finalFilterArray[] = MySalesforcePartnerApi::array2sql($extraFilterArray);
             }
-            $where = ' ( ' . implode(' ) AND ( ', $finalFilterArray) . ' ) ';
-            $query = 'SELECT Id, FirstName, LastName, Phone, Email FROM Contact WHERE ' . $where . ' LIMIT 1';
-
+            $where = ' ( '.implode(' ) AND ( ', $finalFilterArray).' ) ';
+            $querySelect = 'SELECT Id, FirstName, LastName, Phone, Email';
+            if(! empty($otherFields)) {
+                foreach($otherFields as $otherField) {
+                    $querySelect .= ', '.$otherField;
+                }
+            }
+            $queryFrom = 'FROM Contact';
+            $queryWhere = 'WHERE '.$where.' LIMIT 1';
+            $query = implode(
+                ' ',
+                [
+                    $querySelect,
+                    $queryFrom,
+                    $queryWhere
+                ]
+            );
             $result = $connection->query($query);
             if ($result) {
                 $contacts = $result->getRecords();
@@ -303,7 +320,7 @@ class MySalesforceContactApi extends Object
     }
 
     /**
-     * @param $b
+     * @param bool $b
      */
     public static function set_debug($b = true)
     {
