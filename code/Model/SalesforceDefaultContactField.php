@@ -39,10 +39,6 @@ class SalesforceDefaultContactField extends DataObject
     ];
 
 
-    private static $many_many = [
-        'SalesforceOnlyUpdateSets' => SalesforceOnlyUpdateSets::class,
-    ];
-
     /**
      * Defines summary fields commonly used in table columns
      * as a quick overview of the data for this dataobject
